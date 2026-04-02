@@ -116,14 +116,21 @@ CI que roda em todo `push` e `pull_request`, validando que nenhum `README.md` do
 
 ---
 
-### `docs/BLACKBOX_AMBIENTE_DESENVOLVIMENTO.md`
+### `docs/` — Documentação do Ecossistema
 
-Guia completo de configuração do ambiente de desenvolvimento hermético:
-
-- Desativar telemetria no VS Code e Cursor via `settings.json`
-- Ativar Privacy Mode no Cursor
-- Bloquear domínios Microsoft via arquivo `hosts`
-- Usar Ollama como backend de IA local
+| Documento | Descrição |
+|---|---|
+| [Ambiente Black-Box](docs/BLACKBOX_AMBIENTE_DESENVOLVIMENTO.md) | Guia de configuração do ambiente hermético: telemetria off, Privacy Mode, hosts bloqueados, Ollama local |
+| [Análise de Honestidade Cronológica](docs/ANALISE_HONESTIDADE_CRONOLOGICA_PRODUTOS.md) | Verificação de coerência entre datas declaradas e histórico real dos produtos do ecossistema |
+| [Auditoria de Licenças dos Repositórios](docs/AUDITORIA_LICENCAS_REPOSITORIOS_2026_03_14.md) | Auditoria de conformidade de licenças em todos os repositórios (2026-03-14) |
+| [Auditoria de Segurança das Lojas](docs/AUDITORIA_SEGURANCA_LOJAS_RELEASES.md) | Análise de segurança das páginas de releases/loja do ecossistema |
+| [Code Health Report](docs/CODE_HEALTH_REPORT.md) | Relatório de saúde e integração do código — versão intermediária (2026-02-25) |
+| [Code Health Report Final](docs/CODE_HEALTH_REPORT_FINAL.md) | Relatório de saúde e integração do código — versão final (2026-02-25) |
+| [Contexto de Sessão IA](docs/CONTEXTO_SESSAO_IA.md) | Contexto persistente de sessão para continuidade de trabalho com IA |
+| [Gate de Publicação Antiabuso](docs/GATE_PUBLICACAO_ANTIABUTRE_ECOSSISTEMA.md) | Critérios e checklist de gate antes de qualquer publicação no ecossistema (2026-03-15) |
+| [Mapeamento do Ecossistema](docs/MAPEAMENTO_ECOSSISTEMA_PRODUCTOS.md) | Mapa completo de todos os produtos, repositórios e dependências CaraCore (2026-02-27) |
+| [Relatório de Segurança do Ecossistema](docs/RELATORIO_SEGURANCA_ECOSSISTEMA.md) | Relatório de segurança e saúde geral do ecossistema CaraCore (2026-02-27) |
+| [Validação de Memórias IA](docs/VALIDACAO_MEMORIAS_IA_ECOSSISTEMA_2026_03_10.md) | Validação das documentações de memória usadas pelo agente IA (2026-03-10) |
 
 ---
 
