@@ -172,6 +172,11 @@ java TesteJava21
 | Ollama | Instalacao local valida para operacao offline |
 | Permissao administrativa | Necessaria para alteracao do arquivo hosts |
 
+## Licenciamento
+
+Este repositorio e distribuido sob a Licenca MIT.
+Os termos completos de uso, modificacao e distribuicao estao no arquivo [LICENSE](LICENSE).
+
 ## Politica editorial deste manual
 
 Este README deve permanecer em padrao institucional, com linguagem tecnica e foco operacional.
