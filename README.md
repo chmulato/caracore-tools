@@ -1,157 +1,178 @@
-# caracore-tools
+# Cara Core Informatica Tools
 
-Utilitários de desenvolvimento do ecossistema **Cara Core Informática**.
+Manual tecnico e operacional das ferramentas de apoio ao ecossistema Cara Core Informatica.
 
-Ferramentas para soberania do ambiente de desenvolvimento local: bloqueio de telemetria, IA local via Ollama, validação de qualidade de repositórios e laboratório de features Java.
+## Objetivo
 
----
+Este repositorio centraliza utilitarios para padronizacao de ambiente, validacao de qualidade tecnica e experimentacao controlada de tecnologias.
 
-## Estrutura
+## Escopo funcional
 
-```
+1. Controle local de telemetria e privacidade no ambiente de desenvolvimento.
+2. Operacao de endpoint local para modelos de linguagem com Ollama.
+3. Validacao automatica de encoding em arquivos README.
+4. Laboratorio de recursos modernos do Java para uso futuro em produtos.
+5. Registro documental de governanca tecnica e conformidade do ecossistema.
+
+## Estrutura do repositorio
+
+```text
 caracore-tools/
-├── java/                        # Laboratório Java
-│   ├── Main.java                # Records e Switch Expressions (Java 21+)
-│   └── TesteJava21.java         # Virtual Threads — 10.000 tarefas paralelas
-├── python/                      # Scripts de ambiente Black-Box
-│   ├── block-telemetry-hosts.py     # Bloqueia domínios de telemetria no hosts
-│   ├── unblock-telemetry-hosts.py   # Remove o bloqueio de telemetria
-│   ├── plugar-olloma-local.py       # Inicia servidor Ollama local
-│   └── desplugar-olloma-local.py    # Para servidor Ollama local
-├── scripts/                     # Scripts PowerShell de qualidade
-│   └── check-readme-encoding.ps1   # Detecta e corrige mojibake em READMEs
-├── docs/                        # Documentação técnica
-│   └── BLACKBOX_AMBIENTE_DESENVOLVIMENTO.md
-├── plano/                       # Rascunhos estratégicos internos
-└── .github/workflows/
-    └── readme-encoding-check.yml   # CI: valida encoding de READMEs
+|-- .github/
+|   `-- workflows/
+|       `-- readme-encoding-check.yml
+|-- docs/
+|-- java/
+|   |-- Main.java
+|   `-- TesteJava21.java
+|-- plano/
+|-- python/
+|   |-- block-telemetry-hosts.py
+|   |-- unblock-telemetry-hosts.py
+|   |-- plugar-olloma-local.py
+|   `-- desplugar-olloma-local.py
+`-- scripts/
+    `-- check-readme-encoding.ps1
 ```
 
----
+## Catalogo de ferramentas
 
-## Módulos
+| Diretorio | Ferramenta | Funcao operacional |
+|---|---|---|
+| python | block-telemetry-hosts.py | Adiciona regras no arquivo hosts para bloqueio de dominios de telemetria |
+| python | unblock-telemetry-hosts.py | Remove regras de bloqueio adicionadas no hosts |
+| python | plugar-olloma-local.py | Inicializa servidor local do Ollama |
+| python | desplugar-olloma-local.py | Interrompe servidor local do Ollama |
+| scripts | check-readme-encoding.ps1 | Detecta e corrige codificacao incorreta em README.md |
+| java | Main.java | Exercicios de records e switch expressions |
+| java | TesteJava21.java | Teste de virtual threads com alta concorrencia |
 
-### `python/` — Soberania do Código (Black-Box)
+## Procedimentos operacionais
 
-Controle total sobre o que entra e sai do ambiente de desenvolvimento.
+### 1) Bloqueio de telemetria
 
-#### Bloqueio de telemetria
+Ferramentas desta secao:
 
-Bloqueia domínios de telemetria da Microsoft, VS Code e Cursor no arquivo `hosts` do Windows, impedindo envio de dados sem consentimento.
+| Ferramenta | Arquivo | Responsabilidade |
+|---|---|---|
+| Aplicacao de bloqueios no hosts | [python/block-telemetry-hosts.py](python/block-telemetry-hosts.py) | Insere entradas de bloqueio de dominios de telemetria |
+| Reversao de bloqueios no hosts | [python/unblock-telemetry-hosts.py](python/unblock-telemetry-hosts.py) | Remove entradas adicionadas para restaurar estado anterior |
+
+Executar em terminal com privilegio administrativo.
 
 ```powershell
-# Executar como Administrador
 python python/block-telemetry-hosts.py
+```
 
-# Simular sem escrever (não requer admin)
+Modo de simulacao, sem alterar o hosts.
+
+```powershell
 python python/block-telemetry-hosts.py --dry-run
+```
 
-# Remover o bloqueio
+Remocao das regras aplicadas.
+
+```powershell
 python python/unblock-telemetry-hosts.py
 ```
 
-Após qualquer alteração:
+Atualizacao de cache DNS apos mudancas.
 
 ```powershell
 ipconfig /flushdns
 ```
 
-#### IA local via Ollama
+### 2) Operacao de IA local com Ollama
 
-Liga e desliga o servidor Ollama em `http://localhost:11434` para uso de modelos de linguagem totalmente offline.
+Ferramentas desta secao:
+
+| Ferramenta | Arquivo | Responsabilidade |
+|---|---|---|
+| Inicializacao do endpoint local | [python/plugar-olloma-local.py](python/plugar-olloma-local.py) | Inicia o servico Ollama para uso local |
+| Encerramento do endpoint local | [python/desplugar-olloma-local.py](python/desplugar-olloma-local.py) | Interrompe o servico Ollama em execucao |
+
+Inicializacao do endpoint local.
 
 ```powershell
-# Iniciar Ollama
 python python/plugar-olloma-local.py
+```
 
-# Parar Ollama
+Parada do endpoint local.
+
+```powershell
 python python/desplugar-olloma-local.py
 ```
 
-Configure o VS Code ou Cursor para usar `http://localhost:11434/v1` como endpoint de IA local.
+Endpoint esperado para integracao em IDEs: `http://localhost:11434/v1`.
 
----
+### 3) Validacao de encoding de README
 
-### `scripts/` — Qualidade de Repositórios
+Ferramentas desta secao:
 
-#### `check-readme-encoding.ps1`
+| Ferramenta | Arquivo | Responsabilidade |
+|---|---|---|
+| Verificador de codificacao de README | [scripts/check-readme-encoding.ps1](scripts/check-readme-encoding.ps1) | Detecta e opcionalmente corrige sinais de codificacao incorreta |
+| Workflow de controle continuo | [.github/workflows/readme-encoding-check.yml](.github/workflows/readme-encoding-check.yml) | Executa validacao automatica em push e pull request |
 
-Detecta marcadores de *mojibake* (UTF-8 decodificado como CP1252/Latin1) nos arquivos `README.md` de todos os repositórios `caracore-*` e `circuito*` em `D:\dev`.
+Analise sem correcao.
 
 ```powershell
-# Apenas detectar problemas
 .\scripts\check-readme-encoding.ps1
+```
 
-# Detectar e corrigir automaticamente
+Analise com correcao automatica.
+
+```powershell
 .\scripts\check-readme-encoding.ps1 -Fix
+```
 
-# Usar outro diretório raiz
+Analise apontando outra raiz de repositorios.
+
+```powershell
 .\scripts\check-readme-encoding.ps1 -RootPath "C:\projetos"
 ```
 
----
+### 4) Laboratorio Java
 
-### `java/` — Laboratório Java
+Ferramentas desta secao:
 
-Sandbox para validar features modernas do Java antes de adotá-las nos produtos do ecossistema.
-
-| Arquivo | Feature testada | Versão mínima |
+| Ferramenta | Arquivo | Responsabilidade |
 |---|---|---|
-| `Main.java` | Records + Switch Expressions | Java 21 |
-| `TesteJava21.java` | Virtual Threads (`newVirtualThreadPerTaskExecutor`) | Java 21 |
+| Exemplo de records e switch expressions | [java/Main.java](java/Main.java) | Validar sintaxe e comportamento de recursos modernos da linguagem |
+| Exemplo de virtual threads | [java/TesteJava21.java](java/TesteJava21.java) | Avaliar concorrencia baseada em virtual threads |
 
-Compilar e executar:
+Compilacao e execucao dos exemplos.
 
 ```powershell
-cd java
-javac Main.java ; java Main
-javac TesteJava21.java ; java TesteJava21
+Set-Location java
+javac Main.java
+java Main
+javac TesteJava21.java
+java TesteJava21
 ```
 
----
+## Documentacao de governanca
 
-### `.github/workflows/readme-encoding-check.yml`
-
-CI que roda em todo `push` e `pull_request`, validando que nenhum `README.md` do repositório contém marcadores de *mojibake*. Falha o build se encontrar caracteres suspeitos.
-
----
-
-### `docs/` — Documentação do Ecossistema
-
-| Documento | Descrição |
+| Documento | Finalidade |
 |---|---|
-| [Ambiente Black-Box](docs/BLACKBOX_AMBIENTE_DESENVOLVIMENTO.md) | Guia de configuração do ambiente hermético: telemetria off, Privacy Mode, hosts bloqueados, Ollama local |
-| [Análise de Honestidade Cronológica](docs/ANALISE_HONESTIDADE_CRONOLOGICA_PRODUTOS.md) | Verificação de coerência entre datas declaradas e histórico real dos produtos do ecossistema |
-| [Auditoria de Licenças dos Repositórios](docs/AUDITORIA_LICENCAS_REPOSITORIOS_2026_03_14.md) | Auditoria de conformidade de licenças em todos os repositórios (2026-03-14) |
-| [Auditoria de Segurança das Lojas](docs/AUDITORIA_SEGURANCA_LOJAS_RELEASES.md) | Análise de segurança das páginas de releases/loja do ecossistema |
-| [Code Health Report](docs/CODE_HEALTH_REPORT.md) | Relatório de saúde e integração do código — versão intermediária (2026-02-25) |
-| [Code Health Report Final](docs/CODE_HEALTH_REPORT_FINAL.md) | Relatório de saúde e integração do código — versão final (2026-02-25) |
-| [Contexto de Sessão IA](docs/CONTEXTO_SESSAO_IA.md) | Contexto persistente de sessão para continuidade de trabalho com IA |
-| [Gate de Publicação Antiabuso](docs/GATE_PUBLICACAO_ANTIABUTRE_ECOSSISTEMA.md) | Critérios e checklist de gate antes de qualquer publicação no ecossistema (2026-03-15) |
-| [Mapeamento do Ecossistema](docs/MAPEAMENTO_ECOSSISTEMA_PRODUCTOS.md) | Mapa completo de todos os produtos, repositórios e dependências CaraCore (2026-02-27) |
-| [Relatório de Segurança do Ecossistema](docs/RELATORIO_SEGURANCA_ECOSSISTEMA.md) | Relatório de segurança e saúde geral do ecossistema CaraCore (2026-02-27) |
-| [Validação de Memórias IA](docs/VALIDACAO_MEMORIAS_IA_ECOSSISTEMA_2026_03_10.md) | Validação das documentações de memória usadas pelo agente IA (2026-03-10) |
+| [BLACKBOX_AMBIENTE_DESENVOLVIMENTO.md](docs/BLACKBOX_AMBIENTE_DESENVOLVIMENTO.md) | Diretrizes do ambiente local com foco em privacidade |
+| [MAPEAMENTO_ECOSSISTEMA_PRODUCTOS.md](docs/MAPEAMENTO_ECOSSISTEMA_PRODUCTOS.md) | Mapa tecnico dos produtos e dependencias |
+| [RELATORIO_SEGURANCA_ECOSSISTEMA.md](docs/RELATORIO_SEGURANCA_ECOSSISTEMA.md) | Consolidado de postura de seguranca do ecossistema |
+| [AUDITORIA_LICENCAS_REPOSITORIOS_2026_03_14.md](docs/AUDITORIA_LICENCAS_REPOSITORIOS_2026_03_14.md) | Verificacao de conformidade de licenciamento |
+| [AUDITORIA_SEGURANCA_LOJAS_RELEASES.md](docs/AUDITORIA_SEGURANCA_LOJAS_RELEASES.md) | Analise de seguranca para repositorios de releases |
+| [GATE_PUBLICACAO_ANTIABUTRE_ECOSSISTEMA.md](docs/GATE_PUBLICACAO_ANTIABUTRE_ECOSSISTEMA.md) | Criterios obrigatorios antes de publicacao |
 
----
+## Pre-requisitos
 
-## Pré-requisitos
-
-| Ferramenta | Uso |
+| Dependencia | Versao recomendada |
 |---|---|
-| Python 3.8+ | Scripts `python/` |
-| Java 21+ | Laboratório `java/` |
-| PowerShell 5.1+ | Script `scripts/` |
-| Ollama | Scripts de IA local (opcional) |
-| Privilégio de Administrador | Scripts de bloqueio de telemetria |
+| Python | 3.8 ou superior |
+| Java | 21 ou superior |
+| PowerShell | 5.1 ou superior |
+| Ollama | Instalacao local valida para operacao offline |
+| Permissao administrativa | Necessaria para alteracao do arquivo hosts |
 
----
+## Politica editorial deste manual
 
-## Relacionado
-
-- [caracore-cso](https://github.com/chmulato/caracore-cso) — Backend Java 21 + Quarkus
-- [caracore-cso-releases](https://github.com/chmulato/caracore-cso-releases) — Loja e releases
-- Portfólio: [caracore.com.br](https://caracore.com.br)
-
----
-
-*Cara Core Informática — Soberania do Código.*
+Este README deve permanecer em padrao institucional, com linguagem tecnica e foco operacional.
+Nao utilizar emojis, icones visuais infantis ou elementos de destaque informais.
