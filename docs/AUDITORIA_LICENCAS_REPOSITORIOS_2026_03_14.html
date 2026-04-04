@@ -1,0 +1,19 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Auditoria de Licencas dos Repositorios</title>
+  <link rel="stylesheet" href="../assets/css/sala-doc.css">
+</head>
+<body>
+  <header class="sala-header">Cara Core Informatica · Sala de Operacoes · Tools</header>
+  <main class="container">
+    <div class="panel">
+      <div class="breadcrumb"><a href="../index.html">Voltar para o portal</a></div>
+<h1>Auditoria de Licencas dos Repositorios</h1> <p>Data: 2026-03-14</p> <p>Escopo: pastas de repositorio em d:/dev (caracore-<em> e circuito</em>)</p> <h2>Resumo executivo</h2> <ul> <li>Arquivos LICENSE existentes: OK (sem placeholder real, sem arquivo vazio).</li> <li>Tipos encontrados: MIT, Apache-2.0 e Proprietario.</li> <li>Status final: cobertura de LICENSE na raiz regularizada para 100% dos repositorios auditados.</li> </ul> <h2>Repositorios com LICENSE na raiz</h2> <ul> <li>caracore-circuito (Proprietario)</li> <li>caracore-cso (MIT)</li> <li>caracore-ete (MIT)</li> <li>caracore-ete-releases (Proprietario)</li> <li>caracore-ink (MIT)</li> <li>caracore-mkt (MIT)</li> <li>caracore-mkt-releases (MIT)</li> <li>caracore-oidc (Proprietario)</li> <li>caracore-oidc-releases (MIT)</li> <li>caracore-pdv (MIT)</li> <li>caracore-seed-releases (MIT)</li> <li>caracore-site (MIT)</li> </ul> <h3>Regularizados nesta execucao (LICENSE de raiz criado)</h3> <ul> <li>caracore-area51 (Proprietario)</li> <li>caracore-area51-releases (Proprietario)</li> <li>caracore-circuito-releases (Proprietario)</li> <li>caracore-cso-releases (Proprietario)</li> <li>caracore-hub (Proprietario)</li> <li>caracore-hub-releases (Proprietario)</li> <li>caracore-ink-releases (Proprietario)</li> <li>caracore-pdv-releases (Proprietario)</li> <li>caracore-ru (Proprietario)</li> <li>caracore-ru-releases (Proprietario)</li> <li>caracore-seed (Proprietario)</li> <li>caracore-tools (Proprietario)</li> </ul> <h2>Observacao importante</h2> <ul> <li>caracore-hub possui subprojeto com licenca propria em <code>project_hub/LICENSE</code> (Apache-2.0). A raiz do repositorio foi regularizada com politica proprietaria institucional.</li> </ul> <h2>Repositorios sem LICENSE na raiz (gap)</h2> <ul> <li>Nenhum (0). Gap encerrado nesta execucao.</li> </ul> <h2>Verificacao de qualidade dos LICENSE existentes</h2> <ul> <li>Nenhum LICENSE existente esta vazio.</li> <li>Nao foi encontrado TODO/TBD/PENDING/PLACEHOLDER real em LICENSE (os matches iniciais eram falsos positivos por palavras como &quot;Todos&quot;).</li> </ul> <h2>Proximo passo natural (recomendado)</h2> <ol> <li>Atualizar cada README com secao &quot;Licenca&quot; e link para o LICENSE da raiz.</li> <li>Definir, em documento de governanca, criterios objetivos para quando um repositorio deve ser MIT vs Proprietario.</li> <li>Adicionar checagem automatica no CI para falhar se faltar arquivo LICENSE na raiz.</li> </ol>
+      <div class="footer">Documento publicado em formato HTML.</div>
+    </div>
+  </main>
+</body>
+</html>
