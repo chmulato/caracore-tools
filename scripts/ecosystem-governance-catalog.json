@@ -1,0 +1,112 @@
+[
+  {
+    "app": "pdv",
+    "displayName": "CaraCore PDV",
+    "sourceRepoPath": "D:\\dev\\caracore-pdv",
+    "releaseRepoPath": "D:\\dev\\caracore-pdv-releases",
+    "matrixDeliveryPath": "D:\\dev\\caracore-site\\delivery\\pdv",
+    "releaseDocsPath": "docs",
+    "roadmapStatus": "pre-lancamento",
+    "roadmapDate": "2026-03-03",
+    "category": "prateleira"
+  },
+  {
+    "app": "oidc",
+    "displayName": "Reino OIDC",
+    "sourceRepoPath": "D:\\dev\\caracore-oidc",
+    "releaseRepoPath": "D:\\dev\\caracore-oidc-releases",
+    "matrixDeliveryPath": "D:\\dev\\caracore-site\\delivery\\oidc",
+    "releaseDocsPath": "docs",
+    "roadmapStatus": "disponivel",
+    "roadmapDate": "",
+    "category": "prateleira"
+  },
+  {
+    "app": "seed",
+    "displayName": "Cara Core Seed",
+    "sourceRepoPath": "D:\\dev\\caracore-seed",
+    "releaseRepoPath": "D:\\dev\\caracore-seed-releases",
+    "matrixDeliveryPath": "D:\\dev\\caracore-site\\delivery\\seed",
+    "releaseDocsPath": "docs",
+    "roadmapStatus": "disponivel",
+    "roadmapDate": "",
+    "category": "prateleira"
+  },
+  {
+    "app": "area51",
+    "displayName": "Suporte Area 51",
+    "sourceRepoPath": "D:\\dev\\caracore-area51",
+    "releaseRepoPath": "D:\\dev\\caracore-area51-releases",
+    "matrixDeliveryPath": "D:\\dev\\caracore-site\\delivery\\area51",
+    "releaseDocsPath": "docs",
+    "roadmapStatus": "contratavel",
+    "roadmapDate": "",
+    "category": "servico"
+  },
+  {
+    "app": "ete",
+    "displayName": "Minerador 4.0",
+    "sourceRepoPath": "D:\\dev\\caracore-ete",
+    "releaseRepoPath": "D:\\dev\\caracore-ete-releases",
+    "matrixDeliveryPath": "D:\\dev\\caracore-site\\delivery\\ete",
+    "releaseDocsPath": "docs",
+    "roadmapStatus": "disponivel",
+    "roadmapDate": "",
+    "category": "prateleira"
+  },
+  {
+    "app": "circuito",
+    "displayName": "Circuito Ferradura",
+    "sourceRepoPath": "D:\\dev\\caracore-circuito",
+    "releaseRepoPath": "D:\\dev\\caracore-circuito-releases",
+    "matrixDeliveryPath": "D:\\dev\\caracore-site\\delivery\\circuito",
+    "releaseDocsPath": "docs",
+    "roadmapStatus": "disponivel",
+    "roadmapDate": "",
+    "category": "prateleira"
+  },
+  {
+    "app": "ink-v2",
+    "displayName": "Ink Agenda v2.0.0",
+    "sourceRepoPath": "D:\\dev\\caracore-ink",
+    "releaseRepoPath": "D:\\dev\\caracore-ink-releases",
+    "matrixDeliveryPath": "D:\\dev\\caracore-site\\delivery\\ink",
+    "releaseDocsPath": "docs",
+    "roadmapStatus": "em_desenvolvimento",
+    "roadmapDate": "2026-06-26",
+    "category": "garagem"
+  },
+  {
+    "app": "hub",
+    "displayName": "CaraCore Hub",
+    "sourceRepoPath": "D:\\dev\\caracore-hub",
+    "releaseRepoPath": "D:\\dev\\caracore-hub-releases",
+    "matrixDeliveryPath": "D:\\dev\\caracore-site\\delivery\\hub",
+    "releaseDocsPath": "docs",
+    "roadmapStatus": "em_desenvolvimento",
+    "roadmapDate": "2027-04-06",
+    "category": "garagem"
+  },
+  {
+    "app": "ru",
+    "displayName": "RU Soberano",
+    "sourceRepoPath": "D:\\dev\\caracore-ru",
+    "releaseRepoPath": "D:\\dev\\caracore-ru-releases",
+    "matrixDeliveryPath": "D:\\dev\\caracore-site\\delivery\\ru",
+    "releaseDocsPath": "docs",
+    "roadmapStatus": "em_desenvolvimento",
+    "roadmapDate": "2027-06-18",
+    "category": "garagem"
+  },
+  {
+    "app": "cso",
+    "displayName": "Cara Core CSO",
+    "sourceRepoPath": "D:\\dev\\caracore-cso",
+    "releaseRepoPath": "D:\\dev\\caracore-cso-releases",
+    "matrixDeliveryPath": "D:\\dev\\caracore-site\\delivery\\cso",
+    "releaseDocsPath": "docs",
+    "roadmapStatus": "planejado",
+    "roadmapDate": "2028-11-08",
+    "category": "garagem"
+  }
+]

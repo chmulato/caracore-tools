@@ -45,6 +45,7 @@ caracore-tools/
 | python | desplugar-olloma-local.py | Interrompe servidor local do Ollama |
 | scripts | check-readme-encoding.ps1 | Detecta e corrige codificacao incorreta em README.md |
 | scripts | ecosystem-delivery.ps1 | Orquestra deliveries do ecossistema por calendario com mapa central |
+| scripts | ecosystem-governance.ps1 | Dashboard de governanca, gate por app e geracao de relatorio de evidencia |
 | java | Main.java | Exercicios de records e switch expressions |
 | java | TesteJava21.java | Teste de virtual threads com alta concorrencia |
 
@@ -200,6 +201,40 @@ Executar um delivery especifico com argumentos extras (exemplo com tag).
 
 ```powershell
 .\scripts\ecosystem-delivery.ps1 -Action run -App oidc -ExtraArgs --tag v1.0.0
+```
+
+### 6) Governanca de releases, roadmap e lojas
+
+Ferramentas desta secao:
+
+| Ferramenta | Arquivo | Responsabilidade |
+|---|---|---|
+| Dashboard e gate de governanca | [scripts/ecosystem-governance.ps1](scripts/ecosystem-governance.ps1) | Exibe saude do ecossistema, janela de roadmap e decisao Go/No-Go por app |
+| Catalogo oficial de apps | [scripts/ecosystem-governance-catalog.json](scripts/ecosystem-governance-catalog.json) | Define caminhos fonte/release/matriz e status de roadmap por app |
+| Manual operacional de governanca | [docs/SISTEMA_GOVERNANCA_ECOSSISTEMA.md](docs/SISTEMA_GOVERNANCA_ECOSSISTEMA.md) | Politica de execucao e evidencias obrigatorias |
+
+Dashboard de governanca do ecossistema.
+
+```powershell
+.\scripts\ecosystem-governance.ps1 -Action dashboard
+```
+
+Janela de marcos do roadmap.
+
+```powershell
+.\scripts\ecosystem-governance.ps1 -Action roadmap -WindowDays 180
+```
+
+Gate por aplicacao com bloqueio estrito.
+
+```powershell
+.\scripts\ecosystem-governance.ps1 -Action gate -App pdv -Strict
+```
+
+Geracao de evidencia formal do gate.
+
+```powershell
+.\scripts\ecosystem-governance.ps1 -Action report -App pdv
 ```
 
 ## Documentacao de governanca
