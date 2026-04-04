@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sala de Operacoes - Cara Core Tools</title>
+  <meta name="description" content="Portal das ferramentas da Cara Core Informatica: governanca, auditorias tecnicas e relatorios operacionais.">
+  <link rel="canonical" href="https://tools.caracore.com.br/">
+  <style>
+    :root {
+      --sala-bg: #0d1117;
+      --sala-panel: #161b22;
+      --sala-text: #e6edf3;
+      --sala-text-muted: #c9d1d9;
+      --sala-text-quiet: #8b949e;
+      --sala-gold: #ffd700;
+      --sala-border: rgba(255, 255, 255, 0.1);
+      --sala-nav-width: 230px;
+      --news-card-bg: #161b22;
+      --news-card-border: rgba(255, 215, 0, 0.2);
+      --news-card-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+      --news-card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 215, 0, 0.15);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      background: var(--sala-bg);
+      color: var(--sala-text);
+      line-height: 1.6;
+    }
+
+    .sala-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sala-header {
+      background: var(--sala-panel);
+      border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+      padding: 0.6rem 1rem;
+    }
+
+    .sala-header-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--sala-gold);
+      letter-spacing: 0.03em;
+    }
+
+    .sala-body {
+      flex: 1;
+      display: flex;
+      min-height: 0;
+    }
+
+    .sala-nav {
+      width: var(--sala-nav-width);
+      flex-shrink: 0;
+      background: var(--sala-panel);
+      border-right: 1px solid rgba(255, 215, 0, 0.15);
+      padding: 1.25rem 1rem 1.5rem;
+    }
+
+    .sala-nav-logo {
+      font-weight: 700;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      color: #fff;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+    }
+
+    .sala-nav-title {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: rgba(255, 215, 0, 0.9);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .sala-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .sala-nav li {
+      margin-bottom: 0.25rem;
+    }
+
+    .sala-nav a {
+      color: var(--sala-text-quiet);
+      text-decoration: none;
+      font-size: 0.9rem;
+      display: block;
+      padding: 0.35rem 0;
+    }
+
+    .sala-nav a:hover {
+      color: var(--sala-gold);
+    }
+
+    .sala-main {
+      flex: 1;
+      padding: 1.5rem 1.25rem 2rem;
+      max-width: 980px;
+    }
+
+    .hero {
+      background: var(--sala-panel);
+      border: 1px solid var(--sala-border);
+      border-radius: 10px;
+      padding: 1.2rem 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    h1 {
+      margin: 0 0 0.6rem;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: var(--sala-gold);
+      border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+      padding-bottom: 0.5rem;
+      letter-spacing: 0.02em;
+    }
+
+    .sub {
+      margin: 0;
+      color: var(--sala-text-muted);
+      font-size: 0.95rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      display: block;
+      text-decoration: none;
+      color: inherit;
+      background: var(--news-card-bg);
+      border: 1px solid var(--news-card-border);
+      border-radius: 10px;
+      box-shadow: var(--news-card-shadow);
+      padding: 1rem 1.1rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--news-card-shadow-hover);
+      border-color: rgba(255, 215, 0, 0.35);
+    }
+
+    .card h2 {
+      margin: 0 0 0.45rem;
+      font-size: 1rem;
+      color: var(--sala-gold);
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--sala-text-muted);
+      font-size: 0.9rem;
+    }
+
+    footer {
+      margin-top: 1.2rem;
+      color: var(--sala-text-quiet);
+      font-size: 0.88rem;
+      border-top: 1px solid var(--sala-border);
+      padding-top: 0.8rem;
+    }
+
+    @media (max-width: 860px) {
+      .sala-body {
+        display: block;
+      }
+
+      .sala-nav {
+        width: 100%;
+        border-right: 0;
+        border-bottom: 1px solid rgba(255, 215, 0, 0.15);
+      }
+
+      .sala-main {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body class="sala-page">
+  <header class="sala-header">
+    <div class="sala-header-inner">Cara Core Informatica · Sala de Operacoes · Tools</div>
+  </header>
+
+  <div class="sala-body">
+    <aside class="sala-nav" aria-label="Navegacao lateral">
+      <div class="sala-nav-logo">Cara Core Tools</div>
+      <div class="sala-nav-title">Navegacao</div>
+      <ul>
+        <li><a href="SISTEMA_GOVERNANCA_ECOSSISTEMA.md">Sistema de Governanca</a></li>
+        <li><a href="MAPEAMENTO_ECOSSISTEMA_PRODUCTOS.md">Mapeamento</a></li>
+        <li><a href="RELATORIO_SEGURANCA_ECOSSISTEMA.md">Relatorio de Seguranca</a></li>
+        <li><a href="AUDITORIA_SEGURANCA_LOJAS_RELEASES.md">Auditoria de Lojas</a></li>
+        <li><a href="CODE_HEALTH_REPORT.md">Code Health</a></li>
+        <li><a href="governance-reports/">Governance Reports</a></li>
+      </ul>
+    </aside>
+
+    <main class="sala-main">
+      <section class="hero">
+        <h1>Portal de Ferramentas e Governanca</h1>
+        <p class="sub">Ambiente de referencia para auditorias, padroes operacionais, seguranca e saude tecnica do ecossistema Cara Core.</p>
+      </section>
+
+      <section class="grid" aria-label="Documentos principais">
+        <a class="card" href="SISTEMA_GOVERNANCA_ECOSSISTEMA.md">
+          <h2>Sistema de Governanca</h2>
+          <p>Diretrizes formais e estrutura de governanca do ecossistema.</p>
+        </a>
+
+        <a class="card" href="MAPEAMENTO_ECOSSISTEMA_PRODUCTOS.md">
+          <h2>Mapeamento do Ecossistema</h2>
+          <p>Inventario consolidado de produtos, dependencias e relacoes.</p>
+        </a>
+
+        <a class="card" href="RELATORIO_SEGURANCA_ECOSSISTEMA.md">
+          <h2>Relatorio de Seguranca</h2>
+          <p>Controles implementados, riscos observados e recomendacoes.</p>
+        </a>
+
+        <a class="card" href="AUDITORIA_SEGURANCA_LOJAS_RELEASES.md">
+          <h2>Auditoria de Lojas</h2>
+          <p>Verificacao de padrao tecnico e seguranca das lojas de releases.</p>
+        </a>
+
+        <a class="card" href="CODE_HEALTH_REPORT.md">
+          <h2>Code Health Report</h2>
+          <p>Indicadores de qualidade de codigo e manutencao evolutiva.</p>
+        </a>
+
+        <a class="card" href="governance-reports/">
+          <h2>Governance Reports</h2>
+          <p>Colecao de relatorios historicos e evidencias operacionais.</p>
+        </a>
+      </section>
+
+      <footer>
+        Dominio oficial: tools.caracore.com.br
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
