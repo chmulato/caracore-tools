@@ -20,6 +20,10 @@ Reduzir estresse operacional com um fluxo unico, rastreavel e reproduzivel.
 - `scripts/ecosystem-governance.ps1`
 - `scripts/ecosystem-governance-catalog.json`
 
+3. Governanca de branches:
+- `scripts/ecosystem-branch-governance.ps1`
+- campos `sourceBranchTarget` e `releaseBranchTarget` no catalogo
+
 3. Wrappers por aplicacao:
 - `scripts/run_delivery_ete_to_releases.ps1`
 - `scripts/run_delivery_circuito_to_releases.ps1`
@@ -41,6 +45,13 @@ Reduzir estresse operacional com um fluxo unico, rastreavel e reproduzivel.
 
 ```powershell
 .\scripts\ecosystem-governance.ps1 -Action roadmap -WindowDays 180
+```
+
+2.5. Alinhamento de branch por app (fonte e releases):
+
+```powershell
+.\scripts\ecosystem-branch-governance.ps1 -Action status
+.\scripts\ecosystem-branch-governance.ps1 -Action align -DryRun
 ```
 
 3. Gate por aplicacao (No-Go/Go):

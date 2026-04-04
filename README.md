@@ -46,6 +46,7 @@ caracore-tools/
 | scripts | check-readme-encoding.ps1 | Detecta e corrige codificacao incorreta em README.md |
 | scripts | ecosystem-delivery.ps1 | Orquestra deliveries do ecossistema por calendario com mapa central |
 | scripts | ecosystem-governance.ps1 | Dashboard de governanca, gate por app e geracao de relatorio de evidencia |
+| scripts | ecosystem-branch-governance.ps1 | Alinha e audita branch alvo por app (fonte e releases) |
 | java | Main.java | Exercicios de records e switch expressions |
 | java | TesteJava21.java | Teste de virtual threads com alta concorrencia |
 
@@ -235,6 +236,33 @@ Geracao de evidencia formal do gate.
 
 ```powershell
 .\scripts\ecosystem-governance.ps1 -Action report -App pdv
+```
+
+### 7) Governanca de branches por aplicacao
+
+Ferramentas desta secao:
+
+| Ferramenta | Arquivo | Responsabilidade |
+|---|---|---|
+| Auditoria e alinhamento de branches | [scripts/ecosystem-branch-governance.ps1](scripts/ecosystem-branch-governance.ps1) | Verifica branch atual vs branch alvo e executa alinhamento seguro |
+| Politica de branch por app | [scripts/ecosystem-governance-catalog.json](scripts/ecosystem-governance-catalog.json) | Define `sourceBranchTarget` e `releaseBranchTarget` |
+
+Status de alinhamento de branches.
+
+```powershell
+.\scripts\ecosystem-branch-governance.ps1 -Action status
+```
+
+Alinhamento de branches com seguranca (nao troca branch em repo sujo).
+
+```powershell
+.\scripts\ecosystem-branch-governance.ps1 -Action align
+```
+
+Simulacao de alinhamento sem alterar repositorios.
+
+```powershell
+.\scripts\ecosystem-branch-governance.ps1 -Action align -DryRun
 ```
 
 ## Documentacao de governanca
