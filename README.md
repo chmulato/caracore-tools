@@ -293,5 +293,5 @@ Os termos completos de uso, modificacao e distribuicao estao no arquivo [LICENSE
 
 ## Politica editorial deste manual
 
-Este README deve permanecer em padrao institucional, com linguagem tecnica e foco operacional.
-Nao utilizar emojis, icones visuais infantis ou elementos de destaque informais.
+Este README deve permanecer em padrao institucional, com linguagem tecnica, objetiva e foco operacional.
+Nao utilizar emojis, icones visuais informais, excesso de marcacao tipografica ou recursos narrativos nao tecnicos.
