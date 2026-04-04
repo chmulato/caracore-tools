@@ -44,6 +44,7 @@ caracore-tools/
 | python | plugar-olloma-local.py | Inicializa servidor local do Ollama |
 | python | desplugar-olloma-local.py | Interrompe servidor local do Ollama |
 | scripts | check-readme-encoding.ps1 | Detecta e corrige codificacao incorreta em README.md |
+| scripts | ecosystem-delivery.ps1 | Orquestra deliveries do ecossistema por calendario com mapa central |
 | java | Main.java | Exercicios de records e switch expressions |
 | java | TesteJava21.java | Teste de virtual threads com alta concorrencia |
 
@@ -149,6 +150,56 @@ javac Main.java
 java Main
 javac TesteJava21.java
 java TesteJava21
+```
+
+### 5) Orquestracao de delivery do ecossistema
+
+Ferramentas desta secao:
+
+| Ferramenta | Arquivo | Responsabilidade |
+|---|---|---|
+| Orquestrador de delivery | [scripts/ecosystem-delivery.ps1](scripts/ecosystem-delivery.ps1) | Lista, valida e executa comandos de delivery cadastrados por aplicacao |
+| Mapa central de comandos | [scripts/ecosystem-delivery-map.json](scripts/ecosystem-delivery-map.json) | Define calendario, status, repositorio e comando de cada aplicacao |
+
+Listar o calendario e o status operacional dos comandos.
+
+```powershell
+.\scripts\ecosystem-delivery.ps1 -Action list
+```
+
+Validar caminhos locais, comandos e tokens necessarios antes da execucao.
+
+```powershell
+.\scripts\ecosystem-delivery.ps1 -Action validate
+```
+
+Executar um delivery especifico em modo simulacao.
+
+```powershell
+.\scripts\ecosystem-delivery.ps1 -Action run -App pdv -DryRun
+```
+
+Aplicacoes com wrapper automatico no orquestrador:
+
+```text
+pdv, oidc, seed, area51, ete, circuito, hub, ink-v2, ru, cso
+```
+
+Exemplos para as apps que antes eram manuais.
+
+```powershell
+.\scripts\ecosystem-delivery.ps1 -Action run -App ete -DryRun
+.\scripts\ecosystem-delivery.ps1 -Action run -App circuito -DryRun
+.\scripts\ecosystem-delivery.ps1 -Action run -App hub -DryRun
+.\scripts\ecosystem-delivery.ps1 -Action run -App ink-v2 -DryRun
+.\scripts\ecosystem-delivery.ps1 -Action run -App ru -DryRun
+.\scripts\ecosystem-delivery.ps1 -Action run -App cso -DryRun
+```
+
+Executar um delivery especifico com argumentos extras (exemplo com tag).
+
+```powershell
+.\scripts\ecosystem-delivery.ps1 -Action run -App oidc -ExtraArgs --tag v1.0.0
 ```
 
 ## Documentacao de governanca

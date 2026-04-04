@@ -1,0 +1,170 @@
+[
+  {
+    "app": "pdv",
+    "displayName": "CaraCore PDV",
+    "category": "prateleira",
+    "roadmapStatus": "pre-lancamento",
+    "roadmapDate": "2026-03-03",
+    "repoPath": "D:\\dev\\caracore-pdv",
+    "commandType": "ps1",
+    "commandPath": "scripts/run_delivery_pdv_to_releases.ps1",
+    "supportsDryRun": true,
+    "dryRunArg": "-DryRun",
+    "requiredTokens": [
+      "TOKEN_DELIVERY_CC_PDV_TO_REALEASES",
+      "GH_TOKEN",
+      "GITHUB_TOKEN"
+    ],
+    "notes": "Publica instalador/artefatos para caracore-pdv-releases"
+  },
+  {
+    "app": "oidc",
+    "displayName": "Reino OIDC",
+    "category": "prateleira",
+    "roadmapStatus": "disponivel",
+    "roadmapDate": "",
+    "repoPath": "D:\\dev\\caracore-oidc",
+    "commandType": "python",
+    "commandPath": "scripts/script_delivery_reino_oidc_to_releases.py",
+    "supportsDryRun": true,
+    "dryRunArg": "--dry-run",
+    "requiredTokens": [
+      "TOKEN_DELIVERY_REINO_OIDC_TO_REALEASES",
+      "GH_TOKEN",
+      "GITHUB_TOKEN"
+    ],
+    "notes": "Publica release binaria para reino-oidc-releases"
+  },
+  {
+    "app": "seed",
+    "displayName": "Cara Core Seed",
+    "category": "prateleira",
+    "roadmapStatus": "disponivel",
+    "roadmapDate": "",
+    "repoPath": "D:\\dev\\caracore-seed",
+    "commandType": "ps1",
+    "commandPath": "scripts/push_public_to_seed_releases.ps1",
+    "supportsDryRun": false,
+    "dryRunArg": "",
+    "requiredTokens": [
+      "TOKEN_DELIVERY_CC_SEED_TO_REALEASES",
+      "GH_TOKEN",
+      "GITHUB_TOKEN"
+    ],
+    "notes": "Espelha conteudo publico da matriz para caracore-seed-releases"
+  },
+  {
+    "app": "area51",
+    "displayName": "Suporte Area 51",
+    "category": "servico",
+    "roadmapStatus": "contratavel",
+    "roadmapDate": "",
+    "repoPath": "D:\\dev\\caracore-area51",
+    "commandType": "ps1",
+    "commandPath": "scripts/run_delivery_area51_to_releases.ps1",
+    "supportsDryRun": false,
+    "dryRunArg": "",
+    "requiredTokens": [
+      "TOKEN_DELIVERY_CC_AREA_51_RELEASES",
+      "GH_TOKEN",
+      "GITHUB_TOKEN"
+    ],
+    "notes": "Sincroniza vitrine area51 para caracore-area51-releases"
+  },
+  {
+    "app": "ete",
+    "displayName": "Minerador 4.0",
+    "category": "prateleira",
+    "roadmapStatus": "disponivel",
+    "roadmapDate": "",
+    "repoPath": "D:\\dev\\caracore-tools",
+    "commandType": "ps1",
+    "commandPath": "scripts/run_delivery_ete_to_releases.ps1",
+    "supportsDryRun": true,
+    "dryRunArg": "-DryRun",
+    "requiredTokens": [
+      "TOKEN_DELIVERY_CHMULATO_ETE_TO_REALEASES",
+      "GH_TOKEN",
+      "GITHUB_TOKEN"
+    ],
+    "notes": "Wrapper automatico para script de release do Minerador 4.0"
+  },
+  {
+    "app": "circuito",
+    "displayName": "Circuito Ferradura",
+    "category": "prateleira",
+    "roadmapStatus": "disponivel",
+    "roadmapDate": "",
+    "repoPath": "D:\\dev\\caracore-tools",
+    "commandType": "ps1",
+    "commandPath": "scripts/run_delivery_circuito_to_releases.ps1",
+    "supportsDryRun": true,
+    "dryRunArg": "-DryRun",
+    "requiredTokens": [
+      "TOKEN_DELIVERY_CC_PYTHON_TO_REALEASES",
+      "GH_TOKEN",
+      "GITHUB_TOKEN"
+    ],
+    "notes": "Wrapper automatico para script de release do Circuito Ferradura"
+  },
+  {
+    "app": "ink-v2",
+    "displayName": "Ink Agenda v2.0.0",
+    "category": "garagem",
+    "roadmapStatus": "em_desenvolvimento",
+    "roadmapDate": "2026-06-26",
+    "repoPath": "D:\\dev\\caracore-tools",
+    "commandType": "ps1",
+    "commandPath": "scripts/run_delivery_ink_to_releases.ps1",
+    "supportsDryRun": true,
+    "dryRunArg": "-DryRun",
+    "requiredTokens": [],
+    "notes": "Wrapper automatico de sincronizacao matriz -> caracore-ink-releases"
+  },
+  {
+    "app": "hub",
+    "displayName": "CaraCore Hub",
+    "category": "garagem",
+    "roadmapStatus": "em_desenvolvimento",
+    "roadmapDate": "2027-04-06",
+    "repoPath": "D:\\dev\\caracore-tools",
+    "commandType": "ps1",
+    "commandPath": "scripts/run_delivery_hub_to_releases.ps1",
+    "supportsDryRun": true,
+    "dryRunArg": "-DryRun",
+    "requiredTokens": [
+      "TOKEN_DELIVERY_CC_HUB_TO_REALEASES",
+      "GH_TOKEN",
+      "GITHUB_TOKEN"
+    ],
+    "notes": "Wrapper automatico para script de release do WAR Hub"
+  },
+  {
+    "app": "ru",
+    "displayName": "RU Soberano",
+    "category": "garagem",
+    "roadmapStatus": "em_desenvolvimento",
+    "roadmapDate": "2027-06-18",
+    "repoPath": "D:\\dev\\caracore-tools",
+    "commandType": "ps1",
+    "commandPath": "scripts/run_delivery_ru_to_releases.ps1",
+    "supportsDryRun": true,
+    "dryRunArg": "-DryRun",
+    "requiredTokens": [],
+    "notes": "Wrapper automatico de sincronizacao matriz -> caracore-ru-releases"
+  },
+  {
+    "app": "cso",
+    "displayName": "Cara Core CSO",
+    "category": "garagem",
+    "roadmapStatus": "planejado",
+    "roadmapDate": "2028-11-08",
+    "repoPath": "D:\\dev\\caracore-tools",
+    "commandType": "ps1",
+    "commandPath": "scripts/run_delivery_cso_to_releases.ps1",
+    "supportsDryRun": true,
+    "dryRunArg": "-DryRun",
+    "requiredTokens": [],
+    "notes": "Wrapper automatico de sincronizacao matriz -> caracore-cso-releases"
+  }
+]
