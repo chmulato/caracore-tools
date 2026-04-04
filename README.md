@@ -204,6 +204,16 @@ Executar um delivery especifico com argumentos extras (exemplo com tag).
 .\scripts\ecosystem-delivery.ps1 -Action run -App oidc -ExtraArgs --tag v1.0.0
 ```
 
+Regra operacional do PDV:
+
+- Publicar EXE e checksums exclusivamente em `https://github.com/chmulato/caracore-pdv-releases`.
+- Nao publicar EXE do PDV na matriz `caracore-site`.
+
+Regra geral do ecossistema:
+
+- Cada app com artefato de release deve usar sua loja dedicada `*-releases`.
+- O site matriz deve conter apenas conteudo institucional, documentacao e links para as lojas.
+
 ### 6) Governanca de releases, roadmap e lojas
 
 Ferramentas desta secao:

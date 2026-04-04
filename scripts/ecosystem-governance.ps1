@@ -104,6 +104,49 @@ function Get-RepoState {
     }
 }
 
+function Find-GitRoot {
+    param([string]$StartPath)
+
+    $p = Resolve-Path $StartPath -ErrorAction SilentlyContinue
+    if (-not $p) { return $null }
+
+    $current = $p.Path
+    while ($current) {
+        if (Test-Path (Join-Path $current ".git")) {
+            return $current
+        }
+        $parent = Split-Path $current -Parent
+        if (-not $parent -or $parent -eq $current) { break }
+        $current = $parent
+    }
+
+    return $null
+}
+
+function Get-ForbiddenMatrixChanges {
+    param([object]$Item)
+
+    if (-not $Item.forbidBinaryDeliveryInMatrix -or -not $Item.matrixForbiddenPaths) {
+        return @()
+    }
+
+    $gitRoot = Find-GitRoot -StartPath $Item.matrixDeliveryPath
+    if (-not $gitRoot) {
+        return @()
+    }
+
+    $changes = @()
+    foreach ($relPath in $Item.matrixForbiddenPaths) {
+        $path = $relPath.Replace('/', '\\')
+        $status = @(git -C $gitRoot status --porcelain -- $path 2>$null)
+        if ($status.Count -gt 0) {
+            $changes += $relPath
+        }
+    }
+
+    return $changes
+}
+
 function Get-AppSnapshot {
     param([object]$Item)
 
@@ -119,6 +162,9 @@ function Get-AppSnapshot {
     $release = Get-RepoState -Path $Item.releaseRepoPath
     $matrixExists = Test-Path $Item.matrixDeliveryPath
     $releaseDocsExists = Test-Path (Join-Path $Item.releaseRepoPath $Item.releaseDocsPath)
+    $forbiddenMatrixChanges = Get-ForbiddenMatrixChanges -Item $Item
+    $releaseRepoLeaf = Split-Path $Item.releaseRepoPath -Leaf
+    $usesDedicatedReleasesRepo = $releaseRepoLeaf -like "*-releases"
 
     $commandExists = $false
     if ($delivery -and $delivery.commandPath -and $delivery.repoPath) {
@@ -136,6 +182,11 @@ function Get-AppSnapshot {
         token = $token
         matrixExists = $matrixExists
         releaseDocsExists = $releaseDocsExists
+        releaseRepoLeaf = $releaseRepoLeaf
+        usesDedicatedReleasesRepo = $usesDedicatedReleasesRepo
+        releaseChannelPolicy = $Item.releaseChannelPolicy
+        forbiddenMatrixChanges = $forbiddenMatrixChanges
+        officialReleaseRepo = $Item.officialReleaseRepo
         sourceDirty = $source.dirty
         releaseDirty = $release.dirty
         sourceBranch = $source.branch
@@ -166,6 +217,29 @@ function Build-GateResult {
         name = "Automacao"
         status = if ($Snapshot.commandExists) { "APROVADO" } else { "BLOQUEADO" }
         detail = if ($Snapshot.commandExists) { "Comando de delivery encontrado no ecossistema." } else { "Comando de delivery nao encontrado." }
+        critical = $true
+    }
+
+    $checks += [pscustomobject]@{
+        name = "Canal Oficial de Release"
+        status = if ($Snapshot.usesDedicatedReleasesRepo) { "APROVADO" } else { "BLOQUEADO" }
+        detail = if ($Snapshot.usesDedicatedReleasesRepo) {
+            "Repositorio de release dedicado confirmado: " + $Snapshot.releaseRepoLeaf
+        } else {
+            "Repositorio de release fora do padrao *-releases: " + $Snapshot.releaseRepoLeaf
+        }
+        critical = $true
+    }
+
+    $hasForbiddenMatrixChanges = ($Snapshot.forbiddenMatrixChanges -and $Snapshot.forbiddenMatrixChanges.Count -gt 0)
+    $checks += [pscustomobject]@{
+        name = "Politica de Artefato na Matriz"
+        status = if ($hasForbiddenMatrixChanges) { "BLOQUEADO" } else { "APROVADO" }
+        detail = if ($hasForbiddenMatrixChanges) {
+            "Arquivos de artefato alterados na matriz: " + ($Snapshot.forbiddenMatrixChanges -join ", ") + ". Publique binarios apenas na loja oficial: " + $Snapshot.officialReleaseRepo
+        } else {
+            "Matriz sem alteracoes de artefatos proibidos para este app."
+        }
         critical = $true
     }
 
@@ -222,6 +296,17 @@ function Write-GateMarkdown {
     $lines += "- Command exists: " + $Gate.snapshot.commandExists
     $lines += "- Matrix exists: " + $Gate.snapshot.matrixExists
     $lines += "- Release docs exists: " + $Gate.snapshot.releaseDocsExists
+    $lines += "- Release channel policy: " + $Gate.snapshot.releaseChannelPolicy
+    $lines += "- Release repo leaf: " + $Gate.snapshot.releaseRepoLeaf
+    $lines += "- Uses dedicated -releases repo: " + $Gate.snapshot.usesDedicatedReleasesRepo
+    if ($Gate.snapshot.forbiddenMatrixChanges -and $Gate.snapshot.forbiddenMatrixChanges.Count -gt 0) {
+        $lines += "- Forbidden matrix changes: " + ($Gate.snapshot.forbiddenMatrixChanges -join ", ")
+    } else {
+        $lines += "- Forbidden matrix changes: none"
+    }
+    if ($Gate.snapshot.officialReleaseRepo) {
+        $lines += "- Official release repo: " + $Gate.snapshot.officialReleaseRepo
+    }
     $lines += "- Source dirty files: " + $Gate.snapshot.sourceDirty
     $lines += "- Release dirty files: " + $Gate.snapshot.releaseDirty
     $lines += ""

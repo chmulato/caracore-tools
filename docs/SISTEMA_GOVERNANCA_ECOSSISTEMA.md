@@ -105,3 +105,20 @@ Padrao de arquivo:
 - Sempre executar `-DryRun` antes de delivery efetivo.
 - Usar commits atomicos por app e por repositorio.
 - Publicar somente com trilha de evidencia do gate.
+
+## Regra de artefatos binarios por canal
+
+Diretriz obrigatoria para o PDV:
+
+- O executavel e checksums do PDV nao devem ser publicados pela matriz (`caracore-site`).
+- O delivery de binarios do PDV deve ocorrer somente na loja oficial de releases:
+	`https://github.com/chmulato/caracore-pdv-releases`.
+- A matriz deve publicar apenas conteudo institucional, documentacao e links para a loja.
+
+O gate de governanca bloqueia publicacao quando detectar alteracao em artefatos proibidos na matriz do PDV.
+
+Regra geral do ecossistema:
+
+- Cada aplicacao com entrega de artefato deve publicar no seu repositorio dedicado com sufixo `-releases`.
+- O repositorio de matriz (`caracore-site`) permanece como canal institucional de apresentacao, documentacao e direcionamento.
+- O gate valida conformidade do canal oficial por app (checagem de padrao `*-releases`).

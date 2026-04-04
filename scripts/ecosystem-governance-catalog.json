@@ -10,7 +10,15 @@
         "roadmapDate":  "2026-03-03",
         "category":  "prateleira",
         "sourceBranchTarget":  "master",
-        "releaseBranchTarget":  "master"
+        "releaseBranchTarget":  "master",
+        "forbidBinaryDeliveryInMatrix":  true,
+        "officialReleaseRepo":  "https://github.com/chmulato/caracore-pdv-releases",
+        "matrixForbiddenPaths":  [
+                                     "delivery/pdv/artifacts/CaraCorePDV.exe",
+                                     "delivery/pdv/artifacts/checksum.sha256",
+                                     "delivery/pdv/artifacts/checksum.md5"
+                                 ],
+        "releaseChannelPolicy":  "dedicated-releases-repo"
     },
     {
         "app":  "oidc",
@@ -23,7 +31,8 @@
         "roadmapDate":  "",
         "category":  "prateleira",
         "sourceBranchTarget":  "master",
-        "releaseBranchTarget":  "master"
+        "releaseBranchTarget":  "master",
+        "releaseChannelPolicy":  "dedicated-releases-repo"
     },
     {
         "app":  "seed",
@@ -36,7 +45,8 @@
         "roadmapDate":  "",
         "category":  "prateleira",
         "sourceBranchTarget":  "main",
-        "releaseBranchTarget":  "master"
+        "releaseBranchTarget":  "master",
+        "releaseChannelPolicy":  "dedicated-releases-repo"
     },
     {
         "app":  "area51",
@@ -49,7 +59,8 @@
         "roadmapDate":  "",
         "category":  "servico",
         "sourceBranchTarget":  "master",
-        "releaseBranchTarget":  "master"
+        "releaseBranchTarget":  "master",
+        "releaseChannelPolicy":  "dedicated-releases-repo"
     },
     {
         "app":  "ete",
@@ -62,7 +73,8 @@
         "roadmapDate":  "",
         "category":  "prateleira",
         "sourceBranchTarget":  "master",
-        "releaseBranchTarget":  "main"
+        "releaseBranchTarget":  "main",
+        "releaseChannelPolicy":  "dedicated-releases-repo"
     },
     {
         "app":  "circuito",
@@ -75,7 +87,8 @@
         "roadmapDate":  "",
         "category":  "prateleira",
         "sourceBranchTarget":  "ferradura",
-        "releaseBranchTarget":  "master"
+        "releaseBranchTarget":  "master",
+        "releaseChannelPolicy":  "dedicated-releases-repo"
     },
     {
         "app":  "ink-v2",
@@ -88,7 +101,8 @@
         "roadmapDate":  "2026-06-26",
         "category":  "garagem",
         "sourceBranchTarget":  "master",
-        "releaseBranchTarget":  "main"
+        "releaseBranchTarget":  "main",
+        "releaseChannelPolicy":  "dedicated-releases-repo"
     },
     {
         "app":  "hub",
@@ -101,7 +115,8 @@
         "roadmapDate":  "2027-04-06",
         "category":  "garagem",
         "sourceBranchTarget":  "main",
-        "releaseBranchTarget":  "master"
+        "releaseBranchTarget":  "master",
+        "releaseChannelPolicy":  "dedicated-releases-repo"
     },
     {
         "app":  "ru",
@@ -114,7 +129,8 @@
         "roadmapDate":  "2027-06-18",
         "category":  "garagem",
         "sourceBranchTarget":  "java_21",
-        "releaseBranchTarget":  "master"
+        "releaseBranchTarget":  "master",
+        "releaseChannelPolicy":  "dedicated-releases-repo"
     },
     {
         "app":  "cso",
@@ -127,6 +143,7 @@
         "roadmapDate":  "2028-11-08",
         "category":  "garagem",
         "sourceBranchTarget":  "main",
-        "releaseBranchTarget":  "main"
+        "releaseBranchTarget":  "main",
+        "releaseChannelPolicy":  "dedicated-releases-repo"
     }
 ]
