@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plano de Vitrine Padrão — Lojas Cara Core 2026</title>
+  <meta name="description" content="Plano de qualidade de entrega e vitrine padrão para todos os repositórios *-releases do ecossistema Cara Core Informática. Auditoria, padrão e itens de ação por loja.">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --panel: #161b22;
+      --panel2: #1c2128;
+      --text: #e6edf3;
+      --muted: #c9d1d9;
+      --quiet: #8b949e;
+      --gold: #ffd700;
+      --green: #3fb950;
+      --red: #f85149;
+      --yellow: #d29922;
+      --blue: #58a6ff;
+      --border: rgba(255,255,255,0.10);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+    }
+    main { max-width: 1060px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+    .topline {
+      color: var(--gold); font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.06em; font-size: 0.8rem; margin-bottom: 0.6rem;
+    }
+    h1 {
+      margin: 0 0 0.5rem; color: var(--gold); font-size: 1.6rem;
+      border-bottom: 1px solid rgba(255,215,0,0.25); padding-bottom: 0.5rem;
+    }
+    .meta { color: var(--quiet); font-size: 0.88rem; margin-bottom: 1.5rem; }
+    h2 { margin: 1.8rem 0 0.6rem; font-size: 1.15rem; color: var(--gold); border-left: 3px solid var(--gold); padding-left: 0.7rem; }
+    h3 { margin: 1.1rem 0 0.4rem; font-size: 1rem; color: var(--blue); }
+    p, li { color: var(--muted); }
+    .card {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: 10px; padding: 1rem 1.2rem; margin-top: 1rem;
+    }
+    code, pre {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.9rem;
+    }
+    code { background: rgba(255,255,255,0.08); padding: 0.15em 0.4em; border-radius: 4px; }
+    pre {
+      background: #0b1220; border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px; padding: 0.9rem 1rem; overflow-x: auto; color: #dbe8ff;
+    }
+    ul, ol { margin: 0.4rem 0 0.4rem; padding-left: 1.3rem; }
+    li { margin-bottom: 0.2rem; }
+    .subtle { color: var(--quiet); font-size: 0.88rem; }
+
+    /* Audit table */
+    .audit-table { width: 100%; border-collapse: collapse; margin-top: 0.8rem; font-size: 0.86rem; }
+    .audit-table th {
+      background: var(--panel2); color: var(--gold); font-weight: 600;
+      padding: 0.5rem 0.6rem; text-align: left; border-bottom: 1px solid var(--border);
+      white-space: nowrap;
+    }
+    .audit-table td {
+      padding: 0.4rem 0.6rem; border-bottom: 1px solid var(--border);
+      color: var(--muted); vertical-align: middle;
+    }
+    .audit-table tr:last-child td { border-bottom: none; }
+    .ok  { color: var(--green); font-weight: 600; text-align: center; }
+    .fail { color: var(--red);   font-weight: 600; text-align: center; }
+    .warn { color: var(--yellow);font-weight: 600; text-align: center; }
+    .loja-name { color: var(--text); font-weight: 600; white-space: nowrap; }
+
+    /* Priority badges */
+    .p1 { display: inline-block; background: rgba(248,81,73,0.15);  color: var(--red);    border: 1px solid var(--red);    border-radius: 4px; padding: 0.1em 0.5em; font-size: 0.78rem; font-weight: 700; }
+    .p2 { display: inline-block; background: rgba(210,153,34,0.15); color: var(--yellow); border: 1px solid var(--yellow); border-radius: 4px; padding: 0.1em 0.5em; font-size: 0.78rem; font-weight: 700; }
+    .p3 { display: inline-block; background: rgba(63,185,80,0.12);  color: var(--green);  border: 1px solid var(--green);  border-radius: 4px; padding: 0.1em 0.5em; font-size: 0.78rem; font-weight: 700; }
+
+    /* Action items */
+    .action-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 0.8rem; margin-top: 0.8rem; }
+    .action-card { background: var(--panel); border: 1px solid var(--border); border-radius: 8px; padding: 0.9rem 1rem; }
+    .action-card h4 { margin: 0 0 0.4rem; font-size: 0.95rem; color: var(--text); }
+    .action-card ul { margin: 0; padding-left: 1.1rem; }
+    .action-card li { font-size: 0.88rem; margin-bottom: 0.15rem; }
+    .action-card .repo-tag { font-size: 0.78rem; color: var(--quiet); margin-bottom: 0.5rem; display: block; }
+  </style>
+</head>
+<body>
+<main>
+  <p class="topline">Cara Core Tools · Governança de Lojas</p>
+  <h1>Plano de Vitrine Padrão — Lojas Cara Core 2026</h1>
+  <p class="meta">Gerado em: 05 de abril de 2026 · Auditoria: 11 repositórios <code>*-releases</code></p>
+
+  <p>Este documento define o <strong>padrão de qualidade de entrega</strong> para todas as lojas do ecossistema e lista, por repositório, os itens de ação necessários para conformidade completa. O objetivo é que qualquer usuário que acessar uma loja <code>*.caracore.com.br</code> encontre a mesma experiência de vitrine: consistente, clara e com caminho FREE disponível quando aplicável.</p>
+
+  <!-- ============================================================ -->
+  <h2>1. Auditoria de conformidade (snapshot 2026-04-05)</h2>
+
+  <p>Legenda: <span class="ok">✓</span> presente · <span class="fail">✗</span> ausente · <span class="warn">!</span> problema técnico</p>
+
+  <div class="card" style="overflow-x:auto;">
+    <table class="audit-table">
+      <thead>
+        <tr>
+          <th>Loja</th>
+          <th>base href</th>
+          <th>hero-cta</th>
+          <th>CSS inline</th>
+          <th>Bootstrap nav</th>
+          <th>download.html</th>
+          <th>tecnologia.html</th>
+          <th>licenca-uso.html</th>
+          <th>wiki/index.html</th>
+          <th>Prioridade</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="loja-name">area51-releases</td>
+          <td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td>
+          <td class="ok">✓</td><td class="fail">✗</td><td class="ok">✓</td><td class="ok">✓</td>
+          <td><span class="p3">P3</span></td>
+        </tr>
+        <tr>
+          <td class="loja-name">circuito-releases</td>
+          <td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="warn">!</td>
+          <td class="ok">✓</td><td class="fail">✗</td><td class="ok">✓</td><td class="ok">✓</td>
+          <td><span class="p3">P3</span></td>
+        </tr>
+        <tr>
+          <td class="loja-name">cso-releases</td>
+          <td class="fail">✗</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td>
+          <td class="ok">✓</td><td class="fail">✗</td><td class="fail">✗</td><td class="ok">✓</td>
+          <td><span class="p2">P2</span></td>
+        </tr>
+        <tr>
+          <td class="loja-name">ete-releases</td>
+          <td class="ok">✓</td><td class="fail">✗</td><td class="warn">!</td><td class="ok">✓</td>
+          <td class="ok">✓</td><td class="fail">✗</td><td class="ok">✓</td><td class="ok">✓</td>
+          <td><span class="p1">P1</span></td>
+        </tr>
+        <tr>
+          <td class="loja-name">hub-releases</td>
+          <td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td>
+          <td class="ok">✓</td><td class="ok">✓</td><td class="fail">✗</td><td class="ok">✓</td>
+          <td><span class="p3">P3</span></td>
+        </tr>
+        <tr>
+          <td class="loja-name">ink-releases</td>
+          <td class="fail">✗</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td>
+          <td class="ok">✓</td><td class="ok">✓</td><td class="fail">✗</td><td class="ok">✓</td>
+          <td><span class="p2">P2</span></td>
+        </tr>
+        <tr>
+          <td class="loja-name">mkt-releases</td>
+          <td class="fail">✗</td><td class="fail">✗</td><td class="ok">✓</td><td class="ok">✓</td>
+          <td class="fail">✗</td><td class="ok">✓</td><td class="fail">✗</td><td class="ok">✓</td>
+          <td><span class="p1">P1</span></td>
+        </tr>
+        <tr>
+          <td class="loja-name">oidc-releases</td>
+          <td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="warn">!</td>
+          <td class="ok">✓</td><td class="fail">✗</td><td class="ok">✓</td><td class="ok">✓</td>
+          <td><span class="p2">P2</span></td>
+        </tr>
+        <tr>
+          <td class="loja-name">pdv-releases</td>
+          <td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td>
+          <td class="ok">✓</td><td class="ok">✓</td><td class="fail">✗</td><td class="ok">✓</td>
+          <td><span class="p3">P3</span></td>
+        </tr>
+        <tr>
+          <td class="loja-name">ru-releases</td>
+          <td class="fail">✗</td><td class="ok">✓</td><td class="ok">✓</td><td class="ok">✓</td>
+          <td class="ok">✓</td><td class="fail">✗</td><td class="ok">✓</td><td class="ok">✓</td>
+          <td><span class="p2">P2</span></td>
+        </tr>
+        <tr>
+          <td class="loja-name">seed-releases</td>
+          <td class="ok">✓</td><td class="fail">✗</td><td class="ok">✓</td><td class="ok">✓</td>
+          <td class="ok">✓</td><td class="ok">✓</td><td class="fail">✗</td><td class="ok">✓</td>
+          <td><span class="p2">P2</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card">
+    <h3>Legenda de Bootstrap nav</h3>
+    <ul>
+      <li><strong>circuito-releases</strong>: usa <code>bootstrap.min.css</code> do vendor local (aceitável para componentes), mas o <code>index.html</code> não usa classes Bootstrap para o layout principal — baixo impacto.</li>
+      <li><strong>oidc-releases</strong>: usa Bootstrap extensivamente para <code>navbar</code> e layout de coluna — padrão divergente do restante do ecossistema; substituição recomendada a médio prazo.</li>
+    </ul>
+  </div>
+
+  <!-- ============================================================ -->
+  <h2>2. Padrão canônico da vitrine (Vitrine Padrão v2)</h2>
+
+  <div class="card">
+    <h3>2.1 Páginas obrigatórias por loja</h3>
+    <ul>
+      <li><code>docs/index.html</code> — vitrine principal (hero + cards + nav-grid)</li>
+      <li><code>docs/download.html</code> — artefatos, binários ou página "em breve" para apps não lançados</li>
+      <li><code>docs/canal-feedback.html</code> — canal de suporte e feedback</li>
+      <li><code>docs/tecnologia.html</code> — stack técnica, demonstração ou vídeo</li>
+      <li><code>docs/licenca-uso.html</code> — termos de licença do produto</li>
+      <li><code>docs/wiki/index.html</code> — hub de documentação</li>
+    </ul>
+    <p class="subtle">Lojas de uso interno (Seed, MKT) podem substituir <code>download.html</code> por uma página de contexto informativa, mas a página deve existir.</p>
+  </div>
+
+  <div class="card">
+    <h3>2.2 Estrutura canônica do <code>index.html</code></h3>
+    <pre>&lt;!DOCTYPE html&gt;
+&lt;html lang="pt-BR"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;base href="https://[slug].caracore.com.br/"&gt;
+  &lt;title&gt;[NomeProduto] — Loja | [tagline curta] | Cara Core Informática&lt;/title&gt;
+  &lt;meta name="description" content="[Descrição 160 chars máx.]"&gt;
+  &lt;!-- Fontes: Inter por padrão; produtos com identidade própria podem usar fonte adicional --&gt;
+  &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+  &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+  &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+  &lt;!-- CSS: app-specific antes dos institucionais --&gt;
+  &lt;link rel="stylesheet" href="assets/css/loja.css"&gt;
+  &lt;link rel="stylesheet" href="assets/css/[produto].css"&gt;   &lt;!-- opcional --&gt;
+  &lt;link rel="stylesheet" href="/assets/caracore-core-typography.css"&gt;
+  &lt;link rel="stylesheet" href="/assets/caracore-institutional-components.css"&gt;
+  &lt;link rel="stylesheet" href="assets/evolution-status/evolution-status.css"&gt;
+&lt;/head&gt;
+&lt;body class="page-index cc-i-page"&gt;
+  &lt;div class="wrapper"&gt;
+
+    &lt;!-- 1. Breadcrumb --&gt;
+    &lt;nav class="breadcrumb" aria-label="Navegação"&gt;
+      &lt;a href="index.html"&gt;[NomeProduto] — Loja&lt;/a&gt;
+      &lt;span&gt; · &lt;/span&gt;
+      &lt;span&gt;Cara Core Informática&lt;/span&gt;
+    &lt;/nav&gt;
+
+    &lt;!-- 2. Banner de lançamento (opcional, apenas para apps pré-lançados) --&gt;
+    &lt;section class="[produto]-launch-banner" aria-label="Status de lançamento"&gt;
+      &lt;p class="[produto]-launch-label"&gt;Lançamento oficial&lt;/p&gt;
+      &lt;p class="[produto]-launch-date"&gt;[data de lançamento e descrição breve]&lt;/p&gt;
+    &lt;/section&gt;
+
+    &lt;!-- 3. Hero CTA — obrigatório --&gt;
+    &lt;section class="hero-cta" aria-label="O que é o [NomeProduto]?"&gt;
+      &lt;p class="hero-label"&gt;[Categoria do produto]&lt;/p&gt;
+      &lt;h2 class="hero-title"&gt;[Proposta de valor em uma frase]&lt;/h2&gt;
+      &lt;p class="hero-desc"&gt;[Descrição com negrito nos diferenciais chave. Mencionar FREE quando aplicável.]&lt;/p&gt;
+      &lt;div class="cta-buttons"&gt;
+        &lt;a href="download.html" class="cta-btn cta-btn-primary"&gt;[CTA principal — FREE ou demonstração]&lt;/a&gt;
+        &lt;a href="tecnologia.html" class="cta-btn cta-btn-secondary"&gt;[CTA secundário]&lt;/a&gt;
+        &lt;a href="wiki/index.html" class="cta-btn cta-btn-secondary"&gt;Wiki da aplicação&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;!-- 4. Header --&gt;
+    &lt;header&gt;
+      &lt;h1&gt;[NomeProduto]&lt;/h1&gt;
+      &lt;p class="subtitle"&gt;[Subtítulo descritivo 1–2 linhas]&lt;/p&gt;
+    &lt;/header&gt;
+
+    &lt;!-- 5. Cards de conteúdo --&gt;
+    &lt;section class="methodology" aria-label="Sobre o produto"&gt;
+      &lt;div class="card"&gt;&lt;h2&gt;O que é o [NomeProduto]?&lt;/h2&gt;&lt;p&gt;...&lt;/p&gt;&lt;/div&gt;
+      &lt;div class="card card-differential"&gt;&lt;h2&gt;Diferencial principal&lt;/h2&gt;&lt;p&gt;...&lt;/p&gt;&lt;/div&gt;
+      &lt;!-- opcional: FREE/Premium, modelo comercial --&gt;
+    &lt;/section&gt;
+
+    &lt;!-- 6. Nav-grid de links --&gt;
+    &lt;p class="nav-section-title"&gt;Links&lt;/p&gt;
+    &lt;div class="nav-grid"&gt;
+      &lt;a href="download.html" class="nav-card" title="Download"&gt;
+        &lt;span class="icon" aria-hidden="true"&gt;&lt;!-- SVG download --&gt;&lt;/span&gt;
+        &lt;h3&gt;Download&lt;/h3&gt;&lt;p&gt;[descrição]&lt;/p&gt;
+      &lt;/a&gt;
+      &lt;a href="tecnologia.html" class="nav-card" title="Tecnologia"&gt;
+        &lt;span class="icon" aria-hidden="true"&gt;&lt;!-- SVG tech --&gt;&lt;/span&gt;
+        &lt;h3&gt;Tecnologia&lt;/h3&gt;&lt;p&gt;[descrição]&lt;/p&gt;
+      &lt;/a&gt;
+      &lt;a href="canal-feedback.html" class="nav-card" title="Feedback"&gt;
+        &lt;span class="icon" aria-hidden="true"&gt;&lt;!-- SVG chat --&gt;&lt;/span&gt;
+        &lt;h3&gt;Canal de feedback&lt;/h3&gt;&lt;p&gt;Suporte e contato.&lt;/p&gt;
+      &lt;/a&gt;
+      &lt;a href="wiki/index.html" class="nav-card" title="Wiki"&gt;
+        &lt;span class="icon" aria-hidden="true"&gt;&lt;!-- SVG book --&gt;&lt;/span&gt;
+        &lt;h3&gt;Wiki da aplicação&lt;/h3&gt;&lt;p&gt;[descrição]&lt;/p&gt;
+      &lt;/a&gt;
+      &lt;a href="licenca-uso.html" class="nav-card" title="Licença"&gt;
+        &lt;span class="icon" aria-hidden="true"&gt;&lt;!-- SVG shield --&gt;&lt;/span&gt;
+        &lt;h3&gt;Licença de uso&lt;/h3&gt;&lt;p&gt;[descrição]&lt;/p&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;&lt;!-- /.wrapper --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+  </div>
+
+  <div class="card">
+    <h3>2.3 Regra FREE / Premium no hero-cta</h3>
+    <p>Quando o produto possui caminho gratuito, o <strong>primeiro CTA</strong> deve ser o FREE:</p>
+    <pre>&lt;!-- CTA FREE explícito --&gt;
+&lt;div class="cta-buttons"&gt;
+  &lt;a href="download.html" class="cta-btn cta-btn-primary"&gt;Baixar FREE — [limite ou escopo]&lt;/a&gt;
+  &lt;a href="download.html#premium" class="cta-btn cta-btn-secondary"&gt;Premium — [proposta de valor]&lt;/a&gt;
+&lt;/div&gt;
+
+&lt;!-- hero-desc deve mencionar e nomear o que é free: --&gt;
+&lt;p class="hero-desc"&gt;
+  &lt;strong&gt;FREE:&lt;/strong&gt; [o que está disponível sem custo].
+  &lt;strong&gt;Premium:&lt;/strong&gt; [o que adiciona o Premium]. [preço].
+&lt;/p&gt;</pre>
+    <h3>Mapeamento FREE por produto</h3>
+    <table class="audit-table">
+      <thead>
+        <tr><th>Produto</th><th>Modelo</th><th>FREE</th><th>Pago</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="loja-name">PDV</td><td>Licenciamento de ativo</td><td>100 vendas de degustação</td><td>Premium — sem limite de vendas</td></tr>
+        <tr><td class="loja-name">OIDC (Reino)</td><td>Material educacional free</td><td>Todo o conteúdo do Reino</td><td>—</td></tr>
+        <tr><td class="loja-name">Circuito</td><td>Free PF / Licença escola</td><td>Curso completo HTML (PF)</td><td>R$ 5,00/aluno/mês (escolas)</td></tr>
+        <tr><td class="loja-name">RU Soberano</td><td>Free + Pago</td><td>Ambientação RETRO sala de aula</td><td>R$ 29,90 — simulador de reator</td></tr>
+        <tr><td class="loja-name">ETE</td><td>Free educacional</td><td>Apostila + simulador</td><td>—</td></tr>
+        <tr><td class="loja-name">Hub</td><td>Licenciamento de ativo</td><td>Demo/degustação a definir</td><td>Licença operacional</td></tr>
+        <tr><td class="loja-name">Ink</td><td>Pós-lançamento a definir</td><td>A definir no lançamento (26/06/2026)</td><td>Premium</td></tr>
+        <tr><td class="loja-name">CSO</td><td>Pós-lançamento a definir</td><td>A definir no lançamento (08/11/2028)</td><td>Premium</td></tr>
+        <tr><td class="loja-name">Area51</td><td>Serviço + implementação</td><td>—</td><td>Serviço por escopo contratado</td></tr>
+        <tr><td class="loja-name">Seed</td><td>Interno</td><td>N/A — uso interno</td><td>N/A</td></tr>
+        <tr><td class="loja-name">MKT</td><td>Interno</td><td>N/A — uso interno</td><td>N/A</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ============================================================ -->
+  <h2>3. Itens de ação por loja e prioridade</h2>
+
+  <h3><span class="p1">P1 — Crítico</span> · Problemas estruturais ativos</h3>
+  <div class="action-grid">
+
+    <div class="action-card" style="border-left: 3px solid var(--red);">
+      <h4>ete-releases</h4>
+      <span class="repo-tag">caracore-ete-releases/docs/index.html</span>
+      <ul>
+        <li>Extrair CSS inline (<code>&lt;style&gt;</code>) do <code>index.html</code> para <code>assets/css/loja.css</code></li>
+        <li>Adicionar seção <code>hero-cta</code> com CTA FREE (apostila)</li>
+        <li>Criar <code>tecnologia.html</code> (stack Python, libs científicas)</li>
+      </ul>
+    </div>
+
+    <div class="action-card" style="border-left: 3px solid var(--red);">
+      <h4>mkt-releases</h4>
+      <span class="repo-tag">caracore-mkt-releases/docs/</span>
+      <ul>
+        <li>Adicionar <code>&lt;base href="https://mkt.caracore.com.br/"&gt;</code></li>
+        <li>Adicionar seção <code>hero-cta</code> no <code>index.html</code></li>
+        <li>Criar <code>download.html</code> — página "Aplicação interna — não disponível"</li>
+        <li>Criar <code>licenca-uso.html</code></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h3 style="margin-top:1.4rem;"><span class="p2">P2 — Importante</span> · Lacunas de páginas e tags</h3>
+  <div class="action-grid">
+
+    <div class="action-card" style="border-left: 3px solid var(--yellow);">
+      <h4>cso-releases</h4>
+      <span class="repo-tag">caracore-cso-releases/docs/</span>
+      <ul>
+        <li>Adicionar <code>&lt;base href="https://cso.caracore.com.br/"&gt;</code></li>
+        <li>Criar <code>licenca-uso.html</code></li>
+        <li>Criar <code>tecnologia.html</code> (JavaFX 25, stack do CSO)</li>
+      </ul>
+    </div>
+
+    <div class="action-card" style="border-left: 3px solid var(--yellow);">
+      <h4>ink-releases</h4>
+      <span class="repo-tag">caracore-ink-releases/docs/</span>
+      <ul>
+        <li>Adicionar <code>&lt;base href="https://ink.caracore.com.br/"&gt;</code></li>
+        <li>Criar <code>licenca-uso.html</code></li>
+      </ul>
+    </div>
+
+    <div class="action-card" style="border-left: 3px solid var(--yellow);">
+      <h4>ru-releases</h4>
+      <span class="repo-tag">caracore-ru-releases/docs/</span>
+      <ul>
+        <li>Adicionar <code>&lt;base href="https://ru.caracore.com.br/"&gt;</code></li>
+        <li>Criar <code>tecnologia.html</code></li>
+      </ul>
+    </div>
+
+    <div class="action-card" style="border-left: 3px solid var(--yellow);">
+      <h4>oidc-releases</h4>
+      <span class="repo-tag">caracore-oidc-releases/docs/</span>
+      <ul>
+        <li>Criar <code>tecnologia.html</code></li>
+        <li>Médio prazo: migrar navbar Bootstrap para padrão <code>breadcrumb + nav-grid</code></li>
+      </ul>
+    </div>
+
+    <div class="action-card" style="border-left: 3px solid var(--yellow);">
+      <h4>seed-releases</h4>
+      <span class="repo-tag">caracore-seed-releases/docs/</span>
+      <ul>
+        <li>Adicionar seção <code>hero-cta</code> no <code>index.html</code></li>
+        <li>Criar <code>licenca-uso.html</code></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <h3 style="margin-top:1.4rem;"><span class="p3">P3 — Melhoria</span> · Completar vitrine</h3>
+  <div class="action-grid">
+
+    <div class="action-card" style="border-left: 3px solid var(--green);">
+      <h4>area51-releases</h4>
+      <ul><li>Criar <code>tecnologia.html</code> (Python/baseline OIDC)</li></ul>
+    </div>
+
+    <div class="action-card" style="border-left: 3px solid var(--green);">
+      <h4>circuito-releases</h4>
+      <ul><li>Criar <code>tecnologia.html</code></li></ul>
+    </div>
+
+    <div class="action-card" style="border-left: 3px solid var(--green);">
+      <h4>hub-releases</h4>
+      <ul><li>Criar <code>licenca-uso.html</code></li></ul>
+    </div>
+
+    <div class="action-card" style="border-left: 3px solid var(--green);">
+      <h4>pdv-releases</h4>
+      <ul><li>Criar <code>licenca-uso.html</code></li></ul>
+    </div>
+
+  </div>
+
+  <!-- ============================================================ -->
+  <h2>4. Regras de qualidade — checklist por loja</h2>
+
+  <div class="card">
+    <p>Antes de marcar uma loja como <strong>conforme</strong>, verificar:</p>
+    <ol>
+      <li><code>&lt;meta charset="UTF-8"&gt;</code> em todas as páginas.</li>
+      <li><code>&lt;base href="https://[slug].caracore.com.br/"&gt;</code> em todas as páginas.</li>
+      <li><code>&lt;body class="page-index cc-i-page"&gt;</code> (ou <code>cc-i-page</code> sem <code>page-index</code> em subpáginas).</li>
+      <li>Nenhum CSS inline (<code>&lt;style&gt;</code>) no HTML — todo estilo em arquivo externo.</li>
+      <li>Seção <code>hero-cta</code> presente com: label, título, desc e pelo menos um CTA.</li>
+      <li>Breadcrumb institucional funcional.</li>
+      <li>Todas as 6 páginas canônicas existem: <code>index, download, canal-feedback, tecnologia, licenca-uso, wiki/index</code>.</li>
+      <li>Nav-grid com links para todas as páginas canônicas.</li>
+      <li>FREE explicitado no hero-cta (quando o produto o tem).</li>
+      <li>Sem links externos clicáveis no domínio da loja (política vigente: <code>*-releases</code> autocontidos).</li>
+      <li><code>CNAME</code>, <code>.nojekyll</code> presentes em <code>docs/</code>.</li>
+      <li>Nenhum texto com mojibake (<code>Ã§</code>, <code>â€"</code>, <code>Ã£</code>).</li>
+    </ol>
+  </div>
+
+  <!-- ============================================================ -->
+  <h2>5. Ordem de execução recomendada</h2>
+
+  <div class="card">
+    <ol>
+      <li><span class="p1">P1</span> <strong>ete-releases</strong> — extrair CSS inline + adicionar hero-cta + criar tecnologia.html</li>
+      <li><span class="p1">P1</span> <strong>mkt-releases</strong> — base href + hero-cta + download.html + licenca-uso.html</li>
+      <li><span class="p2">P2</span> <strong>cso-releases</strong> — base href + licenca-uso.html + tecnologia.html</li>
+      <li><span class="p2">P2</span> <strong>seed-releases</strong> — hero-cta + licenca-uso.html</li>
+      <li><span class="p2">P2</span> <strong>ink-releases</strong> — base href + licenca-uso.html</li>
+      <li><span class="p2">P2</span> <strong>ru-releases</strong> — base href + tecnologia.html</li>
+      <li><span class="p2">P2</span> <strong>oidc-releases</strong> — tecnologia.html (migração de nav: backlog)</li>
+      <li><span class="p3">P3</span> <strong>area51, circuito</strong> — tecnologia.html</li>
+      <li><span class="p3">P3</span> <strong>hub, pdv</strong> — licenca-uso.html</li>
+    </ol>
+    <p class="subtle">Commits atômicos por loja. Mensagem sugerida: <code>feat(loja): vitrine-padrao — [lista de itens adicionados]</code></p>
+  </div>
+
+  <!-- ============================================================ -->
+  <h2>6. Score de conformidade atual (snapshot)</h2>
+  <div class="card">
+    <table class="audit-table">
+      <thead>
+        <tr><th>Loja</th><th>Itens OK (de 12)</th><th>Score</th><th>Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="loja-name">pdv-releases</td><td>10/12</td><td>83 %</td><td class="warn">Quase lá</td></tr>
+        <tr><td class="loja-name">hub-releases</td><td>10/12</td><td>83 %</td><td class="warn">Quase lá</td></tr>
+        <tr><td class="loja-name">area51-releases</td><td>10/12</td><td>83 %</td><td class="warn">Quase lá</td></tr>
+        <tr><td class="loja-name">circuito-releases</td><td>9/12</td><td>75 %</td><td class="warn">Incompleto</td></tr>
+        <tr><td class="loja-name">ink-releases</td><td>9/12</td><td>75 %</td><td class="warn">Incompleto</td></tr>
+        <tr><td class="loja-name">ru-releases</td><td>9/12</td><td>75 %</td><td class="warn">Incompleto</td></tr>
+        <tr><td class="loja-name">oidc-releases</td><td>9/12</td><td>75 %</td><td class="warn">Incompleto</td></tr>
+        <tr><td class="loja-name">seed-releases</td><td>9/12</td><td>75 %</td><td class="warn">Incompleto</td></tr>
+        <tr><td class="loja-name">cso-releases</td><td>8/12</td><td>67 %</td><td class="fail">Lacunas</td></tr>
+        <tr><td class="loja-name">ete-releases</td><td>7/12</td><td>58 %</td><td class="fail">Lacunas</td></tr>
+        <tr><td class="loja-name">mkt-releases</td><td>6/12</td><td>50 %</td><td class="fail">Lacunas</td></tr>
+      </tbody>
+    </table>
+    <p class="subtle" style="margin-top:0.6rem;">Meta: todas as lojas com score ≥ 92 % (11/12 itens). Limite aceitável: ≥ 83 % com pendência documentada.</p>
+  </div>
+
+  <p class="subtle" style="margin-top:2rem;">
+    Gerado automaticamente · Cara Core Tools · Governança de Lojas · 2026-04-05<br>
+    Arquivo: <code>caracore-tools/docs/PLANO_VITRINE_PADRAO_2026.html</code><br>
+    Referência: <code>PADRAO_LOJAS_ECOSSISTEMA.html</code> (especificação base)
+  </p>
+</main>
+</body>
+</html>
