@@ -109,9 +109,9 @@
   },
   {
     "app": "ink-v2",
-    "displayName": "Ink Agenda v2.0.0",
+    "displayName": "Ink Agenda v2.0.0-RC1",
     "category": "garagem",
-    "roadmapStatus": "em_desenvolvimento",
+    "roadmapStatus": "pre-lancamento",
     "roadmapDate": "2026-06-26",
     "repoPath": "D:\\dev\\caracore-tools",
     "commandType": "ps1",
@@ -119,7 +119,7 @@
     "supportsDryRun": true,
     "dryRunArg": "-DryRun",
     "requiredTokens": [],
-    "notes": "Wrapper automatico de sincronizacao matriz -> caracore-ink-releases"
+    "notes": "Wrapper de sincronizacao matriz -> caracore-ink-releases; binaries RC1 multiplataforma sao publicados no repo caracore-ink por scripts/workflows dedicados"
   },
   {
     "app": "hub",

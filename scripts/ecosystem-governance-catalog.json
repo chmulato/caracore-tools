@@ -92,16 +92,16 @@
     },
     {
         "app":  "ink-v2",
-        "displayName":  "Ink Agenda v2.0.0",
+        "displayName":  "Ink Agenda v2.0.0-RC1",
         "sourceRepoPath":  "D:\\dev\\caracore-ink",
         "releaseRepoPath":  "D:\\dev\\caracore-ink-releases",
         "matrixDeliveryPath":  "D:\\dev\\caracore-site\\delivery\\ink",
         "releaseDocsPath":  "docs",
-        "roadmapStatus":  "em_desenvolvimento",
+        "roadmapStatus":  "pre-lancamento",
         "roadmapDate":  "2026-06-26",
         "category":  "garagem",
         "sourceBranchTarget":  "master",
-        "releaseBranchTarget":  "main",
+        "releaseBranchTarget":  "master",
         "releaseChannelPolicy":  "dedicated-releases-repo"
     },
     {

@@ -47,6 +47,7 @@ caracore-tools/
 | scripts | ecosystem-delivery.ps1 | Orquestra deliveries do ecossistema por calendario com mapa central |
 | scripts | ecosystem-governance.ps1 | Dashboard de governanca, gate por app e geracao de relatorio de evidencia |
 | scripts | ecosystem-branch-governance.ps1 | Alinha e audita branch alvo por app (fonte e releases) |
+| scripts | run_delivery_ink_to_releases.ps1 | Sincroniza a entrega institucional da matriz para a loja do Ink Agenda |
 | java | Main.java | Exercicios de records e switch expressions |
 | java | TesteJava21.java | Teste de virtual threads com alta concorrencia |
 
@@ -204,6 +205,12 @@ Executar um delivery especifico com argumentos extras (exemplo com tag).
 .\scripts\ecosystem-delivery.ps1 -Action run -App oidc -ExtraArgs --tag v1.0.0
 ```
 
+Regra operacional do Ink Agenda:
+
+- A sincronizacao feita por `run_delivery_ink_to_releases.ps1` atualiza apenas o conteudo institucional da loja `caracore-ink-releases` a partir da matriz.
+- Os artefatos RC1 de `Windows (.zip)`, `macOS (.dmg)` e `Linux (.deb)` sao publicados pelo repositorio `caracore-ink`, usando scripts e workflows dedicados por plataforma.
+- A branch oficial do repositorio `caracore-ink-releases` e `master`.
+
 Regra operacional do PDV:
 
 - Publicar EXE e checksums exclusivamente em `https://github.com/chmulato/caracore-pdv-releases`.
@@ -222,7 +229,7 @@ Ferramentas desta secao:
 |---|---|---|
 | Dashboard e gate de governanca | [scripts/ecosystem-governance.ps1](scripts/ecosystem-governance.ps1) | Exibe saude do ecossistema, janela de roadmap e decisao Go/No-Go por app |
 | Catalogo oficial de apps | [scripts/ecosystem-governance-catalog.json](scripts/ecosystem-governance-catalog.json) | Define caminhos fonte/release/matriz e status de roadmap por app |
-| Manual operacional de governanca | [docs/SISTEMA_GOVERNANCA_ECOSSISTEMA.md](docs/SISTEMA_GOVERNANCA_ECOSSISTEMA.md) | Politica de execucao e evidencias obrigatorias |
+| Manual operacional de governanca | [docs/SISTEMA_GOVERNANCA_ECOSSISTEMA.html](docs/SISTEMA_GOVERNANCA_ECOSSISTEMA.html) | Politica de execucao e evidencias obrigatorias |
 
 Dashboard de governanca do ecossistema.
 
