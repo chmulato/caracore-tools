@@ -1,0 +1,177 @@
+PLANO DE CONTEÚDO LINKEDIN – 90 DIAS
+FOCO: PARCERIAS INTERNACIONAIS (OFFLINE-FIRST / RESILIENT SYSTEMS)
+
+---
+
+## OBJETIVO
+
+Gerar autoridade e atrair parceiros (MSPs, IT firms, integradores)
+na América do Norte (EUA, Canadá, México), através de conteúdo técnico estratégico.
+
+---
+
+## ESTRATÉGIA GERAL
+
+* 1 artigo longo por semana (5–8 minutos de leitura)
+* 3 posts curtos derivados por semana
+* Comentários diários em posts relevantes
+
+Total em 90 dias:
+
+* 12 artigos
+* ~36 posts curtos
+* Networking ativo diário
+
+---
+
+## CALENDÁRIO DE ARTIGOS (12 SEMANAS)
+
+MÊS 1 – CONSCIÊNCIA (DORES E FALHAS)
+
+SEMANA 1
+Tema: The hidden risk of cloud-only systems
+Foco: Mostrar fragilidade da dependência total de internet
+
+SEMANA 2
+Tema: What really happens when the internet goes down in a business
+Foco: Cenários reais de falha operacional
+
+SEMANA 3
+Tema: Why most POS and ERP systems are not built for failure
+Foco: Crítica técnica de sistemas atuais
+
+SEMANA 4
+Tema: Downtime is not a bug — it’s a design decision
+Foco: Posicionamento forte sobre arquitetura
+
+---
+
+MÊS 2 – EDUCAÇÃO (AUTORIDADE TÉCNICA)
+
+SEMANA 5
+Tema: What is offline-first architecture (and why it matters)
+
+SEMANA 6
+Tema: Local-first vs cloud-first: a practical comparison
+
+SEMANA 7
+Tema: Designing systems that survive disconnection
+
+SEMANA 8
+Tema: Edge computing for real businesses (not hype)
+
+---
+
+MÊS 3 – CONVERSÃO (PARCERIAS)
+
+SEMANA 9
+Tema: How we build systems that never stop
+
+SEMANA 10
+Tema: Where offline-first systems make the biggest impact
+
+SEMANA 11
+Tema: Partnering with IT firms: how we work together
+
+SEMANA 12
+Tema: Why resilience is becoming a competitive advantage
+
+---
+
+## ESTRUTURA PADRÃO DOS ARTIGOS
+
+1. HOOK (ABERTURA FORTE)
+   Frase que quebra padrão e prende atenção
+
+2. PROBLEMA REAL
+   Explicação clara de um risco ou falha
+
+3. EXPLICAÇÃO
+   Por que isso acontece (linguagem simples)
+
+4. SOLUÇÃO
+   Introdução ao conceito de offline-first / resiliência
+
+5. APLICAÇÃO
+   Onde isso impacta (varejo, saúde, indústria)
+
+6. FECHAMENTO
+   Convite leve para conexão ou parceria
+
+---
+
+## POSTS DERIVADOS (POR ARTIGO)
+
+POST 1: Frase de impacto
+POST 2: Insight técnico curto
+POST 3: Mini cenário real
+POST 4 (opcional): convite para parceria
+
+---
+
+## ROTINA SEMANAL
+
+SEGUNDA:
+Publicar artigo
+
+TERÇA:
+Post curto (insight do artigo)
+
+QUARTA:
+Comentário em 10–15 posts de terceiros
+
+QUINTA:
+Post curto (frase forte ou provocação)
+
+SEXTA:
+Post curto (mini-case ou reflexão)
+
+---
+
+## ESTRATÉGIA DE CRESCIMENTO
+
+* Adicionar 10–20 pessoas por dia (IT, MSPs, CTOs)
+
+* Sempre com mensagem curta:
+  “We work with resilient offline-first systems. Great to connect.”
+
+* Responder TODOS os comentários
+
+* Iniciar conversa com quem interagir
+
+---
+
+## POSICIONAMENTO (IMPORTANTE)
+
+Sempre comunicar como:
+
+* “Resilient systems specialist”
+* “Offline-first infrastructure”
+* “Systems that don’t stop”
+
+Evitar:
+
+* Linguagem muito técnica
+* Foco na empresa
+* Vender direto
+
+---
+
+## RESULTADO ESPERADO (90 DIAS)
+
+* Autoridade em nicho específico
+* 2–5 conversas qualificadas
+* 1–2 potenciais parcerias
+
+---
+
+## OBSERVAÇÃO FINAL
+
+Consistência é mais importante que perfeição.
+
+O objetivo não é viralizar.
+É ser encontrado pelas pessoas certas.
+
+---
+
+## FIM DO PLANO
