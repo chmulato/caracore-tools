@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catalogo de Documentos - Cara Core Tools</title>
+  <meta name="description" content="Catalogo completo dos documentos HTML do Cara Core Tools com filtro por categoria e pesquisa textual.">
+  <link rel="canonical" href="https://tools.caracore.com.br/catalogo.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/portal-docs.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Cara Core · Catalogo de Documentos</div>
+      <div class="meta">publicacao centralizada</div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Navegacao">
+      <h2 class="side-title">Atalhos</h2>
+      <p class="side-lead">Volte ao portal principal ou acesse colecoes especificas.</p>
+      <ul class="quick-nav">
+        <li><a href="index.html">Portal principal</a></li>
+        <li><a href="governance-reports/index.html">Governance Reports</a></li>
+        <li><a href="b2b_export/index.html">B2B Export</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <section class="hero anim-in">
+        <p class="eyebrow">Catalogo Geral</p>
+        <h1>Indice navegavel de documentos HTML</h1>
+        <p>Use este catalogo para localizar rapidamente qualquer documento publicado no portal da Sala de Operacoes.</p>
+
+        <div class="catalog-toolbar">
+          <input id="catalogSearch" type="search" placeholder="Buscar por titulo, tema, tag ou audiencia">
+          <select id="catalogCategory" aria-label="Filtrar categoria do catalogo">
+            <option value="all">Todas as categorias</option>
+            <option value="governanca">Governanca</option>
+            <option value="seguranca">Seguranca</option>
+            <option value="auditoria">Auditoria</option>
+            <option value="campanha">Campanha e comunicacao</option>
+          </select>
+        </div>
+
+        <p class="result-line" id="catalogCount">Carregando catalogo...</p>
+      </section>
+
+      <section class="catalog-grid" id="catalogGrid" aria-label="Cartoes do catalogo"></section>
+      <div class="empty" id="catalogEmpty">Nenhum documento localizado com os filtros aplicados.</div>
+
+      <footer class="footer">Dominio oficial: tools.caracore.com.br · Pagina de indice para publicacao.</footer>
+    </main>
+  </div>
+
+  <script src="assets/js/docs-portal.js"></script>
+</body>
+</html>

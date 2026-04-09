@@ -3,47 +3,307 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>B2B Export Campaign Templates</title>
-  <meta name="description" content="Template set for the B2B export campaign article series.">
-  <link rel="stylesheet" href="article/assets/css/sala-doc.css">
+  <title>B2B Export Campaign Templates - Cara Core Tools</title>
+  <meta name="description" content="Template set for the B2B export campaign article series, published in a searchable and responsive portal.">
+  <link rel="canonical" href="https://tools.caracore.com.br/b2b_export/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/portal-docs.css">
+  <style>
+    .filters {
+      margin: 0.8rem 0 0.8rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.6rem;
+    }
+    .filters label {
+      display: block;
+      color: var(--quiet);
+      font-size: 0.82rem;
+      margin-bottom: 0.25rem;
+    }
+    .filters select,
+    .filters input {
+      width: 100%;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: rgba(7, 17, 30, 0.75);
+      color: var(--text);
+      padding: 0.58rem 0.62rem;
+      font-size: 0.92rem;
+    }
+    .results-note {
+      margin: 0 0 0.6rem;
+      color: var(--quiet);
+      font-size: 0.82rem;
+      font-family: "IBM Plex Mono", Consolas, monospace;
+    }
+    .quick-subjects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.42rem;
+      margin: 0 0 0.7rem;
+    }
+    .chip-btn {
+      border: 1px solid var(--border);
+      background: rgba(255, 255, 255, 0.03);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 0.2rem 0.58rem;
+      font-size: 0.78rem;
+      cursor: pointer;
+    }
+    .chip-btn:hover {
+      color: var(--text);
+    }
+    .chip-btn.is-active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #1f1602;
+      font-weight: 700;
+    }
+    .article-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.5rem;
+    }
+    .article-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.65rem 0.72rem;
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .article-item h3 {
+      margin: 0;
+      font-size: 0.96rem;
+      color: var(--accent);
+    }
+    .article-item h3 a {
+      text-decoration: none;
+    }
+    .article-item p {
+      margin: 0.34rem 0 0;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+    .subject-badge {
+      display: inline-block;
+      margin-top: 0.44rem;
+      padding: 0.16rem 0.46rem;
+      border-radius: 999px;
+      background: rgba(93, 217, 193, 0.2);
+      border: 1px solid rgba(93, 217, 193, 0.36);
+      color: var(--accent-2);
+      font-size: 0.74rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      font-family: "IBM Plex Mono", Consolas, monospace;
+    }
+    .template-structure {
+      margin-top: 0.8rem;
+      border-top: 1px solid var(--border);
+      padding-top: 0.7rem;
+      color: var(--quiet);
+      font-size: 0.86rem;
+    }
+    .is-hidden {
+      display: none;
+    }
+    @media (max-width: 760px) {
+      .filters {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="sala-header">Cara Core Informatica · B2B Export · Templates</header>
-  <main class="container">
-    <div class="breadcrumb"><a href="../index.html">Docs</a> / <span>B2B Export</span></div>
-    <article class="panel">
-      <h1>B2B Export Campaign Templates</h1>
-      <p>This folder contains only the HTML templates for the 12-week B2B export campaign defined in B2B_EXPORT.txt. Final article copy will be added later.</p>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Cara Core · B2B Export</div>
+      <div class="meta">campaign article hub</div>
+    </div>
+  </header>
 
-      <h2>Template Files</h2>
-      <ul>
-        <li><a href="article/2026_04_13_ARTICLE_01_.html">2026_04_13_ARTICLE_01_.html</a> - The hidden risk of cloud-only systems</li>
-        <li><a href="article/2026_04_20_ARTICLE_02_.html">2026_04_20_ARTICLE_02_.html</a> - What really happens when the internet goes down in a business</li>
-        <li><a href="article/2026_04_27_ARTICLE_03_.html">2026_04_27_ARTICLE_03_.html</a> - Why most POS and ERP systems are not built for failure</li>
-        <li><a href="article/2026_05_04_ARTICLE_04_.html">2026_05_04_ARTICLE_04_.html</a> - Downtime is not a bug - it is a design decision</li>
-        <li><a href="article/2026_05_11_ARTICLE_05_.html">2026_05_11_ARTICLE_05_.html</a> - What is offline-first architecture and why it matters</li>
-        <li><a href="article/2026_05_18_ARTICLE_06_.html">2026_05_18_ARTICLE_06_.html</a> - Local-first vs cloud-first: a practical comparison</li>
-        <li><a href="article/2026_05_25_ARTICLE_07_.html">2026_05_25_ARTICLE_07_.html</a> - Designing systems that survive disconnection</li>
-        <li><a href="article/2026_06_01_ARTICLE_08_.html">2026_06_01_ARTICLE_08_.html</a> - Edge computing for real businesses</li>
-        <li><a href="article/2026_06_08_ARTICLE_09_.html">2026_06_08_ARTICLE_09_.html</a> - How we build systems that never stop</li>
-        <li><a href="article/2026_06_15_ARTICLE_10_.html">2026_06_15_ARTICLE_10_.html</a> - Where offline-first systems make the biggest impact</li>
-        <li><a href="article/2026_06_22_ARTICLE_11_.html">2026_06_22_ARTICLE_11_.html</a> - Partnering with IT firms: how we work together</li>
-        <li><a href="article/2026_06_29_ARTICLE_12_.html">2026_06_29_ARTICLE_12_.html</a> - Why resilience is becoming a competitive advantage</li>
+  <div class="layout">
+    <aside class="sidebar" aria-label="B2B navigation">
+      <h2 class="side-title">Quick access</h2>
+      <p class="side-lead">Navigate campaign content and return to the main docs portal.</p>
+      <ul class="quick-nav">
+        <li><a href="../index.html">Back to Docs Portal</a></li>
+        <li><a href="../catalogo.html">Open Full Catalog</a></li>
+        <li><a href="#articles">Article Index</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <section class="hero anim-in">
+        <p class="eyebrow">Campaign Content Studio</p>
+        <h1>B2B Export Campaign Templates</h1>
+        <p>This hub contains the 12-week B2B export campaign articles with topic filters and search, ready for web publication and editorial operations.</p>
+
+        <div class="badges">
+          <span class="badge">12 articles</span>
+          <span class="badge">subject filtering</span>
+          <span class="badge">web-first publishing</span>
+        </div>
+      </section>
+
+      <section class="section anim-in" id="articles">
+        <h2>Article Index</h2>
+        <div class="filters">
+          <div>
+            <label for="subjectFilter">Filter by subject</label>
+            <select id="subjectFilter">
+              <option value="all">All subjects</option>
+              <option value="continuity">Business continuity</option>
+              <option value="architecture">Resilient architecture</option>
+              <option value="offline-first">Offline-first and local-first</option>
+              <option value="edge">Edge operations</option>
+              <option value="partnership">B2B partnership model</option>
+              <option value="strategy">Resilience as strategy</option>
+            </select>
+          </div>
+          <div>
+            <label for="searchFilter">Search by title or filename</label>
+            <input id="searchFilter" type="search" placeholder="Type cloud, ERP, edge, partner...">
+          </div>
+        </div>
+        <p class="results-note" id="resultCount">Showing 12 of 12 articles.</p>
+        <div class="quick-subjects" id="quickSubjects">
+          <button type="button" class="chip-btn is-active" data-subject="all">All</button>
+          <button type="button" class="chip-btn" data-subject="continuity">Business continuity</button>
+          <button type="button" class="chip-btn" data-subject="architecture">Resilient architecture</button>
+          <button type="button" class="chip-btn" data-subject="offline-first">Offline-first/local-first</button>
+          <button type="button" class="chip-btn" data-subject="edge">Edge operations</button>
+          <button type="button" class="chip-btn" data-subject="partnership">B2B partnership</button>
+          <button type="button" class="chip-btn" data-subject="strategy">Resilience strategy</button>
+        </div>
+
+        <ul class="article-list" id="articleList">
+        <li class="article-item" data-subject="continuity architecture" data-search="2026_04_13_article_01_.html the hidden risk of cloud-only systems">
+          <h3><a href="article/2026_04_13_ARTICLE_01_.html">The hidden risk of cloud-only systems</a></h3>
+          <p>File: 2026_04_13_ARTICLE_01_.html</p>
+          <span class="subject-badge">Business continuity</span>
+        </li>
+        <li class="article-item" data-subject="continuity" data-search="2026_04_20_article_02_.html what really happens when the internet goes down in a business">
+          <h3><a href="article/2026_04_20_ARTICLE_02_.html">What really happens when the internet goes down in a business</a></h3>
+          <p>File: 2026_04_20_ARTICLE_02_.html</p>
+          <span class="subject-badge">Business continuity</span>
+        </li>
+        <li class="article-item" data-subject="architecture continuity" data-search="2026_04_27_article_03_.html why most pos and erp systems are not built for failure">
+          <h3><a href="article/2026_04_27_ARTICLE_03_.html">Why most POS and ERP systems are not built for failure</a></h3>
+          <p>File: 2026_04_27_ARTICLE_03_.html</p>
+          <span class="subject-badge">Resilient architecture</span>
+        </li>
+        <li class="article-item" data-subject="architecture strategy" data-search="2026_05_04_article_04_.html downtime is not a bug it is a design decision">
+          <h3><a href="article/2026_05_04_ARTICLE_04_.html">Downtime is not a bug - it is a design decision</a></h3>
+          <p>File: 2026_05_04_ARTICLE_04_.html</p>
+          <span class="subject-badge">Resilient architecture</span>
+        </li>
+        <li class="article-item" data-subject="offline-first architecture" data-search="2026_05_11_article_05_.html what is offline-first architecture and why it matters">
+          <h3><a href="article/2026_05_11_ARTICLE_05_.html">What is offline-first architecture and why it matters</a></h3>
+          <p>File: 2026_05_11_ARTICLE_05_.html</p>
+          <span class="subject-badge">Offline-first and local-first</span>
+        </li>
+        <li class="article-item" data-subject="offline-first architecture" data-search="2026_05_18_article_06_.html local-first vs cloud-first a practical comparison">
+          <h3><a href="article/2026_05_18_ARTICLE_06_.html">Local-first vs cloud-first: a practical comparison</a></h3>
+          <p>File: 2026_05_18_ARTICLE_06_.html</p>
+          <span class="subject-badge">Offline-first and local-first</span>
+        </li>
+        <li class="article-item" data-subject="continuity architecture" data-search="2026_05_25_article_07_.html designing systems that survive disconnection">
+          <h3><a href="article/2026_05_25_ARTICLE_07_.html">Designing systems that survive disconnection</a></h3>
+          <p>File: 2026_05_25_ARTICLE_07_.html</p>
+          <span class="subject-badge">Business continuity</span>
+        </li>
+        <li class="article-item" data-subject="edge architecture" data-search="2026_06_01_article_08_.html edge computing for real businesses">
+          <h3><a href="article/2026_06_01_ARTICLE_08_.html">Edge computing for real businesses</a></h3>
+          <p>File: 2026_06_01_ARTICLE_08_.html</p>
+          <span class="subject-badge">Edge operations</span>
+        </li>
+        <li class="article-item" data-subject="continuity architecture" data-search="2026_06_08_article_09_.html how we build systems that never stop">
+          <h3><a href="article/2026_06_08_ARTICLE_09_.html">How we build systems that never stop</a></h3>
+          <p>File: 2026_06_08_ARTICLE_09_.html</p>
+          <span class="subject-badge">Business continuity</span>
+        </li>
+        <li class="article-item" data-subject="offline-first strategy" data-search="2026_06_15_article_10_.html where offline-first systems make the biggest impact">
+          <h3><a href="article/2026_06_15_ARTICLE_10_.html">Where offline-first systems make the biggest impact</a></h3>
+          <p>File: 2026_06_15_ARTICLE_10_.html</p>
+          <span class="subject-badge">Offline-first and local-first</span>
+        </li>
+        <li class="article-item" data-subject="partnership strategy" data-search="2026_06_22_article_11_.html partnering with it firms how we work together">
+          <h3><a href="article/2026_06_22_ARTICLE_11_.html">Partnering with IT firms: how we work together</a></h3>
+          <p>File: 2026_06_22_ARTICLE_11_.html</p>
+          <span class="subject-badge">B2B partnership model</span>
+        </li>
+        <li class="article-item" data-subject="strategy continuity" data-search="2026_06_29_article_12_.html why resilience is becoming a competitive advantage">
+          <h3><a href="article/2026_06_29_ARTICLE_12_.html">Why resilience is becoming a competitive advantage</a></h3>
+          <p>File: 2026_06_29_ARTICLE_12_.html</p>
+          <span class="subject-badge">Resilience as strategy</span>
+        </li>
       </ul>
 
-      <h2>Template Structure</h2>
-      <ul>
-        <li>Hook</li>
-        <li>Real Problem</li>
-        <li>Explanation</li>
-        <li>Solution</li>
-        <li>Application</li>
-        <li>Closing</li>
-      </ul>
+        <div class="template-structure">
+          Template structure: Hook, Real Problem, Explanation, Solution, Application and Closing.<br>
+          Naming pattern: YYYY_MM_DD_ARTICLE_XX_.html
+        </div>
+      </section>
 
-      <div class="footer">Naming pattern: YYYY_MM_DD_ARTICLE_XX_.html</div>
-    </article>
-  </main>
+      <footer class="footer">Cara Core Tools · B2B export editorial hub.</footer>
+    </main>
+  </div>
+  <script>
+    (function () {
+      var subjectFilter = document.getElementById('subjectFilter');
+      var searchFilter = document.getElementById('searchFilter');
+      var articleList = document.getElementById('articleList');
+      var resultCount = document.getElementById('resultCount');
+      var quickSubjects = document.getElementById('quickSubjects');
+      var chips = Array.prototype.slice.call(quickSubjects.querySelectorAll('.chip-btn'));
+      var items = Array.prototype.slice.call(articleList.querySelectorAll('.article-item'));
+
+      function syncChips(subject) {
+        chips.forEach(function (chip) {
+          var active = chip.getAttribute('data-subject') === subject;
+          chip.classList.toggle('is-active', active);
+        });
+      }
+
+      function applyFilters() {
+        var subject = subjectFilter.value;
+        var query = searchFilter.value.trim().toLowerCase();
+        var visible = 0;
+
+        items.forEach(function (item) {
+          var subjects = item.getAttribute('data-subject') || '';
+          var searchable = item.getAttribute('data-search') || '';
+          var matchesSubject = subject === 'all' || subjects.indexOf(subject) !== -1;
+          var matchesQuery = !query || searchable.indexOf(query) !== -1;
+          var isVisible = matchesSubject && matchesQuery;
+
+          item.classList.toggle('is-hidden', !isVisible);
+          if (isVisible) {
+            visible += 1;
+          }
+        });
+
+        resultCount.textContent = 'Showing ' + visible + ' of ' + items.length + ' articles.';
+        syncChips(subject);
+      }
+
+      subjectFilter.addEventListener('change', applyFilters);
+      searchFilter.addEventListener('input', applyFilters);
+      chips.forEach(function (chip) {
+        chip.addEventListener('click', function () {
+          subjectFilter.value = chip.getAttribute('data-subject');
+          applyFilters();
+        });
+      });
+      applyFilters();
+    })();
+  </script>
   <script src="article/assets/js/article.js" defer></script>
 </body>
 </html>

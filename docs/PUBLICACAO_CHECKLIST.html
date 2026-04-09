@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checklist de Publicacao Web - Cara Core Tools</title>
+  <meta name="description" content="Checklist operacional para publicacao online das paginas HTML do Cara Core Tools com validacoes de navegação, links e metadados.">
+  <link rel="canonical" href="https://tools.caracore.com.br/PUBLICACAO_CHECKLIST.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/portal-docs.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Cara Core · Checklist de Publicacao</div>
+      <div class="meta">release gate web</div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Navegacao de checklist">
+      <h2 class="side-title">Atalhos</h2>
+      <p class="side-lead">Use este checklist antes de publicar para garantir consistencia visual e funcional.</p>
+      <ul class="quick-nav">
+        <li><a href="index.html">Portal principal</a></li>
+        <li><a href="catalogo.html">Catalogo de documentos</a></li>
+        <li><a href="#pre">Pre-publicacao</a></li>
+        <li><a href="#pos">Pos-publicacao</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <section class="hero anim-in">
+        <p class="eyebrow">Publicacao Operacional</p>
+        <h1>Checklist de publicacao online do docs</h1>
+        <p>Execute os itens abaixo para validar integridade de links, consistencia visual, metadados basicos e acessibilidade minima antes do deploy.</p>
+
+        <div class="badges">
+          <span class="badge">web statica</span>
+          <span class="badge">gate de qualidade</span>
+          <span class="badge">validacao funcional</span>
+        </div>
+      </section>
+
+      <section class="section anim-in" id="pre">
+        <h2>Pre-publicacao</h2>
+        <ul>
+          <li>Confirmar que a home em index.html abre sem erro e exibe os cards de documentos.</li>
+          <li>Validar que catalogo.html aplica busca e filtro por categoria corretamente.</li>
+          <li>Testar links de colecoes: b2b_export/index.html e governance-reports/index.html.</li>
+          <li>Garantir que cada pagina tenha title e meta description adequados.</li>
+          <li>Verificar que nao existem links quebrados para arquivos removidos.</li>
+          <li>Conferir responsividade basica em largura aproximada de 390px e 1366px.</li>
+          <li>Checar contraste e legibilidade dos textos principais e botões de filtro.</li>
+        </ul>
+      </section>
+
+      <section class="section anim-in">
+        <h2>Conteudo e padrao</h2>
+        <ul>
+          <li>Confirmar padrao visual unificado com portal-docs.css nas paginas novas.</li>
+          <li>Manter templates publicaveis em HTML quando forem parte da experiencia web.</li>
+          <li>Atualizar datas e descricoes no catalogo quando novos documentos entrarem.</li>
+          <li>Incluir novos hubs no menu lateral do portal principal.</li>
+        </ul>
+      </section>
+
+      <section class="section anim-in" id="pos">
+        <h2>Pos-publicacao</h2>
+        <ul>
+          <li>Acessar o dominio publicado e navegar pelos links principais do portal.</li>
+          <li>Executar smoke test de busca na home e no catalogo.</li>
+          <li>Registrar checkpoint de publicacao com data e escopo das paginas alteradas.</li>
+          <li>Validar cache e CDN, quando aplicavel, para refletir versoes atualizadas.</li>
+        </ul>
+      </section>
+
+      <footer class="footer">Checklist base de publicacao Cara Core Tools.</footer>
+    </main>
+  </div>
+</body>
+</html>

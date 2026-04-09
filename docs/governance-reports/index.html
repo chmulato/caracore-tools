@@ -3,23 +3,184 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Governance Reports</title>
-  <link rel="stylesheet" href="../assets/css/sala-doc.css">
+  <title>Governance Reports - Cara Core Tools</title>
+  <meta name="description" content="Indice de relatórios de governanca com pesquisa rapida e acesso organizado por data.">
+  <link rel="canonical" href="https://tools.caracore.com.br/governance-reports/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/portal-docs.css">
+  <style>
+    .reports-toolbar {
+      display: grid;
+      grid-template-columns: 1fr 220px;
+      gap: 0.6rem;
+      margin: 0.8rem 0 0.8rem;
+    }
+    .reports-toolbar input,
+    .reports-toolbar select {
+      width: 100%;
+      border: 1px solid var(--border);
+      background: rgba(7, 17, 30, 0.75);
+      color: var(--text);
+      border-radius: 8px;
+      padding: 0.55rem 0.65rem;
+      font-size: 0.92rem;
+      font-family: inherit;
+    }
+    .report-count {
+      color: var(--quiet);
+      font-size: 0.82rem;
+      font-family: "IBM Plex Mono", Consolas, monospace;
+      margin-bottom: 0.8rem;
+    }
+    .report-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.5rem;
+    }
+    .report-item {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.65rem 0.75rem;
+      background: rgba(255, 255, 255, 0.03);
+    }
+    .report-item a {
+      text-decoration: none;
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .report-item p {
+      margin: 0.3rem 0 0;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+    .report-tag {
+      display: inline-block;
+      margin-top: 0.4rem;
+      border-radius: 999px;
+      border: 1px solid rgba(93, 217, 193, 0.36);
+      padding: 0.16rem 0.45rem;
+      color: var(--accent-2);
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      font-family: "IBM Plex Mono", Consolas, monospace;
+    }
+    .hidden {
+      display: none;
+    }
+    @media (max-width: 760px) {
+      .reports-toolbar {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header class="sala-header">Cara Core Informatica Â· Sala de Operacoes Â· Tools</header>
-  <main class="container">
-    <div class="panel">
-      <div class="breadcrumb"><a href="../index.html">Voltar para o portal</a></div>
-      <h1>Governance Reports</h1>
-      <ul>
-        <li><a href="GATE_pdv_20260404_103416.html">GATE pdv 20260404 103416</a></li>
-        <li><a href="GATE_pdv_20260404_105630.html">GATE pdv 20260404 105630</a></li>
-        <li><a href="GATE_pdv_20260404_105806.html">GATE pdv 20260404 105806</a></li>
-      </ul>
-      <div class="footer">Colecao de relatorios em formato HTML.</div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Cara Core · Governance Reports</div>
+      <div class="meta">gate and evidence timeline</div>
     </div>
-  </main>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Navegacao de relatórios">
+      <h2 class="side-title">Atalhos</h2>
+      <p class="side-lead">Acesso rapido para o portal principal, catalogo e relatorios mais recentes.</p>
+      <ul class="quick-nav">
+        <li><a href="../index.html">Voltar ao portal</a></li>
+        <li><a href="../catalogo.html">Abrir catalogo completo</a></li>
+        <li><a href="#reports">Lista de relatorios</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <section class="hero anim-in" id="reports">
+        <p class="eyebrow">Governance Operations</p>
+        <h1>Governance Reports</h1>
+        <p>Relatorios de gate e evidencias operacionais para consulta historica, rastreabilidade e publicacao em ambiente web.</p>
+
+        <div class="badges">
+          <span class="badge">evidencias de gate</span>
+          <span class="badge">filtro textual</span>
+          <span class="badge">ordenacao cronologica</span>
+        </div>
+
+        <div class="reports-toolbar">
+          <input id="reportSearch" type="search" placeholder="Buscar por nome, modulo ou data">
+          <select id="reportSort" aria-label="Ordenar relatorios">
+            <option value="desc">Mais recente primeiro</option>
+            <option value="asc">Mais antigo primeiro</option>
+          </select>
+        </div>
+        <p class="report-count" id="reportCount">Mostrando 3 de 3 relatorios.</p>
+
+        <ul class="report-list" id="reportList">
+          <li class="report-item" data-date="20260404103416" data-search="gate pdv 20260404 103416">
+            <a href="GATE_pdv_20260404_103416.html">GATE PDV · 2026-04-04 10:34:16</a>
+            <p>Snapshot de gate com evidencias de publicacao no modulo PDV.</p>
+            <span class="report-tag">pdv gate</span>
+          </li>
+          <li class="report-item" data-date="20260404105630" data-search="gate pdv 20260404 105630">
+            <a href="GATE_pdv_20260404_105630.html">GATE PDV · 2026-04-04 10:56:30</a>
+            <p>Registro intermediario de verificacao com trilha de consistencia.</p>
+            <span class="report-tag">pdv gate</span>
+          </li>
+          <li class="report-item" data-date="20260404105806" data-search="gate pdv 20260404 105806">
+            <a href="GATE_pdv_20260404_105806.html">GATE PDV · 2026-04-04 10:58:06</a>
+            <p>Estado consolidado de gate para rastreabilidade de publicacao.</p>
+            <span class="report-tag">pdv gate</span>
+          </li>
+        </ul>
+      </section>
+
+      <footer class="footer">Colecao de relatorios em formato HTML, pronta para publicacao estatica.</footer>
+    </main>
+  </div>
+
+  <script>
+    (function () {
+      var search = document.getElementById('reportSearch');
+      var sort = document.getElementById('reportSort');
+      var list = document.getElementById('reportList');
+      var count = document.getElementById('reportCount');
+      var items = Array.prototype.slice.call(list.querySelectorAll('.report-item'));
+
+      function sortItems(order) {
+        items.sort(function (a, b) {
+          var da = Number(a.getAttribute('data-date'));
+          var db = Number(b.getAttribute('data-date'));
+          return order === 'asc' ? da - db : db - da;
+        });
+        items.forEach(function (item) { list.appendChild(item); });
+      }
+
+      function apply() {
+        var q = search.value.trim().toLowerCase();
+        var visible = 0;
+        sortItems(sort.value);
+
+        items.forEach(function (item) {
+          var text = item.getAttribute('data-search') || '';
+          var ok = !q || text.indexOf(q) !== -1;
+          item.classList.toggle('hidden', !ok);
+          if (ok) {
+            visible += 1;
+          }
+        });
+
+        count.textContent = 'Mostrando ' + visible + ' de ' + items.length + ' relatorios.';
+      }
+
+      search.addEventListener('input', apply);
+      sort.addEventListener('change', apply);
+      apply();
+    })();
+  </script>
 </body>
 </html>
 

@@ -4,266 +4,137 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sala de Operacoes - Cara Core Tools</title>
-  <meta name="description" content="Portal das ferramentas da Cara Core Informatica: governanca, auditorias tecnicas e relatorios operacionais.">
+  <meta name="description" content="Portal unificado da Sala de Operacoes Cara Core Tools para publicacao online de governanca, auditorias, seguranca e campanha B2B.">
   <link rel="canonical" href="https://tools.caracore.com.br/">
-  <style>
-    :root {
-      --sala-bg: #0d1117;
-      --sala-panel: #161b22;
-      --sala-text: #e6edf3;
-      --sala-text-muted: #c9d1d9;
-      --sala-text-quiet: #8b949e;
-      --sala-gold: #ffd700;
-      --sala-border: rgba(255, 255, 255, 0.1);
-      --sala-nav-width: 230px;
-      --news-card-bg: #161b22;
-      --news-card-border: rgba(255, 215, 0, 0.2);
-      --news-card-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-      --news-card-shadow-hover: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 0 1px rgba(255, 215, 0, 0.15);
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      font-size: 16px;
-      background: var(--sala-bg);
-      color: var(--sala-text);
-      line-height: 1.7;
-    }
-
-    .sala-page {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .sala-header {
-      background: var(--sala-panel);
-      border-bottom: 1px solid rgba(255, 215, 0, 0.15);
-      padding: 0.6rem 1rem;
-    }
-
-    .sala-header-inner {
-      max-width: 1180px;
-      margin: 0 auto;
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--sala-gold);
-      letter-spacing: 0.03em;
-    }
-
-    .sala-body {
-      flex: 1;
-      display: flex;
-      min-height: 0;
-    }
-
-    .sala-nav {
-      width: var(--sala-nav-width);
-      flex-shrink: 0;
-      background: var(--sala-panel);
-      border-right: 1px solid rgba(255, 215, 0, 0.15);
-      padding: 1.25rem 1rem 1.5rem;
-    }
-
-    .sala-nav-logo {
-      font-weight: 700;
-      font-size: 0.75rem;
-      letter-spacing: 0.08em;
-      color: #fff;
-      margin-bottom: 0.75rem;
-      text-transform: uppercase;
-    }
-
-    .sala-nav-title {
-      font-size: 0.7rem;
-      font-weight: 600;
-      color: rgba(255, 215, 0, 0.9);
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      margin-bottom: 0.75rem;
-    }
-
-    .sala-nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .sala-nav li {
-      margin-bottom: 0.25rem;
-    }
-
-    .sala-nav a {
-      color: var(--sala-text-quiet);
-      text-decoration: none;
-      font-size: 0.9rem;
-      display: block;
-      padding: 0.35rem 0;
-    }
-
-    .sala-nav a:hover {
-      color: var(--sala-gold);
-    }
-
-    .sala-main {
-      flex: 1;
-      padding: 1.5rem 1.35rem 2rem;
-      max-width: 980px;
-    }
-
-    .hero {
-      background: var(--sala-panel);
-      border: 1px solid var(--sala-border);
-      border-radius: 10px;
-      padding: 1.25rem 1.3rem;
-      margin-bottom: 1rem;
-    }
-
-    h1 {
-      margin: 0 0 0.75rem;
-      font-size: 1.35rem;
-      font-weight: 600;
-      color: var(--sala-gold);
-      border-bottom: 1px solid rgba(255, 215, 0, 0.3);
-      padding-bottom: 0.55rem;
-      letter-spacing: 0.02em;
-    }
-
-    .sub {
-      margin: 0;
-      color: var(--sala-text-muted);
-      font-size: 0.98rem;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .card {
-      display: block;
-      text-decoration: none;
-      color: inherit;
-      background: var(--news-card-bg);
-      border: 1px solid var(--news-card-border);
-      border-radius: 10px;
-      box-shadow: var(--news-card-shadow);
-      padding: 1.05rem 1.15rem;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: var(--news-card-shadow-hover);
-      border-color: rgba(255, 215, 0, 0.35);
-    }
-
-    .card h2 {
-      margin: 0 0 0.5rem;
-      font-size: 1.04rem;
-      color: var(--sala-gold);
-    }
-
-    .card p {
-      margin: 0;
-      color: var(--sala-text-muted);
-      font-size: 0.94rem;
-    }
-
-    footer {
-      margin-top: 1.2rem;
-      color: var(--sala-text-quiet);
-      font-size: 0.88rem;
-      border-top: 1px solid var(--sala-border);
-      padding-top: 0.8rem;
-    }
-
-    @media (max-width: 860px) {
-      .sala-body {
-        display: block;
-      }
-
-      .sala-nav {
-        width: 100%;
-        border-right: 0;
-        border-bottom: 1px solid rgba(255, 215, 0, 0.15);
-      }
-
-      .sala-main {
-        max-width: 100%;
-      }
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/portal-docs.css">
 </head>
-<body class="sala-page">
-  <header class="sala-header">
-    <div class="sala-header-inner">Cara Core Informatica Â· Sala de Operacoes Â· Tools</div>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Cara Core · Sala de Operacoes · Tools</div>
+      <div class="meta">tools.caracore.com.br · publicacao web</div>
+    </div>
   </header>
 
-  <div class="sala-body">
-    <aside class="sala-nav" aria-label="Navegacao lateral">
-      <div class="sala-nav-logo">Cara Core Tools</div>
-      <div class="sala-nav-title">Navegacao</div>
-      <ul>
-        <li><a href="SISTEMA_GOVERNANCA_ECOSSISTEMA.html">Sistema de Governanca</a></li>
-        <li><a href="MAPEAMENTO_ECOSSISTEMA_PRODUCTOS.html">Mapeamento</a></li>
-        <li><a href="RELATORIO_SEGURANCA_ECOSSISTEMA.html">Relatorio de Seguranca</a></li>
-        <li><a href="AUDITORIA_SEGURANCA_LOJAS_RELEASES.html">Auditoria de Lojas</a></li>
-        <li><a href="CODE_HEALTH_REPORT.html">Code Health</a></li>
+  <div class="layout">
+    <aside class="sidebar" aria-label="Navegacao lateral">
+      <h2 class="side-title">Navegacao rapida</h2>
+      <p class="side-lead">Acesso direto aos hubs principais e aos documentos mais usados no fluxo de publicacao.</p>
+      <ul class="quick-nav">
+        <li><a href="#portal">Visao geral</a></li>
+        <li><a href="#documentos">Documentos</a></li>
+        <li><a href="#timeline">Atualizacoes</a></li>
+      </ul>
+
+      <h2 class="side-title side-title-spaced">Colecoes</h2>
+      <ul class="side-list">
+        <li><a href="catalogo.html">Catalogo completo</a></li>
         <li><a href="governance-reports/index.html">Governance Reports</a></li>
+        <li><a href="b2b_export/index.html">Campanha B2B Export</a></li>
+        <li><a href="PUBLICACAO_CHECKLIST.html">Checklist de Publicacao</a></li>
+        <li><a href="TEMPLATE_INSTALACAO.html">Template de Instalacao</a></li>
       </ul>
     </aside>
 
-    <main class="sala-main">
-      <section class="hero">
-        <h1>Portal de Ferramentas e Governanca</h1>
-        <p class="sub">Ambiente de referencia para auditorias, padroes operacionais, seguranca e saude tecnica do ecossistema Cara Core.</p>
+    <main class="main" id="portal">
+      <section class="hero anim-in">
+        <p class="eyebrow">Portal Oficial de Publicacao</p>
+        <h1>Conteudo HTML do Cara Core Tools pronto para web, busca e governanca</h1>
+        <p>Esta estrutura centraliza a documentacao operacional com acesso rapido por categoria, padrao visual consistente e navegacao preparada para uso online em dominio proprio.</p>
+
+        <div class="badges" aria-label="Indicadores de prontidao">
+          <span class="badge">Publicacao web-first</span>
+          <span class="badge">Navegacao por tema</span>
+          <span class="badge">Indice centralizado</span>
+          <span class="badge">Padrao visual unico</span>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi"><strong id="statDocs">0</strong><span>documentos html</span></div>
+          <div class="kpi"><strong id="statCategories">0</strong><span>categorias</span></div>
+          <div class="kpi"><strong>2</strong><span>subportais ativos</span></div>
+          <div class="kpi"><strong id="statUpdated">n/a</strong><span>ultima atualizacao</span></div>
+        </div>
+
+        <div class="controls">
+          <input id="searchInput" type="search" placeholder="Buscar por tema, tag, audiencia ou nome do documento">
+          <select id="categorySelect" aria-label="Filtrar por categoria">
+            <option value="all">Todas as categorias</option>
+            <option value="governanca">Governanca</option>
+            <option value="seguranca">Seguranca</option>
+            <option value="auditoria">Auditoria</option>
+            <option value="campanha">Campanha e comunicacao</option>
+          </select>
+        </div>
+
+        <div class="chips" id="chips">
+          <button class="chip active" type="button" data-category="all">Tudo</button>
+          <button class="chip" type="button" data-category="governanca">Governanca</button>
+          <button class="chip" type="button" data-category="seguranca">Seguranca</button>
+          <button class="chip" type="button" data-category="auditoria">Auditoria</button>
+          <button class="chip" type="button" data-category="campanha">Campanha</button>
+        </div>
+
+        <p class="result-line" id="resultLine">Carregando documentos...</p>
       </section>
 
-      <section class="grid" aria-label="Documentos principais">
-        <a class="card" href="SISTEMA_GOVERNANCA_ECOSSISTEMA.html">
-          <h2>Sistema de Governanca</h2>
-          <p>Diretrizes formais e estrutura de governanca do ecossistema.</p>
-        </a>
-
-        <a class="card" href="MAPEAMENTO_ECOSSISTEMA_PRODUCTOS.html">
-          <h2>Mapeamento do Ecossistema</h2>
-          <p>Inventario consolidado de produtos, dependencias e relacoes.</p>
-        </a>
-
-        <a class="card" href="RELATORIO_SEGURANCA_ECOSSISTEMA.html">
-          <h2>Relatorio de Seguranca</h2>
-          <p>Controles implementados, riscos observados e recomendacoes.</p>
-        </a>
-
-        <a class="card" href="AUDITORIA_SEGURANCA_LOJAS_RELEASES.html">
-          <h2>Auditoria de Lojas</h2>
-          <p>Verificacao de padrao tecnico e seguranca das lojas de releases.</p>
-        </a>
-
-        <a class="card" href="CODE_HEALTH_REPORT.html">
-          <h2>Code Health Report</h2>
-          <p>Indicadores de qualidade de codigo e manutencao evolutiva.</p>
-        </a>
-
-        <a class="card" href="governance-reports/index.html">
-          <h2>Governance Reports</h2>
-          <p>Colecao de relatorios historicos e evidencias operacionais.</p>
-        </a>
+      <section class="section anim-in" aria-label="Acoes de publicacao">
+        <h2>Publicacao operacional</h2>
+        <p>Use o catalogo para curadoria completa, os relatórios de governance para evidencia e os templates para padronizacao de paginas de vitrine, download e instalacao.</p>
+        <div class="cards">
+          <a class="card" href="catalogo.html">
+            <h3>Abrir catalogo completo</h3>
+            <p>Visao total dos documentos com filtro por categoria e pesquisa textual.</p>
+            <small>indice geral</small>
+          </a>
+          <a class="card" href="governance-reports/index.html">
+            <h3>Acessar Governance Reports</h3>
+            <p>Relatorios cronologicos de gate para rastreabilidade de publicacoes.</p>
+            <small>governanca</small>
+          </a>
+          <a class="card" href="b2b_export/index.html">
+            <h3>Entrar na Campanha B2B Export</h3>
+            <p>Hub editorial em ingles com 12 artigos e filtros por assunto.</p>
+            <small>campanha</small>
+          </a>
+          <a class="card" href="PUBLICACAO_CHECKLIST.html">
+            <h3>Executar checklist de publicacao</h3>
+            <p>Lista operacional para validar links, metadados e experiencia web antes do deploy.</p>
+            <small>operacao</small>
+          </a>
+        </div>
       </section>
 
-      <footer>
-        Dominio oficial: tools.caracore.com.br
-      </footer>
+      <section class="cards" id="documentos" aria-label="Documentos publicados"></section>
+      <div class="empty" id="emptyState">Nenhum documento encontrado para o filtro atual. Ajuste a busca ou selecione outra categoria.</div>
+
+      <section class="section anim-in" id="timeline" aria-label="Linha do tempo de atualizacoes">
+        <h2>Linha de atualizacoes relevantes</h2>
+        <p>Resumo rapido de frentes recentes para orientar publicacao e governanca.</p>
+        <ul class="timeline">
+          <li>
+            <time datetime="2026-04-09">2026-04-09</time>
+            <a href="TEMPLATE_INSTALACAO.html">Template de instalacao convertido para HTML publicavel</a>
+          </li>
+          <li>
+            <time datetime="2026-04-04">2026-04-04</time>
+            <a href="governance-reports/index.html">Snapshots de gate PDV adicionados em Governance Reports</a>
+          </li>
+          <li>
+            <time datetime="2026-04-01">2026-04-01</time>
+            <a href="b2b_export/index.html">Colecao B2B Export consolidada com index filtravel</a>
+          </li>
+        </ul>
+      </section>
+
+      <footer class="footer">Dominio oficial: tools.caracore.com.br · Estrutura preparada para deploy estatico.</footer>
     </main>
   </div>
+
+  <script src="assets/js/docs-portal.js"></script>
 </body>
 </html>
 

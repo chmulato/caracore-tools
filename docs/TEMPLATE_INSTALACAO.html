@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Template de Instalacao (Windows) - Cara Core Tools</title>
+  <meta name="description" content="Template padrao de instalacao para entregas Windows com validacao de integridade e checklist de publicacao.">
+  <link rel="canonical" href="https://tools.caracore.com.br/TEMPLATE_INSTALACAO.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/portal-docs.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Cara Core · Template de Instalacao</div>
+      <div class="meta">padrao para entregas Windows</div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Navegacao lateral">
+      <h2 class="side-title">Navegacao rapida</h2>
+      <p class="side-lead">Use este template como base para cada release com executavel.</p>
+      <ul class="quick-nav">
+        <li><a href="index.html">Portal principal</a></li>
+        <li><a href="catalogo.html">Catalogo de documentos</a></li>
+        <li><a href="#validacao">Validacao de integridade</a></li>
+        <li><a href="#execucao">Execucao</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <article class="hero anim-in">
+        <p class="eyebrow">Template reutilizavel</p>
+        <h1>[NomeProduto] - Instalacao (Windows)</h1>
+        <p>Modelo em HTML para publicar instrucoes de instalacao em paginas de release. Substitua os campos entre colchetes antes de publicar.</p>
+
+        <div class="section section-first">
+          <h2>Arquivos desta entrega</h2>
+          <ul>
+            <li>[Executavel].exe</li>
+            <li>checksum.sha256</li>
+            <li>checksum.md5</li>
+            <li>INSTALACAO.html (este arquivo)</li>
+          </ul>
+        </div>
+
+        <div class="section" id="validacao">
+          <h2>Validacao de integridade</h2>
+          <p>No PowerShell, execute os comandos abaixo na pasta dos artefatos e compare os hashes gerados com os arquivos checksum publicados.</p>
+<pre><code>Get-FileHash -Path .\[Executavel].exe -Algorithm SHA256
+Get-FileHash -Path .\[Executavel].exe -Algorithm MD5</code></pre>
+        </div>
+
+        <div class="section">
+          <h2>Requisitos</h2>
+          <ul>
+            <li>Windows 10 ou superior (64 bits)</li>
+            <li>[Requisitos extras, ex: 4 GB RAM, 500 MB de espaco livre]</li>
+            <li>Conexao com internet: [sim / nao / somente ativacao]</li>
+          </ul>
+        </div>
+
+        <div class="section" id="execucao">
+          <h2>Execucao</h2>
+          <ol>
+            <li>Execute [Executavel].exe como usuario local do Windows.</li>
+            <li>Conclua o assistente de instalacao.</li>
+            <li>[Instrucao de acesso, ex: abrir localhost:8080 ou atalho no desktop].</li>
+          </ol>
+          <p>Login de degustacao (opcional): usuario [usuario_padrao], senha [senha_padrao].</p>
+        </div>
+
+        <div class="section">
+          <h2>Desinstalacao</h2>
+          <p>[Instrucoes de remocao, ex: Painel de Controle > Programas > Desinstalar [NomeProduto] ou remover pasta de instalacao].</p>
+        </div>
+
+        <div class="section">
+          <h2>Canal oficial</h2>
+          <ul>
+            <li>Pagina de download: [URL publica]</li>
+            <li>Licenca: [LICENCA.txt ou URL da licenca]</li>
+            <li>Suporte: [email ou URL de suporte]</li>
+          </ul>
+        </div>
+
+        <footer class="footer">Versao: [versao] · Lancamento: [data] · Cara Core Informatica - https://caracore.com.br</footer>
+      </article>
+    </main>
+  </div>
+</body>
+</html>

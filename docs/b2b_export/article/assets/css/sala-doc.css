@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --sala-bg: #0d1117;
   --sala-panel: #161b22;
   --sala-text: #e6edf3;
@@ -152,4 +152,24 @@ hr {
   h1 {
     font-size: 1.35rem;
   }
+}
+.article-hero-image {
+  max-width: var(--sala-measure);
+  margin: 0.6rem 0 0.55rem;
+}
+
+.article-hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  border: 1px solid var(--sala-border);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.28);
+}
+
+.image-note {
+  max-width: var(--sala-measure);
+  color: var(--sala-quiet);
+  font-size: 0.92rem;
+  margin-bottom: 1.2rem;
 }
