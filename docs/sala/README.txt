@@ -1,10 +1,11 @@
 Sala de Operações / Sala de Notícias — Cara Core Informática
 ============================================================
-Cenário canónico (edição e Git): D:\dev\caracore-tools\docs\sala (esta pasta).
-URL pública: https://tools.caracore.com.br/sala/
+Cenário legado nesta pasta: D:\dev\caracore-site\sala.
+Cenário canónico (edição e Git): D:\dev\caracore-tools\docs\sala.
+URL pública canónica: https://tools.caracore.com.br/sala/
 
-Toda a informação operacional real da sala (páginas, regis, redes, assets) deve existir aqui.
-A matriz `caracore-site/sala` permanece apenas como ponto de entrada legado com redirect para `tools.caracore.com.br/sala/`.
+Esta pasta da matriz permanece apenas como entrada legado e compatibilidade de rota.
+Toda a informação operacional real (páginas, regis, redes, assets) deve ser mantida em D:\dev\caracore-tools\docs\sala.
 Documento de arquitetura (fonte única): ..\docs\FONTES_CANONICAS_MATRIZ_LOJAS.md
 
 Leia primeiro:
