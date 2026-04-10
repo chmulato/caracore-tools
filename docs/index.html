@@ -73,27 +73,7 @@
           <div class="kpi"><strong>3</strong><span>subportais ativos</span></div>
           <div class="kpi"><strong id="statUpdated">n/a</strong><span>ultima atualizacao</span></div>
         </div>
-
-        <div class="controls">
-          <input id="searchInput" type="search" placeholder="Buscar por tema, tag, audiencia ou nome do documento">
-          <select id="categorySelect" aria-label="Filtrar por categoria">
-            <option value="all">Todas as categorias</option>
-            <option value="governanca">Governanca</option>
-            <option value="seguranca">Seguranca</option>
-            <option value="auditoria">Auditoria</option>
-            <option value="campanha">Campanha e comunicacao</option>
-          </select>
-        </div>
-
-        <div class="chips" id="chips">
-          <button class="chip active" type="button" data-category="all">Tudo</button>
-          <button class="chip" type="button" data-category="governanca">Governanca</button>
-          <button class="chip" type="button" data-category="seguranca">Seguranca</button>
-          <button class="chip" type="button" data-category="auditoria">Auditoria</button>
-          <button class="chip" type="button" data-category="campanha">Campanha</button>
-        </div>
-
-        <p class="result-line" id="resultLine">Carregando documentos...</p>
+        <p class="result-line">Listagem completa e pesquisa textual centralizadas em <a href="catalogo.html">catalogo.html</a>.</p>
       </section>
 
       <section class="section anim-in" aria-label="Acoes de publicacao">
@@ -155,8 +135,32 @@
         <ul class="business-list" id="businessHotlist"></ul>
       </section>
 
-      <section class="cards" id="documentos" aria-label="Documentos publicados"></section>
-      <div class="empty" id="emptyState">Nenhum documento encontrado para o filtro atual. Ajuste a busca ou selecione outra categoria.</div>
+      <section class="section anim-in" id="documentos" aria-label="Referencias essenciais">
+        <h2>Referencias essenciais</h2>
+        <p>A home agora aponta apenas para os artefatos centrais do portal. A exploracao completa por documento fica concentrada no catalogo para evitar repeticao de navegacao e cards redundantes.</p>
+        <div class="cards">
+          <a class="card" href="catalogo.html">
+            <h3>Catalogo completo</h3>
+            <p>Fonte unica de pesquisa, filtro por categoria e listagem integral dos documentos publicados.</p>
+            <small>indice geral</small>
+          </a>
+          <a class="card" href="SISTEMA_GOVERNANCA_ECOSSISTEMA.html">
+            <h3>Sistema de Governanca</h3>
+            <p>Documento-base para regras operacionais, gates e fluxo de evidencias do ecossistema.</p>
+            <small>governanca</small>
+          </a>
+          <a class="card" href="PUBLICACAO_CHECKLIST.html">
+            <h3>Checklist de Publicacao</h3>
+            <p>Roteiro pratico para validar links, estrutura e prontidao antes de deploy estatico.</p>
+            <small>operacao</small>
+          </a>
+          <a class="card" href="CHECKLIST_QA_VISUAL_PORTAL.html">
+            <h3>Checklist QA visual</h3>
+            <p>Validacao final de hierarquia, contraste, ritmo e coesao visual entre shell e identidade.</p>
+            <small>qa visual</small>
+          </a>
+        </div>
+      </section>
 
       <section class="section anim-in" id="timeline" aria-label="Linha do tempo de atualizacoes">
         <h2>Linha de atualizacoes relevantes</h2>

@@ -93,15 +93,6 @@
       updatedAt: '2026-03-14'
     },
     {
-      title: 'Code Health Report',
-      href: 'CODE_HEALTH_REPORT.html',
-      description: 'Indicadores de qualidade de codigo e manutencao dos repositorios.',
-      category: 'auditoria',
-      tag: 'code-health',
-      audience: 'engenharia',
-      updatedAt: '2026-03-18'
-    },
-    {
       title: 'Code Health Report Final',
       href: 'CODE_HEALTH_REPORT_FINAL.html',
       description: 'Consolidado final do estado tecnico de saude de codigo.',
@@ -117,15 +108,6 @@
       category: 'seguranca',
       tag: 'gate',
       audience: 'publicacao',
-      updatedAt: '2026-03-16'
-    },
-    {
-      title: 'Blackbox Ambiente de Desenvolvimento',
-      href: 'BLACKBOX_AMBIENTE_DESENVOLVIMENTO.html',
-      description: 'Panorama tecnico do ambiente de desenvolvimento e pontos criticos.',
-      category: 'governanca',
-      tag: 'ambiente',
-      audience: 'engenharia',
       updatedAt: '2026-03-16'
     },
     {
@@ -181,24 +163,6 @@
       tag: 'qa-visual',
       audience: 'publicacao',
       updatedAt: '2026-04-10'
-    },
-    {
-      title: 'Contexto Sessao IA',
-      href: 'CONTEXTO_SESSAO_IA.html',
-      description: 'Registro de contexto e alinhamento de operacao assistida por IA.',
-      category: 'governanca',
-      tag: 'ia',
-      audience: 'operacao',
-      updatedAt: '2026-03-10'
-    },
-    {
-      title: 'Validacao Memorias IA',
-      href: 'VALIDACAO_MEMORIAS_IA_ECOSSISTEMA_2026_03_10.html',
-      description: 'Checklist de validacao de memoria e consistencia de contexto.',
-      category: 'governanca',
-      tag: 'ia',
-      audience: 'operacao',
-      updatedAt: '2026-03-10'
     }
   ];
 
@@ -398,15 +362,6 @@
   }
 
   function initPortalHome() {
-    var cardsRoot = qs('#documentos');
-    if (!cardsRoot) {
-      return;
-    }
-
-    var searchInput = qs('#searchInput');
-    var categorySelect = qs('#categorySelect');
-    var resultLine = qs('#resultLine');
-    var emptyState = qs('#emptyState');
     var statDocs = qs('#statDocs');
     var statCategories = qs('#statCategories');
     var statUpdated = qs('#statUpdated');
@@ -415,31 +370,9 @@
     var businessStreams = qs('#businessStreams');
     var businessModel = computeBusinessModel();
 
-    function render() {
-      var filtered = filterDocs(searchInput.value, categorySelect.value);
-      cardsRoot.innerHTML = filtered.map(cardHtml).join('');
-
-      if (resultLine) {
-        resultLine.textContent =
-          'Mostrando ' + filtered.length + ' de ' + docs.length + ' documentos em ' + categoryLabel(categorySelect.value) + '.';
-      }
-
-      if (emptyState) {
-        emptyState.style.display = filtered.length === 0 ? 'block' : 'none';
-      }
-
-      updateChips(categorySelect.value);
+    if (!statDocs && !businessKpis) {
+      return;
     }
-
-    qsa('.chip').forEach(function (chip) {
-      chip.addEventListener('click', function () {
-        categorySelect.value = chip.getAttribute('data-category');
-        render();
-      });
-    });
-
-    searchInput.addEventListener('input', render);
-    categorySelect.addEventListener('change', render);
 
     if (statDocs) {
       statDocs.textContent = String(docs.length);
@@ -486,8 +419,6 @@
           '</article>';
       }).join('');
     }
-
-    render();
   }
 
   function catalogCardHtml(doc) {
