@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Leia primeiro â€” RepositÃ³rio Sala de NotÃ­cias</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="assets/css/sala.css">
+</head>
+<body class="sala-page">
+    <header class="sala-header" role="banner">
+        <div class="sala-header-inner">
+            <a class="sala-header-brand" href="index.html"><img src="../assets/images/logo_branca.png" alt="" class="sala-header-logo" width="40" height="36" decoding="async"><span class="sala-header-text">Sala de NotÃ­cias Â· Manual Â· Plano e campanhas</span></a>
+        </div>
+    </header>
+    <div class="sala-body">
+        <nav class="sala-nav" aria-label="NavegaÃ§Ã£o da sala">
+            <div class="sala-nav-logo">Cara Core InformÃ¡tica</div>
+            <p class="sala-nav-title">Plano e campanhas</p>
+            <ul>
+                <li><a href="index.html">Controle</a></li>
+                <li><a href="opera-sala.html">Para quem opera</a></li>
+                <li><a href="feedback.html">Canal de feedback</a></li>
+                <li><a href="facebook/facebook.html">Facebook</a></li>
+                <li><a href="instagram/instagram.html">Instagram</a></li>
+                <li><a href="linkedin/linkedin.html">LinkedIn</a></li>
+            </ul>
+            <div class="sala-nav-footer">
+                <a href="LEIGO_C1_C2_C3_C4.html">Passo a passo C1â€“C4</a>
+                <a href="CAIXA_FERRAMENTAS_6_SCRIPTS.html">Caixa de ferramentas (6 scripts)</a>
+                <a href="prompts-imagem-ia.html">Prompts IA de imagem</a>
+                <a href="ESTRUTURA_SALA.html">Estrutura da sala</a>
+                <a href="LEIA_PRIMEIRO_REPOSITORIO.html" class="active">Leia primeiro (repo)</a>
+            </div>
+        </nav>
+        <main class="sala-main" id="conteudo">
+            <h1>Leia primeiro â€” RepositÃ³rio Sala de NotÃ­cias</h1>
+            <p class="sala-doc-nav"><a href="index.html">â† Voltar ao Controle</a> Â· <a href="ESTRUTURA_SALA.html">Estrutura da sala</a></p>
+
+            <article class="sala-doc">
+                <p><strong>Cara Core InformÃ¡tica</strong> Â· InstruÃ§Ãµes para quem opera (ex.: jovem 16 anos, 3h/semana). O Seed e o MKT sÃ£o da Cara Core; nÃ£o vendemos.</p>
+                <p><strong>Premissa:</strong> A sala Ã© pÃºblica e transparente. O diferencial competitivo estÃ¡ no valor da execuÃ§Ã£o; a recompensa Ã© proporcional Ã  entrega validada. Ver regis/TEXTO_RECEPCAO, regis/ESTRATEGIA_EXECUCAO, regis/GUIA_EXECUCAO_JOVEM e regis/ARQUITETURA_SALA_C4.</p>
+                <p><strong>CenÃ¡rio:</strong> a sala estÃ¡ em D:\dev\caracore-site\sala. Estrutura completa: <a href="ESTRUTURA_SALA.html">Estrutura da sala</a>.</p>
+
+                <h2>1. CONTEÃšDO DESTE REPOSITÃ“RIO (sala)</h2>
+                <ul>
+                    <li>InstruÃ§Ãµes em formato para leigos, com desenhos (Passos 1â€“4) â€” <a href="LEIGO_C1_C2_C3_C4.html">LEIGO_C1_C2_C3_C4.html</a>. C1â€“C4 = modelo C4 (Contexto, ContÃªineres, Componentes, CÃ³digo); ver <a href="C4_MODELO.html">C4_MODELO.html</a>.</li>
+                    <li>Material sempre em HTML; em cada pÃ¡gina de artefato hÃ¡ caixa "Texto para colar na IA" e instruÃ§Ãµes para salvar no formato correto.</li>
+                    <li>Assets por rede: sala/assets/, face/, gram/, retro/.</li>
+                    <li>Script Python no final para validar se o trabalho foi executado com sucesso.</li>
+                </ul>
+
+                <h2>2. PYTHON â€” VERSÃƒO CORRETA (BASELINE)</h2>
+                <p>Use a versÃ£o correta do Python instalada pela Microsoft Store (baseline). Oficina: D:\dev\caracore-mkt (py -3 scripts\validar_sala.py etc.). Ou na raiz do repo: python sala/scripts/validar_sala.py.</p>
+
+                <h2>3. AUTOMAÃ‡ÃƒO â€” ONDE CADA REDE ENCAIXA</h2>
+                <ul>
+                    <li><strong>Facebook (F):</strong> face/</li>
+                    <li><strong>Instagram (G):</strong> gram/</li>
+                    <li><strong>LinkedIn (retro, depois do 86):</strong> <code>sala/redes/retro</code> â€” listagem em <a href="https://retro.caracore.com.br/">redes/retro/articles.html</a></li>
+                </ul>
+                <p>Tudo precisa encaixar: artefatos _F em face/artefatos/, _G em gram/artefatos/, articles 87+ em <code>sala/redes/retro/articles/</code>.</p>
+
+                <h2>4. VALIDAÃ‡ÃƒO NO FINAL DO TRABALHO</h2>
+                <ol>
+                    <li>Salve todos os arquivos (texto, imagens em sala/assets/img/ com nome correto, HTML nos lugares certos).</li>
+                    <li>Rode a oficina: py -3 scripts\validar_sala.py ou py -3 scripts\validar_trabalho_executado.py (em D:\dev\caracore-mkt).</li>
+                    <li>Ou na raiz do repositÃ³rio: python sala/scripts/validar_sala.py.</li>
+                    <li>Se aparecer "ValidaÃ§Ã£o OK", o trabalho foi executado com sucesso.</li>
+                </ol>
+
+                <h2>5. ONDE COMEÃ‡AR</h2>
+                <ul>
+                    <li><a href="opera-sala.html">Para quem opera</a> (opera-sala.html)</li>
+                    <li><a href="LEIGO_C1_C2_C3_C4.html">Passo a passo C1â€“C4</a> Â· <a href="C4_MODELO.html">Modelo C4</a></li>
+                    <li>ConvenÃ§Ã£o de nomes: <a href="prompts-ia/ESTRATEGIA_COPIAR_SALVAR.html">ESTRATEGIA_COPIAR_SALVAR</a></li>
+                    <li><a href="prompts-imagem-ia.html">Prompts para IA de imagem</a></li>
+                </ul>
+
+                <p class="sala-quiet">Resumo: repositÃ³rio com instruÃ§Ãµes para leigos; material em HTML com caixa "Texto para colar na IA" e passo a passo; script Python no final valida face (F), gram (G) e retro (LinkedIn depois do 86).</p>
+            </article>
+
+            <p class="sala-doc-nav"><a href="index.html">â† Voltar ao Controle</a> Â· <a href="ESTRUTURA_SALA.html">Estrutura da sala</a></p>
+        </main>
+    </div>
+    <footer class="sala-footer" role="contentinfo">
+        <a href="index.html">Sala de NotÃ­cias</a> Â· DocumentaÃ§Ã£o institucional Â· Nenhum dado pessoal coletado
+    </footer>
+</body>
+</html>
+
