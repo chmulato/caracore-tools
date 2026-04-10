@@ -26,12 +26,14 @@
       <ul class="quick-nav">
         <li><a href="#portal">Visao geral</a></li>
         <li><a href="#documentos">Documentos</a></li>
+        <li><a href="#logica-negocio">Logica de negocios</a></li>
         <li><a href="#timeline">Atualizacoes</a></li>
       </ul>
 
       <h2 class="side-title side-title-spaced">Colecoes</h2>
       <ul class="side-list">
         <li><a href="catalogo.html">Catalogo completo</a></li>
+        <li><a href="negocios.html">Painel de Negocios</a></li>
         <li><a href="governance-reports/index.html">Governance Reports</a></li>
         <li><a href="b2b_export/index.html">Campanha B2B Export</a></li>
         <li><a href="PUBLICACAO_CHECKLIST.html">Checklist de Publicacao</a></li>
@@ -105,7 +107,24 @@
             <p>Lista operacional para validar links, metadados e experiencia web antes do deploy.</p>
             <small>operacao</small>
           </a>
+          <a class="card" href="negocios.html">
+            <h3>Abrir painel de logica de negocios</h3>
+            <p>Prioridade de documentos, fluxo de valor e status de atualizacao para tomada de decisao.</p>
+            <small>negocio</small>
+          </a>
         </div>
+      </section>
+
+      <section class="section anim-in" id="logica-negocio" aria-label="Painel de logica de negocios">
+        <h2>Logica de negocios da documentacao</h2>
+        <p>Motor de negocio baseado em criticidade, publico-alvo e recencia. Use para priorizar manutencao e publicacao.</p>
+
+        <div class="business-kpis" id="businessKpis"></div>
+
+        <div class="stream-grid" id="businessStreams"></div>
+
+        <h2 class="subheading-spaced">Fila de prioridade</h2>
+        <ul class="business-list" id="businessHotlist"></ul>
       </section>
 
       <section class="cards" id="documentos" aria-label="Documentos publicados"></section>

@@ -207,6 +207,145 @@
     return labels[value] || value;
   }
 
+  function streamLabel(value) {
+    var labels = {
+      governanceOps: 'Governance Ops',
+      publicationPipeline: 'Publication Pipeline',
+      riskAndSecurity: 'Risk and Security',
+      marketEnablement: 'Market Enablement'
+    };
+    return labels[value] || value;
+  }
+
+  function daysSince(dateString) {
+    var today = new Date();
+    var source = new Date(dateString + 'T00:00:00');
+    var diff = today.getTime() - source.getTime();
+    return Math.max(0, Math.floor(diff / 86400000));
+  }
+
+  function businessStatus(days) {
+    if (days >= 28) {
+      return 'quente';
+    }
+    if (days >= 14) {
+      return 'morno';
+    }
+    return 'saudavel';
+  }
+
+  function statusClass(status) {
+    if (status === 'quente') {
+      return 'hot';
+    }
+    if (status === 'morno') {
+      return 'warm';
+    }
+    return 'ok';
+  }
+
+  function criticalityWeight(category) {
+    var map = {
+      seguranca: 5,
+      auditoria: 4,
+      governanca: 3,
+      campanha: 2
+    };
+    return map[category] || 2;
+  }
+
+  function audienceWeight(audience) {
+    var map = {
+      operacao: 4,
+      publicacao: 3,
+      governanca: 4,
+      engenharia: 3,
+      compliance: 4,
+      juridico: 2,
+      marketing: 2,
+      estrategia: 3,
+      suporte: 3
+    };
+    return map[audience] || 2;
+  }
+
+  function streamFromDoc(doc) {
+    if (doc.category === 'seguranca' || doc.tag === 'seguranca' || doc.tag === 'gate') {
+      return 'riskAndSecurity';
+    }
+    if (doc.category === 'auditoria') {
+      return 'governanceOps';
+    }
+    if (doc.tag === 'template' || doc.tag === 'instalacao' || doc.tag === 'checklist' || doc.tag === 'padrao') {
+      return 'publicationPipeline';
+    }
+    if (doc.category === 'campanha' || doc.tag === 'b2b' || doc.tag === 'vitrine') {
+      return 'marketEnablement';
+    }
+    return 'governanceOps';
+  }
+
+  function businessEnrichedDocs() {
+    return docs.map(function (doc) {
+      var ageInDays = daysSince(doc.updatedAt);
+      var status = businessStatus(ageInDays);
+      var stream = streamFromDoc(doc);
+      var priorityScore = (criticalityWeight(doc.category) * 10) + (audienceWeight(doc.audience) * 6) + Math.min(30, ageInDays);
+
+      return {
+        title: doc.title,
+        href: doc.href,
+        description: doc.description,
+        category: doc.category,
+        tag: doc.tag,
+        audience: doc.audience,
+        updatedAt: doc.updatedAt,
+        ageInDays: ageInDays,
+        status: status,
+        stream: stream,
+        priorityScore: priorityScore
+      };
+    });
+  }
+
+  function computeBusinessModel() {
+    var enriched = businessEnrichedDocs();
+    var streamBuckets = {
+      governanceOps: 0,
+      publicationPipeline: 0,
+      riskAndSecurity: 0,
+      marketEnablement: 0
+    };
+    var stale = 0;
+    var hot = 0;
+
+    enriched.forEach(function (doc) {
+      streamBuckets[doc.stream] += 1;
+      if (doc.ageInDays >= 30) {
+        stale += 1;
+      }
+      if (doc.status === 'quente') {
+        hot += 1;
+      }
+    });
+
+    var priorityQueue = enriched.slice().sort(function (a, b) {
+      return b.priorityScore - a.priorityScore;
+    });
+
+    return {
+      docs: enriched,
+      kpis: {
+        total: enriched.length,
+        stale: stale,
+        hot: hot,
+        streams: Object.keys(streamBuckets).length
+      },
+      streams: streamBuckets,
+      priorityQueue: priorityQueue
+    };
+  }
+
   function cardHtml(doc) {
     return '<a class="card anim-in" href="' + doc.href + '">' +
       '<h3>' + doc.title + '</h3>' +
@@ -253,6 +392,10 @@
     var statDocs = qs('#statDocs');
     var statCategories = qs('#statCategories');
     var statUpdated = qs('#statUpdated');
+    var businessKpis = qs('#businessKpis');
+    var businessHotlist = qs('#businessHotlist');
+    var businessStreams = qs('#businessStreams');
+    var businessModel = computeBusinessModel();
 
     function render() {
       var filtered = filterDocs(searchInput.value, categorySelect.value);
@@ -297,6 +440,33 @@
         return a.updatedAt < b.updatedAt ? 1 : -1;
       });
       statUpdated.textContent = sorted[0] ? sorted[0].updatedAt : 'n/a';
+    }
+
+    if (businessKpis) {
+      businessKpis.innerHTML = '' +
+        '<div class="business-kpi"><strong>' + businessModel.kpis.hot + '</strong><span>documentos quentes</span></div>' +
+        '<div class="business-kpi"><strong>' + businessModel.kpis.stale + '</strong><span>desatualizados +30d</span></div>' +
+        '<div class="business-kpi"><strong>' + businessModel.kpis.streams + '</strong><span>fluxos de valor</span></div>' +
+        '<div class="business-kpi"><strong>' + businessModel.priorityQueue[0].title + '</strong><span>prioridade #1</span></div>';
+    }
+
+    if (businessHotlist) {
+      businessHotlist.innerHTML = businessModel.priorityQueue.slice(0, 5).map(function (doc) {
+        return '<li class="business-item">' +
+          '<a href="' + doc.href + '">' + doc.title + '</a>' +
+          '<div class="business-meta"><span class="pill ' + statusClass(doc.status) + '">' + doc.status + '</span>' +
+          'score ' + doc.priorityScore + ' · ' + streamLabel(doc.stream) + ' · ' + doc.ageInDays + 'd</div>' +
+          '</li>';
+      }).join('');
+    }
+
+    if (businessStreams) {
+      businessStreams.innerHTML = Object.keys(businessModel.streams).map(function (stream) {
+        return '<article class="stream-card">' +
+          '<h3>' + streamLabel(stream) + '</h3>' +
+          '<p>' + businessModel.streams[stream] + ' ativos neste fluxo de negocio.</p>' +
+          '</article>';
+      }).join('');
     }
 
     render();
@@ -345,10 +515,69 @@
     render();
   }
 
+  function businessRowHtml(doc) {
+    return '<tr>' +
+      '<td><a href="' + doc.href + '">' + doc.title + '</a></td>' +
+      '<td>' + streamLabel(doc.stream) + '</td>' +
+      '<td>' + doc.category + '</td>' +
+      '<td>' + doc.audience + '</td>' +
+      '<td><span class="pill ' + statusClass(doc.status) + '">' + doc.status + '</span></td>' +
+      '<td>' + doc.ageInDays + 'd</td>' +
+      '<td>' + doc.priorityScore + '</td>' +
+      '</tr>';
+  }
+
+  function initBusinessPage() {
+    var tableBody = qs('#businessTableBody');
+    if (!tableBody) {
+      return;
+    }
+
+    var streamFilter = qs('#bizStreamFilter');
+    var statusFilter = qs('#bizStatusFilter');
+    var searchInput = qs('#bizSearch');
+    var countLine = qs('#bizCount');
+    var kpisRoot = qs('#bizKpis');
+    var model = computeBusinessModel();
+
+    if (kpisRoot) {
+      kpisRoot.innerHTML = '' +
+        '<div class="business-kpi"><strong>' + model.kpis.total + '</strong><span>ativos mapeados</span></div>' +
+        '<div class="business-kpi"><strong>' + model.kpis.hot + '</strong><span>quentes</span></div>' +
+        '<div class="business-kpi"><strong>' + model.kpis.stale + '</strong><span>desatualizados +30d</span></div>' +
+        '<div class="business-kpi"><strong>' + model.priorityQueue[0].priorityScore + '</strong><span>maior score</span></div>';
+    }
+
+    function render() {
+      var selectedStream = streamFilter.value;
+      var selectedStatus = statusFilter.value;
+      var term = normalize(searchInput.value).trim();
+
+      var filtered = model.priorityQueue.filter(function (doc) {
+        var streamMatch = selectedStream === 'all' || doc.stream === selectedStream;
+        var statusMatch = selectedStatus === 'all' || doc.status === selectedStatus;
+        var text = normalize(doc.title + ' ' + doc.description + ' ' + doc.tag + ' ' + doc.category + ' ' + doc.audience);
+        var termMatch = !term || text.indexOf(term) !== -1;
+        return streamMatch && statusMatch && termMatch;
+      });
+
+      tableBody.innerHTML = filtered.map(businessRowHtml).join('');
+      countLine.textContent = 'Itens visiveis: ' + filtered.length + ' de ' + model.priorityQueue.length + '.';
+    }
+
+    streamFilter.addEventListener('change', render);
+    statusFilter.addEventListener('change', render);
+    searchInput.addEventListener('input', render);
+
+    render();
+  }
+
   window.CaraCoreDocs = {
-    docs: docs
+    docs: docs,
+    computeBusinessModel: computeBusinessModel
   };
 
   initPortalHome();
   initCatalogPage();
+  initBusinessPage();
 })();

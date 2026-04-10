@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Painel de Logica de Negocios - Cara Core Tools</title>
+  <meta name="description" content="Painel de lógica de negócios da documentação do Cara Core Tools com score de prioridade, status e fluxo de valor.">
+  <link rel="canonical" href="https://tools.caracore.com.br/negocios.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/portal-docs.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Cara Core · Painel de Negocios</div>
+      <div class="meta">decision dashboard</div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Navegacao do painel de negocios">
+      <h2 class="side-title">Atalhos</h2>
+      <p class="side-lead">Acompanhe a saude de publicacao e priorize melhorias conforme risco e impacto.</p>
+      <ul class="quick-nav">
+        <li><a href="index.html">Portal principal</a></li>
+        <li><a href="catalogo.html">Catalogo completo</a></li>
+        <li><a href="PUBLICACAO_CHECKLIST.html">Checklist de publicacao</a></li>
+      </ul>
+    </aside>
+
+    <main class="main">
+      <section class="hero anim-in">
+        <p class="eyebrow">Business Logic Layer</p>
+        <h1>Painel de logica de negocios da documentacao</h1>
+        <p>Classificacao por fluxo de valor, status de recencia e score de prioridade para apoiar planejamento editorial e governanca operacional.</p>
+
+        <div class="business-kpis" id="bizKpis"></div>
+
+        <div class="catalog-toolbar toolbar-spaced">
+          <input id="bizSearch" type="search" placeholder="Buscar por documento, tema, tag ou audiencia">
+          <select id="bizStreamFilter" aria-label="Filtrar por fluxo de valor">
+            <option value="all">Todos os fluxos</option>
+            <option value="governanceOps">Governance Ops</option>
+            <option value="publicationPipeline">Publication Pipeline</option>
+            <option value="riskAndSecurity">Risk and Security</option>
+            <option value="marketEnablement">Market Enablement</option>
+          </select>
+        </div>
+
+        <div class="catalog-toolbar">
+          <select id="bizStatusFilter" aria-label="Filtrar por status de negocio">
+            <option value="all">Todos os status</option>
+            <option value="quente">Quente</option>
+            <option value="morno">Morno</option>
+            <option value="saudavel">Saudavel</option>
+          </select>
+          <p class="result-line" id="bizCount">Carregando painel...</p>
+        </div>
+      </section>
+
+      <section class="section anim-in">
+        <h2>Tabela de decisao</h2>
+        <p>Score considera criticidade da categoria, impacto por audiencia e dias desde a ultima atualizacao.</p>
+
+        <div class="biz-table-wrap">
+          <table class="biz-table" aria-label="Tabela de logica de negocios">
+            <thead>
+              <tr>
+                <th>Documento</th>
+                <th>Fluxo</th>
+                <th>Categoria</th>
+                <th>Audiencia</th>
+                <th>Status</th>
+                <th>Idade</th>
+                <th>Score</th>
+              </tr>
+            </thead>
+            <tbody id="businessTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <footer class="footer">Modelo de logica de negocios aplicavel a novos documentos do portal.</footer>
+    </main>
+  </div>
+
+  <script src="assets/js/docs-portal.js"></script>
+</body>
+</html>
