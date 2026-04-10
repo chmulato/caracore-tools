@@ -8,7 +8,7 @@ Copia os arquivos da pasta de entrega (sala/entrega/) para as pastas de cada red
   sala/entrega/retro/ -> retro/articles/
 
 Mensagens amigáveis para reportar via WhatsApp, Telegram ou e-mail em caso de erro.
-Uso: python sala/scripts/transportar_para_salas.py
+Uso: python scripts/sala/transportar_para_salas.py
 """
 from __future__ import annotations
 

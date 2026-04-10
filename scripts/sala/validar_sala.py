@@ -5,8 +5,8 @@ Sala de Notícias — Script único de validação.
 Verifica se o trabalho foi executado com sucesso: face (F), gram (G), retro (LinkedIn depois do 86).
 Usar Python baseline (versão correta do Windows Store). Rodar no final da sessão.
 
-Uso: python scripts/validar_sala.py   ou   py scripts/validar_sala.py
-      (a partir da raiz do repositório onde estão sala/, face/, gram/, retro/)
+Uso: python scripts/sala/validar_sala.py   ou   py scripts/sala/validar_sala.py
+    (a partir da raiz do repositório caracore-tools)
 """
 from __future__ import annotations
 
@@ -15,10 +15,10 @@ import re
 import sys
 from pathlib import Path
 
-# Raiz do repositório: pasta que contém sala/, face/, gram/, retro/
+# Raiz do repositório caracore-tools
 SCRIPT_DIR = Path(__file__).resolve().parent
-SALA_DIR = SCRIPT_DIR.parent
-REPO_ROOT = SALA_DIR.parent
+REPO_ROOT = SCRIPT_DIR.parent.parent
+SALA_DIR = REPO_ROOT / "docs" / "sala"
 
 # Pastas por rede (automação)
 FACE_DIR = REPO_ROOT / "face"

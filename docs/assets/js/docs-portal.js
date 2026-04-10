@@ -147,6 +147,15 @@
       updatedAt: '2026-04-09'
     },
     {
+      title: 'Politica de Publicacao HTML-Only',
+      href: 'POLITICA_PUBLICACAO_HTML_ONLY.html',
+      description: 'Regra institucional para manter o docs com documentos publicados em HTML e sem artefatos crus na superficie web.',
+      category: 'governanca',
+      tag: 'html-only',
+      audience: 'publicacao',
+      updatedAt: '2026-04-10'
+    },
+    {
       title: 'Guia de Publicacao: Shell x Identidade',
       href: 'GUIA_PUBLICACAO_SHELL_IDENTIDADE.html',
       description: 'Guia curto para separar componentes compartilhados do portal e identidade propria por assunto.',

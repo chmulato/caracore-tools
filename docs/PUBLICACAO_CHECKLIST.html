@@ -27,6 +27,7 @@
         <ul class="quick-nav">
           <li><a href="index.html">Portal principal</a></li>
           <li><a href="catalogo.html">Catalogo de documentos</a></li>
+          <li><a href="POLITICA_PUBLICACAO_HTML_ONLY.html">Politica HTML-only</a></li>
           <li><a href="#pre">Pre-publicacao</a></li>
           <li><a href="#pos">Pos-publicacao</a></li>
           <li><a href="GUIA_PUBLICACAO_SHELL_IDENTIDADE.html">Guia Shell x Identidade</a></li>
@@ -35,7 +36,7 @@
       </div>
       <div class="sidebar-block">
         <p class="sidebar-label">Regra de harmonizacao</p>
-        <p class="side-lead">Checklist opera no shell compartilhado e valida consistencia entre hubs, templates e colecoes com identidade propria.</p>
+        <p class="side-lead">Checklist opera no shell compartilhado, exige publicacao HTML-only e valida consistencia entre hubs, templates e colecoes com identidade propria.</p>
       </div>
     </aside>
 
@@ -59,7 +60,8 @@
         <ul>
           <li>Confirmar que a home em index.html abre sem erro e exibe os cards de documentos.</li>
           <li>Validar que catalogo.html aplica busca e filtro por categoria corretamente.</li>
-            <li>Testar links de colecoes: b2b/index.html e governance-reports/index.html.</li>
+          <li>Testar links de colecoes: sala/index.html, b2b/index.html e governance-reports/index.html.</li>
+          <li>Executar <code>scripts/check-docs-html-only.ps1 -ReportOnly</code> e confirmar zero arquivos crus bloqueados em docs.</li>
           <li>Garantir que cada pagina tenha title e meta description adequados.</li>
           <li>Verificar que nao existem links quebrados para arquivos removidos.</li>
           <li>Conferir responsividade basica em largura aproximada de 390px e 1366px.</li>
@@ -71,7 +73,9 @@
         <h2>Conteudo e padrao</h2>
         <ul>
           <li>Confirmar padrao visual unificado com portal-docs.css nas paginas novas.</li>
+          <li>Publicar documentos web apenas em HTML; fontes cruas e scripts saem da arvore docs.</li>
           <li>Manter templates publicaveis em HTML quando forem parte da experiencia web.</li>
+          <li>Permitir identidade local apenas quando permanecer harmonica com a navegacao institucional.</li>
           <li>Atualizar datas e descricoes no catalogo quando novos documentos entrarem.</li>
           <li>Incluir novos hubs no menu lateral do portal principal.</li>
         </ul>
@@ -82,6 +86,7 @@
         <ul>
           <li>Acessar o dominio publicado e navegar pelos links principais do portal.</li>
           <li>Executar smoke test de busca na home e no catalogo.</li>
+          <li>Rodar o gate sem <code>-ReportOnly</code> antes do deploy final.</li>
           <li>Registrar checkpoint de publicacao com data e escopo das paginas alteradas.</li>
           <li>Validar cache e CDN, quando aplicavel, para refletir versoes atualizadas.</li>
         </ul>

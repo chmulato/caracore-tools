@@ -12,8 +12,8 @@ from datetime import datetime
 from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-SALA_DIR = SCRIPT_DIR.parent
-REPO_ROOT = SALA_DIR.parent
+REPO_ROOT = SCRIPT_DIR.parent.parent
+SALA_DIR = REPO_ROOT / "docs" / "sala"
 
 FACE_DIR = REPO_ROOT / "face"
 GRAM_DIR = REPO_ROOT / "gram"
@@ -21,8 +21,9 @@ RETRO_DIR = REPO_ROOT / "retro"
 SALA_ASSETS_IMG = SALA_DIR / "assets" / "img"
 
 PLANILHA_PATH = SALA_DIR / "planilha_sala.csv"
-TRABALHO_DO_DIA_PATH = SALA_DIR / "regis" / "trabalho_do_dia.txt"
-CONFIG_PATH = SALA_DIR / "regis" / "config_sala.txt"
+REGIS_SOURCE_DIR = REPO_ROOT / "sources" / "sala" / "regis"
+TRABALHO_DO_DIA_PATH = REGIS_SOURCE_DIR / "trabalho_do_dia.txt"
+CONFIG_PATH = REGIS_SOURCE_DIR / "config_sala.txt"
 
 ENCODING = "utf-8"
 CSV_DELIM = ";"
@@ -101,19 +102,19 @@ def abrir_sala_no_navegador() -> None:
     """Abre a Sala de Notícias (index ou opera-sala) no navegador padrão."""
     url = SALA_DIR / "opera-sala.html"
     if not url.exists():
-        url = SALA_DIR / "index.htm"
+        url = SALA_DIR / "index.html"
     webbrowser.open(url.as_uri())
 
 
 def ler_trabalho_do_dia() -> str:
-    """Lê a descrição do trabalho do dia em regis/trabalho_do_dia.txt."""
+    """Lê a descrição do trabalho do dia em sources/sala/regis/trabalho_do_dia.txt."""
     if TRABALHO_DO_DIA_PATH.exists():
         return TRABALHO_DO_DIA_PATH.read_text(encoding=ENCODING).strip()
     return "Publicar artefatos conforme plano da semana (Face, Gram ou Retro). Copiar texto, gerar imagens na IA, salvar com nome correto."
 
 
 def ler_valor_hora_cc() -> float:
-    """Lê valor por hora em dinheiro CC em regis/config_sala.txt (linha valor_hora_cc=...)."""
+    """Lê valor por hora em dinheiro CC em sources/sala/regis/config_sala.txt (linha valor_hora_cc=...)."""
     if not CONFIG_PATH.exists():
         return 0.0
     for line in CONFIG_PATH.read_text(encoding=ENCODING).splitlines():

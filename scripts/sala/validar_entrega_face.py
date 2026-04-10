@@ -5,7 +5,7 @@ Sala de Notícias — Script 4: Validar a entrega dentro da sala face (Facebook)
 Verifica se os artefatos em face/artefatos/ estão no padrão e com nomes corretos.
 Mensagens amigáveis para reportar via WhatsApp, Telegram ou e-mail.
 
-Uso: python sala/scripts/validar_entrega_face.py
+Uso: python scripts/sala/validar_entrega_face.py
 """
 from __future__ import annotations
 

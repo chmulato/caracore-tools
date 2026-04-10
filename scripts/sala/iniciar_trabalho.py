@@ -5,7 +5,7 @@ Sala de Notícias — Script 1: Iniciar o trabalho do dia.
 Abre a sala no navegador, apresenta o trabalho do dia e as horas a executar,
 e atualiza a planilha (início da sessão) de forma transparente.
 
-Uso: python sala/scripts/iniciar_trabalho.py
+Uso: python scripts/sala/iniciar_trabalho.py
 Mensagens de erro são amigáveis para reportar via WhatsApp, Telegram ou e-mail da Cara Core.
 """
 from __future__ import annotations

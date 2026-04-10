@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Politica de Publicacao HTML-Only - Cara Core Tools</title>
+  <meta name="description" content="Politica operacional para manter o docs do Cara Core Tools com artefatos publicados em HTML e visual harmonico dentro do site.">
+  <link rel="canonical" href="https://tools.caracore.com.br/POLITICA_PUBLICACAO_HTML_ONLY.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/portal-docs.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Cara Core · Politica HTML-Only</div>
+      <div class="meta">publicacao harmonica no docs</div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Navegacao da politica">
+      <h2 class="side-title">Atalhos</h2>
+      <p class="side-lead">Regra operacional para impedir artefatos crus no site publicado e preservar coesao visual entre portal e hubs.</p>
+      <div class="sidebar-block">
+        <ul class="quick-nav">
+          <li><a href="index.html">Portal principal</a></li>
+          <li><a href="catalogo.html">Catalogo</a></li>
+          <li><a href="PUBLICACAO_CHECKLIST.html">Checklist de Publicacao</a></li>
+          <li><a href="CHECKLIST_QA_VISUAL_PORTAL.html">Checklist QA visual</a></li>
+          <li><a href="GUIA_PUBLICACAO_SHELL_IDENTIDADE.html">Guia Shell x Identidade</a></li>
+          <li><a href="#regras">Regras</a></li>
+          <li><a href="#fluxo">Fluxo de migracao</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-label">Regra do espaco</p>
+        <p class="side-lead">No dominio publicado, documento visivel deve ser HTML. Fonte crua, script operacional e rascunho ficam fora de docs.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="hero anim-in">
+        <p class="eyebrow">Gate de publicacao</p>
+        <h1>Politica HTML-only para o docs</h1>
+        <p>O site publicado deve expor paginas HTML com navegacao valida e estilo harmonico. Arquivos de apoio tecnico podem existir como assets de renderizacao, mas documentos, notas operacionais e scripts nao devem permanecer dentro de <code>docs/</code>.</p>
+
+        <div class="badges">
+          <span class="badge">html-only</span>
+          <span class="badge">shell harmonico</span>
+          <span class="badge">sem artefato cru</span>
+        </div>
+      </section>
+
+      <section class="section anim-in" id="regras">
+        <h2>Regras operacionais</h2>
+        <ul>
+          <li>Documento publicado no portal: sempre <code>.html</code>.</li>
+          <li>Arquivos fonte como <code>.md</code>, <code>.txt</code>, <code>.py</code>, <code>.csv</code>, <code>.htm</code> e equivalentes nao podem permanecer na arvore publicada.</li>
+          <li>Assets tecnicos de renderizacao podem permanecer quando forem estritamente suporte de pagina: <code>.css</code>, <code>.js</code>, imagens e fontes.</li>
+          <li>Excecao operacional explicita: <code>feed.xml</code> e permitido somente para distribuicao de feed publico (sindication).</li>
+          <li>Subportais com identidade propria continuam permitidos, desde que respeitem navegacao, hierarquia e integracao com o shell do site.</li>
+          <li>Todo novo documento entra no portal com metadata basica, link institucional e visual coerente com a colecao onde vive.</li>
+        </ul>
+      </section>
+
+      <section class="section anim-in">
+        <h2>O que bloqueia publicacao</h2>
+        <ul>
+          <li>README operacional, prompt, plano bruto ou nota de continuidade publicado diretamente dentro de <code>docs/</code>.</li>
+          <li>Script Python ou PowerShell acessivel pelo mesmo caminho da documentacao web.</li>
+          <li>Indice usando extensao legada <code>.htm</code> em vez de <code>.html</code>.</li>
+          <li>Pagina nova sem shell harmonico ou sem links de retorno para o portal/hub.</li>
+        </ul>
+      </section>
+
+      <section class="section anim-in" id="fluxo">
+        <h2>Fluxo recomendado para migrar material cru</h2>
+        <ol>
+          <li>Escolher o material bruto fora de <code>docs/</code> como fonte de trabalho.</li>
+          <li>Produzir a versao publicada em HTML usando o shell do portal ou a identidade local autorizada.</li>
+          <li>Apontar navegacao do hub para a pagina HTML final.</li>
+          <li>Executar a auditoria com <code>scripts/check-docs-html-only.ps1 -ReportOnly</code>.</li>
+          <li>Se a auditoria retornar zero violacoes, liberar para deploy.</li>
+        </ol>
+      </section>
+
+      <section class="section anim-in">
+        <h2>Validacao automatica</h2>
+        <p class="section-intro">Script institucional: <code>scripts/check-docs-html-only.ps1</code>.</p>
+        <ul>
+          <li><strong>Modo de auditoria:</strong> <code>powershell -File scripts/check-docs-html-only.ps1 -ReportOnly</code></li>
+          <li><strong>Modo de gate:</strong> <code>powershell -File scripts/check-docs-html-only.ps1</code></li>
+          <li><strong>Saida esperada:</strong> total de violacoes, agrupamento por extensao e diretorios com maior passivo.</li>
+        </ul>
+      </section>
+
+      <footer class="footer">Politica institucional para manter o docs estritamente publicavel.</footer>
+    </main>
+  </div>
+</body>
+</html>

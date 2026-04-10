@@ -7,7 +7,7 @@ a planilha com: descrição do trabalho feito, horas trabalhadas, valor da sess�
 e acumulado em dinheiro CC. Tratamento de exceções com mensagens amigáveis
 para reportar na sala via WhatsApp, Telegram ou e-mail da Cara Core.
 
-Uso: python sala/scripts/validar_trabalho_executado.py
+Uso: python scripts/sala/validar_trabalho_executado.py
 """
 from __future__ import annotations
 
