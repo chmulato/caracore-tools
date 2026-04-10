@@ -23,12 +23,20 @@
     <aside class="sidebar" aria-label="Navegacao de checklist">
       <h2 class="side-title">Atalhos</h2>
       <p class="side-lead">Use este checklist antes de publicar para garantir consistencia visual e funcional.</p>
-      <ul class="quick-nav">
-        <li><a href="index.html">Portal principal</a></li>
-        <li><a href="catalogo.html">Catalogo de documentos</a></li>
-        <li><a href="#pre">Pre-publicacao</a></li>
-        <li><a href="#pos">Pos-publicacao</a></li>
-      </ul>
+      <div class="sidebar-block">
+        <ul class="quick-nav">
+          <li><a href="index.html">Portal principal</a></li>
+          <li><a href="catalogo.html">Catalogo de documentos</a></li>
+          <li><a href="#pre">Pre-publicacao</a></li>
+          <li><a href="#pos">Pos-publicacao</a></li>
+          <li><a href="GUIA_PUBLICACAO_SHELL_IDENTIDADE.html">Guia Shell x Identidade</a></li>
+          <li><a href="CHECKLIST_QA_VISUAL_PORTAL.html">Checklist QA visual</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-label">Regra de harmonizacao</p>
+        <p class="side-lead">Checklist opera no shell compartilhado e valida consistencia entre hubs, templates e colecoes com identidade propria.</p>
+      </div>
     </aside>
 
     <main class="main">
@@ -46,10 +54,12 @@
 
       <section class="section anim-in" id="pre">
         <h2>Pre-publicacao</h2>
+        <p class="section-intro">Desktop e mobile: validar ritmo visual (espacamento), contraste legivel e hierarquia de titulos antes de publicar.</p>
+        <p class="section-intro">Use o roteiro dedicado em <a href="CHECKLIST_QA_VISUAL_PORTAL.html">Checklist QA visual do portal</a> para validar shell compartilhado e identidade local.</p>
         <ul>
           <li>Confirmar que a home em index.html abre sem erro e exibe os cards de documentos.</li>
           <li>Validar que catalogo.html aplica busca e filtro por categoria corretamente.</li>
-          <li>Testar links de colecoes: b2b_export/index.html e governance-reports/index.html.</li>
+            <li>Testar links de colecoes: b2b/index.html e governance-reports/index.html.</li>
           <li>Garantir que cada pagina tenha title e meta description adequados.</li>
           <li>Verificar que nao existem links quebrados para arquivos removidos.</li>
           <li>Conferir responsividade basica em largura aproximada de 390px e 1366px.</li>

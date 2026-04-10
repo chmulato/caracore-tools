@@ -54,7 +54,7 @@ Formato
 - Incluir selo discreto "03/03" integrado ao cenario (carimbo, etiqueta, reflexo).
 
 Operacao na sala de prompts (entrada)
-- Pasta de recebimento: D:\dev\caracore-site\sala\prompts-ia
+- Pasta de recebimento: D:\dev\caracore-tools\docs\sala\prompts-ia
 - Padrao de arquivo: img_prompts_ed_0 (num).txt
 - Cada arquivo deve conter 1 prompt por episodio, seguindo a ordem 1..7.
 

@@ -31,7 +31,7 @@ Validação da lógica com o legado retro (article 87, convenções): regis/VALI
     sala/assets/img/
 
   Exemplo de caminho completo (no seu computador):
-    D:\dev\caracore-site\sala\assets\img\
+    D:\dev\caracore-tools\docs\sala\assets\img\
 
   Se a pasta img/ ainda não existir, crie dentro de sala/assets/ com o nome: img
 

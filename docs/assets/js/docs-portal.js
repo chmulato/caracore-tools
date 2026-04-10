@@ -148,7 +148,7 @@
     },
     {
       title: 'Campanha B2B Export',
-      href: 'b2b_export/index.html',
+      href: 'b2b/index.html',
       description: 'Hub editorial com 12 artigos em ingles, filtragem por assunto e assets.',
       category: 'campanha',
       tag: 'b2b',
@@ -163,6 +163,24 @@
       tag: 'checklist',
       audience: 'operacao',
       updatedAt: '2026-04-09'
+    },
+    {
+      title: 'Guia de Publicacao: Shell x Identidade',
+      href: 'GUIA_PUBLICACAO_SHELL_IDENTIDADE.html',
+      description: 'Guia curto para separar componentes compartilhados do portal e identidade propria por assunto.',
+      category: 'governanca',
+      tag: 'publicacao',
+      audience: 'publicacao',
+      updatedAt: '2026-04-10'
+    },
+    {
+      title: 'Checklist QA Visual do Portal',
+      href: 'CHECKLIST_QA_VISUAL_PORTAL.html',
+      description: 'Roteiro de validacao visual desktop/mobile com foco em ritmo, contraste, hierarquia e consistencia Shell x Identidade.',
+      category: 'governanca',
+      tag: 'qa-visual',
+      audience: 'publicacao',
+      updatedAt: '2026-04-10'
     },
     {
       title: 'Contexto Sessao IA',

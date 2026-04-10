@@ -39,10 +39,11 @@
 
             <article class="sala-doc">
                 <h2>ESTRUTURA DA SALA — Novo cenário</h2>
-                <p><strong>LÓGICA DA SALA:</strong> D:\dev\caracore-site\sala (conteúdo, planos, planilha, regis, assets, feedback, opera-sala, LEIGO, etc.). Toda a lógica do MKT da sala está aqui.</p>
+                <p><strong>LÓGICA DA SALA:</strong> D:\dev\caracore-tools\docs\sala (conteúdo, planos, planilha, regis, assets, feedback, opera-sala, LEIGO, etc.). Toda a lógica web da sala está aqui.</p>
                 <ul>
-                    <li><strong>Sala:</strong> D:\dev\caracore-site\sala</li>
-                    <li><strong>Repositório do site:</strong> D:\dev\caracore-site (contém sala/; dentro de sala/, redes/ = retro, gram, face)</li>
+                    <li><strong>Sala:</strong> D:\dev\caracore-tools\docs\sala</li>
+                    <li><strong>Repositório canónico:</strong> D:\dev\caracore-tools (docs/sala/)</li>
+                    <li><strong>Matriz legado:</strong> D:\dev\caracore-site\sala (somente entrada pública com redirect)</li>
                     <li><strong>Portal</strong> (apenas login/sessão): caracore-site/caracore-mkt (Node.js); senha inicial: nota_cc</li>
                     <li><strong>Oficina</strong> (6 scripts Python): D:\dev\caracore-mkt (projeto separado); py -3 scripts\validar_sala.py etc.</li>
                     <li>O Seed e o MKT são da Cara Core; não vendemos.</li>
@@ -84,7 +85,7 @@ scripts/                  — Scripts Python legados</pre>
                 <p><strong>Resguardo:</strong> materiais públicos, domínio da matriz Cara Core; apenas o que publicamos nas redes, em obediência às redes detentoras (LinkedIn, Instagram, Facebook).</p>
 
                 <h2>OFICINA (fora do repo da sala)</h2>
-                <p>D:\dev\caracore-mkt — Projeto Python (Baseline, Microsoft Store). Scripts: iniciar_trabalho, validar_trabalho_executado, validar_sala, transportar_para_salas, validar_entrega_face, validar_entrega_gram, validar_entrega_retro. Defina CARACORE_REPO=D:\dev\caracore-site se necessário.</p>
+                <p>D:\dev\caracore-mkt — Projeto Python (Baseline, Microsoft Store). Scripts: iniciar_trabalho, validar_trabalho_executado, validar_sala, transportar_para_salas, validar_entrega_face, validar_entrega_gram, validar_entrega_retro. Defina CARACORE_REPO=D:\dev\caracore-tools\docs se necessário.</p>
 
                 <h2>ACESSO À SALA</h2>
                 <p>Via portal (caracore-site/caracore-mkt): node server.js → http://localhost:3333. Login: admin / nota_cc (senha inicial). Depois acesse index.html, feedback, etc.</p>

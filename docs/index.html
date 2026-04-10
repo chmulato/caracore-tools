@@ -23,24 +23,35 @@
     <aside class="sidebar" aria-label="Navegacao lateral">
       <h2 class="side-title">Navegacao rapida</h2>
       <p class="side-lead">Acesso direto aos hubs principais e aos documentos mais usados no fluxo de publicacao.</p>
-      <ul class="quick-nav">
-        <li><a href="#portal">Visao geral</a></li>
-        <li><a href="sala/index.html">Sala de Operacoes</a></li>
-        <li><a href="#documentos">Documentos</a></li>
-        <li><a href="#logica-negocio">Logica de negocios</a></li>
-        <li><a href="#timeline">Atualizacoes</a></li>
-      </ul>
+      <div class="sidebar-block">
+        <ul class="quick-nav">
+          <li><a href="#portal">Visao geral</a></li>
+          <li><a href="sala/index.html">Sala de Operacoes</a></li>
+          <li><a href="#documentos">Documentos</a></li>
+          <li><a href="#logica-negocio">Logica de negocios</a></li>
+          <li><a href="#timeline">Atualizacoes</a></li>
+        </ul>
+      </div>
 
-      <h2 class="side-title side-title-spaced">Colecoes</h2>
-      <ul class="side-list">
-        <li><a href="sala/index.html">Sala de Operacoes</a></li>
-        <li><a href="catalogo.html">Catalogo completo</a></li>
-        <li><a href="negocios.html">Painel de Negocios</a></li>
-        <li><a href="governance-reports/index.html">Governance Reports</a></li>
-        <li><a href="b2b_export/index.html">Campanha B2B Export</a></li>
-        <li><a href="PUBLICACAO_CHECKLIST.html">Checklist de Publicacao</a></li>
-        <li><a href="TEMPLATE_INSTALACAO.html">Template de Instalacao</a></li>
-      </ul>
+      <div class="sidebar-block">
+        <h2 class="side-title side-title-spaced">Colecoes</h2>
+        <ul class="side-list">
+          <li><a href="sala/index.html">Sala de Operacoes</a></li>
+          <li><a href="catalogo.html">Catalogo completo</a></li>
+          <li><a href="negocios.html">Painel de Negocios</a></li>
+          <li><a href="governance-reports/index.html">Governance Reports</a></li>
+          <li><a href="b2b/index.html">Campanha B2B</a></li>
+          <li><a href="PUBLICACAO_CHECKLIST.html">Checklist de Publicacao</a></li>
+          <li><a href="CHECKLIST_QA_VISUAL_PORTAL.html">Checklist QA visual</a></li>
+          <li><a href="GUIA_PUBLICACAO_SHELL_IDENTIDADE.html">Guia Shell x Identidade</a></li>
+          <li><a href="TEMPLATE_INSTALACAO.html">Template de Instalacao</a></li>
+        </ul>
+      </div>
+
+      <div class="sidebar-block">
+        <p class="sidebar-label">Regra do espaco</p>
+        <p class="side-lead">O portal principal unifica governanca, auditoria e publicacao. A Sala e a campanha B2B mantêm identidade propria dentro do mesmo espaco web.</p>
+      </div>
     </aside>
 
     <main class="main" id="portal">
@@ -104,15 +115,25 @@
             <p>Relatorios cronologicos de gate para rastreabilidade de publicacoes.</p>
             <small>governanca</small>
           </a>
-          <a class="card" href="b2b_export/index.html">
-            <h3>Entrar na Campanha B2B Export</h3>
-            <p>Hub editorial em ingles com 12 artigos e filtros por assunto.</p>
+          <a class="card" href="b2b/index.html">
+            <h3>Entrar na Campanha B2B</h3>
+            <p>Hub editorial em ingles com 12 artigos, filtros por assunto e estrutura propria.</p>
             <small>campanha</small>
           </a>
           <a class="card" href="PUBLICACAO_CHECKLIST.html">
             <h3>Executar checklist de publicacao</h3>
             <p>Lista operacional para validar links, metadados e experiencia web antes do deploy.</p>
             <small>operacao</small>
+          </a>
+          <a class="card" href="CHECKLIST_QA_VISUAL_PORTAL.html">
+            <h3>Executar checklist QA visual</h3>
+            <p>Roteiro dirigido para validar ritmo, contraste e hierarquia em desktop e mobile.</p>
+            <small>qa visual</small>
+          </a>
+          <a class="card" href="GUIA_PUBLICACAO_SHELL_IDENTIDADE.html">
+            <h3>Guia Shell x Identidade</h3>
+            <p>Regra curta para separar o que e compartilhado no portal e o que e identidade de cada assunto.</p>
+            <small>governanca editorial</small>
           </a>
           <a class="card" href="negocios.html">
             <h3>Abrir painel de logica de negocios</h3>
@@ -155,7 +176,7 @@
           </li>
           <li>
             <time datetime="2026-04-01">2026-04-01</time>
-            <a href="b2b_export/index.html">Colecao B2B Export consolidada com index filtravel</a>
+            <a href="b2b/index.html">Colecao B2B consolidada com indice filtravel</a>
           </li>
         </ul>
       </section>

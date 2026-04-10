@@ -13,6 +13,7 @@ Este repositorio centraliza utilitarios para padronizacao de ambiente, validacao
 3. Validacao automatica de encoding em arquivos README.
 4. Laboratorio de recursos modernos do Java para uso futuro em produtos.
 5. Registro documental de governanca tecnica e conformidade do ecossistema.
+6. Publicacao canonica da Sala de Operacoes em `docs/sala/`, consumida pelo dominio `tools.caracore.com.br`.
 
 ## Estrutura do repositorio
 
@@ -48,6 +49,7 @@ caracore-tools/
 | scripts | ecosystem-governance.ps1 | Dashboard de governanca, gate por app e geracao de relatorio de evidencia |
 | scripts | ecosystem-branch-governance.ps1 | Alinha e audita branch alvo por app (fonte e releases) |
 | scripts | run_delivery_ink_to_releases.ps1 | Sincroniza a entrega institucional da matriz para a loja do Ink Agenda |
+| docs/sala | Sala de Operacoes | Hub canonico de documentacao operacional, campanhas e registos da sala |
 | java | Main.java | Exercicios de records e switch expressions |
 | java | TesteJava21.java | Teste de virtual threads com alta concorrencia |
 

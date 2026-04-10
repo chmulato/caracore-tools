@@ -1,11 +1,12 @@
 ================================================================================
 ESTRUTURA DA SALA — Novo cenário
 ================================================================================
-LÓGICA DA SALA: D:\dev\caracore-site\sala (conteúdo, planos, planilha, regis,
-assets, feedback, opera-sala, LEIGO, etc.). Toda a lógica do MKT da sala está aqui.
+LÓGICA DA SALA: D:\dev\caracore-tools\docs\sala (conteúdo, planos, planilha,
+regis, assets, feedback, opera-sala, LEIGO, etc.). Toda a lógica web da sala está aqui.
 
-Sala: D:\dev\caracore-site\sala
-Repositório do site: D:\dev\caracore-site (contém sala/; dentro de sala/, redes/ = retro, gram, face)
+Sala: D:\dev\caracore-tools\docs\sala
+Repositório canónico: D:\dev\caracore-tools (docs/sala/)
+Matriz legado: D:\dev\caracore-site\sala (somente entrada pública com redirect)
 Portal (apenas login/sessão): caracore-site/caracore-mkt (Node.js); senha inicial: nota_cc
 Oficina (6 scripts Python): D:\dev\caracore-mkt (projeto separado); py -3 scripts\validar_sala.py etc.
 O Seed e o MKT são da Cara Core; não vendemos.
@@ -18,7 +19,7 @@ LAYOUT PADRÃO (todas as páginas internas)
   Rodapé (footer): "Sala de Notícias · Documentação institucional · Nenhum dado pessoal coletado".
   CSS: assets/css/sala.css. Referência de nav para subpastas: NAV_PADRAO_SUBPASTA.txt.
 
-O QUE FICA DENTRO DA SALA (D:\dev\caracore-site\sala)
+O QUE FICA DENTRO DA SALA (D:\dev\caracore-tools\docs\sala)
   index.htm                 — Controle (plano e campanhas)
   opera-sala.html           — Para quem opera
   feedback.html             — Canal de feedback (após login)
@@ -64,7 +65,7 @@ OFICINA (fora do repo da sala)
   D:\dev\caracore-mkt       — Projeto Python (Baseline, Microsoft Store)
   Scripts: iniciar_trabalho, validar_trabalho_executado, validar_sala,
            transportar_para_salas, validar_entrega_face, validar_entrega_gram,
-           validar_entrega_retro. Defina CARACORE_REPO=D:\dev\caracore-site
+           validar_entrega_retro. Defina CARACORE_REPO=D:\dev\caracore-tools\docs
   se necessário.
 
 ACESSO À SALA

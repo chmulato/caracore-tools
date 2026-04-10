@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checklist QA Visual do Portal - Cara Core Tools</title>
+  <meta name="description" content="Checklist dirigido para revisao visual desktop e mobile com foco em ritmo, contraste, hierarquia e consistencia Shell x Identidade.">
+  <link rel="canonical" href="https://tools.caracore.com.br/CHECKLIST_QA_VISUAL_PORTAL.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/portal-docs.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Cara Core · QA Visual</div>
+      <div class="meta">desktop and mobile review</div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Navegacao de QA visual">
+      <h2 class="side-title">Atalhos</h2>
+      <p class="side-lead">Roteiro rapido para revisar a experiencia visual antes de publicacao.</p>
+      <div class="sidebar-block">
+        <ul class="quick-nav">
+          <li><a href="index.html">Portal principal</a></li>
+          <li><a href="catalogo.html">Catalogo de documentos</a></li>
+          <li><a href="PUBLICACAO_CHECKLIST.html">Checklist de publicacao</a></li>
+          <li><a href="GUIA_PUBLICACAO_SHELL_IDENTIDADE.html">Guia Shell x Identidade</a></li>
+          <li><a href="#desktop">Passo desktop</a></li>
+          <li><a href="#mobile">Passo mobile</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-label">Criterio de aceite</p>
+        <p class="side-lead">Sem blocos colididos, texto legivel, hierarquia clara e links navegaveis sem erro nos pontos criticos.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="hero anim-in">
+        <p class="eyebrow">Quality Gate</p>
+        <h1>Checklist QA visual do portal</h1>
+        <p>Checklist curto, pratico e repetivel para validar ritmo, contraste, hierarquia e consistencia entre shell compartilhado e identidade do assunto.</p>
+
+        <div class="badges">
+          <span class="badge">desktop 1366px</span>
+          <span class="badge">mobile 390px</span>
+          <span class="badge">shell x identidade</span>
+        </div>
+      </section>
+
+      <section class="section anim-in" id="desktop">
+        <h2>Passo 1: revisão desktop (1366px)</h2>
+        <p class="section-intro">Abra cada pagina prioritaria em viewport ampla e confirme os itens abaixo em ordem.</p>
+        <ul>
+          <li>Topo e sidebar alinhados, sem quebra visual entre header, navegação e conteudo principal.</li>
+          <li>Ritmo vertical uniforme entre hero, secoes e listas (sem espacos comprimidos ou excessivos).</li>
+          <li>Hierarquia visual clara: titulo principal destacado, subtitulos legiveis e texto de apoio com contraste suficiente.</li>
+          <li>Cards, listas e filtros com estados visuais coerentes (hover/foco/ativo).</li>
+          <li>Links de navegação interna e cruzada abrindo destinos corretos.</li>
+        </ul>
+      </section>
+
+      <section class="section anim-in" id="mobile">
+        <h2>Passo 2: revisão mobile (390px)</h2>
+        <p class="section-intro">Repita a navegação essencial em largura reduzida para capturar regressões de responsividade.</p>
+        <ul>
+          <li>Topbar empilha corretamente e nao sobrepoe conteudo.</li>
+          <li>Sidebar e blocos de atalho permanecem navegaveis sem truncar textos.</li>
+          <li>Filtros e inputs mantem area de toque adequada (sem elementos colados).</li>
+          <li>Leitura continua em uma coluna com hierarquia preservada.</li>
+          <li>Nenhum scroll horizontal involuntario em secoes principais.</li>
+        </ul>
+      </section>
+
+      <section class="section anim-in">
+        <h2>Passo 3: shell compartilhado x identidade local</h2>
+        <p class="section-intro">Valide se cada pagina respeita o contrato editorial e visual.</p>
+        <ul>
+          <li>Shell compartilhado mantido: tipografia base, espaçamento estrutural, topbar, sidebar e padrao de secoes.</li>
+          <li>Identidade local preservada: terminologia do assunto, taxonomia, linguagem e objetivo de negocio.</li>
+          <li>Sem mistura de contexto entre paginas (ex.: governanca com discurso comercial ou campanha com linguagem de auditoria).</li>
+          <li>Alteracoes locais documentadas no proprio conteudo quando mudarem comportamento ou interpretacao.</li>
+        </ul>
+      </section>
+
+      <section class="section anim-in">
+        <h2>Pacote minimo para gate</h2>
+        <ul>
+          <li>Páginas minimas: index, catalogo, negocios, governance-reports e hub B2B.</li>
+          <li>Registrar data, operador e resultado final (aprovado, aprovado com ressalvas ou bloqueado).</li>
+          <li>Se houver falha visual critica, corrigir antes do deploy.</li>
+        </ul>
+      </section>
+
+      <footer class="footer">Checklist de QA visual para publicacao do portal Cara Core Tools.</footer>
+    </main>
+  </div>
+</body>
+</html>

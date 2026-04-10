@@ -10,74 +10,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/portal-docs.css">
-  <style>
-    .reports-toolbar {
-      display: grid;
-      grid-template-columns: 1fr 220px;
-      gap: 0.6rem;
-      margin: 0.8rem 0 0.8rem;
-    }
-    .reports-toolbar input,
-    .reports-toolbar select {
-      width: 100%;
-      border: 1px solid var(--border);
-      background: rgba(7, 17, 30, 0.75);
-      color: var(--text);
-      border-radius: 8px;
-      padding: 0.55rem 0.65rem;
-      font-size: 0.92rem;
-      font-family: inherit;
-    }
-    .report-count {
-      color: var(--quiet);
-      font-size: 0.82rem;
-      font-family: "IBM Plex Mono", Consolas, monospace;
-      margin-bottom: 0.8rem;
-    }
-    .report-list {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: grid;
-      gap: 0.5rem;
-    }
-    .report-item {
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      padding: 0.65rem 0.75rem;
-      background: rgba(255, 255, 255, 0.03);
-    }
-    .report-item a {
-      text-decoration: none;
-      color: var(--accent);
-      font-weight: 600;
-    }
-    .report-item p {
-      margin: 0.3rem 0 0;
-      color: var(--muted);
-      font-size: 0.86rem;
-    }
-    .report-tag {
-      display: inline-block;
-      margin-top: 0.4rem;
-      border-radius: 999px;
-      border: 1px solid rgba(93, 217, 193, 0.36);
-      padding: 0.16rem 0.45rem;
-      color: var(--accent-2);
-      font-size: 0.74rem;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      font-family: "IBM Plex Mono", Consolas, monospace;
-    }
-    .hidden {
-      display: none;
-    }
-    @media (max-width: 760px) {
-      .reports-toolbar {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 </head>
 <body>
   <header class="topbar">
@@ -91,11 +23,20 @@
     <aside class="sidebar" aria-label="Navegacao de relatórios">
       <h2 class="side-title">Atalhos</h2>
       <p class="side-lead">Acesso rapido para o portal principal, catalogo e relatorios mais recentes.</p>
-      <ul class="quick-nav">
-        <li><a href="../index.html">Voltar ao portal</a></li>
-        <li><a href="../catalogo.html">Abrir catalogo completo</a></li>
-        <li><a href="#reports">Lista de relatorios</a></li>
-      </ul>
+      <div class="sidebar-block">
+        <ul class="quick-nav">
+          <li><a href="../index.html">Voltar ao portal</a></li>
+          <li><a href="../catalogo.html">Abrir catalogo completo</a></li>
+          <li><a href="../negocios.html">Painel de Negocios</a></li>
+          <li><a href="#reports">Lista de relatorios</a></li>
+          <li><a href="../GUIA_PUBLICACAO_SHELL_IDENTIDADE.html">Guia Shell x Identidade</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-label">Assunto</p>
+        <p class="side-lead">Governance Reports é a camada de evidencia cronologica. O foco aqui é rastreabilidade, não vitrine comercial.</p>
+        <p class="side-lead">Shell compartilhado: navegacao, tipografia e layout. Identidade local: taxonomia de gate, trilha de evidencias e linguagem de auditoria.</p>
+      </div>
     </aside>
 
     <main class="main">
@@ -110,32 +51,35 @@
           <span class="badge">ordenacao cronologica</span>
         </div>
 
-        <div class="reports-toolbar">
+        <div class="subportal-toolbar">
           <input id="reportSearch" type="search" placeholder="Buscar por nome, modulo ou data">
           <select id="reportSort" aria-label="Ordenar relatorios">
             <option value="desc">Mais recente primeiro</option>
             <option value="asc">Mais antigo primeiro</option>
           </select>
         </div>
-        <p class="report-count" id="reportCount">Mostrando 3 de 3 relatorios.</p>
+        <p class="subportal-count" id="reportCount">Mostrando 3 de 3 relatorios.</p>
 
-        <ul class="report-list" id="reportList">
-          <li class="report-item" data-date="20260404103416" data-search="gate pdv 20260404 103416">
+        <ul class="subportal-list" id="reportList">
+          <li class="subportal-item" data-date="20260404103416" data-search="gate pdv 20260404 103416">
             <a href="GATE_pdv_20260404_103416.html">GATE PDV · 2026-04-04 10:34:16</a>
             <p>Snapshot de gate com evidencias de publicacao no modulo PDV.</p>
-            <span class="report-tag">pdv gate</span>
+            <span class="subportal-tag">pdv gate</span>
           </li>
-          <li class="report-item" data-date="20260404105630" data-search="gate pdv 20260404 105630">
+          <li class="subportal-item" data-date="20260404105630" data-search="gate pdv 20260404 105630">
             <a href="GATE_pdv_20260404_105630.html">GATE PDV · 2026-04-04 10:56:30</a>
             <p>Registro intermediario de verificacao com trilha de consistencia.</p>
-            <span class="report-tag">pdv gate</span>
+            <span class="subportal-tag">pdv gate</span>
           </li>
-          <li class="report-item" data-date="20260404105806" data-search="gate pdv 20260404 105806">
+          <li class="subportal-item" data-date="20260404105806" data-search="gate pdv 20260404 105806">
             <a href="GATE_pdv_20260404_105806.html">GATE PDV · 2026-04-04 10:58:06</a>
             <p>Estado consolidado de gate para rastreabilidade de publicacao.</p>
-            <span class="report-tag">pdv gate</span>
+            <span class="subportal-tag">pdv gate</span>
           </li>
         </ul>
+
+        <p class="subportal-note">Todos os relatórios desta coleção priorizam ordem cronologica, evidência e leitura rápida para auditoria operacional.</p>
+        <p class="subportal-note">Validacao visual dirigida (mobile e desktop): <a href="../CHECKLIST_QA_VISUAL_PORTAL.html">Checklist QA visual</a>.</p>
       </section>
 
       <footer class="footer">Colecao de relatorios em formato HTML, pronta para publicacao estatica.</footer>
@@ -148,7 +92,7 @@
       var sort = document.getElementById('reportSort');
       var list = document.getElementById('reportList');
       var count = document.getElementById('reportCount');
-      var items = Array.prototype.slice.call(list.querySelectorAll('.report-item'));
+      var items = Array.prototype.slice.call(list.querySelectorAll('.subportal-item'));
 
       function sortItems(order) {
         items.sort(function (a, b) {

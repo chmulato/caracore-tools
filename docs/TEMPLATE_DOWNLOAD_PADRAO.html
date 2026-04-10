@@ -80,6 +80,13 @@
             <a href="artifacts/INSTALACAO.md" class="btn-release btn-release-outline" target="_blank" rel="noopener">Guia de instalação</a>
         </section>
 
+        <section class="card">
+            <h3>Shell compartilhado x identidade do produto</h3>
+            <p>Este template preserva o shell institucional (breadcrumb, estrutura, CTA de download e bloco de validacao). A identidade propria fica no texto do produto, requisitos e orientacoes de uso.</p>
+            <p>Referencia de governanca editorial: <a href="https://tools.caracore.com.br/GUIA_PUBLICACAO_SHELL_IDENTIDADE.html" target="_blank" rel="noopener">Guia de publicacao Shell x Identidade</a>.</p>
+            <p>Validacao visual dirigida: <a href="https://tools.caracore.com.br/CHECKLIST_QA_VISUAL_PORTAL.html" target="_blank" rel="noopener">Checklist QA visual do portal</a>.</p>
+        </section>
+
         <!--
         VARIANTE: lançamento futuro — substituir a seção card acima por:
         <section class="card">
@@ -90,10 +97,10 @@
         -->
 
         <!-- Verificação de integridade -->
-        <section class="card" style="border-left: 4px solid var(--accent-gold);">
+        <section class="card card-highlight">
             <h3>Verificação de Integridade</h3>
             <p>Após o download, verifique a integridade no <strong>PowerShell</strong>:</p>
-            <code style="display: block; background: var(--bg-elevated); padding: 12px; border-radius: 4px; margin: 12px 0; font-family: 'Courier New', monospace;">Get-FileHash -Path .\[Executavel].exe -Algorithm SHA256</code>
+            <code class="hash-command">Get-FileHash -Path .\[Executavel].exe -Algorithm SHA256</code>
             <p>Compare o resultado com o hash publicado em <code>checksum.sha256</code>.</p>
         </section>
 
