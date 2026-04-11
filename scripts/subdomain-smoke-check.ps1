@@ -64,7 +64,67 @@ function Get-FirstRegexGroup {
     return $null
 }
 
-$checks = @(
+function Add-Check {
+    param(
+        [Parameter(Mandatory = $true)][System.Collections.ArrayList]$Target,
+        [Parameter(Mandatory = $true)][string]$Name,
+        [Parameter(Mandatory = $true)][string]$Type,
+        [Parameter(Mandatory = $true)][string]$Url,
+        [int]$ExpectedStatus,
+        [string]$ExpectedPrefix,
+        [string]$ExpectedHost,
+        [string]$ExpectedNeedle
+    )
+
+    $item = [ordered]@{
+        Name = $Name
+        Type = $Type
+        Url = $Url
+    }
+
+    if ($PSBoundParameters.ContainsKey('ExpectedStatus')) { $item.ExpectedStatus = $ExpectedStatus }
+    if ($PSBoundParameters.ContainsKey('ExpectedPrefix')) { $item.ExpectedPrefix = $ExpectedPrefix }
+    if ($PSBoundParameters.ContainsKey('ExpectedHost')) { $item.ExpectedHost = $ExpectedHost }
+    if ($PSBoundParameters.ContainsKey('ExpectedNeedle')) { $item.ExpectedNeedle = $ExpectedNeedle }
+
+    [void]$Target.Add([pscustomobject]$item)
+}
+
+function Add-StoreChecks {
+    param(
+        [Parameter(Mandatory = $true)][System.Collections.ArrayList]$Target,
+        [Parameter(Mandatory = $true)][string]$Name,
+        [Parameter(Mandatory = $true)][string]$StoreHost,
+        [switch]$HasDownload,
+        [switch]$HasBaseHref
+    )
+
+    $rootUrl = "https://$StoreHost/"
+    $feedbackUrl = "https://$StoreHost/canal-feedback.html"
+    $wikiUrl = "https://$StoreHost/wiki/index.html"
+
+    if ($HasBaseHref) {
+        Add-Check -Target $Target -Name "$Name root base host" -Type 'base-host' -Url $rootUrl -ExpectedHost $StoreHost
+    }
+
+    if ($HasDownload) {
+        $downloadUrl = "https://$StoreHost/download.html"
+        Add-Check -Target $Target -Name "$Name download 200" -Type 'status' -Url $downloadUrl -ExpectedStatus 200
+        if ($HasBaseHref) {
+            Add-Check -Target $Target -Name "$Name download base host" -Type 'base-host' -Url $downloadUrl -ExpectedHost $StoreHost
+        }
+    }
+
+    Add-Check -Target $Target -Name "$Name feedback 200" -Type 'status' -Url $feedbackUrl -ExpectedStatus 200
+    if ($HasBaseHref) {
+        Add-Check -Target $Target -Name "$Name feedback base host" -Type 'base-host' -Url $feedbackUrl -ExpectedHost $StoreHost
+    }
+
+    Add-Check -Target $Target -Name "$Name wiki 200" -Type 'status' -Url $wikiUrl -ExpectedStatus 200
+    Add-Check -Target $Target -Name "$Name wiki links canonical wiki" -Type 'contains' -Url $wikiUrl -ExpectedNeedle 'https://wiki.caracore.com.br/index.html'
+}
+
+$checks = [System.Collections.ArrayList]@(
     [pscustomobject]@{ Name = 'matrix root 200'; Type = 'status'; Url = 'https://www.caracore.com.br/'; ExpectedStatus = 200 },
     [pscustomobject]@{ Name = 'tools root 200'; Type = 'status'; Url = 'https://tools.caracore.com.br/'; ExpectedStatus = 200 },
     [pscustomobject]@{ Name = 'retro root 200'; Type = 'status'; Url = 'https://retro.caracore.com.br/'; ExpectedStatus = 200 },
@@ -87,6 +147,18 @@ $checks = @(
     [pscustomobject]@{ Name = 'personal article canonical/og host'; Type = 'meta-host'; Url = 'https://personal.caracore.com.br/articles/2026_04_03_alem_da_lente_os_limites_da_automacao_visual.html'; ExpectedHost = 'personal.caracore.com.br' },
     [pscustomobject]@{ Name = 'wiki root og:url host'; Type = 'meta-host-og-only'; Url = 'https://wiki.caracore.com.br/'; ExpectedHost = 'wiki.caracore.com.br' }
 )
+
+Add-StoreChecks -Target $checks -Name 'pdv' -StoreHost 'pdv.caracore.com.br' -HasDownload -HasBaseHref
+Add-StoreChecks -Target $checks -Name 'cso' -StoreHost 'cso.caracore.com.br' -HasDownload -HasBaseHref
+Add-StoreChecks -Target $checks -Name 'hub' -StoreHost 'hub.caracore.com.br' -HasDownload -HasBaseHref
+Add-StoreChecks -Target $checks -Name 'seed' -StoreHost 'seed.caracore.com.br' -HasDownload -HasBaseHref
+Add-StoreChecks -Target $checks -Name 'oidc' -StoreHost 'oidc.caracore.com.br' -HasDownload -HasBaseHref
+Add-StoreChecks -Target $checks -Name 'area51' -StoreHost 'area51.caracore.com.br' -HasDownload -HasBaseHref
+Add-StoreChecks -Target $checks -Name 'ru' -StoreHost 'ru.caracore.com.br' -HasDownload -HasBaseHref
+Add-StoreChecks -Target $checks -Name 'ete' -StoreHost 'ete.caracore.com.br' -HasDownload -HasBaseHref
+Add-StoreChecks -Target $checks -Name 'circuito' -StoreHost 'circuito.caracore.com.br' -HasDownload -HasBaseHref
+Add-StoreChecks -Target $checks -Name 'ink' -StoreHost 'ink.caracore.com.br' -HasDownload -HasBaseHref
+Add-StoreChecks -Target $checks -Name 'mkt' -StoreHost 'mkt.caracore.com.br'
 
 $cache = @{}
 $report = @()
@@ -136,6 +208,20 @@ foreach ($check in $checks) {
 
             $pass = ($ogHost -eq $check.ExpectedHost)
             $detail = "expected-host=$($check.ExpectedHost); og-host=$ogHost"
+        }
+
+        'base-host' {
+            $baseHref = Get-FirstRegexGroup -InputText $page.Html -Pattern '<base[^>]+href=["'']([^"'']+)["'']'
+            $baseHost = $null
+            if ($baseHref) { $baseHost = ([Uri]$baseHref).Host }
+
+            $pass = ($baseHost -eq $check.ExpectedHost)
+            $detail = "expected-host=$($check.ExpectedHost); base-host=$baseHost"
+        }
+
+        'contains' {
+            $pass = ($null -ne $page.Html) -and $page.Html.Contains($check.ExpectedNeedle)
+            $detail = "expected-needle=$($check.ExpectedNeedle)"
         }
 
         default {
