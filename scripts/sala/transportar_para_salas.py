@@ -3,9 +3,9 @@
 """
 Sala de Notícias — Script 3: Transportar o trabalho para as salas retro, gram e face.
 Copia os arquivos da pasta de entrega (sala/entrega/) para as pastas de cada rede:
-  sala/entrega/face/  -> face/artefatos/
-  sala/entrega/gram/  -> gram/artefatos/
-  sala/entrega/retro/ -> retro/articles/
+    sala/entrega/face/  -> docs/sala/redes/face/artefatos/
+    sala/entrega/gram/  -> docs/sala/redes/gram/artefatos/
+    sala/entrega/retro/ -> caracore-retro/docs/articles/
 
 Mensagens amigáveis para reportar via WhatsApp, Telegram ou e-mail em caso de erro.
 Uso: python scripts/sala/transportar_para_salas.py
@@ -63,7 +63,7 @@ def main() -> int:
         print("=" * 60)
         print()
         print("Origem: sala/entrega/ (face, gram, retro)")
-        print("Destino: face/artefatos/, gram/artefatos/, retro/articles/")
+        print("Destino: docs/sala/redes/face/artefatos/, docs/sala/redes/gram/artefatos/, caracore-retro/docs/articles/")
         print()
 
         if not ENTREGA_DIR.is_dir():

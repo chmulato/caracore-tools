@@ -65,10 +65,22 @@ function Get-FirstRegexGroup {
 }
 
 $checks = @(
+    [pscustomobject]@{ Name = 'matrix root 200'; Type = 'status'; Url = 'https://www.caracore.com.br/'; ExpectedStatus = 200 },
     [pscustomobject]@{ Name = 'tools root 200'; Type = 'status'; Url = 'https://tools.caracore.com.br/'; ExpectedStatus = 200 },
     [pscustomobject]@{ Name = 'retro root 200'; Type = 'status'; Url = 'https://retro.caracore.com.br/'; ExpectedStatus = 200 },
     [pscustomobject]@{ Name = 'personal root 200'; Type = 'status'; Url = 'https://personal.caracore.com.br/'; ExpectedStatus = 200 },
     [pscustomobject]@{ Name = 'wiki root 200'; Type = 'status'; Url = 'https://wiki.caracore.com.br/'; ExpectedStatus = 200 },
+    [pscustomobject]@{ Name = 'pdv root 200'; Type = 'status'; Url = 'https://pdv.caracore.com.br/'; ExpectedStatus = 200 },
+    [pscustomobject]@{ Name = 'cso root 200'; Type = 'status'; Url = 'https://cso.caracore.com.br/'; ExpectedStatus = 200 },
+    [pscustomobject]@{ Name = 'hub root 200'; Type = 'status'; Url = 'https://hub.caracore.com.br/'; ExpectedStatus = 200 },
+    [pscustomobject]@{ Name = 'seed root 200'; Type = 'status'; Url = 'https://seed.caracore.com.br/'; ExpectedStatus = 200 },
+    [pscustomobject]@{ Name = 'oidc root 200'; Type = 'status'; Url = 'https://oidc.caracore.com.br/'; ExpectedStatus = 200 },
+    [pscustomobject]@{ Name = 'area51 root 200'; Type = 'status'; Url = 'https://area51.caracore.com.br/'; ExpectedStatus = 200 },
+    [pscustomobject]@{ Name = 'ru root 200'; Type = 'status'; Url = 'https://ru.caracore.com.br/'; ExpectedStatus = 200 },
+    [pscustomobject]@{ Name = 'ete root 200'; Type = 'status'; Url = 'https://ete.caracore.com.br/'; ExpectedStatus = 200 },
+    [pscustomobject]@{ Name = 'circuito root 200'; Type = 'status'; Url = 'https://circuito.caracore.com.br/'; ExpectedStatus = 200 },
+    [pscustomobject]@{ Name = 'ink root 200'; Type = 'status'; Url = 'https://ink.caracore.com.br/'; ExpectedStatus = 200 },
+    [pscustomobject]@{ Name = 'mkt root 200'; Type = 'status'; Url = 'https://mkt.caracore.com.br/'; ExpectedStatus = 200 },
     [pscustomobject]@{ Name = 'retro articles redirect'; Type = 'redirect'; Url = 'https://retro.caracore.com.br/articles.html'; ExpectedPrefix = 'https://retro.caracore.com.br/' },
     [pscustomobject]@{ Name = 'personal articles redirect'; Type = 'redirect'; Url = 'https://personal.caracore.com.br/articles.html'; ExpectedPrefix = 'https://personal.caracore.com.br/' },
     [pscustomobject]@{ Name = 'retro article canonical/og host'; Type = 'meta-host'; Url = 'https://retro.caracore.com.br/articles/2026_04_04_article_79.html'; ExpectedHost = 'retro.caracore.com.br' },

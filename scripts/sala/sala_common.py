@@ -6,6 +6,7 @@ Caminhos, planilha, mensagens amigáveis para reportar via WhatsApp/Telegram/e-m
 from __future__ import annotations
 
 import csv
+import os
 import sys
 import webbrowser
 from datetime import datetime
@@ -13,11 +14,15 @@ from pathlib import Path
 
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent.parent
+WORKSPACE_ROOT = REPO_ROOT.parent
 SALA_DIR = REPO_ROOT / "docs" / "sala"
+REDES_DIR = SALA_DIR / "redes"
 
-FACE_DIR = REPO_ROOT / "face"
-GRAM_DIR = REPO_ROOT / "gram"
-RETRO_DIR = REPO_ROOT / "retro"
+FACE_DIR = REDES_DIR / "face"
+GRAM_DIR = REDES_DIR / "gram"
+RETRO_DIR = Path(
+    os.environ.get("CARACORE_RETRO_DIR", WORKSPACE_ROOT / "caracore-retro" / "docs")
+)
 SALA_ASSETS_IMG = SALA_DIR / "assets" / "img"
 
 PLANILHA_PATH = SALA_DIR / "planilha_sala.csv"

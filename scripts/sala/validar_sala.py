@@ -10,21 +10,14 @@ Uso: python scripts/sala/validar_sala.py   ou   py scripts/sala/validar_sala.py
 """
 from __future__ import annotations
 
-import os
 import re
 import sys
 from pathlib import Path
 
-# Raiz do repositório caracore-tools
 SCRIPT_DIR = Path(__file__).resolve().parent
-REPO_ROOT = SCRIPT_DIR.parent.parent
-SALA_DIR = REPO_ROOT / "docs" / "sala"
+sys.path.insert(0, str(SCRIPT_DIR))
 
-# Pastas por rede (automação)
-FACE_DIR = REPO_ROOT / "face"
-GRAM_DIR = REPO_ROOT / "gram"
-RETRO_DIR = REPO_ROOT / "retro"
-SALA_ASSETS_IMG = SALA_DIR / "assets" / "img"
+from sala_common import FACE_DIR, GRAM_DIR, RETRO_DIR, REPO_ROOT, SALA_ASSETS_IMG
 
 # Padrões de nome
 RE_DATE = re.compile(r"^\d{4}_\d{2}_\d{2}_")
@@ -50,7 +43,7 @@ def log_warn(msg: str) -> None:
 
 
 def check_face() -> None:
-    """Facebook (F): face/artefatos/ com *_F.html; imagens em sala/assets/img/."""
+    """Facebook (F): docs/sala/redes/face/artefatos/ com *_F.html; imagens em sala/assets/img/."""
     if not FACE_DIR.is_dir():
         log_err(f"Pasta face não encontrada: {FACE_DIR}")
         return
@@ -69,7 +62,7 @@ def check_face() -> None:
 
 
 def check_gram() -> None:
-    """Instagram (G): gram/artefatos/ com *_G.html."""
+    """Instagram (G): docs/sala/redes/gram/artefatos/ com *_G.html."""
     if not GRAM_DIR.is_dir():
         log_err(f"Pasta gram não encontrada: {GRAM_DIR}")
         return
@@ -87,7 +80,7 @@ def check_gram() -> None:
 
 
 def check_retro() -> None:
-    """LinkedIn (retro): retro/articles/ com article_87 em diante."""
+    """LinkedIn (retro): caracore-retro/docs/articles/ com article_87 em diante."""
     if not RETRO_DIR.is_dir():
         log_err(f"Pasta retro não encontrada: {RETRO_DIR}")
         return
