@@ -9,7 +9,7 @@ Referencias do ecossistema:
   ECOSYSTEM_LOJAS.txt        URLs canonicas das lojas (GitHub Pages) e matriz institucional (caracore.com.br — portfolio, ecossistema, sala); ver docs/FONTES_CANONICAS_MATRIZ_LOJAS.md §2–3.
 
 Sala de noticias (este repositorio):
-  Repositorio: caracore-articles (branch main). GitHub Pages: https://retro.caracore.com.br/
+  Repositorio: caracore-articles (branch main). Referencia publica Sala: https://tools.caracore.com.br/sala/linkedin/linkedin.html
   Listagem:    docs/articles.html   |   Artigos: docs/articles/ (HTML) e docs/articles/assets/img/ (imagens).
   Sem dominio proprio: sala hospedada apenas na infra do GitHub; aviso startup + infra em index.html e articles.html.
   Canonical e og:url/og:image de todos os artigos apontam para caracore.com.br/caracore-articles/articles/.
@@ -137,7 +137,7 @@ Foco: artigos alinhados aos produtos e lojas do ecossistema (PDV, Hub, ETE, Circ
 
 Produtos e referencias (CTAs e artigos: usar sempre a loja; matriz = identidade Cara Core em caracore.com.br):
   Cara Core PDV          pdv.caracore.com.br   | matriz: portfolio.html, ecossistema.html (institucional)
-  Cara Core Hub          hub.caracore.com.br   | idem
+  Cara Core Hub          tools.caracore.com.br/catalogo.html   | portal de ferramentas
   Minerador 4.0 (ETE)    ete.caracore.com.br   | idem
   Circuito Python       circuito.caracore.com.br | idem
   Reino OIDC            oidc.caracore.com.br  | idem
@@ -179,7 +179,7 @@ NOTAS
 
   Analise editorial (Editor-Chefe / Estrategista de Narrativa): docs/EDITORIAL_ANALISE_MARCO_2026.md. Auditoria de soberania, refinamento Soberania Tecnica/Dossie Operacional, engajamento de elite, filtro de ruido, CTA Industrial-Ink. Comando de guerrilla para comentarios (Cara Core + Guilherme). Aplicado ao artigo 75 (07/04); replicar criterios para 76, 77, 78 e serie RU marÃ§o.
   O registro e atualizado conforme a lista em docs/articles.html (sala em caracore-articles, GitHub Pages). Novos artigos: YYYY_MM_DD_article_NN.html ou nome tematico (ex.: serie_ru_*); inserir na lista e neste arquivo.
-  Sala de noticias: sem dominio proprio; URL base https://retro.caracore.com.br/. Memoria do projeto em .cursor/rules/project-memory.mdc.
+  Sala de noticias / campanha: URL base https://tools.caracore.com.br/sala/linkedin/linkedin.html. Memoria do projeto em .cursor/rules/project-memory.mdc.
   Imagens: formato 16:9 paisagem; pasta docs/articles/assets/img. Prompts em docs/articles/assets/prompts_img/.
   Referencia cruzada: ECOSYSTEM_CARA_CORE.txt, VALIDACAO_LOJAS_MATRIZ.txt, ECOSYSTEM_LOJAS.txt. Serie RU: docs/CONSISTENCIA_SERIE_RU.md, feedback_final.txt.
   Convencao de nomes do ecossistema: repos e pastas no padrao caracore-* (caracore-site, caracore-pdv, caracore-hub, caracore-ete, caracore-circuito, caracore-oidc, caracore-seed, caracore-area51, caracore-ru); lojas GitHub Pages em caracore-*-releases (ex.: caracore-circuito-releases, caracore-oidc-releases).

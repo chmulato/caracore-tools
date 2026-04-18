@@ -11,7 +11,7 @@ e regis/ARQUITETURA_SALA_C4.txt.
 
 Cenário legado nesta pasta: D:\dev\caracore-site\sala.
 Cenário canónico: D:\dev\caracore-tools\docs\sala. Estrutura completa: ESTRUTURA_SALA.txt
-Entrada pública da matriz: https://www.caracore.com.br/sala/ -> https://tools.caracore.com.br/sala/
+Entrada pública da matriz / Sala de Operações: https://tools.caracore.com.br/sala/
 ================================================================================
 
 1. CONTEÚDO DESTE REPOSITÓRIO (sala)

@@ -12,14 +12,14 @@ A Cara Core trata isso com uma estrutura interna chamada Matriz CC: uma página 
 
 A empresa desenvolve tecnologia local e offline-first para regiões com baixa conectividade. Essa disciplina — uma fonte de verdade, clareza, alinhamento — se estende à comunicação: um hub, várias redes, conteúdo coerente.
 
-Exemplo prático: os artigos publicados no LinkedIn entram na lista da Sala de Notícias e na matriz em caracore.com.br/publications, com datas e textos idênticos. Quem define o que vai a cada mês consulta a nota_cc; quem publica em cada rede segue as diretrizes daquele hub.
+Exemplo prático: os artigos publicados no LinkedIn entram na lista da Sala de Notícias e na matriz em tools.caracore.com.br/sala/linkedin/linkedin.html, com datas e textos idênticos. Quem define o que vai a cada mês consulta a nota_cc; quem publica em cada rede segue as diretrizes daquele hub.
 
-Se quiser ver como a Cara Core organiza artigos e campanhas, a Sala de Notícias está em caracore.com.br/publications (ou no link da bio). Lá você encontra os artigos e a lógica por trás da Matriz CC.
+Se quiser ver como a Cara Core organiza artigos e campanhas, a Sala de Notícias está em tools.caracore.com.br/sala/linkedin/linkedin.html (ou no link da bio). Lá você encontra os artigos e a lógica por trás da Matriz CC.
 
 ---
 
 ================================================================================
-Fim da Versão 1. Link sugerido: caracore.com.br/publications ou GitHub Pages.
+Fim da Versão 1. Link sugerido: tools.caracore.com.br/sala/linkedin/linkedin.html ou GitHub Pages.
 ================================================================================
 
 
@@ -35,9 +35,9 @@ A Cara Core adota uma estrutura interna (Matriz CC / nota_cc): uma página de co
 
 O posicionamento da empresa é offline-first e local: tecnologia que funciona em baixa conectividade. A mesma lógica se aplica à comunicação — um hub, várias redes, coerência.
 
-Aplicação prática: cada artigo publicado no LinkedIn é registrado na Sala de Notícias e na matriz (caracore.com.br/publications), com data e texto idênticos. A definição mensal do que publicar passa pela nota_cc; a publicação em cada canal segue as diretrizes desse hub.
+Aplicação prática: cada artigo publicado no LinkedIn é registrado na Sala de Notícias e na matriz (tools.caracore.com.br/sala/linkedin/linkedin.html), com data e texto idênticos. A definição mensal do que publicar passa pela nota_cc; a publicação em cada canal segue as diretrizes desse hub.
 
-Para ver como isso funciona na prática, a Sala de Notícias está em caracore.com.br/publications. Lá estão os artigos e a estrutura por trás da Matriz CC.
+Para ver como isso funciona na prática, a Sala de Notícias está em tools.caracore.com.br/sala/linkedin/linkedin.html. Lá estão os artigos e a estrutura por trás da Matriz CC.
 
 ---
 

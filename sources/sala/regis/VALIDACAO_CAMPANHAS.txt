@@ -26,10 +26,10 @@ Data: 2026-02-13
     ../retro/articles/XXX.html (no caracore-site não existe articles/ na raiz;
     os artigos ficam em retro/articles/).
   - Canonicals atualizados para caracore.com.br/sala/:
-    index.htm → https://www.caracore.com.br/sala/index.htm
-    linkedin/linkedin.html → https://www.caracore.com.br/sala/linkedin/linkedin.html
-    facebook/facebook.html → https://www.caracore.com.br/sala/facebook/facebook.html
-    instagram/instagram.html → https://www.caracore.com.br/sala/instagram/instagram.html
+    index.htm → https://tools.caracore.com.br/sala/index.html
+    linkedin/linkedin.html → https://tools.caracore.com.br/sala/linkedin/linkedin.html
+    facebook/facebook.html → https://tools.caracore.com.br/sala/facebook/facebook.html
+    instagram/instagram.html → https://tools.caracore.com.br/sala/instagram/instagram.html
 
 --------------------------------------------------------------------------------
 3. ASSETS

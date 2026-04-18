@@ -9,7 +9,7 @@ Conteúdo público, no domínio da matriz Cara Core. Resguardo: sala/redes/READM
   · Nome: Retro · Portal Cara Core LinkedIn
   · Listagem: redes/retro/articles.html  (a partir da raiz da sala)
   · Artigos (HTML): redes/retro/articles/
-  · Convencao: article_(NN)_(01).png, YYYY_MM_DD_article_(NN).html — a data no nome = publicacao no calendario (ex.: 1.o semestre 2026: jan-jun). URL canonica: https://retro.caracore.com.br/articles/<ficheiro>. Duplicados com o mesmo article_NN foram eliminados (75-78: usar so 2026_04_*).
+  · Convencao: article_(NN)_(01).png, YYYY_MM_DD_article_(NN).html — a data no nome = publicacao no calendario (ex.: 1.o semestre 2026: jan-jun). URL publica da Sala (campanha / manual LinkedIn): https://tools.caracore.com.br/sala/linkedin/linkedin.html — duplicados com o mesmo article_NN foram eliminados (75-78: usar so 2026_04_*).
 
 O plano e as diretrizes da campanha LinkedIn (retorno 31/03/2026; articles 87–89
 em ago/set/out 2026) ficam em sala/linkedin/ (manual da Sala). Aqui em redes/retro
