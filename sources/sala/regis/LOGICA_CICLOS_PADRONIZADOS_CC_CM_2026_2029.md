@@ -122,9 +122,9 @@ Responsavel editorial:
 
 ## Referencias de governanca
 
-- `REPOSICIONAMENTO_CONJUNTO_CC_CM_2026_2029.html`
+- `reposicionamento_conjunto_cc_cm_2026_2029.html`
 - `CRONOGRAMA_EDITORIAL_EXECUTIVO_2026_2029.md`
 - `CRONOGRAMA_DISTRIBUICAO_CICLOS_EQUILATEROS_2026_2029.md`
-- `REGISTRO_FASES_MODIFICACOES_2026_2029.html`
-- `REDISTRIBUICAO_ARTIGOS_OPERACAO_2026_2027.html`
+- `registro_fases_modificacoes_2026_2029.html`
+- `redistribuicao_artigos_operacao_2026_2027.html`
 - `D:\dev\MAPEAMENTO_ECOSSISTEMA_PRODUCTOS.md`

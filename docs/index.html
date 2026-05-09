@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sala de Operacoes - Cara Core Tools</title>
-  <meta name="description" content="Portal unificado da Sala de Operacoes Cara Core Tools para publicacao online de governanca, auditorias, seguranca e campanha B2B.">
+  <title>Portal Cara Core — tools.caracore.com.br</title>
+  <meta name="description" content="Portal da Loja das Ferramentas e da Sala de Operações Cara Core: documentação em português, catálogo e acesso à campanha.">
   <link rel="canonical" href="https://tools.caracore.com.br/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,199 +14,85 @@
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <div class="brand">Cara Core · Sala de Operacoes · Tools</div>
-      <div class="meta">tools.caracore.com.br · publicacao web</div>
+      <div class="brand">Cara Core · Ferramentas e Sala de Operações</div>
+      <div class="meta">tools.caracore.com.br</div>
     </div>
   </header>
 
   <div class="layout">
-    <aside class="sidebar" aria-label="Navegacao lateral">
-      <h2 class="side-title">Navegacao rapida</h2>
-      <p class="side-lead">Acesso direto aos hubs principais e aos documentos mais usados no fluxo de publicacao.</p>
+    <aside class="sidebar" aria-label="Navegação">
+      <h2 class="side-title">Navegação</h2>
       <div class="sidebar-block">
         <ul class="quick-nav">
-          <li><a href="#portal">Visao geral</a></li>
-          <li><a href="sala/index.html">Sala de Operacoes</a></li>
-          <li><a href="#documentos">Documentos</a></li>
-          <li><a href="#logica-negocio">Logica de negocios</a></li>
-          <li><a href="#timeline">Atualizacoes</a></li>
-          <li><a href="POLITICA_PUBLICACAO_HTML_ONLY.html">Politica HTML-only</a></li>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="sala/index.html">Sala de Operações</a></li>
+          <li><a href="catalogo.html">Catálogo de documentos</a></li>
+          <li><a href="negocios.html">Prioridade da documentação</a></li>
         </ul>
       </div>
-
       <div class="sidebar-block">
-        <h2 class="side-title side-title-spaced">Colecoes</h2>
-        <ul class="side-list">
-          <li><a href="sala/index.html">Sala de Operacoes</a></li>
-          <li><a href="catalogo.html">Catalogo completo</a></li>
-          <li><a href="negocios.html">Painel de Negocios</a></li>
-          <li><a href="governance-reports/index.html">Governance Reports</a></li>
-          <li><a href="b2b/index.html">Campanha B2B</a></li>
-          <li><a href="PUBLICACAO_CHECKLIST.html">Checklist de Publicacao</a></li>
-          <li><a href="CHECKLIST_QA_VISUAL_PORTAL.html">Checklist QA visual</a></li>
-          <li><a href="POLITICA_PUBLICACAO_HTML_ONLY.html">Politica HTML-only</a></li>
-          <li><a href="GUIA_PUBLICACAO_SHELL_IDENTIDADE.html">Guia Shell x Identidade</a></li>
-          <li><a href="TEMPLATE_INSTALACAO.html">Template de Instalacao</a></li>
-        </ul>
-      </div>
-
-      <div class="sidebar-block">
-        <p class="sidebar-label">Regra do espaco</p>
-        <p class="side-lead">O portal principal unifica governanca, auditoria e publicacao. Conteudo publicado entra em HTML com shell harmonico; fonte crua e script ficam fora do dominio web.</p>
+        <p class="sidebar-label">Sobre este site</p>
+        <p class="side-lead">Conteúdo em HTML para consulta e publicação. Material bruto e scripts ficam fora da área pública.</p>
       </div>
     </aside>
 
-    <main class="main" id="portal">
+    <main class="main" id="inicio">
       <section class="hero anim-in">
-        <p class="eyebrow">Portal Oficial de Publicacao</p>
-        <h1>Conteudo HTML do Cara Core Tools pronto para web, busca e governanca</h1>
-        <p>Esta estrutura centraliza a documentacao operacional com acesso rapido por categoria, padrao visual consistente e navegacao preparada para uso online em dominio proprio.</p>
+        <p class="eyebrow">Portal oficial</p>
+        <h1>Loja das Ferramentas e Sala de Operações</h1>
+        <p class="hero-lead">Um único lugar para a documentação operacional da Cara Core: campanha, governança e modelos de página.</p>
 
-        <div class="badges" aria-label="Indicadores de prontidao">
-          <span class="badge">Publicacao web-first</span>
-          <span class="badge">Navegacao por tema</span>
-          <span class="badge">Indice centralizado</span>
-          <span class="badge">Padrao visual unico</span>
-          <span class="badge">HTML-only</span>
-        </div>
+        <dl class="hero-stats" aria-label="Resumo do catálogo">
+          <div class="hero-stat">
+            <dt>Documentos</dt>
+            <dd><strong id="statDocs">0</strong></dd>
+          </div>
+          <div class="hero-stat">
+            <dt>Última atualização</dt>
+            <dd><strong id="statUpdated">—</strong></dd>
+          </div>
+        </dl>
 
-        <div class="kpi-grid">
-          <div class="kpi"><strong id="statDocs">0</strong><span>documentos html</span></div>
-          <div class="kpi"><strong id="statCategories">0</strong><span>categorias</span></div>
-          <div class="kpi"><strong>3</strong><span>subportais ativos</span></div>
-          <div class="kpi"><strong id="statUpdated">n/a</strong><span>ultima atualizacao</span></div>
-        </div>
-        <p class="result-line">Listagem completa e pesquisa textual centralizadas em <a href="catalogo.html">catalogo.html</a>.</p>
+        <p class="result-line"><a href="catalogo.html">Abrir o catálogo completo</a> para buscar por tema ou título.</p>
       </section>
 
-      <section class="section anim-in" aria-label="Acoes de publicacao">
-        <h2>Publicacao operacional</h2>
-        <p>Use o catalogo para curadoria completa, os relatórios de governance para evidencia e os templates para padronizacao de paginas de vitrine, download e instalacao.</p>
-        <div class="cards">
+      <section class="section anim-in" aria-label="Acesso principal">
+        <h2>Acesso principal</h2>
+        <p class="section-intro">Escolha o que precisa; o restante está no catálogo ou no painel de prioridades.</p>
+        <div class="cards cards-compact">
           <a class="card" href="sala/index.html">
-            <h3>Acessar Sala de Operacoes</h3>
-            <p>Hub operacional migrado com manuais de rede, execucao e acompanhamento de campanha.</p>
-            <small>operacao</small>
+            <h3>Sala de Operações</h3>
+            <p>Campanha, manuais por rede e fluxo para quem publica.</p>
           </a>
           <a class="card" href="catalogo.html">
-            <h3>Abrir catalogo completo</h3>
-            <p>Visao total dos documentos com filtro por categoria e pesquisa textual.</p>
-            <small>indice geral</small>
+            <h3>Catálogo</h3>
+            <p>Lista de todos os HTML do portal, com busca e filtro.</p>
           </a>
-          <a class="card" href="governance-reports/index.html">
-            <h3>Acessar Governance Reports</h3>
-            <p>Relatorios cronologicos de gate para rastreabilidade de publicacoes.</p>
-            <small>governanca</small>
-          </a>
-          <a class="card" href="b2b/index.html">
-            <h3>Entrar na Campanha B2B</h3>
-            <p>Hub editorial em ingles com 12 artigos, filtros por assunto e estrutura propria.</p>
-            <small>campanha</small>
-          </a>
-          <a class="card" href="PUBLICACAO_CHECKLIST.html">
-            <h3>Executar checklist de publicacao</h3>
-            <p>Lista operacional para validar links, metadados e experiencia web antes do deploy.</p>
-            <small>operacao</small>
-          </a>
-          <a class="card" href="POLITICA_PUBLICACAO_HTML_ONLY.html">
-            <h3>Aplicar politica HTML-only</h3>
-            <p>Regra institucional para manter o docs sem artefatos crus e com navegacao harmonica.</p>
-            <small>governanca web</small>
-          </a>
-          <a class="card" href="CHECKLIST_QA_VISUAL_PORTAL.html">
-            <h3>Executar checklist QA visual</h3>
-            <p>Roteiro dirigido para validar ritmo, contraste e hierarquia em desktop e mobile.</p>
-            <small>qa visual</small>
-          </a>
-          <a class="card" href="GUIA_PUBLICACAO_SHELL_IDENTIDADE.html">
-            <h3>Guia Shell x Identidade</h3>
-            <p>Regra curta para separar o que e compartilhado no portal e o que e identidade de cada assunto.</p>
-            <small>governanca editorial</small>
+          <a class="card" href="publicacao_checklist.html">
+            <h3>Antes de publicar</h3>
+            <p>Checklist rápido de links, metadados e revisão.</p>
           </a>
           <a class="card" href="negocios.html">
-            <h3>Abrir painel de logica de negocios</h3>
-            <p>Prioridade de documentos, fluxo de valor e status de atualizacao para tomada de decisao.</p>
-            <small>negocio</small>
+            <h3>Prioridade da documentação</h3>
+            <p>Quais arquivos merecem atenção primeiro (recência e impacto).</p>
           </a>
         </div>
       </section>
 
-      <section class="section anim-in" id="logica-negocio" aria-label="Painel de logica de negocios">
-        <h2>Logica de negocios da documentacao</h2>
-        <p>Motor de negocio baseado em criticidade, publico-alvo e recencia. Use para priorizar manutencao e publicacao.</p>
-
-        <div class="business-kpis" id="businessKpis"></div>
-
-        <div class="stream-grid" id="businessStreams"></div>
-
-        <h2 class="subheading-spaced">Fila de prioridade</h2>
-        <ul class="business-list" id="businessHotlist"></ul>
-      </section>
-
-      <section class="section anim-in" id="documentos" aria-label="Referencias essenciais">
-        <h2>Referencias essenciais</h2>
-        <p>A home agora aponta apenas para os artefatos centrais do portal. A exploracao completa por documento fica concentrada no catalogo para evitar repeticao de navegacao e cards redundantes.</p>
-        <div class="cards">
-          <a class="card" href="catalogo.html">
-            <h3>Catalogo completo</h3>
-            <p>Fonte unica de pesquisa, filtro por categoria e listagem integral dos documentos publicados.</p>
-            <small>indice geral</small>
-          </a>
-          <a class="card" href="POLITICA_PUBLICACAO_HTML_ONLY.html">
-            <h3>Politica HTML-only</h3>
-            <p>Critério formal para manter o portal com documentos HTML e suporte tecnico fora da superficie publicada.</p>
-            <small>governanca editorial</small>
-          </a>
-          <a class="card" href="SISTEMA_GOVERNANCA_ECOSSISTEMA.html">
-            <h3>Sistema de Governanca</h3>
-            <p>Documento-base para regras operacionais, gates e fluxo de evidencias do ecossistema.</p>
-            <small>governanca</small>
-          </a>
-          <a class="card" href="PUBLICACAO_CHECKLIST.html">
-            <h3>Checklist de Publicacao</h3>
-            <p>Roteiro pratico para validar links, estrutura e prontidao antes de deploy estatico.</p>
-            <small>operacao</small>
-          </a>
-          <a class="card" href="CHECKLIST_QA_VISUAL_PORTAL.html">
-            <h3>Checklist QA visual</h3>
-            <p>Validacao final de hierarquia, contraste, ritmo e coesao visual entre shell e identidade.</p>
-            <small>qa visual</small>
-          </a>
-        </div>
-      </section>
-
-      <section class="section anim-in" id="timeline" aria-label="Linha do tempo de atualizacoes">
-        <h2>Linha de atualizacoes relevantes</h2>
-        <p>Resumo rapido de frentes recentes para orientar publicacao e governanca.</p>
-        <ul class="timeline">
-          <li>
-            <time datetime="2026-04-10">2026-04-10</time>
-            <a href="sala/index.html">Sala de Operacoes migrada para o dominio tools com links de Retro e Blog reposicionados</a>
-          </li>
-          <li>
-            <time datetime="2026-04-10">2026-04-10</time>
-            <a href="POLITICA_PUBLICACAO_HTML_ONLY.html">Politica HTML-only adicionada como gate de publicacao do portal</a>
-          </li>
-          <li>
-            <time datetime="2026-04-09">2026-04-09</time>
-            <a href="TEMPLATE_INSTALACAO.html">Template de instalacao convertido para HTML publicavel</a>
-          </li>
-          <li>
-            <time datetime="2026-04-04">2026-04-04</time>
-            <a href="governance-reports/index.html">Snapshots de gate PDV adicionados em Governance Reports</a>
-          </li>
-          <li>
-            <time datetime="2026-04-01">2026-04-01</time>
-            <a href="b2b/index.html">Colecao B2B consolidada com indice filtravel</a>
-          </li>
+      <section class="section anim-in section-muted" aria-label="Mais recursos">
+        <h2>Outros recursos</h2>
+        <ul class="link-list">
+          <li><a href="sistema_governanca_ecossistema.html">Sistema de governança do ecossistema</a></li>
+          <li><a href="b2b/index.html">Campanha B2B</a> <span class="link-note">conteúdo em inglês</span></li>
+          <li><a href="politica_publicacao_html_only.html">Política de publicação só em HTML</a></li>
+          <li><a href="guia_publicacao_shell_identidade.html">Guia: identidade visual e portal</a></li>
         </ul>
       </section>
 
-      <footer class="footer">Dominio oficial: tools.caracore.com.br · Estrutura preparada para deploy estatico.</footer>
+      <footer class="footer">tools.caracore.com.br · publicação estática</footer>
     </main>
   </div>
 
   <script src="assets/js/docs-portal.js"></script>
 </body>
 </html>
-

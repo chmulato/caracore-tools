@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Painel de Logica de Negocios - Cara Core Tools</title>
-  <meta name="description" content="Painel de lógica de negócios da documentação do Cara Core Tools com score de prioridade, status e fluxo de valor.">
+  <title>Prioridade da documentação — Cara Core</title>
+  <meta name="description" content="Painel para ordenar a documentação do portal por impacto, categoria e tempo desde a última atualização.">
   <link rel="canonical" href="https://tools.caracore.com.br/negocios.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,76 +14,72 @@
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <div class="brand">Cara Core · Painel de Negocios</div>
-      <div class="meta">decision dashboard</div>
+      <div class="brand">Cara Core · Prioridades</div>
+      <div class="meta">tools.caracore.com.br</div>
     </div>
   </header>
 
   <div class="layout">
-    <aside class="sidebar" aria-label="Navegacao do painel de negocios">
+    <aside class="sidebar" aria-label="Navegação">
       <h2 class="side-title">Atalhos</h2>
-      <p class="side-lead">Acompanhe a saude de publicacao e priorize melhorias conforme risco e impacto.</p>
       <div class="sidebar-block">
         <ul class="quick-nav">
-          <li><a href="index.html">Portal principal</a></li>
-          <li><a href="catalogo.html">Catalogo completo</a></li>
-          <li><a href="governance-reports/index.html">Governance Reports</a></li>
-          <li><a href="PUBLICACAO_CHECKLIST.html">Checklist de publicacao</a></li>
-          <li><a href="CHECKLIST_QA_VISUAL_PORTAL.html">Checklist QA visual</a></li>
-          <li><a href="GUIA_PUBLICACAO_SHELL_IDENTIDADE.html">Guia Shell x Identidade</a></li>
+          <li><a href="index.html">Página inicial</a></li>
+          <li><a href="catalogo.html">Catálogo completo</a></li>
+          <li><a href="sala/index.html">Sala de Operações</a></li>
         </ul>
       </div>
       <div class="sidebar-block">
-        <p class="sidebar-label">Uso</p>
-        <p class="side-lead">Este painel é a camada de decisao do portal. Ele cruza recencia, criticidade e audiencia para orientar manutencao do espaco.</p>
+        <p class="sidebar-label">Objetivo</p>
+        <p class="side-lead">Apoia a manutenção: o que revisar primeiro, com base em criticidade, público e data.</p>
       </div>
     </aside>
 
     <main class="main">
       <section class="hero anim-in">
-        <p class="eyebrow">Business Logic Layer</p>
-        <h1>Painel de logica de negocios da documentacao</h1>
-        <p>Classificacao por fluxo de valor, status de recencia e score de prioridade para apoiar planejamento editorial e governanca operacional.</p>
+        <p class="eyebrow">Painel</p>
+        <h1>Prioridade da documentação</h1>
+        <p class="hero-lead">Pontuação simples a partir da categoria, do público-alvo e dos dias desde a última alteração. Não substitui julgamento humano.</p>
 
         <div class="business-kpis" id="bizKpis"></div>
 
         <div class="catalog-toolbar toolbar-spaced">
-          <input id="bizSearch" type="search" placeholder="Buscar por documento, tema, tag ou audiencia">
-          <select id="bizStreamFilter" aria-label="Filtrar por fluxo de valor">
-            <option value="all">Todos os fluxos</option>
-            <option value="governanceOps">Governance Ops</option>
-            <option value="publicationPipeline">Publication Pipeline</option>
-            <option value="riskAndSecurity">Risk and Security</option>
-            <option value="marketEnablement">Market Enablement</option>
+          <input id="bizSearch" type="search" placeholder="Buscar na tabela" autocomplete="off">
+          <select id="bizStreamFilter" aria-label="Filtrar por grupo de trabalho">
+            <option value="all">Todos os grupos</option>
+            <option value="governanceOps">Operação e governança</option>
+            <option value="publicationPipeline">Publicação e modelos</option>
+            <option value="riskAndSecurity">Risco e segurança</option>
+            <option value="marketEnablement">Campanha e mercado</option>
           </select>
         </div>
 
         <div class="catalog-toolbar">
-          <select id="bizStatusFilter" aria-label="Filtrar por status de negocio">
-            <option value="all">Todos os status</option>
+          <select id="bizStatusFilter" aria-label="Filtrar por estado de recência">
+            <option value="all">Todos os estados</option>
             <option value="quente">Quente</option>
             <option value="morno">Morno</option>
-            <option value="saudavel">Saudavel</option>
+            <option value="saudavel">Saudável</option>
           </select>
-          <p class="result-line" id="bizCount">Carregando painel...</p>
+          <p class="result-line" id="bizCount">A carregar…</p>
         </div>
       </section>
 
       <section class="section anim-in">
-        <h2>Tabela de decisao</h2>
-        <p>Score considera criticidade da categoria, impacto por audiencia e dias desde a ultima atualizacao.</p>
+        <h2>Tabela</h2>
+        <p class="section-intro">Colunas: documento, grupo, categoria, público, estado, idade em dias e pontuação.</p>
 
         <div class="biz-table-wrap">
-          <table class="biz-table" aria-label="Tabela de logica de negocios">
+          <table class="biz-table" aria-label="Prioridade da documentação">
             <thead>
               <tr>
                 <th>Documento</th>
-                <th>Fluxo</th>
+                <th>Grupo</th>
                 <th>Categoria</th>
-                <th>Audiencia</th>
-                <th>Status</th>
+                <th>Público</th>
+                <th>Estado</th>
                 <th>Idade</th>
-                <th>Score</th>
+                <th>Pontos</th>
               </tr>
             </thead>
             <tbody id="businessTableBody"></tbody>
@@ -91,7 +87,7 @@
         </div>
       </section>
 
-      <footer class="footer">Modelo de logica de negocios aplicavel a novos documentos do portal.</footer>
+      <footer class="footer">tools.caracore.com.br</footer>
     </main>
   </div>
 

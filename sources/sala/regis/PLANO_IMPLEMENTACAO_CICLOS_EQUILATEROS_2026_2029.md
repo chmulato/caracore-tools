@@ -97,12 +97,12 @@ Objetivo: trocar a ancora do programa e registrar a nova arquitetura de dois cic
 
 Arquivos a atualizar:
 
-- sala/regis/REPOSICIONAMENTO_CONJUNTO_CC_CM_2026_2029.html
+- sala/regis/reposicionamento_conjunto_cc_cm_2026_2029.html
 - sala/regis/REPOSICIONAMENTO_CONJUNTO_CC_CM_2026_2029.md
-- sala/regis/LOGICA_CICLOS_PADRONIZADOS_CC_CM_2026_2029.html
+- sala/regis/logica_ciclos_padronizados_cc_cm_2026_2029.html
 - sala/regis/LOGICA_CICLOS_PADRONIZADOS_CC_CM_2026_2029.md
 - sala/regis/CRONOGRAMA_EDITORIAL_EXECUTIVO_2026_2029.md
-- sala/regis/REDISTRIBUICAO_ARTIGOS_OPERACAO_2026_2027.html
+- sala/regis/redistribuicao_artigos_operacao_2026_2027.html
 
 Entregas:
 

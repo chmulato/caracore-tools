@@ -782,3 +782,87 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Página inicial enxuta (portal reorganizado) */
+.hero-lead {
+  margin: 0.65rem 0 0;
+  color: var(--muted);
+  line-height: 1.65;
+  max-width: var(--content-max);
+  font-size: 0.98rem;
+}
+
+.hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+.hero-stat {
+  margin: 0;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  min-width: 8.5rem;
+}
+
+.hero-stat dt {
+  margin: 0;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--quiet);
+  font-family: "IBM Plex Mono", Consolas, monospace;
+}
+
+.hero-stat dd {
+  margin: 0.2rem 0 0;
+  font-size: 1.05rem;
+  color: var(--accent-2);
+}
+
+.cards-compact {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.65rem;
+}
+
+.cards-compact .card small {
+  display: none;
+}
+
+.section-intro {
+  margin: 0 0 0.75rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+  max-width: var(--content-max);
+}
+
+.section-muted {
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  border-radius: 14px;
+  background: rgba(7, 17, 30, 0.35);
+}
+
+.link-list {
+  margin: 0;
+  padding-left: 1.2rem;
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+.link-list a {
+  color: var(--accent-2);
+  text-decoration: none;
+}
+
+.link-list a:hover {
+  text-decoration: underline;
+}
+
+.link-note {
+  color: var(--quiet);
+  font-size: 0.82rem;
+}

@@ -24,9 +24,9 @@ O QUE FICA DENTRO DA SALA (D:\dev\caracore-site\sala)
   feedback.html             — Canal de feedback (após login)
   login.html                — Tela de login (portal serve com senha nota_cc)
   LEIA_PRIMEIRO_REPOSITORIO.txt
-  LEIGO_C1_C2_C3_C4.html    — Passo a passo (Passos 1–4)
-  C4_MODELO.html            — Modelo C4 (C1=Contexto, C2=Contêineres, C3=Componentes, C4=Código)
-  CAIXA_FERRAMENTAS_6_SCRIPTS.html
+  leigo_c1_c2_c3_c4.html    — Passo a passo (Passos 1–4)
+  c4_modelo.html            — Modelo C4 (C1=Contexto, C2=Contêineres, C3=Componentes, C4=Código)
+  caixa_ferramentas_6_scripts.html
   regis/ESTRATEGIA_EXECUCAO.txt — Premissa: valor na execução, não no segredo do código
   regis/ARQUITETURA_SALA_C4.txt  — C1 (sala pública), C2 (contêineres)
   regis/TEXTO_RECEPCAO.txt     — Recepção (tom mentor, 16–21 anos)

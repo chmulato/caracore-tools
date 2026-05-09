@@ -48,5 +48,5 @@ Cada artefato publicavel deve conter:
 
 ## Referencias oficiais
 
-- `REPOSICIONAMENTO_EDITORIAL_2026_2029.html`
+- `reposicionamento_editorial_2026_2029.html`
 - `CRONOGRAMA_EDITORIAL_EXECUTIVO_2026_2029.md`

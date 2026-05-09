@@ -12,7 +12,7 @@ Conteúdo (dentro de sala/):
   feedback.html         — canal de feedback (após login)
   login.html            — tela de login (portal: senha inicial nota_cc)
   planilha_sala.csv      — tarefa, trabalho feito, horas, valor CC
-  LEIGO_C1_C2_C3_C4.html (Passos 1–4), CAIXA_FERRAMENTAS_6_SCRIPTS.html,
+  leigo_c1_c2_c3_c4.html (Passos 1–4), caixa_ferramentas_6_scripts.html,
   C4_MODELO (C1=Contexto, C2=Contêineres, C3=Componentes, C4=Código),
   TEXTO_RECEPCAO.txt, ESTRATEGIA_EXECUCAO.txt, GUIA_EXECUCAO_JOVEM.txt,
   ARQUITETURA_SALA_C4.txt,

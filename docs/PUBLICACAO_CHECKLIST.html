@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Checklist de Publicacao Web - Cara Core Tools</title>
   <meta name="description" content="Checklist operacional para publicacao online das paginas HTML do Cara Core Tools com validacoes de navegação, links e metadados.">
-  <link rel="canonical" href="https://tools.caracore.com.br/PUBLICACAO_CHECKLIST.html">
+  <link rel="canonical" href="https://tools.caracore.com.br/publicacao_checklist.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
@@ -27,11 +27,11 @@
         <ul class="quick-nav">
           <li><a href="index.html">Portal principal</a></li>
           <li><a href="catalogo.html">Catalogo de documentos</a></li>
-          <li><a href="POLITICA_PUBLICACAO_HTML_ONLY.html">Politica HTML-only</a></li>
+          <li><a href="politica_publicacao_html_only.html">Politica HTML-only</a></li>
           <li><a href="#pre">Pre-publicacao</a></li>
           <li><a href="#pos">Pos-publicacao</a></li>
-          <li><a href="GUIA_PUBLICACAO_SHELL_IDENTIDADE.html">Guia Shell x Identidade</a></li>
-          <li><a href="CHECKLIST_QA_VISUAL_PORTAL.html">Checklist QA visual</a></li>
+          <li><a href="guia_publicacao_shell_identidade.html">Guia Shell x Identidade</a></li>
+          <li><a href="checklist_qa_visual_portal.html">Checklist QA visual</a></li>
         </ul>
       </div>
       <div class="sidebar-block">
@@ -56,12 +56,12 @@
       <section class="section anim-in" id="pre">
         <h2>Pre-publicacao</h2>
         <p class="section-intro">Desktop e mobile: validar ritmo visual (espacamento), contraste legivel e hierarquia de titulos antes de publicar.</p>
-        <p class="section-intro">Use o roteiro dedicado em <a href="CHECKLIST_QA_VISUAL_PORTAL.html">Checklist QA visual do portal</a> para validar shell compartilhado e identidade local.</p>
+        <p class="section-intro">Use o roteiro dedicado em <a href="checklist_qa_visual_portal.html">Checklist QA visual do portal</a> para validar shell compartilhado e identidade local.</p>
         <ul>
           <li>Confirmar que a home em index.html abre sem erro e exibe os cards de documentos.</li>
           <li>Validar que catalogo.html aplica busca e filtro por categoria corretamente.</li>
-          <li>Testar links de colecoes: sala/index.html, b2b/index.html e governance-reports/index.html.</li>
-          <li>Executar <code>scripts/check-docs-html-only.ps1 -ReportOnly</code> e confirmar zero arquivos crus bloqueados em docs.</li>
+          <li>Testar links de coleções: sala/index.html e b2b/index.html.</li>
+          <li>Executar <code>python scripts/check_docs_html_only.py --report-only</code> e confirmar zero arquivos crus bloqueados em docs.</li>
           <li>Garantir que cada pagina tenha title e meta description adequados.</li>
           <li>Verificar que nao existem links quebrados para arquivos removidos.</li>
           <li>Conferir responsividade basica em largura aproximada de 390px e 1366px.</li>

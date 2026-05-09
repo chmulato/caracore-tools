@@ -3,171 +3,162 @@
 
   var docs = [
     {
-      title: 'Sistema de Governanca do Ecossistema',
-      href: 'SISTEMA_GOVERNANCA_ECOSSISTEMA.html',
-      description: 'Diretrizes formais, papeis e modelo operacional do ecossistema Cara Core.',
+      title: 'Sistema de governança do ecossistema',
+      href: 'sistema_governanca_ecossistema.html',
+      description: 'Papéis, regras e fluxo operacional do ecossistema Cara Core.',
       category: 'governanca',
       tag: 'governanca',
       audience: 'operacao',
       updatedAt: '2026-03-12'
     },
     {
-      title: 'Mapeamento do Ecossistema',
-      href: 'MAPEAMENTO_ECOSSISTEMA_PRODUCTOS.html',
-      description: 'Inventario de produtos, dependencias e relacionamento entre frentes.',
+      title: 'Mapeamento do ecossistema',
+      href: 'mapeamento_ecossistema_productos.html',
+      description: 'Produtos, dependências e relação entre frentes.',
       category: 'governanca',
       tag: 'mapa',
       audience: 'estrategia',
       updatedAt: '2026-03-14'
     },
     {
-      title: 'Padrao de Lojas do Ecossistema',
-      href: 'PADRAO_LOJAS_ECOSSISTEMA.html',
-      description: 'Padroes de estrutura e experiencia para lojas e repositorios de releases.',
+      title: 'Padrão de lojas do ecossistema',
+      href: 'padrao_lojas_ecossistema.html',
+      description: 'Estrutura e experiência das lojas e repositórios de releases.',
       category: 'governanca',
       tag: 'padrao',
       audience: 'publicacao',
       updatedAt: '2026-03-20'
     },
     {
-      title: 'Plano de Vitrine Padrao 2026',
-      href: 'PLANO_VITRINE_PADRAO_2026.html',
-      description: 'Plano de apresentacao online para produtos com foco comercial.',
+      title: 'Plano de vitrine padrão 2026',
+      href: 'plano_vitrine_padrao_2026.html',
+      description: 'Apresentação online de produtos com foco comercial.',
       category: 'campanha',
       tag: 'vitrine',
       audience: 'marketing',
       updatedAt: '2026-03-22'
     },
     {
-      title: 'Template Vitrine Padrao',
-      href: 'TEMPLATE_VITRINE_PADRAO.html',
-      description: 'Modelo base para pagina de vitrine de produto no ecossistema.',
+      title: 'Template de vitrine padrão',
+      href: 'template_vitrine_padrao.html',
+      description: 'Modelo base de página de vitrine de produto.',
       category: 'campanha',
       tag: 'template',
       audience: 'marketing',
       updatedAt: '2026-03-22'
     },
     {
-      title: 'Template Download Padrao',
-      href: 'TEMPLATE_DOWNLOAD_PADRAO.html',
-      description: 'Modelo padrao para pagina de download e distribuicao de artefatos.',
+      title: 'Template de download padrão',
+      href: 'template_download_padrao.html',
+      description: 'Modelo de página de download e distribuição de artefatos.',
       category: 'campanha',
       tag: 'template',
       audience: 'publicacao',
       updatedAt: '2026-03-22'
     },
     {
-      title: 'Template Instalacao (HTML)',
-      href: 'TEMPLATE_INSTALACAO.html',
-      description: 'Guia em HTML para instrucoes de instalacao em Windows e validacao de checksum.',
+      title: 'Template de instalação (HTML)',
+      href: 'template_instalacao.html',
+      description: 'Instalação no Windows e validação de checksum.',
       category: 'campanha',
       tag: 'instalacao',
       audience: 'suporte',
       updatedAt: '2026-04-09'
     },
     {
-      title: 'Relatorio de Seguranca do Ecossistema',
-      href: 'RELATORIO_SEGURANCA_ECOSSISTEMA.html',
-      description: 'Controles implementados, riscos identificados e recomendacoes tecnicas.',
+      title: 'Relatório de segurança do ecossistema',
+      href: 'relatorio_seguranca_ecossistema.html',
+      description: 'Controles, riscos e recomendações técnicas.',
       category: 'seguranca',
       tag: 'seguranca',
       audience: 'governanca',
       updatedAt: '2026-03-15'
     },
     {
-      title: 'Auditoria de Seguranca das Lojas Releases',
-      href: 'AUDITORIA_SEGURANCA_LOJAS_RELEASES.html',
-      description: 'Verificacao da postura de seguranca nas lojas de release.',
+      title: 'Auditoria de segurança das lojas de releases',
+      href: 'auditoria_seguranca_lojas_releases.html',
+      description: 'Postura de segurança nas lojas de release.',
       category: 'auditoria',
       tag: 'seguranca',
       audience: 'compliance',
       updatedAt: '2026-03-14'
     },
     {
-      title: 'Auditoria de Licencas Repositorios',
-      href: 'AUDITORIA_LICENCAS_REPOSITORIOS_2026_03_14.html',
-      description: 'Relatorio de conformidade e rastreabilidade de licencas.',
+      title: 'Auditoria de licenças dos repositórios',
+      href: 'auditoria_licencas_repositorios_2026_03_14.html',
+      description: 'Conformidade e rastreabilidade de licenças.',
       category: 'auditoria',
       tag: 'compliance',
       audience: 'juridico',
       updatedAt: '2026-03-14'
     },
     {
-      title: 'Code Health Report Final',
-      href: 'CODE_HEALTH_REPORT_FINAL.html',
-      description: 'Consolidado final do estado tecnico de saude de codigo.',
+      title: 'Relatório final de saúde do código',
+      href: 'code_health_report_final.html',
+      description: 'Consolidado do estado técnico do código.',
       category: 'auditoria',
       tag: 'code-health',
       audience: 'engenharia',
       updatedAt: '2026-03-19'
     },
     {
-      title: 'GATE Publicacao Antiabutre',
-      href: 'GATE_PUBLICACAO_ANTIABUTRE_ECOSSISTEMA.html',
-      description: 'Gate de publicacao e controles de protecao operacional.',
+      title: 'Gate de publicação antiabuso',
+      href: 'gate_publicacao_antiabutre_ecossistema.html',
+      description: 'Gate de publicação e controles operacionais.',
       category: 'seguranca',
       tag: 'gate',
       audience: 'publicacao',
       updatedAt: '2026-03-16'
     },
     {
-      title: 'Analise de Honestidade Cronologica',
-      href: 'ANALISE_HONESTIDADE_CRONOLOGICA_PRODUTOS.html',
-      description: 'Analise de coerencia temporal em entregas e trilha de evidencias.',
+      title: 'Análise de honestidade cronológica',
+      href: 'analise_honestidade_cronologica_produtos.html',
+      description: 'Coerência temporal nas entregas e trilha de evidências.',
       category: 'auditoria',
       tag: 'analise',
       audience: 'governanca',
       updatedAt: '2026-03-17'
     },
     {
-      title: 'Governance Reports',
-      href: 'governance-reports/index.html',
-      description: 'Colecao cronologica de relatorios de gate e evidencias operacionais.',
-      category: 'governanca',
-      tag: 'relatorios',
-      audience: 'operacao',
-      updatedAt: '2026-04-04'
-    },
-    {
-      title: 'Campanha B2B Export',
+      title: 'Campanha B2B',
       href: 'b2b/index.html',
-      description: 'Hub editorial com 12 artigos em ingles, filtragem por assunto e assets.',
+      description: 'Doze artigos em inglês, com filtros por assunto.',
       category: 'campanha',
       tag: 'b2b',
       audience: 'marketing',
       updatedAt: '2026-04-01'
     },
     {
-      title: 'Checklist de Publicacao Web',
-      href: 'PUBLICACAO_CHECKLIST.html',
-      description: 'Checklist operacional para validar navegacao, links e consistencia antes de publicar online.',
+      title: 'Checklist de publicação web',
+      href: 'publicacao_checklist.html',
+      description: 'Validar navegação, links e consistência antes de publicar.',
       category: 'governanca',
       tag: 'checklist',
       audience: 'operacao',
       updatedAt: '2026-04-09'
     },
     {
-      title: 'Politica de Publicacao HTML-Only',
-      href: 'POLITICA_PUBLICACAO_HTML_ONLY.html',
-      description: 'Regra institucional para manter o docs com documentos publicados em HTML e sem artefatos crus na superficie web.',
+      title: 'Política de publicação só em HTML',
+      href: 'politica_publicacao_html_only.html',
+      description: 'Manter o site só com HTML publicável, sem artefatos crus.',
       category: 'governanca',
       tag: 'html-only',
       audience: 'publicacao',
       updatedAt: '2026-04-10'
     },
     {
-      title: 'Guia de Publicacao: Shell x Identidade',
-      href: 'GUIA_PUBLICACAO_SHELL_IDENTIDADE.html',
-      description: 'Guia curto para separar componentes compartilhados do portal e identidade propria por assunto.',
+      title: 'Guia: shell do portal e identidade da loja',
+      href: 'guia_publicacao_shell_identidade.html',
+      description: 'O que é compartilhado no portal e o que é identidade por produto.',
       category: 'governanca',
       tag: 'publicacao',
       audience: 'publicacao',
       updatedAt: '2026-04-10'
     },
     {
-      title: 'Checklist QA Visual do Portal',
-      href: 'CHECKLIST_QA_VISUAL_PORTAL.html',
-      description: 'Roteiro de validacao visual desktop/mobile com foco em ritmo, contraste, hierarquia e consistencia Shell x Identidade.',
+      title: 'Checklist de QA visual do portal',
+      href: 'checklist_qa_visual_portal.html',
+      description: 'Contraste, hierarquia e leitura em desktop e celular.',
       category: 'governanca',
       tag: 'qa-visual',
       audience: 'publicacao',
@@ -187,25 +178,59 @@
     return String(text || '').toLowerCase();
   }
 
+  function categoryPt(value) {
+    var labels = {
+      governanca: 'Governança',
+      seguranca: 'Segurança',
+      auditoria: 'Auditoria',
+      campanha: 'Campanha'
+    };
+    return labels[value] || value;
+  }
+
   function categoryLabel(value) {
     var labels = {
-      all: 'todas as categorias',
-      governanca: 'governanca',
-      seguranca: 'seguranca',
-      auditoria: 'auditoria',
-      campanha: 'campanha e comunicacao'
+      all: 'Todas as categorias',
+      governanca: 'Governança',
+      seguranca: 'Segurança',
+      auditoria: 'Auditoria',
+      campanha: 'Campanha e comunicação'
     };
     return labels[value] || value;
   }
 
   function streamLabel(value) {
     var labels = {
-      governanceOps: 'Governance Ops',
-      publicationPipeline: 'Publication Pipeline',
-      riskAndSecurity: 'Risk and Security',
-      marketEnablement: 'Market Enablement'
+      governanceOps: 'Operação e governança',
+      publicationPipeline: 'Publicação e modelos',
+      riskAndSecurity: 'Risco e segurança',
+      marketEnablement: 'Campanha e mercado'
     };
     return labels[value] || value;
+  }
+
+  function audiencePt(value) {
+    var labels = {
+      operacao: 'Operação',
+      publicacao: 'Publicação',
+      governanca: 'Governança',
+      engenharia: 'Engenharia',
+      compliance: 'Compliance',
+      juridico: 'Jurídico',
+      marketing: 'Marketing',
+      estrategia: 'Estratégia',
+      suporte: 'Suporte'
+    };
+    return labels[value] || value;
+  }
+
+  function statusLabel(status) {
+    var labels = {
+      quente: 'Quente',
+      morno: 'Morno',
+      saudavel: 'Saudável'
+    };
+    return labels[status] || status;
   }
 
   function daysSince(dateString) {
@@ -341,7 +366,7 @@
     return '<a class="card anim-in" href="' + doc.href + '">' +
       '<h3>' + doc.title + '</h3>' +
       '<p>' + doc.description + '</p>' +
-      '<small>' + doc.category + ' · ' + doc.tag + ' · ' + doc.updatedAt + '</small>' +
+      '<small>' + categoryPt(doc.category) + ' · atualizado em ' + doc.updatedAt + '</small>' +
       '</a>';
   }
 
@@ -356,7 +381,9 @@
         doc.category,
         doc.audience,
         doc.updatedAt,
-        doc.href
+        doc.href,
+        categoryPt(doc.category),
+        audiencePt(doc.audience)
       ].join(' '));
       var termMatch = !safeTerm || searchable.indexOf(safeTerm) !== -1;
       return categoryMatch && termMatch;
@@ -377,11 +404,13 @@
     var businessKpis = qs('#businessKpis');
     var businessHotlist = qs('#businessHotlist');
     var businessStreams = qs('#businessStreams');
-    var businessModel = computeBusinessModel();
 
-    if (!statDocs && !businessKpis) {
+    if (!statDocs && !statUpdated && !statCategories && !businessKpis && !businessHotlist && !businessStreams) {
       return;
     }
+
+    var needBusiness = !!(businessKpis || businessHotlist || businessStreams);
+    var businessModel = needBusiness ? computeBusinessModel() : null;
 
     if (statDocs) {
       statDocs.textContent = String(docs.length);
@@ -399,32 +428,32 @@
       var sorted = docs.slice().sort(function (a, b) {
         return a.updatedAt < b.updatedAt ? 1 : -1;
       });
-      statUpdated.textContent = sorted[0] ? sorted[0].updatedAt : 'n/a';
+      statUpdated.textContent = sorted[0] ? sorted[0].updatedAt : '—';
     }
 
-    if (businessKpis) {
+    if (businessModel && businessKpis) {
       businessKpis.innerHTML = '' +
-        '<div class="business-kpi"><strong>' + businessModel.kpis.hot + '</strong><span>documentos quentes</span></div>' +
-        '<div class="business-kpi"><strong>' + businessModel.kpis.stale + '</strong><span>desatualizados +30d</span></div>' +
-        '<div class="business-kpi"><strong>' + businessModel.kpis.streams + '</strong><span>fluxos de valor</span></div>' +
-        '<div class="business-kpi"><strong>' + businessModel.priorityQueue[0].title + '</strong><span>prioridade #1</span></div>';
+        '<div class="business-kpi"><strong>' + businessModel.kpis.hot + '</strong><span>Documentos prioritários</span></div>' +
+        '<div class="business-kpi"><strong>' + businessModel.kpis.stale + '</strong><span>Sem atualização há 30+ dias</span></div>' +
+        '<div class="business-kpi"><strong>' + businessModel.kpis.streams + '</strong><span>Fluxos de trabalho</span></div>' +
+        '<div class="business-kpi"><strong>' + businessModel.priorityQueue[0].title + '</strong><span>Maior prioridade hoje</span></div>';
     }
 
-    if (businessHotlist) {
+    if (businessModel && businessHotlist) {
       businessHotlist.innerHTML = businessModel.priorityQueue.slice(0, 5).map(function (doc) {
         return '<li class="business-item">' +
           '<a href="' + doc.href + '">' + doc.title + '</a>' +
-          '<div class="business-meta"><span class="pill ' + statusClass(doc.status) + '">' + doc.status + '</span>' +
-          'score ' + doc.priorityScore + ' · ' + streamLabel(doc.stream) + ' · ' + doc.ageInDays + 'd</div>' +
+          '<div class="business-meta"><span class="pill ' + statusClass(doc.status) + '">' + statusLabel(doc.status) + '</span>' +
+          ' · ' + streamLabel(doc.stream) + ' · ' + doc.ageInDays + ' dias</div>' +
           '</li>';
       }).join('');
     }
 
-    if (businessStreams) {
+    if (businessModel && businessStreams) {
       businessStreams.innerHTML = Object.keys(businessModel.streams).map(function (stream) {
         return '<article class="stream-card">' +
           '<h3>' + streamLabel(stream) + '</h3>' +
-          '<p>' + businessModel.streams[stream] + ' ativos neste fluxo de negocio.</p>' +
+          '<p>' + businessModel.streams[stream] + ' documento(s) neste grupo.</p>' +
           '</article>';
       }).join('');
     }
@@ -433,7 +462,7 @@
   function catalogCardHtml(doc) {
     return '<article class="catalog-card anim-in" data-category="' + doc.category + '">' +
       '<h3><a href="' + doc.href + '">' + doc.title + '</a></h3>' +
-      '<div class="meta-line">' + doc.category + ' · ' + doc.tag + ' · ' + doc.updatedAt + '</div>' +
+      '<div class="meta-line">' + categoryPt(doc.category) + ' · atualizado em ' + doc.updatedAt + '</div>' +
       '<p>' + doc.description + '</p>' +
       '</article>';
   }
@@ -459,10 +488,11 @@
       catalogRoot.innerHTML = filtered.map(catalogCardHtml).join('');
 
       if (countNode) {
-        countNode.textContent = 'Total visivel: ' + filtered.length + ' de ' + docs.length + ' documentos.';
+        countNode.textContent = 'Mostrando ' + filtered.length + ' de ' + docs.length + ' documento(s).';
       }
 
       if (emptyNode) {
+        emptyNode.textContent = 'Nenhum documento corresponde à busca ou ao filtro.';
         emptyNode.style.display = filtered.length === 0 ? 'block' : 'none';
       }
     }
@@ -477,10 +507,10 @@
     return '<tr>' +
       '<td><a href="' + doc.href + '">' + doc.title + '</a></td>' +
       '<td>' + streamLabel(doc.stream) + '</td>' +
-      '<td>' + doc.category + '</td>' +
-      '<td>' + doc.audience + '</td>' +
-      '<td><span class="pill ' + statusClass(doc.status) + '">' + doc.status + '</span></td>' +
-      '<td>' + doc.ageInDays + 'd</td>' +
+      '<td>' + categoryPt(doc.category) + '</td>' +
+      '<td>' + audiencePt(doc.audience) + '</td>' +
+      '<td><span class="pill ' + statusClass(doc.status) + '">' + statusLabel(doc.status) + '</span></td>' +
+      '<td>' + doc.ageInDays + ' d</td>' +
       '<td>' + doc.priorityScore + '</td>' +
       '</tr>';
   }
@@ -500,10 +530,10 @@
 
     if (kpisRoot) {
       kpisRoot.innerHTML = '' +
-        '<div class="business-kpi"><strong>' + model.kpis.total + '</strong><span>ativos mapeados</span></div>' +
-        '<div class="business-kpi"><strong>' + model.kpis.hot + '</strong><span>quentes</span></div>' +
-        '<div class="business-kpi"><strong>' + model.kpis.stale + '</strong><span>desatualizados +30d</span></div>' +
-        '<div class="business-kpi"><strong>' + model.priorityQueue[0].priorityScore + '</strong><span>maior score</span></div>';
+        '<div class="business-kpi"><strong>' + model.kpis.total + '</strong><span>Documentos no painel</span></div>' +
+        '<div class="business-kpi"><strong>' + model.kpis.hot + '</strong><span>Prioritários (recência)</span></div>' +
+        '<div class="business-kpi"><strong>' + model.kpis.stale + '</strong><span>+30 dias sem revisão</span></div>' +
+        '<div class="business-kpi"><strong>' + model.priorityQueue[0].priorityScore + '</strong><span>Maior pontuação</span></div>';
     }
 
     function render() {
@@ -514,13 +544,14 @@
       var filtered = model.priorityQueue.filter(function (doc) {
         var streamMatch = selectedStream === 'all' || doc.stream === selectedStream;
         var statusMatch = selectedStatus === 'all' || doc.status === selectedStatus;
-        var text = normalize(doc.title + ' ' + doc.description + ' ' + doc.tag + ' ' + doc.category + ' ' + doc.audience);
+        var text = normalize(doc.title + ' ' + doc.description + ' ' + doc.tag + ' ' + doc.category + ' ' + doc.audience +
+          ' ' + categoryPt(doc.category) + ' ' + audiencePt(doc.audience) + ' ' + streamLabel(doc.stream));
         var termMatch = !term || text.indexOf(term) !== -1;
         return streamMatch && statusMatch && termMatch;
       });
 
       tableBody.innerHTML = filtered.map(businessRowHtml).join('');
-      countLine.textContent = 'Itens visiveis: ' + filtered.length + ' de ' + model.priorityQueue.length + '.';
+      countLine.textContent = 'Exibindo ' + filtered.length + ' de ' + model.priorityQueue.length + ' documento(s).';
     }
 
     streamFilter.addEventListener('change', render);

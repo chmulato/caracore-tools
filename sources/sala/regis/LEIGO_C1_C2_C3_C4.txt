@@ -4,7 +4,7 @@ PASSO A PASSO COM DESENHOS (PASSOS 1–4) — Formato para leigos
 Cara Core Informática · Sala de Notícias · regis
 Instruções com informação completa. Cada passo tem um desenho (Passo 1, 2, 3, 4).
 No projeto, C1–C4 designam o modelo C4 de arquitetura (Contexto, Contêineres,
-Componentes, Código). Ver C4_MODELO.txt ou C4_MODELO.html.
+Componentes, Código). Ver C4_MODELO.txt ou c4_modelo.html.
 No final do trabalho, rode o script Python para validar se tudo foi executado.
 ================================================================================
 

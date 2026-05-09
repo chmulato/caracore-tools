@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Politica de Publicacao HTML-Only - Cara Core Tools</title>
   <meta name="description" content="Politica operacional para manter o docs do Cara Core Tools com artefatos publicados em HTML e visual harmonico dentro do site.">
-  <link rel="canonical" href="https://tools.caracore.com.br/POLITICA_PUBLICACAO_HTML_ONLY.html">
+  <link rel="canonical" href="https://tools.caracore.com.br/politica_publicacao_html_only.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
@@ -27,9 +27,9 @@
         <ul class="quick-nav">
           <li><a href="index.html">Portal principal</a></li>
           <li><a href="catalogo.html">Catalogo</a></li>
-          <li><a href="PUBLICACAO_CHECKLIST.html">Checklist de Publicacao</a></li>
-          <li><a href="CHECKLIST_QA_VISUAL_PORTAL.html">Checklist QA visual</a></li>
-          <li><a href="GUIA_PUBLICACAO_SHELL_IDENTIDADE.html">Guia Shell x Identidade</a></li>
+          <li><a href="publicacao_checklist.html">Checklist de Publicacao</a></li>
+          <li><a href="checklist_qa_visual_portal.html">Checklist QA visual</a></li>
+          <li><a href="guia_publicacao_shell_identidade.html">Guia Shell x Identidade</a></li>
           <li><a href="#regras">Regras</a></li>
           <li><a href="#fluxo">Fluxo de migracao</a></li>
         </ul>
@@ -57,6 +57,7 @@
         <h2>Regras operacionais</h2>
         <ul>
           <li>Documento publicado no portal: sempre <code>.html</code>.</li>
+          <li>Nomes de ficheiros <code>.html</code> em caixa baixa (URLs estaveis em servidores case-sensitive e alinhamento com o catálogo).</li>
           <li>Arquivos fonte como <code>.md</code>, <code>.txt</code>, <code>.py</code>, <code>.csv</code>, <code>.htm</code> e equivalentes nao podem permanecer na arvore publicada.</li>
           <li>Assets tecnicos de renderizacao podem permanecer quando forem estritamente suporte de pagina: <code>.css</code>, <code>.js</code>, imagens e fontes.</li>
           <li>Excecao operacional explicita: <code>feed.xml</code> e permitido somente para distribuicao de feed publico (sindication).</li>
@@ -81,17 +82,17 @@
           <li>Escolher o material bruto fora de <code>docs/</code> como fonte de trabalho.</li>
           <li>Produzir a versao publicada em HTML usando o shell do portal ou a identidade local autorizada.</li>
           <li>Apontar navegacao do hub para a pagina HTML final.</li>
-          <li>Executar a auditoria com <code>scripts/check-docs-html-only.ps1 -ReportOnly</code>.</li>
+          <li>Executar a auditoria com <code>python scripts/check_docs_html_only.py --report-only</code>.</li>
           <li>Se a auditoria retornar zero violacoes, liberar para deploy.</li>
         </ol>
       </section>
 
       <section class="section anim-in">
         <h2>Validacao automatica</h2>
-        <p class="section-intro">Script institucional: <code>scripts/check-docs-html-only.ps1</code>.</p>
+        <p class="section-intro">Script institucional: <code>scripts/check_docs_html_only.py</code>.</p>
         <ul>
-          <li><strong>Modo de auditoria:</strong> <code>powershell -File scripts/check-docs-html-only.ps1 -ReportOnly</code></li>
-          <li><strong>Modo de gate:</strong> <code>powershell -File scripts/check-docs-html-only.ps1</code></li>
+          <li><strong>Modo de auditoria:</strong> <code>python scripts/check_docs_html_only.py --report-only</code></li>
+          <li><strong>Modo de gate:</strong> <code>python scripts/check_docs_html_only.py</code></li>
           <li><strong>Saida esperada:</strong> total de violacoes, agrupamento por extensao e diretorios com maior passivo.</li>
         </ul>
       </section>
