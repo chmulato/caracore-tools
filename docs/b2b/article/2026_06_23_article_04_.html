@@ -1,0 +1,71 @@
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Article 04 — Downtime is not a bug — it is a design decision</title>
+    <meta name="description" content="B2B export campaign article (~5 min read). Editorial schedule from June 2026.">
+    <link rel="stylesheet" href="assets/css/sala-doc.css">
+  </head>
+  <body>
+    <header class="sala-header">Cara Core Informatica · B2B Export · Article 04</header>
+    <main class="container">
+      <div class="breadcrumb"><a href="../index.html">B2B Export</a> / <span>Article</span></div>
+      <article class="panel">
+        <h1>Downtime is not a bug — it is a design decision</h1>
+        <p><strong>Publish date:</strong> 2026-06-23</p>
+        <p><strong>Status:</strong> Scheduled — June 2026 onward editorial window</p>
+        <p><strong>Estimated reading time:</strong> about 5 minutes</p>
+
+        <figure class="article-hero-image">
+          <img src="assets/img/2026_06_23_IMAGE_01.png" alt="Editorial image for 2026_06_23_article_04_.html" loading="lazy" decoding="async">
+        </figure>
+        <p class="image-note"><strong>About this image:</strong> Campaign visual carried forward for this article slot; update asset if you refresh the creative.</p>
+
+        <h2>Hook</h2>
+<p>Downtime is often treated as an accident. In mature systems, availability is a consequence of explicit design choices—including acceptable degradation.</p>
+<p>This article reframes downtime as a policy signal, not only as an incident metric.</p>
+<p>SLA dashboards can hide user-visible failure when micro-outages fragment sessions but never breach formal downtime thresholds.</p>
+<p>Architects should pair degradation design with capacity planning: a system that degrades gracefully still needs headroom for queued work when connectivity returns.</p>
+<p>Degraded UX should still meet accessibility obligations; stress modes are not an excuse for unusable screens.</p>
+<p>Degradation design is a product skill: it needs UX, legal, finance, and engineering in the same room early.</p>
+<h2>Real Problem</h2>
+<p>If every feature requires live services, downtime becomes binary: all-or-nothing. That creates brittle operations and expensive emergency culture.</p>
+<p>Leaders see SLA charts, but customers see inconsistent service and staff stress.</p>
+<p>Product teams feel pressure to ship features faster than they can harden failure paths, which increases coupling without increasing safety.</p>
+<p>Customer contracts sometimes include availability language that engineering never reviewed; align legal clauses with testable behavior.</p>
+<p>Include customer notification templates pre-approved by legal so communications can go out quickly.</p>
+<p>If degraded modes feel embarrassing to demo, that is a signal you are closer to real operations than a glossy keynote.</p>
+<h2>Explanation</h2>
+<p>Resilience budgets time and architecture for partial operation: what continues, what pauses, and what operators can see while degraded.</p>
+<p>That requires product discipline: fewer hidden dependencies and clearer state machines in critical flows.</p>
+<p>Design reviews should include a degradation column: what the operator sees, what the customer sees, and what finance can still prove.</p>
+<p>Degraded modes should be productized features with pricing and support implications, not hidden switches only engineers know.</p>
+<p>Capacity for queued work should include storage growth projections; queues are a database problem as much as a network problem.</p>
+<p>Publish internal examples of good degradation to align sales promises with engineering truth.</p>
+<h2>Solution</h2>
+<p>Define “good enough service” states for peak hours. Implement them as first-class modes, not as undocumented exceptions.</p>
+<p>Measure recovery quality: record consistency and reconciliation time, not only minutes offline.</p>
+<p>Publish internal “good degradation” examples so sales and delivery share the same vocabulary with engineering.</p>
+<p>Use post-incident metrics in quarterly business reviews so continuity improvements compete fairly with feature roadmap items.</p>
+<p>Finance should model outage cost using both direct revenue loss and recovery labor—not only SLA credits.</p>
+<p>Treat incident blameless reviews as product inputs; recurring themes belong on the roadmap with dates.</p>
+<h2>Application</h2>
+<p>When degradation is designed, teams stop improvising dangerous shortcuts. Finance and compliance get calmer narratives after incidents.</p>
+<p>Partners can differentiate with honest engineering stories backed by metrics.</p>
+<p>Clients reward vendors who explain honest trade-offs instead of promising infinite availability.</p>
+<p>B2B buyers compare vendor maturity by how calmly vendors respond to their own incidents in public channels and partner comms.</p>
+<p>Sales should avoid promising synchronous miracles for workflows that physics and geography make fragile.</p>
+<p>Clients should ask vendors for degradation acceptance tests as part of procurement scoring.</p>
+<h2>Closing</h2>
+<p>Pick one customer journey and design its degraded mode on purpose. That single exercise usually reveals three hidden dependencies.</p>
+<p>Cara Core publishes in Sala tone: strategy must survive contact with reality.</p>
+<p>Choose one service and document its degraded mode this sprint; repeat monthly until the catalog is honest.</p>
+<p>Add a “degradation owner” role to major services so accountability survives reorganizations.</p>
+<p>Revisit degradation assumptions after every major feature release; new code paths reintroduce coupling quietly.</p>
+<p>Make degradation visible in demos on purpose; trust grows when vendors show honesty, not only sunshine paths.</p>
+  </article>
+    </main>
+    <script src="assets/js/article.js" defer></script>
+  </body>
+  </html>

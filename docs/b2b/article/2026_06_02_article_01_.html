@@ -1,0 +1,71 @@
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Article 01 — The hidden risk of cloud-only systems</title>
+    <meta name="description" content="B2B export campaign article (~5 min read). Editorial schedule from June 2026.">
+    <link rel="stylesheet" href="assets/css/sala-doc.css">
+  </head>
+  <body>
+    <header class="sala-header">Cara Core Informatica · B2B Export · Article 01</header>
+    <main class="container">
+      <div class="breadcrumb"><a href="../index.html">B2B Export</a> / <span>Article</span></div>
+      <article class="panel">
+        <h1>The hidden risk of cloud-only systems</h1>
+        <p><strong>Publish date:</strong> 2026-06-02</p>
+        <p><strong>Status:</strong> Scheduled — June 2026 onward editorial window</p>
+        <p><strong>Estimated reading time:</strong> about 5 minutes</p>
+
+        <figure class="article-hero-image">
+          <img src="assets/img/2026_06_02_IMAGE_01.png" alt="Editorial image for 2026_06_02_article_01_.html" loading="lazy" decoding="async">
+        </figure>
+        <p class="image-note"><strong>About this image:</strong> Campaign visual carried forward for this article slot; update asset if you refresh the creative.</p>
+
+        <h2>Hook</h2>
+<p>Cloud-only workflows look efficient until the first serious outage. Then sales, approvals, and reporting stall at the same time.</p>
+<p>This article is a five-minute read for leaders who need plain language, not slides: why dependency on distant services is a continuity risk, and what to do first.</p>
+<p>Export-facing teams should treat connectivity like weather: plan for seasonal peaks, construction work, and regional instability, not only for total blackout.</p>
+<p>Regulators and large buyers increasingly ask for continuity evidence during renewal cycles; screenshots of uptime are weaker than drill logs and reconciliation metrics.</p>
+<p>When you inventory cloud dependencies, include scheduled jobs, background sync, and “invisible” microservices invoked by macros—those fail quietly until month-end.</p>
+<p>If you only remember one sentence: design so revenue-critical work can continue with clear rules when the cloud is slow, absent, or inconsistent.</p>
+<h2>Real Problem</h2>
+<p>When connectivity drops, the visible failure is “the system is down.” The hidden failure is improvised spreadsheets, duplicate entries, and delayed decisions.</p>
+<p>Retail and distributed teams feel this first: the branch keeps serving people, but digital process stops. That mismatch creates chaos cost and audit stress.</p>
+<p>Finance often discovers the true cost months later, when audits uncover inconsistent stock counts, duplicated invoices, or approvals that happened outside the controlled workflow.</p>
+<p>Dependency mapping should include third-party SaaS chains: one identity outage can disable five downstream systems that each look healthy in isolation.</p>
+<p>Executives should ask for a single-page continuity narrative tied to revenue: which customer journeys stop, which degrade, and which continue unchanged.</p>
+<p>Measure twice on dependencies that touch money, identity, and inventory; those are where outages become legal and commercial exposure, not only IT tickets.</p>
+<h2>Explanation</h2>
+<p>The root issue is an assumption that the network is a constant. Field reality includes latency spikes, ISP maintenance, and human mistakes under pressure.</p>
+<p>Resilient design separates what must execute locally from what can wait for synchronization, without giving up governance.</p>
+<p>A useful mental model is tiers: Tier A must run locally with audit trail; Tier B can queue safely; Tier C can pause without customer harm. Most organizations never classify work this plainly.</p>
+<p>Treat vendor maintenance windows as part of your threat model: scheduled downtime should not become an unplanned business holiday.</p>
+<p>Architects should validate that authentication paths do not create circular cloud dependencies during partial outages.</p>
+<p>Resilience budgets should include operator time: rehearsing and reconciling is real labor that must be planned, not squeezed into nights and weekends forever.</p>
+<h2>Solution</h2>
+<p>Start with a one-page map: which steps must never stop, which can pause, and which can degrade without harming customers.</p>
+<p>Add local execution or queued operations for the “never stop” steps, with clear conflict rules when the network returns. Train the first ten minutes of outage response in plain language.</p>
+<p>Operationalize the map with owners: who validates queued transactions, who signs off reconciliation, and which monitoring signals prove recovery quality—not only that servers are green again.</p>
+<p>Budget for rehearsal time the same way you budget for QA: continuity is a quality gate, not an insurance footnote.</p>
+<p>Run a tabletop exercise with finance present so discount and approval rules during outages are lawful and traceable.</p>
+<p>Prefer small, verifiable reductions in cloud-only coupling over large rewrites that stall after the first executive workshop.</p>
+<h2>Application</h2>
+<p>In Cara Core patterns (for example PDV and Hub contexts), continuity is treated as a product requirement: predictable behavior under stress, not only uptime charts.</p>
+<p>Partners win when reliability is observable: fewer emergency calls, cleaner records after incidents, and renewals based on evidence.</p>
+<p>Cara Core documentation in Sala de Operacoes tone favors checklists and drills because resilience decays when it lives only in architecture diagrams.</p>
+<p>When Cara Core discusses PDV and Hub patterns publicly, the emphasis stays on operator clarity and audit-friendly trails, not on buzzwords.</p>
+<p>Publish a short internal memo after each drill: what worked, what broke, and the next funded fix—continuity improves when learning loops are short.</p>
+<p>When in doubt, choose boring technology with explicit failure behavior over clever automation nobody can explain during an incident.</p>
+<h2>Closing</h2>
+<p>Pick one critical workflow this week, remove a single hidden cloud-only dependency, and measure the outcome. Small wins compound.</p>
+<p>If you want a practical collaboration path, bring your continuity map—we are open to integrator-friendly delivery with clear responsibilities.</p>
+<p>Send one continuity improvement to your integration partner this month; alignment beats perfect theory when calendars are tight.</p>
+<p>If leadership time is constrained, delegate mapping to a cross-functional pair (IT + operations) and review only the Tier A list in the executive cadence.</p>
+<p>If you export software or services, align public claims with drill evidence before the next major trade cycle.</p>
+<p>Forward this article to your program manager with one question: which Tier A workflow still dies when DNS flickers?</p>
+  </article>
+    </main>
+    <script src="assets/js/article.js" defer></script>
+  </body>
+  </html>

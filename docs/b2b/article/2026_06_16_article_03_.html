@@ -1,0 +1,71 @@
+  <!doctype html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Article 03 — Why most POS and ERP systems are not built for failure</title>
+    <meta name="description" content="B2B export campaign article (~5 min read). Editorial schedule from June 2026.">
+    <link rel="stylesheet" href="assets/css/sala-doc.css">
+  </head>
+  <body>
+    <header class="sala-header">Cara Core Informatica · B2B Export · Article 03</header>
+    <main class="container">
+      <div class="breadcrumb"><a href="../index.html">B2B Export</a> / <span>Article</span></div>
+      <article class="panel">
+        <h1>Why most POS and ERP systems are not built for failure</h1>
+        <p><strong>Publish date:</strong> 2026-06-16</p>
+        <p><strong>Status:</strong> Scheduled — June 2026 onward editorial window</p>
+        <p><strong>Estimated reading time:</strong> about 5 minutes</p>
+
+        <figure class="article-hero-image">
+          <img src="assets/img/2026_06_16_IMAGE_01.png" alt="Editorial image for 2026_06_16_article_03_.html" loading="lazy" decoding="async">
+        </figure>
+        <p class="image-note"><strong>About this image:</strong> Campaign visual carried forward for this article slot; update asset if you refresh the creative.</p>
+
+        <h2>Hook</h2>
+<p>POS and ERP systems are sold as “always available,” but many are architected for happy-path connectivity, not for branch reality.</p>
+<p>This note explains the failure gap in practical terms for buyers and integrators.</p>
+<p>POS failures are social as well as technical: cashiers improvise, supervisors override, and inventory truth diverges within minutes.</p>
+<p>Inventory drift during POS incidents is a classic shrinkage vector; continuity design should make abnormal states visible, not silent.</p>
+<p>POS peripherals (scales, scanners, printers) often fail first; continuity includes peripheral states, not only server uptime.</p>
+<p>POS and ERP buyers should reward vendors who demonstrate failure behavior, not only happy-path feature velocity.</p>
+<h2>Real Problem</h2>
+<p>Failure is not only server downtime. It is partial degradation: slow auth, flaky printers, intermittent timeouts, and silent retries that corrupt totals.</p>
+<p>Most vendors report availability of components, not end-to-end transaction success under weak networks.</p>
+<p>ERP modules often assume synchronous validation for steps that could be deferred with explicit business rules—especially tax and identity checks.</p>
+<p>ERP integrations that batch overnight can hide latency problems until month-end close exposes inconsistencies that are expensive to unwind.</p>
+<p>ERP batch windows interact badly with daylight-saving and regional holidays; test calendar edge cases deliberately.</p>
+<p>Ask for video evidence of offline sell paths, not only architecture slides—execution matters more than intent.</p>
+<h2>Explanation</h2>
+<p>Retail-grade reliability requires deterministic local behavior, explicit sync boundaries, and operator-visible states—not optimistic UI assumptions.</p>
+<p>When failure modes are unnamed, teams invent unsafe workarounds that look productive in the moment.</p>
+<p>Resilience is a contract item: response-time envelopes, offline sell rules, and maximum queue depth should be testable acceptance criteria, not marketing adjectives.</p>
+<p>Ask for failure injection tests in vendor demos: skipped steps should produce operator-safe states, not cryptic stack traces.</p>
+<p>Ask vendors how they handle split-brain risk when two registers believe they own the same transaction number.</p>
+<p>If a vendor cannot show reconciliation after forced failures, assume you will pay for that discovery in production.</p>
+<h2>Solution</h2>
+<p>Ask vendors for offline behavior in writing: what sells, what queues, what conflicts, and how reconciliation is audited.</p>
+<p>Pilot in one stressed branch, not only in headquarters Wi-Fi. Measure transaction completion, not ping time.</p>
+<p>Demand test evidence from vendors under constrained network profiles, not only LAN demos.</p>
+<p>Create a partner checklist for go-live that includes degraded-mode sign-off, not only happy-path user acceptance.</p>
+<p>Document cash-handling rules explicitly for offline periods to reduce shrinkage and disputes.</p>
+<p>Integrators should standardize a POS hardening checklist and reuse it across clients to amortize learning.</p>
+<h2>Application</h2>
+<p>Strong POS discipline improves inventory truth, cash control, and partner trust. ERP alignment then becomes simpler because facts match reality.</p>
+<p>Cara Core product thinking treats continuity as part of product quality, not as an add-on module.</p>
+<p>Integrators protect margin when failure design is explicit: fewer emergency trips and fewer weekend releases driven by panic.</p>
+<p>Retail chains that standardize failure behavior across branches reduce training load and improve internal audits.</p>
+<p>Standardize operator prompts across branches so training scales and audits simplify.</p>
+<p>Finance should track shrink and rework deltas after POS incidents; those numbers justify continuity investment.</p>
+<h2>Closing</h2>
+<p>If your roadmap ignores failure design, you are planning for a demo environment, not for customers on Tuesday afternoon.</p>
+<p>Start with one honest failure map; it pays back faster than another feature checklist.</p>
+<p>If you maintain a POS catalog, rank ten integrations by revenue impact and validate failure behavior for the top three first.</p>
+<p>Commit to publishing your top five failure scenarios internally; secrecy does not create resilience, rehearsal does.</p>
+<p>Treat vendor roadmaps as inputs, not guarantees: your continuity model must survive vendor delays.</p>
+<p>Pick one branch for honest failure testing next month; comfort with ugly results early prevents expensive surprises later.</p>
+  </article>
+    </main>
+    <script src="assets/js/article.js" defer></script>
+  </body>
+  </html>
