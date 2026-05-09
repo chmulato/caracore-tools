@@ -1,71 +1,83 @@
-  <!doctype html>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Article 02 — What really happens when the internet goes down in a business</title>
-    <meta name="description" content="B2B export campaign article (~5 min read). Editorial schedule from June 2026.">
-    <link rel="stylesheet" href="assets/css/sala-doc.css">
-  </head>
-  <body>
-    <header class="sala-header">Cara Core Informatica · B2B Export · Article 02</header>
-    <main class="container">
-      <div class="breadcrumb"><a href="../index.html">B2B Export</a> / <span>Article</span></div>
-      <article class="panel">
-        <h1>What really happens when the internet goes down in a business</h1>
-        <p><strong>Publish date:</strong> 2026-06-09</p>
-        <p><strong>Status:</strong> Scheduled — June 2026 onward editorial window</p>
-        <p><strong>Estimated reading time:</strong> about 5 minutes</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What really happens when the internet goes down in a business · B2B Export</title>
+  <meta name="description" content="Inside the first hour of an outage: behavior, risk, and what to rehearse before the next one. About five minutes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/sala-doc.css">
+</head>
+<body class="b2b-article">
+  <header class="sala-header">Cara Core Informatica · B2B Export · Article 02</header>
+  <main class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">B2B Export</a> / <span>Article 02</span></nav>
 
-        <figure class="article-hero-image">
-          <img src="assets/img/2026_06_09_IMAGE_01.png" alt="Editorial image for 2026_06_09_article_02.html" loading="lazy" decoding="async">
-        </figure>
-        <p class="image-note"><strong>About this image:</strong> Campaign visual carried forward for this article slot; update asset if you refresh the creative.</p>
+    <article class="panel article-sheet" itemscope itemtype="https://schema.org/Article">
+      <header class="article-head">
+        <h1 itemprop="headline">What really happens when the internet goes down in a business</h1>
+        <p class="article-deck">Outages are normal “weather,” yet teams still improvise every time. This piece describes the first hour in plain terms—what people do, what breaks trust, and how to prepare without a fifty-page crisis manual.</p>
+        <ul class="article-meta">
+          <li><strong>Published</strong> <time datetime="2026-06-09" itemprop="datePublished">9 June 2026</time></li>
+          <li><strong>Reading time</strong> ~5 minutes</li>
+          <li><strong>Status</strong> Scheduled · export editorial</li>
+        </ul>
+      </header>
 
-        <h2>Hook</h2>
-<p>Internet outages are not rare edge cases. They are normal infrastructure weather—and businesses still behave surprised every time.</p>
-<p>Here is what actually happens inside teams during the first hour, and why “we will fix the line” is not a complete response.</p>
-<p>The first hour is where habits form: if people learn that outages mean chaos, they will optimize for personal survival instead of process integrity.</p>
-<p>Communication discipline matters: customers should hear one coherent message, not conflicting explanations from departments using different data snapshots.</p>
-<p>Outage communications should distinguish customer impact from internal IT status; customers forgive delays they understand.</p>
-<p>The goal is not zero outages—it is controlled behavior during outages that customers and auditors can still trust.</p>
-<h2>Real Problem</h2>
-<p>Queues grow, payments stall, and managers ask for numbers nobody can trust because half the data is offline and half is in the cloud.</p>
-<p>The organization optimizes for survival, not for process integrity. That is how technical debt becomes operational debt overnight.</p>
-<p>Customer-facing staff often choose the fastest workaround—personal phones, paper receipts, manual discounts—because KPIs still demand throughput during the outage window.</p>
-<p>Legal and finance teams often become involved late because the technical team treated the outage as “short,” while business impact was already material.</p>
-<p>Keep a printed fallback for Tier A steps only if it is controlled, numbered, and reconciled—uncontrolled paper creates worse risk than downtime.</p>
-<p>Write the customer script for hour one: what you say, what you offer, and what you refuse to do unsafely—even under revenue pressure.</p>
-<h2>Explanation</h2>
-<p>Outages expose coupling: every critical action that requires a round trip to a distant service is a single point of failure.</p>
-<p>Good continuity preserves customer-facing motion with local or queued execution, then reconciles with discipline instead of heroics.</p>
-<p>Continuity architecture should assume partial connectivity: flaky DNS, captive portals, and asymmetric packet loss are common in retail Wi-Fi and mobile failover paths.</p>
-<p>Document which approvals can be deferred versus which must be immediate; ambiguity creates both risk and interpersonal conflict during stress.</p>
-<p>Measure how long it takes to restore managerial confidence, not only service green lights; confidence drives behavior.</p>
-<p>Keep incident timelines lightweight but honest; they become training gold and protect the organization from mythology after the fact.</p>
-<h2>Solution</h2>
-<p>Publish a short playbook: who decides, what sells without connectivity, what waits, and how records reconcile when service returns.</p>
-<p>Run a thirty-minute tabletop exercise quarterly. The goal is muscle memory, not documentation weight.</p>
-<p>Add explicit decision rights for degraded modes so managers do not contradict each other while the network is unstable.</p>
-<p>Use simple status pages for internal staff that reflect operational reality, not optimistic green checks tied to partial subsystem health.</p>
-<p>Integrators can differentiate by packaging rehearsal agendas and scorecards for clients.</p>
-<p>If your playbook is longer than two pages, operators will not read it under stress; split reference detail into appendices.</p>
-<h2>Application</h2>
-<p>Branches, desks, and finance teams stop improvising when the routine is rehearsed. That reduces fraud risk and customer-visible inconsistency.</p>
-<p>Partners can sell calmer operations because the story is measurable, not aspirational.</p>
-<p>Measure post-incident cleanup time; if reconciliation takes days, your continuity design is still too cloud-centered for real operations.</p>
-<p>Partners who rehearse together reduce blame cycles and speed recovery because responsibilities were agreed before adrenaline spikes.</p>
-<p>Avoid “hero engineer” dependency: if only one person can recover the system, continuity is still fragile.</p>
-<p>Partners should rehearse joint comms: mismatched vendor and integrator messages erode client confidence faster than downtime itself.</p>
-<h2>Closing</h2>
-<p>Schedule one drill before peak season. Afterward, fix the top friction you discovered—do not file it under “later.”</p>
-<p>Cara Core aligns editorial and engineering around execution reality: less noise, more routines that survive bad days.</p>
-<p>Treat the next maintenance window as rehearsal: throttle bandwidth in a pilot branch and observe what breaks before customers do.</p>
-<p>Capture one real incident timeline anonymously and use it as a training story; narrative memory beats abstract policy for frontline retention.</p>
-<p>Share anonymized timelines with new hires during onboarding so culture learns from history.</p>
-<p>End every outage with a single structural action item funded within thirty days, or lessons will evaporate.</p>
-  </article>
-    </main>
-    <script src="assets/js/article.js" defer></script>
-  </body>
-  </html>
+      <figure class="article-hero-image">
+        <img src="assets/img/2026_06_09_IMAGE_01.png" alt="" loading="lazy" decoding="async">
+        <figcaption><strong>Figure 1.</strong> Campaign visual for this slot: continuity is trained behavior, not only network graphs. Replace when creative is refreshed.</figcaption>
+      </figure>
+
+      <div class="article-prose" itemprop="articleBody">
+        <section aria-labelledby="h-summary">
+          <h2 id="h-summary">Summary for decision-makers</h2>
+          <p class="lead">When connectivity drops, the visible problem is “we are offline.” The expensive problem is behavioral: queues grow, approvals stall, and half the organization works from stale data while the other half works from the cloud—so nobody agrees on the truth.</p>
+          <p>The first hour sets habits. If teams learn that outages mean chaos, they optimize for personal survival—shadow spreadsheets, personal phones, manual discounts—while KPIs still demand throughput. That is how technical debt becomes operational debt in a single afternoon.</p>
+        </section>
+
+        <section aria-labelledby="h-hour">
+          <h2 id="h-hour">Inside the first hour</h2>
+          <p>Managers ask for numbers that cannot be reconciled: part of the ledger is on paper, part in a queue, part still in a SaaS screen that will not load. Finance and legal often arrive late because engineering treated the event as “short,” while customer impact was already material.</p>
+          <p>Customer-facing staff face an impossible bind: keep the line moving or follow policy. Without a rehearsed script, they choose the fastest workaround—sometimes creating audit and fraud exposure that outlasts the outage itself.</p>
+          <p>Communication discipline matters. Customers tolerate delay far better when they hear one coherent story tied to impact and ETA—not conflicting messages from sales, support, and the store floor, each using a different snapshot of reality.</p>
+        </section>
+
+        <section aria-labelledby="h-why">
+          <h2 id="h-why">Why “fix the line” is not enough</h2>
+          <p>Outages expose coupling: every critical action that requires a round trip to a distant service is a single point of failure. Good continuity preserves customer-facing motion with local or queued execution, then reconciles with discipline instead of heroics.</p>
+          <p>Real networks fail partially: flaky DNS, captive portals, asymmetric packet loss. Continuity design must assume degraded connectivity, not only total blackout. Measure how long it takes to restore <em>managerial confidence</em>, not only green lights on a dashboard—confidence drives what operators do next.</p>
+          <p>Lightweight, honest incident timelines become training assets and protect the organization from mythology later. Heavy playbooks are ignored under stress; split core response onto two pages and move reference detail to an appendix.</p>
+        </section>
+
+        <section aria-labelledby="h-playbook">
+          <h2 id="h-playbook">A practical playbook (rehearsal over volume)</h2>
+          <p>Publish who decides in degraded mode, what can sell without connectivity, what must wait, and how records reconcile when service returns. Ambiguity creates both compliance risk and interpersonal conflict while the network is unstable.</p>
+          <ol>
+            <li><strong>Hour-one customer script</strong> — what you say, what you offer, and what you refuse to do unsafely, even under revenue pressure.</li>
+            <li><strong>Decision rights</strong> — named approvers for discounts, voids, and exceptions so managers do not contradict each other on Slack.</li>
+            <li><strong>Internal status that matches reality</strong> — not subsystem green checks that hide partial failure.</li>
+            <li><strong>Quarterly tabletop drills</strong> (~30 minutes): muscle memory beats unread documentation.</li>
+          </ol>
+          <p>Integrators and vendors can rehearse <em>joint</em> communications: mismatched messages erode client confidence faster than downtime itself. Avoid hero-engineer dependency—if only one person can recover the system, fragility remains.</p>
+        </section>
+
+        <section aria-labelledby="h-apply">
+          <h2 id="h-apply">What improves when routines exist</h2>
+          <p>Branches, desks, and finance teams stop improvising when the routine is rehearsed. That reduces fraud risk, customer-visible inconsistency, and days-long reconciliation after the line is “green” again.</p>
+          <p>Partners can sell calmer operations because the narrative is measurable: post-incident cleanup time, exception volume, and repeat incident rate—not aspirational uptime slogans.</p>
+        </section>
+
+        <section class="section-end" aria-labelledby="h-next">
+          <h2 id="h-next">Next steps</h2>
+          <p>Before peak season, run one drill in a pilot branch with throttled bandwidth—observe what breaks before customers do. Afterward, fund a single structural fix within thirty days; otherwise lessons evaporate.</p>
+          <p>Cara Core keeps editorial and engineering aligned on execution reality: fewer promises, more routines that survive bad days. <strong>One question for leadership:</strong> do you have a two-page hour-one playbook operators have actually rehearsed—not only filed?</p>
+        </section>
+      </div>
+    </article>
+  </main>
+  <script src="assets/js/article.js" defer></script>
+</body>
+</html>

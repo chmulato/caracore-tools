@@ -1,71 +1,78 @@
-  <!doctype html>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Article 06 — Local-first vs cloud-first: a practical comparison</title>
-    <meta name="description" content="B2B export campaign article (~5 min read). Editorial schedule from June 2026.">
-    <link rel="stylesheet" href="assets/css/sala-doc.css">
-  </head>
-  <body>
-    <header class="sala-header">Cara Core Informatica · B2B Export · Article 06</header>
-    <main class="container">
-      <div class="breadcrumb"><a href="../index.html">B2B Export</a> / <span>Article</span></div>
-      <article class="panel">
-        <h1>Local-first vs cloud-first: a practical comparison</h1>
-        <p><strong>Publish date:</strong> 2026-07-07</p>
-        <p><strong>Status:</strong> Scheduled — June 2026 onward editorial window</p>
-        <p><strong>Estimated reading time:</strong> about 5 minutes</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Local-first vs cloud-first: a practical comparison · B2B Export</title>
+  <meta name="description" content="Hybrid truth rules, migrations, and observability—without ideology. About five minutes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/sala-doc.css">
+</head>
+<body class="b2b-article">
+  <header class="sala-header">Cara Core Informatica · B2B Export · Article 06</header>
+  <main class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">B2B Export</a> / <span>Article 06</span></nav>
 
-        <figure class="article-hero-image">
-          <img src="assets/img/2026_07_07_IMAGE_01.png" alt="Editorial image for 2026_07_07_article_06.html" loading="lazy" decoding="async">
-        </figure>
-        <p class="image-note"><strong>About this image:</strong> Campaign visual carried forward for this article slot; update asset if you refresh the creative.</p>
+    <article class="panel article-sheet" itemscope itemtype="https://schema.org/Article">
+      <header class="article-head">
+        <h1 itemprop="headline">Local-first vs cloud-first: a practical comparison</h1>
+        <p class="article-deck">Cloud-first optimizes centralized control and iteration speed. Local-first optimizes autonomy and predictable execution where latency, sovereignty, or outages bite. Most healthy systems are hybrid—with an explicit source-of-truth strategy per entity.</p>
+        <ul class="article-meta">
+          <li><strong>Published</strong> <time datetime="2026-07-07" itemprop="datePublished">7 July 2026</time></li>
+          <li><strong>Reading time</strong> ~5 minutes</li>
+          <li><strong>Status</strong> Scheduled · export editorial</li>
+        </ul>
+      </header>
 
-        <h2>Hook</h2>
-<p>Cloud-first optimizes for centralized control and fast iteration. Local-first optimizes for autonomy and predictable execution under stress.</p>
-<p>This comparison is practical, not ideological: where each model wins in real B2B delivery.</p>
-<p>Hybrid clarity reduces rework during migrations because teams know which subsystem is authoritative during each phase.</p>
-<p>Data residency and sovereignty concerns often push toward local-first controls even when teams prefer cloud collaboration ergonomics.</p>
-<p>Hybrid systems need consistent observability: the same trace IDs should work across edge and cloud where possible.</p>
-<p>Hybrid clarity is a negotiation tool: it reduces hidden assumptions between business, IT, and vendors.</p>
-<h2>Real Problem</h2>
-<p>Pure cloud-first fails when latency, compliance, or outages block revenue moments. Pure local-first can drift without governance if sync is weak.</p>
-<p>Most healthy systems are hybrid with a clear “source of truth” strategy per entity.</p>
-<p>Cloud-first shines for collaboration and fast iteration on non-critical workflows; local-first shines where latency and autonomy decide revenue.</p>
-<p>Migration plans should include a temporary dual-write window with explicit exit criteria; otherwise hybrid becomes permanent confusion.</p>
-<p>Document data retention differences between local caches and cloud warehouses to avoid compliance surprises.</p>
-<p>Document temporary dual-write rules with sunset dates or hybrid becomes permanent confusion.</p>
-<h2>Explanation</h2>
-<p>Decide per data type: what must be local authoritative, what can be cloud authoritative, and what must be mergeable with rules.</p>
-<p>If you cannot explain merge rules on one page, you will pay for that ambiguity in incidents.</p>
-<p>Security models differ: centralized policy with distributed enforcement is workable; accidental policy sprawl at the edge is not.</p>
-<p>Testing should validate rollback paths as thoroughly as forward migration; rollback is a continuity event.</p>
-<p>Partners should align on incident severity definitions so Sev-1 means the same thing to everyone.</p>
-<p>Align procurement milestones to hybrid reality: some benefits arrive late by design; plan cash flow accordingly.</p>
-<h2>Solution</h2>
-<p>Run a decision workshop with business and engineering: ten entity types, ten decisions, done. Then align the roadmap to those decisions.</p>
-<p>Avoid “we will sync somehow” as an architecture statement.</p>
-<p>Document rollback triggers before migration, not after the first production surprise.</p>
-<p>Partners should document assumptions about latency and packet loss; export markets vary widely in infrastructure quality.</p>
-<p>Include contract clauses for cooperative debugging during outages; finger-pointing delays recovery.</p>
-<p>Partners should publish a joint migration risk register template and reuse it.</p>
-<h2>Application</h2>
-<p>Hybrid clarity reduces vendor finger-pointing and speeds audits because ownership is explicit.</p>
-<p>Partners can propose phased migration paths that respect revenue risk windows.</p>
-<p>Partners can phase budgets when hybrid rules are explicit: less all-or-nothing capital risk for clients.</p>
-<p>Hybrid clarity improves onboarding for new engineers because the system’s truth model is explicit.</p>
-<p>Architecture diagrams should show authority arrows, not only boxes and lines.</p>
-<p>Engineering should track authority drift quarterly; silent changes are how hybrids fail.</p>
-<h2>Closing</h2>
-<p>Pick one entity type this month and write its truth rules. That document becomes your compass for the next quarter.</p>
-<p>Cara Core favors readable engineering that integrators can implement without guessing intent.</p>
-<p>Revisit the ten decisions quarterly; architecture drift happens when rules live only in chat threads.</p>
-<p>Run a quarterly architecture review focused only on authority drift: where did a new integration quietly change who owns truth?</p>
-<p>Celebrate small hybrid wins publicly inside the organization to build patience for longer migrations.</p>
-<p>If hybrid debates stall, prototype the smallest end-to-end slice instead of arguing abstractly for months.</p>
-  </article>
-    </main>
-    <script src="assets/js/article.js" defer></script>
-  </body>
-  </html>
+      <figure class="article-hero-image">
+        <img src="assets/img/2026_07_07_IMAGE_01.png" alt="" loading="lazy" decoding="async">
+        <figcaption><strong>Figure 1.</strong> Campaign visual for this slot. Replace when creative is refreshed.</figcaption>
+      </figure>
+
+      <div class="article-prose" itemprop="articleBody">
+        <section aria-labelledby="h-summary">
+          <h2 id="h-summary">Summary for decision-makers</h2>
+          <p class="lead">Pure cloud-first fails when latency, compliance, or outages block revenue moments. Pure local-first can drift without governance if sync and security are weak. The negotiation is not “winner takes all”—it is <em>per-entity authority</em> and honest migration sequencing.</p>
+          <p>Hybrid clarity reduces rework: everyone knows which subsystem is authoritative during each phase of a program—vendor, integrator, and client.</p>
+        </section>
+
+        <section aria-labelledby="h-trade">
+          <h2 id="h-trade">Where each model wins</h2>
+          <p>Cloud-first shines for collaboration, analytics, and fast iteration on non-critical workflows. Local-first shines where autonomy, latency, or data residency decide whether money moves. Security differs: centralized policy with distributed enforcement works; accidental policy sprawl at the edge does not.</p>
+          <p>Migrations need temporary dual-write with explicit sunset criteria—otherwise “hybrid” becomes permanent confusion. Document retention differences between edge caches and cloud warehouses before lawyers discover them during an audit.</p>
+        </section>
+
+        <section aria-labelledby="h-rules">
+          <h2 id="h-rules">Truth rules you can explain on one page</h2>
+          <p>For each data type, decide: local authoritative, cloud authoritative, or mergeable—with merge rules a non-developer auditor could follow. If you cannot explain it on one page, you will pay for ambiguity in incidents.</p>
+          <p>Testing must validate rollback as thoroughly as forward migration; rollback is a continuity event. Align on severity definitions so “Sev-1” means the same thing to sales, support, and engineering.</p>
+        </section>
+
+        <section aria-labelledby="h-playbook">
+          <h2 id="h-playbook">A practical playbook</h2>
+          <ol>
+            <li><strong>Ten entities, ten decisions</strong> — workshop with business and engineering; align the roadmap to the outcomes.</li>
+            <li><strong>Architecture diagrams</strong> — draw authority arrows, not only boxes.</li>
+            <li><strong>Contracts</strong> — cooperative debugging during outages; finger-pointing delays recovery.</li>
+            <li><strong>Quarterly review</strong> — track authority drift: where did a new integration quietly change who owns truth?</li>
+          </ol>
+        </section>
+
+        <section aria-labelledby="h-apply">
+          <h2 id="h-apply">Why integrators win</h2>
+          <p>Explicit hybrid rules reduce vendor finger-pointing, speed audits, and make onboarding easier for new engineers. Phased budgets respect revenue-risk windows instead of all-or-nothing bets.</p>
+        </section>
+
+        <section class="section-end" aria-labelledby="h-next">
+          <h2 id="h-next">Next steps</h2>
+          <p>If debates stall, prototype the smallest end-to-end slice instead of arguing in slides for months. Cara Core favors readable engineering integrators can implement without guessing intent.</p>
+          <p><strong>One question:</strong> can your team name three entities and who owns truth for each <em>today</em>?</p>
+        </section>
+      </div>
+    </article>
+  </main>
+  <script src="assets/js/article.js" defer></script>
+</body>
+</html>

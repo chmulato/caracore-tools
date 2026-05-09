@@ -1,71 +1,78 @@
-  <!doctype html>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Article 05 — What is offline-first architecture and why it matters</title>
-    <meta name="description" content="B2B export campaign article (~5 min read). Editorial schedule from June 2026.">
-    <link rel="stylesheet" href="assets/css/sala-doc.css">
-  </head>
-  <body>
-    <header class="sala-header">Cara Core Informatica · B2B Export · Article 05</header>
-    <main class="container">
-      <div class="breadcrumb"><a href="../index.html">B2B Export</a> / <span>Article</span></div>
-      <article class="panel">
-        <h1>What is offline-first architecture and why it matters</h1>
-        <p><strong>Publish date:</strong> 2026-06-30</p>
-        <p><strong>Status:</strong> Scheduled — June 2026 onward editorial window</p>
-        <p><strong>Estimated reading time:</strong> about 5 minutes</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>What is offline-first architecture and why it matters · B2B Export</title>
+  <meta name="description" content="Offline-first vs no-cloud: queues, truth rules, and pilots that finance can trust. About five minutes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/sala-doc.css">
+</head>
+<body class="b2b-article">
+  <header class="sala-header">Cara Core Informatica · B2B Export · Article 05</header>
+  <main class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">B2B Export</a> / <span>Article 05</span></nav>
 
-        <figure class="article-hero-image">
-          <img src="assets/img/2026_06_30_IMAGE_01.png" alt="Editorial image for 2026_06_30_article_05.html" loading="lazy" decoding="async">
-        </figure>
-        <p class="image-note"><strong>About this image:</strong> Campaign visual carried forward for this article slot; update asset if you refresh the creative.</p>
+    <article class="panel article-sheet" itemscope itemtype="https://schema.org/Article">
+      <header class="article-head">
+        <h1 itemprop="headline">What is offline-first architecture and why it matters</h1>
+        <p class="article-deck">Offline-first does not mean “no cloud.” It means the revenue-critical path does not pray for perfect connectivity: work continues with clear queues, idempotent commands, and reconciliation your auditor can follow.</p>
+        <ul class="article-meta">
+          <li><strong>Published</strong> <time datetime="2026-06-30" itemprop="datePublished">30 June 2026</time></li>
+          <li><strong>Reading time</strong> ~5 minutes</li>
+          <li><strong>Status</strong> Scheduled · export editorial</li>
+        </ul>
+      </header>
 
-        <h2>Hook</h2>
-<p>Offline-first means your default execution path does not assume perfect connectivity. Sync becomes a scheduled responsibility, not a prayer.</p>
-<p>Five minutes, plain English: why it matters for B2B buyers who operate outside headquarters.</p>
-<p>Offline-first is compatible with cloud analytics: the separation is about critical path, not about rejecting centralized insight.</p>
-<p>Offline-first does not eliminate cloud value; it sequences it so analytics and collaboration enhance decisions without blocking transactions.</p>
-<p>Offline-first pairs well with progressive enhancement in customer-facing flows: start usable, then enrich when connectivity allows.</p>
-<p>Offline-first is a journey: start with one workflow, prove reconciliation quality, then expand scope with evidence.</p>
-<h2>Real Problem</h2>
-<p>Without offline-first patterns, teams oscillate between “cannot work” and “working twice” after outages—neither is acceptable at scale.</p>
-<p>The cost shows up as shrinkage risk, angry customers, and delayed closes.</p>
-<p>Teams fear offline-first because they imagine conflict resolution is impossible; in practice, bounded queues and idempotent commands make it manageable.</p>
-<p>Conflict handling should be explainable to a non-developer auditor; if only engineers understand merge rules, governance is fragile.</p>
-<p>Operator training should include how to explain delays to customers without blaming unnamed “systems.”</p>
-<p>Do not let perfect conflict resolution block pragmatic progress; start with bounded queues and clear operator prompts.</p>
-<h2>Explanation</h2>
-<p>Offline-first is not “no cloud.” It is “cloud is not in the critical path for every keystroke.” Queues, idempotency, and operator clarity are the toolkit.</p>
-<p>Local-first is a sibling idea: authority and truth live where work happens, then synchronize.</p>
-<p>The hardest part is data ownership rules: who wins when two edits disagree, and how is that communicated to operators in plain language?</p>
-<p>Telemetry from offline queues helps prioritize which integrations deserve investment versus which should be removed as low value.</p>
-<p>Engineering should expose safe limits: maximum offline duration, maximum queue size, and operator actions at thresholds.</p>
-<p>Invest in training artifacts that match real UI states, including offline banners and queue counters.</p>
-<h2>Solution</h2>
-<p>Prototype one flow with explicit queues and conflict rules. Validate with real devices on a throttled network profile.</p>
-<p>Document operator-visible states so support can diagnose without escalating to engineering every time.</p>
-<p>Pilot with a workflow that already generates support tickets today; success should reduce tickets, not increase clever exceptions.</p>
-<p>Operators need confidence that queued actions will not silently disappear; visible counters and audit IDs reduce panic.</p>
-<p>Analytics teams should not punish branches for honest offline usage; otherwise operators hide reality.</p>
-<p>Celebrate reconciliation improvements as loudly as feature launches; they protect margin.</p>
-<h2>Application</h2>
-<p>Retail and field operations gain predictable throughput. IT partners reduce weekend war rooms after storms or fiber cuts.</p>
-<p>Cara Core messaging stays consistent: continuity is hygiene, not heroics.</p>
-<p>Cara Core messaging stays grounded: offline-first is discipline for field reality, not a slogan against modernization.</p>
-<p>Cara Core keeps editorial examples grounded in retail and distributed operations because that is where ambiguity becomes cash risk fastest.</p>
-<p>Cara Core recommends naming a single product owner for continuity behavior so decisions do not fragment across squads.</p>
-<p>Cara Core recommends writing truth rules in business language first, then translating to technical schemas.</p>
-<h2>Closing</h2>
-<p>Choose one pilot workflow, ship it, measure reconciliation errors weekly for a month, then expand.</p>
-<p>If you want a partner-ready narrative, anchor claims in those measured outcomes.</p>
-<p>Schedule a one-hour workshop with business and IT to write truth rules for a single entity; that document becomes your pilot contract.</p>
-<p>After pilot success, publish an internal one-pager: what changed, what metrics moved, and what you refuse to regress on next release.</p>
-<p>Capture before/after support ticket rates as a simple pilot success signal.</p>
-<p>Send operators a one-page cheat sheet after each pilot; laminated beats forgotten wiki pages.</p>
-  </article>
-    </main>
-    <script src="assets/js/article.js" defer></script>
-  </body>
-  </html>
+      <figure class="article-hero-image">
+        <img src="assets/img/2026_06_30_IMAGE_01.png" alt="" loading="lazy" decoding="async">
+        <figcaption><strong>Figure 1.</strong> Campaign visual for this slot. Replace when creative is refreshed.</figcaption>
+      </figure>
+
+      <div class="article-prose" itemprop="articleBody">
+        <section aria-labelledby="h-summary">
+          <h2 id="h-summary">Summary for decision-makers</h2>
+          <p class="lead">Without offline-first patterns, teams swing between “cannot work” and “working twice” after incidents—neither scales. The hidden cost is shrinkage risk, angry customers, and delayed closes while reconciliation catches up.</p>
+          <p>Fear of conflict resolution should not block pragmatic progress: bounded queues, visible limits, and business-language truth rules beat perfect theoretical merges that never ship.</p>
+        </section>
+
+        <section aria-labelledby="h-what">
+          <h2 id="h-what">What changes in the architecture</h2>
+          <p>The cloud can still power analytics and collaboration; the critical path for transactions is sequenced so sync is a scheduled responsibility. <em>Local-first</em> is the sibling idea: authority starts where work happens, then converges with explicit merge rules.</p>
+          <p>The hardest part is ownership: who wins when two edits disagree, and how operators see that outcome in plain language—not only engineers. Telemetry from queues shows which integrations deserve investment and which should be removed as low value.</p>
+        </section>
+
+        <section aria-labelledby="h-ops">
+          <h2 id="h-ops">Operator experience is the product</h2>
+          <p>Expose safe limits: maximum offline duration, maximum queue depth, and actions required as thresholds approach. Training artifacts must match real UI states—offline banners, counters, audit IDs—so support can diagnose without escalating every incident.</p>
+          <p>Analytics must not punish branches for honest offline usage or operators will hide reality. Celebrate reconciliation improvements as loudly as feature launches; margin lives in consistent truth.</p>
+        </section>
+
+        <section aria-labelledby="h-playbook">
+          <h2 id="h-playbook">A practical playbook</h2>
+          <ol>
+            <li><strong>One-hour workshop</strong> — business and IT write truth rules for a single entity; that document is your pilot contract.</li>
+            <li><strong>Pilot a noisy workflow</strong> — one that already generates tickets; success means fewer tickets, not cleverer exceptions.</li>
+            <li><strong>Measure weekly</strong> — reconciliation errors for a month before expanding scope.</li>
+            <li><strong>Ship a one-page cheat sheet</strong> to operators after each pilot; durable beats wiki-only.</li>
+          </ol>
+        </section>
+
+        <section aria-labelledby="h-apply">
+          <h2 id="h-apply">Field reality</h2>
+          <p>Retail and field operations gain predictable throughput; partners spend fewer weekends in war rooms after storms or fiber cuts. Cara Core keeps the message grounded: offline-first is discipline for reality, not a slogan against modernization.</p>
+        </section>
+
+        <section class="section-end" aria-labelledby="h-next">
+          <h2 id="h-next">Next steps</h2>
+          <p>Name a single product owner for continuity behavior so decisions do not fragment across squads. After a successful pilot, publish an internal one-pager: what changed, which metrics moved, and what you refuse to regress on the next release.</p>
+          <p><strong>One question:</strong> do operators trust that queued actions will not silently disappear?</p>
+        </section>
+      </div>
+    </article>
+  </main>
+  <script src="assets/js/article.js" defer></script>
+</body>
+</html>

@@ -1,71 +1,77 @@
-  <!doctype html>
-  <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Article 08 — Edge computing for real businesses</title>
-    <meta name="description" content="B2B export campaign article (~5 min read). Editorial schedule from June 2026.">
-    <link rel="stylesheet" href="assets/css/sala-doc.css">
-  </head>
-  <body>
-    <header class="sala-header">Cara Core Informatica · B2B Export · Article 08</header>
-    <main class="container">
-      <div class="breadcrumb"><a href="../index.html">B2B Export</a> / <span>Article</span></div>
-      <article class="panel">
-        <h1>Edge computing for real businesses</h1>
-        <p><strong>Publish date:</strong> 2026-07-21</p>
-        <p><strong>Status:</strong> Scheduled — June 2026 onward editorial window</p>
-        <p><strong>Estimated reading time:</strong> about 5 minutes</p>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Edge computing for real businesses · B2B Export</title>
+  <meta name="description" content="Scope, patching, telemetry, and KPIs—edge as operations, not buzzwords. About five minutes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/sala-doc.css">
+</head>
+<body class="b2b-article">
+  <header class="sala-header">Cara Core Informatica · B2B Export · Article 08</header>
+  <main class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="../index.html">B2B Export</a> / <span>Article 08</span></nav>
 
-        <figure class="article-hero-image">
-          <img src="assets/img/2026_07_21_IMAGE_01.png" alt="Editorial image for 2026_07_21_article_08.html" loading="lazy" decoding="async">
-        </figure>
-        <p class="image-note"><strong>About this image:</strong> Campaign visual carried forward for this article slot; update asset if you refresh the creative.</p>
+    <article class="panel article-sheet" itemscope itemtype="https://schema.org/Article">
+      <header class="article-head">
+        <h1 itemprop="headline">Edge computing for real businesses</h1>
+        <p class="article-deck">Edge moves selected processing closer to events: stores, warehouses, clinics, field teams. The business case is latency, autonomy, and bandwidth discipline—not slides with foggy “AI at the edge” promises.</p>
+        <ul class="article-meta">
+          <li><strong>Published</strong> <time datetime="2026-07-21" itemprop="datePublished">21 July 2026</time></li>
+          <li><strong>Reading time</strong> ~5 minutes</li>
+          <li><strong>Status</strong> Scheduled · export editorial</li>
+        </ul>
+      </header>
 
-        <h2>Hook</h2>
-<p>Edge computing moves selected processing closer to where events happen: stores, warehouses, clinics, and field teams.</p>
-<p>This article grounds edge in business outcomes latency, autonomy, and controlled bandwidth—not buzzwords.</p>
-<p>Edge without governance becomes shadow IT: unmanaged devices, stale certificates, and unknown data flows.</p>
-<p>Edge AI inference is attractive but increases governance load; decide whether models at the edge are versioned with the same rigor as server deployments.</p>
-<p>Edge security should assume physical access risks: locked ports, tamper evidence, and device attestation where feasible.</p>
-<p>Edge success requires disciplined scope: expand only where latency or autonomy truly changes outcomes.</p>
-<h2>Real Problem</h2>
-<p>Without edge discipline, you get duplicated logic, security sprawl, and “snowflake” devices nobody can patch consistently.</p>
-<p>The edge is not a free performance button; it is an operations responsibility.</p>
-<p>Choose edge scope where latency materially changes conversion or safety, not everywhere by default.</p>
-<p>Bandwidth caps mean telemetry must be sampled and prioritized; not every log line should traverse the WAN during incidents.</p>
-<p>Consider energy resilience for edge nodes: short outages at the outlet look like mysterious “software” failures.</p>
-<p>Security and patching must be designed for distributed reality, not copied from a single data center checklist.</p>
-<h2>Explanation</h2>
-<p>Good edge patterns define what runs locally, how updates roll out, and how telemetry returns without drowning uplinks.</p>
-<p>Security and observability must be designed for distributed failure, not copied from a single data center checklist.</p>
-<p>Patching strategy must be realistic for distributed footprints: staged rollouts beat heroic manual updates.</p>
-<p>Hardware diversity at the edge requires a small supported device matrix; infinite choice becomes infinite breakage.</p>
-<p>Update channels must be resilient too; a broken update mechanism bricks the field fleet.</p>
-<p>Telemetry should be budgeted like bandwidth: sampling and prioritization prevent observability from becoming an outage cause.</p>
-<h2>Solution</h2>
-<p>Start with one high-churn workflow where latency hurts revenue. Measure before/after with the same devices and hours.</p>
-<p>Centralize policy, decentralize execution; do not decentralize policy accidentally.</p>
-<p>Central observability should answer: which edge node is unhealthy and what customer workflow is impacted?</p>
-<p>Disaster recovery plans should include edge node replacement playbooks with time-to-restore targets.</p>
-<p>Telemetry backhaul should degrade gracefully with sampling when uplinks saturate.</p>
-<p>Hardware refresh plans belong next to edge roadmaps; aged devices become silent risk.</p>
-<h2>Application</h2>
-<p>Real businesses see fewer timeouts during peaks and clearer accountability when something misbehaves on site.</p>
-<p>Partners can propose phased edge scope with measurable KPIs instead of big-bang rollouts.</p>
-<p>Partners differentiate with runbooks clients can audit.</p>
-<p>Clients respect vendors who admit edge limits early instead of discovering them during peak season.</p>
-<p>Clients appreciate edge roadmaps that include retirement and refresh budgeting.</p>
-<p>Clients should demand edge failure drills with replacement time targets.</p>
-<h2>Closing</h2>
-<p>Pick one workflow, one edge boundary, one month pilot. Review with finance and security on week four.</p>
-<p>Cara Core prefers honest scope: edge helps when the problem is truly local.</p>
-<p>Cap edge scope to one bounded domain until operations prove patching and monitoring discipline.</p>
-<p>Instrument customer-visible latency at the edge and tie improvements to revenue moments, not only to technical percentiles.</p>
-<p>Pair edge pilots with a support readiness review so help desks are not surprised by new failure signatures.</p>
-<p>Pair edge adoption with help-desk training so new failure signatures are diagnosable quickly.</p>
-  </article>
-    </main>
-    <script src="assets/js/article.js" defer></script>
-  </body>
-  </html>
+      <figure class="article-hero-image">
+        <img src="assets/img/2026_07_21_IMAGE_01.png" alt="" loading="lazy" decoding="async">
+        <figcaption><strong>Figure 1.</strong> Campaign visual for this slot. Replace when creative is refreshed.</figcaption>
+      </figure>
+
+      <div class="article-prose" itemprop="articleBody">
+        <section aria-labelledby="h-summary">
+          <h2 id="h-summary">Summary for decision-makers</h2>
+          <p class="lead">Without governance, edge becomes shadow IT: duplicated logic, stale certificates, unknown data flows, and devices nobody patches consistently. Edge is not a free performance button—it is an operations responsibility with physical and software risk.</p>
+          <p>Choose scope where latency or autonomy materially changes conversion or safety—not everywhere by default.</p>
+        </section>
+
+        <section aria-labelledby="h-ops">
+          <h2 id="h-ops">Operations reality at the edge</h2>
+          <p>Good patterns define what runs locally, how updates roll out, and how telemetry returns without drowning uplinks. Hardware diversity demands a small supported matrix; infinite choice becomes infinite breakage. Energy blips at the outlet look like mysterious “software” failures if power resilience is ignored.</p>
+          <p>Patching must be staged; update channels must be resilient—a broken updater bricks a field fleet. Telemetry should degrade gracefully with sampling when links saturate.</p>
+        </section>
+
+        <section aria-labelledby="h-obs">
+          <h2 id="h-obs">Observability and accountability</h2>
+          <p>Central observability should answer: which node is unhealthy and which customer workflow is impacted? Disaster recovery should include edge replacement playbooks with time-to-restore targets. Refresh budgets belong next to roadmaps; aged devices are silent risk.</p>
+        </section>
+
+        <section aria-labelledby="h-playbook">
+          <h2 id="h-playbook">A practical playbook</h2>
+          <ol>
+            <li><strong>One workflow, one boundary</strong> — one-month pilot; review with finance and security in week four.</li>
+            <li><strong>Policy centralized, execution distributed</strong> — do not decentralize policy by accident.</li>
+            <li><strong>KPIs</strong> — tie latency improvements to customer-visible revenue moments, not only percentile charts.</li>
+            <li><strong>Support readiness</strong> — train help desks before new failure signatures hit production volume.</li>
+          </ol>
+        </section>
+
+        <section aria-labelledby="h-apply">
+          <h2 id="h-apply">Why honesty sells</h2>
+          <p>Clients respect vendors who disclose edge limits early. Partners differentiate with runbooks auditors can read. Cara Core prefers honest scope: edge helps when the problem is truly local.</p>
+        </section>
+
+        <section class="section-end" aria-labelledby="h-next">
+          <h2 id="h-next">Next steps</h2>
+          <p>Cap scope to one bounded domain until patching and monitoring discipline are proven. Pair pilots with support readiness reviews.</p>
+          <p><strong>One question:</strong> can you name the customer workflow that fails first when this edge node misbehaves?</p>
+        </section>
+      </div>
+    </article>
+  </main>
+  <script src="assets/js/article.js" defer></script>
+</body>
+</html>
