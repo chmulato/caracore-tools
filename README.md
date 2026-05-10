@@ -6,6 +6,8 @@ Manual tecnico e operacional das ferramentas de apoio ao ecossistema Cara Core I
 
 Este repositorio centraliza o portal estatico (`docs/`), a Sala de Operacoes, scripts de governanca/delivery e a pasta `sources/` como matriz editorial.
 
+Tambem hospeda a base publica e consultiva das linhas mestras da Cara Core Informatica, publicada em HTML no portal e mantida de forma canonica em `sources/`.
+
 ## Escopo funcional
 
 1. Validacao automatica de encoding em README (CI e script local).
@@ -44,7 +46,8 @@ caracore-tools/
 | scripts | sync_delivery_site_to_releases_docs.py | Copia `delivery/<app>` para `*-releases/docs` com git |
 | scripts | run_delivery_ink.py | Wrapper: sync Ink matriz -> caracore-ink-releases |
 | docs/sala | Sala de Operacoes | Hub canonico de documentacao operacional, campanhas e registos da sala |
-| sources/sala | Matriz editorial | Textos e registos operacionais que alimentam a revisao antes de publicar em `docs/` |
+| docs/linhas_mestras_cara_core.html | Linhas mestras | Referencia publica consultiva da tese, do portfolio e dos gates de decisao da Cara Core |
+| docs/matriz_produto_status_expectativa_gate.html | Matriz publica | Quadro consultivo do portfolio por produto, status, expectativa publica e gate exigido |
 
 ## Procedimentos operacionais
 
@@ -207,6 +210,8 @@ python scripts/ecosystem_branch_governance.py align --dry-run
 | Documento | Finalidade |
 |---|---|
 | [mapeamento_ecossistema_productos.html](docs/mapeamento_ecossistema_productos.html) | Mapa tecnico dos produtos e dependencias |
+| [linhas_mestras_cara_core.html](docs/linhas_mestras_cara_core.html) | Base consultiva publica da tese e dos principios de decisao da Cara Core |
+| [matriz_produto_status_expectativa_gate.html](docs/matriz_produto_status_expectativa_gate.html) | Matriz publica de produto, status interno, expectativa externa e gate exigido |
 | [relatorio_seguranca_ecossistema.html](docs/relatorio_seguranca_ecossistema.html) | Consolidado de postura de seguranca do ecossistema |
 | [auditoria_licencas_repositorios_2026_03_14.html](docs/auditoria_licencas_repositorios_2026_03_14.html) | Verificacao de conformidade de licenciamento |
 | [auditoria_seguranca_lojas_releases.html](docs/auditoria_seguranca_lojas_releases.html) | Analise de seguranca para repositorios de releases |

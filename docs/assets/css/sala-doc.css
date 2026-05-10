@@ -1,41 +1,59 @@
-﻿:root {
-  --sala-bg: #0d1117;
-  --sala-panel: #161b22;
-  --sala-text: #e6edf3;
-  --sala-muted: #c9d1d9;
-  --sala-quiet: #8b949e;
-  --sala-gold: #ffd700;
-  --sala-border: rgba(255, 255, 255, 0.1);
+﻿@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;700&display=swap");
+
+:root {
+  --sala-bg: #07111e;
+  --sala-bg-2: #0d1b2e;
+  --sala-panel: rgba(10, 25, 42, 0.82);
+  --sala-panel-2: rgba(16, 34, 54, 0.9);
+  --sala-text: #eaf4ff;
+  --sala-muted: #bdd0e7;
+  --sala-quiet: #8fa8c4;
+  --sala-gold: #f2c14e;
+  --sala-accent: #5dd9c1;
+  --sala-border: rgba(255, 255, 255, 0.16);
+  --sala-shadow: 0 20px 52px rgba(2, 8, 16, 0.5);
   --sala-measure: 76ch;
 }
 * { box-sizing: border-box; }
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-family: "Sora", "Segoe UI", sans-serif;
   font-size: 16px;
-  background: var(--sala-bg);
+  background:
+    radial-gradient(1200px 680px at -10% -15%, rgba(93, 217, 193, 0.18), transparent 60%),
+    radial-gradient(980px 700px at 110% -20%, rgba(242, 193, 78, 0.16), transparent 58%),
+    linear-gradient(165deg, var(--sala-bg), var(--sala-bg-2));
   color: var(--sala-text);
+  min-height: 100vh;
   line-height: 1.7;
 }
 .sala-header {
-  background: var(--sala-panel);
-  border-bottom: 1px solid rgba(255, 215, 0, 0.15);
-  padding: 0.75rem 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(7, 17, 30, 0.74);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  padding: 0.84rem 1rem;
   color: var(--sala-gold);
+  font-family: "IBM Plex Mono", Consolas, monospace;
   font-weight: 600;
-  letter-spacing: 0.03em;
-  font-size: 0.9rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.82rem;
 }
 .container {
-  max-width: 1040px;
+  max-width: 1220px;
   margin: 0 auto;
-  padding: 1.5rem 1.25rem;
+  padding: 1.05rem;
 }
 .panel {
-  background: var(--sala-panel);
+  background: linear-gradient(145deg, var(--sala-panel), var(--sala-panel-2));
   border: 1px solid var(--sala-border);
-  border-radius: 10px;
+  border-radius: 16px;
   padding: 1.35rem 1.45rem;
+  box-shadow: var(--sala-shadow);
 }
 
 /* Keep readable line length for long documents while preserving full-width code blocks. */
@@ -65,9 +83,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1 {
   margin: 0 0 1rem;
-  border-bottom: 1px solid rgba(255, 215, 0, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.16);
   padding-bottom: 0.55rem;
-  font-size: 1.55rem;
+  font-size: clamp(1.28rem, 3vw, 1.95rem);
 }
 h2 {
   margin: 1.35rem 0 0.8rem;
@@ -87,7 +105,6 @@ p, li {
 }
 p {
   margin: 0 0 0.95rem;
-  text-wrap: pretty;
   overflow-wrap: anywhere;
 }
 ul, ol {
@@ -102,18 +119,21 @@ a {
   text-decoration-thickness: 0.08em;
   text-underline-offset: 0.12em;
 }
+a:hover {
+  color: var(--sala-text);
+}
 code {
-  background: rgba(255, 255, 255, 0.09);
-  border: 1px solid rgba(255, 215, 0, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 0.12rem 0.35rem;
   border-radius: 4px;
   font-size: 0.92em;
-  color: #ffe9a3;
+  color: #f7d98a;
 }
 pre {
-  background: #0a0f14;
-  border: 1px solid rgba(255, 215, 0, 0.2);
-  border-radius: 8px;
+  background: rgba(7, 17, 30, 0.76);
+  border: 1px solid var(--sala-border);
+  border-radius: 12px;
   padding: 0.9rem;
   margin: 0 0 1rem;
   overflow: auto;

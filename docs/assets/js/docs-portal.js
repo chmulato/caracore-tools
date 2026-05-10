@@ -3,6 +3,24 @@
 
   var docs = [
     {
+      title: 'Linhas mestras da Cara Core Informatica',
+      href: 'linhas_mestras_cara_core.html',
+      description: 'Base pública e consultiva da tese, dos eixos de decisão e da fidelidade ao negócio da Cara Core.',
+      category: 'governanca',
+      tag: 'linhas-mestras',
+      audience: 'estrategia',
+      updatedAt: '2026-05-10'
+    },
+    {
+      title: 'Matriz pública do portfólio Cara Core',
+      href: 'matriz_produto_status_expectativa_gate.html',
+      description: 'Quadro consultivo de produto, status interno, expectativa pública e gate exigido.',
+      category: 'governanca',
+      tag: 'matriz',
+      audience: 'estrategia',
+      updatedAt: '2026-05-10'
+    },
+    {
       title: 'Sistema de governança do ecossistema',
       href: 'sistema_governanca_ecossistema.html',
       description: 'Papéis, regras e fluxo operacional do ecossistema Cara Core.',
