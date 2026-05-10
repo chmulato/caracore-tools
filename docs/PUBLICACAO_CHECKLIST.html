@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Checklist de Publicacao Web - Cara Core Tools</title>
-  <meta name="description" content="Checklist operacional para publicacao online das paginas HTML do Cara Core Tools com validacoes de navegação, links e metadados.">
+  <title>Checklist de Publicação Web - Cara Core Tools</title>
+  <meta name="description" content="Checklist operacional para publicação online das páginas HTML do Cara Core Tools com validacoes de navegação, links e metadados.">
   <link rel="canonical" href="https://tools.caracore.com.br/publicacao_checklist.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <div class="brand">Cara Core · Checklist de Publicacao</div>
+      <div class="brand">Cara Core · Checklist de Publicação</div>
       <div class="meta">release gate web</div>
     </div>
   </header>
@@ -22,77 +22,77 @@
   <div class="layout">
     <aside class="sidebar" aria-label="Navegacao de checklist">
       <h2 class="side-title">Atalhos</h2>
-      <p class="side-lead">Use este checklist antes de publicar para garantir consistencia visual e funcional.</p>
+      <p class="side-lead">Use este checklist antes de publicar para garantir consistência visual e funcional.</p>
       <div class="sidebar-block">
         <ul class="quick-nav">
           <li><a href="index.html">Portal principal</a></li>
-          <li><a href="catalogo.html">Catalogo de documentos</a></li>
-          <li><a href="politica_publicacao_html_only.html">Politica HTML-only</a></li>
-          <li><a href="#pre">Pre-publicacao</a></li>
-          <li><a href="#pos">Pos-publicacao</a></li>
+          <li><a href="catalogo.html">Catálogo de documentos</a></li>
+          <li><a href="politica_publicacao_html_only.html">Política HTML-only</a></li>
+          <li><a href="#pre">Pre-publicação</a></li>
+          <li><a href="#pos">Pós-publicação</a></li>
           <li><a href="guia_publicacao_shell_identidade.html">Guia Shell x Identidade</a></li>
           <li><a href="checklist_qa_visual_portal.html">Checklist QA visual</a></li>
         </ul>
       </div>
       <div class="sidebar-block">
-        <p class="sidebar-label">Regra de harmonizacao</p>
-        <p class="side-lead">Checklist opera no shell compartilhado, exige publicacao HTML-only e valida consistencia entre hubs, templates e colecoes com identidade propria.</p>
+        <p class="sidebar-label">Regra de harmonização</p>
+        <p class="side-lead">Checklist opera no shell compartilhado, exige publicação HTML-only e valida consistência entre hubs, templates e coleções com identidade própria.</p>
       </div>
     </aside>
 
     <main class="main">
       <section class="hero anim-in">
-        <p class="eyebrow">Publicacao Operacional</p>
-        <h1>Checklist de publicacao online do docs</h1>
-        <p>Execute os itens abaixo para validar integridade de links, consistencia visual, metadados basicos e acessibilidade minima antes do deploy.</p>
+        <p class="eyebrow">Publicação Operacional</p>
+        <h1>Checklist de publicação online do docs</h1>
+        <p>Execute os itens abaixo para validar integridade de links, consistência visual, metadados básicos e acessibilidade mínima antes do deploy.</p>
 
         <div class="badges">
           <span class="badge">web statica</span>
           <span class="badge">gate de qualidade</span>
-          <span class="badge">validacao funcional</span>
+          <span class="badge">validação funcional</span>
         </div>
       </section>
 
       <section class="section anim-in" id="pre">
-        <h2>Pre-publicacao</h2>
-        <p class="section-intro">Desktop e mobile: validar ritmo visual (espacamento), contraste legivel e hierarquia de titulos antes de publicar.</p>
+        <h2>Pre-publicação</h2>
+        <p class="section-intro">Desktop e mobile: validar ritmo visual (espaçamento), contraste legível e hierarquia de títulos antes de publicar.</p>
         <p class="section-intro">Use o roteiro dedicado em <a href="checklist_qa_visual_portal.html">Checklist QA visual do portal</a> para validar shell compartilhado e identidade local.</p>
         <ul>
           <li>Confirmar que a home em index.html abre sem erro e exibe os cards de documentos.</li>
           <li>Validar que catalogo.html aplica busca e filtro por categoria corretamente.</li>
           <li>Testar links de coleções: sala/index.html e b2b/index.html.</li>
           <li>Executar <code>python scripts/check_docs_html_only.py --report-only</code> e confirmar zero arquivos crus bloqueados em docs.</li>
-          <li>Garantir que cada pagina tenha title e meta description adequados.</li>
-          <li>Verificar que nao existem links quebrados para arquivos removidos.</li>
-          <li>Conferir responsividade basica em largura aproximada de 390px e 1366px.</li>
+          <li>Garantir que cada página tenha title e meta description adequados.</li>
+          <li>Verificar que não existem links quebrados para arquivos removidos.</li>
+          <li>Conferir responsividade básica em largura aproximada de 390px e 1366px.</li>
           <li>Checar contraste e legibilidade dos textos principais e botões de filtro.</li>
         </ul>
       </section>
 
       <section class="section anim-in">
-        <h2>Conteudo e padrao</h2>
+        <h2>Conteúdo e padrão</h2>
         <ul>
-          <li>Confirmar padrao visual unificado com portal-docs.css nas paginas novas.</li>
+          <li>Confirmar padrão visual unificado com portal-docs.css nas páginas novas.</li>
           <li>Publicar documentos web apenas em HTML; fontes cruas e scripts saem da arvore docs.</li>
-          <li>Manter templates publicaveis em HTML quando forem parte da experiencia web.</li>
-          <li>Permitir identidade local apenas quando permanecer harmonica com a navegacao institucional.</li>
-          <li>Atualizar datas e descricoes no catalogo quando novos documentos entrarem.</li>
+          <li>Manter templates publicaveis em HTML quando forem parte da experiência web.</li>
+          <li>Permitir identidade local apenas quando permanecer harmonica com a navegação institucional.</li>
+          <li>Atualizar datas e descricoes no catálogo quando novos documentos entrarem.</li>
           <li>Incluir novos hubs no menu lateral do portal principal.</li>
         </ul>
       </section>
 
       <section class="section anim-in" id="pos">
-        <h2>Pos-publicacao</h2>
+        <h2>Pós-publicação</h2>
         <ul>
-          <li>Acessar o dominio publicado e navegar pelos links principais do portal.</li>
-          <li>Executar smoke test de busca na home e no catalogo.</li>
+          <li>Acessar o domínio publicado e navegar pelos links principais do portal.</li>
+          <li>Executar smoke test de busca na home e no catálogo.</li>
           <li>Rodar o gate sem <code>-ReportOnly</code> antes do deploy final.</li>
-          <li>Registrar checkpoint de publicacao com data e escopo das paginas alteradas.</li>
+          <li>Registrar checkpoint de publicação com data e escopo das páginas alteradas.</li>
           <li>Validar cache e CDN, quando aplicavel, para refletir versoes atualizadas.</li>
         </ul>
       </section>
 
-      <footer class="footer">Checklist base de publicacao Cara Core Tools.</footer>
+      <footer class="footer">Checklist base de publicação Cara Core Tools.</footer>
     </main>
   </div>
 </body>

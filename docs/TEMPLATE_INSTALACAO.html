@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Template de Instalacao (Windows) - Cara Core Tools</title>
-  <meta name="description" content="Template padrao de instalacao para entregas Windows com validacao de integridade e checklist de publicacao.">
+  <meta name="description" content="Template padrão de instalacao para entregas Windows com validação de integridade e checklist de publicação.">
   <link rel="canonical" href="https://tools.caracore.com.br/template_instalacao.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,27 +15,27 @@
   <header class="topbar">
     <div class="topbar-inner">
       <div class="brand">Cara Core · Template de Instalacao</div>
-      <div class="meta">padrao para entregas Windows</div>
+      <div class="meta">padrão para entregas Windows</div>
     </div>
   </header>
 
   <div class="layout">
     <aside class="sidebar" aria-label="Navegacao lateral">
-      <h2 class="side-title">Navegacao rapida</h2>
-      <p class="side-lead">Use este template como base para cada release com executavel.</p>
+      <h2 class="side-title">Navegação rapida</h2>
+      <p class="side-lead">Use este template como base para cada release com executável.</p>
       <div class="sidebar-block">
         <ul class="quick-nav">
           <li><a href="index.html">Portal principal</a></li>
-          <li><a href="catalogo.html">Catalogo de documentos</a></li>
-          <li><a href="#validacao">Validacao de integridade</a></li>
-          <li><a href="#execucao">Execucao</a></li>
+          <li><a href="catalogo.html">Catálogo de documentos</a></li>
+          <li><a href="#validacao">Validação de integridade</a></li>
+          <li><a href="#execucao">Execução</a></li>
           <li><a href="guia_publicacao_shell_identidade.html">Guia Shell x Identidade</a></li>
           <li><a href="checklist_qa_visual_portal.html">Checklist QA visual</a></li>
         </ul>
       </div>
       <div class="sidebar-block">
         <p class="sidebar-label">Leitura editorial</p>
-        <p class="side-lead">Este template segue shell compartilhado. O conteudo entre colchetes e identidade propria da release.</p>
+        <p class="side-lead">Este template segue shell compartilhado. O conteúdo entre colchetes e identidade própria da release.</p>
       </div>
     </aside>
 
@@ -43,10 +43,10 @@
       <article class="hero anim-in">
         <p class="eyebrow">Template reutilizavel</p>
         <h1>[NomeProduto] - Instalacao (Windows)</h1>
-        <p>Modelo em HTML para publicar instrucoes de instalacao em paginas de release. Substitua os campos entre colchetes antes de publicar.</p>
+        <p>Modelo em HTML para publicar instrucoes de instalacao em páginas de release. Substitua os campos entre colchetes antes de publicar.</p>
 
-        <p class="section-intro">Regra de uso: mantenha estrutura, ritmo visual e nomenclatura de validacao. Personalize apenas dados do produto, passos de execucao e canais oficiais.</p>
-        <p class="section-intro">Validacao visual dirigida (desktop/mobile): <a href="checklist_qa_visual_portal.html">Checklist QA visual do portal</a>.</p>
+        <p class="section-intro">Regra de uso: mantenha estrutura, ritmo visual e nomenclatura de validação. Personalize apenas dados do produto, passos de execução e canais oficiais.</p>
+        <p class="section-intro">Validação visual dirigida (desktop/mobile): <a href="checklist_qa_visual_portal.html">Checklist QA visual do portal</a>.</p>
 
         <div class="section section-first">
           <h2>Arquivos desta entrega</h2>
@@ -59,7 +59,7 @@
         </div>
 
         <div class="section" id="validacao">
-          <h2>Validacao de integridade</h2>
+          <h2>Validação de integridade</h2>
           <p>No PowerShell, execute os comandos abaixo na pasta dos artefatos e compare os hashes gerados com os arquivos checksum publicados.</p>
 <pre><code>Get-FileHash -Path .\[Executavel].exe -Algorithm SHA256
 Get-FileHash -Path .\[Executavel].exe -Algorithm MD5</code></pre>
@@ -70,18 +70,18 @@ Get-FileHash -Path .\[Executavel].exe -Algorithm MD5</code></pre>
           <ul>
             <li>Windows 10 ou superior (64 bits)</li>
             <li>[Requisitos extras, ex: 4 GB RAM, 500 MB de espaco livre]</li>
-            <li>Conexao com internet: [sim / nao / somente ativacao]</li>
+            <li>Conexao com internet: [sim / não / somente ativacao]</li>
           </ul>
         </div>
 
         <div class="section" id="execucao">
-          <h2>Execucao</h2>
+          <h2>Execução</h2>
           <ol>
-            <li>Execute [Executavel].exe como usuario local do Windows.</li>
+            <li>Execute [Executavel].exe como usuário local do Windows.</li>
             <li>Conclua o assistente de instalacao.</li>
             <li>[Instrucao de acesso, ex: abrir localhost:8080 ou atalho no desktop].</li>
           </ol>
-          <p>Login de degustacao (opcional): usuario [usuario_padrao], senha [senha_padrao].</p>
+          <p>Login de degustacao (opcional): usuário [usuario_padrao], senha [senha_padrao].</p>
         </div>
 
         <div class="section">
@@ -92,13 +92,13 @@ Get-FileHash -Path .\[Executavel].exe -Algorithm MD5</code></pre>
         <div class="section">
           <h2>Canal oficial</h2>
           <ul>
-            <li>Pagina de download: [URL publica]</li>
-            <li>Licenca: [LICENCA.txt ou URL da licenca]</li>
+            <li>Página de download: [URL pública]</li>
+            <li>Licença: [LICENCA.txt ou URL da licença]</li>
             <li>Suporte: [email ou URL de suporte]</li>
           </ul>
         </div>
 
-        <footer class="footer">Versao: [versao] · Lancamento: [data] · Cara Core Informatica - https://tools.caracore.com.br</footer>
+        <footer class="footer">Versão: [versão] · Lançamento: [data] · Cara Core Informática - https://tools.caracore.com.br</footer>
       </article>
     </main>
   </div>

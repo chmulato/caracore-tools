@@ -55,21 +55,21 @@
                             <tr><td>trabalho_feito</td><td>Status / trabalho feito (resumo do que você executou)</td></tr>
                             <tr><td>horas_previstas</td><td>Meta de horas para o dia</td></tr>
                             <tr><td>horas_trabalhadas</td><td>Horas (tempo real que você trabalhou)</td></tr>
-                            <tr><td>valor_sessao_cc</td><td>Valor CC (pagamento desta sessão em dinheiro CC)</td></tr>
+                            <tr><td>valor_sessão_cc</td><td>Valor CC (pagamento desta sessão em dinheiro CC)</td></tr>
                             <tr><td>acumulado_cc</td><td>Acumulado (total em dinheiro CC até aqui)</td></tr>
-                            <tr><td>inicio_sessao</td><td>Início (data e hora em que você começou)</td></tr>
-                            <tr><td>fim_sessao</td><td>Fim (data e hora em que você encerrou)</td></tr>
+                            <tr><td>inicio_sessão</td><td>Início (data e hora em que você começou)</td></tr>
+                            <tr><td>fim_sessão</td><td>Fim (data e hora em que você encerrou)</td></tr>
                         </tbody>
                     </table>
                 </section>
                 <section>
                     <h2>Equivalência com nomes amigáveis</h2>
-                    <p>ID Tarefa / linha: cada linha da planilha é uma sessão (data + início). Descrição da Tarefa = tarefa_do_dia. Status / Trabalho Feito = trabalho_feito. Início = inicio_sessao. Fim = fim_sessao. Horas = horas_trabalhadas. Valor CC = valor_sessao_cc. Acumulado = acumulado_cc.</p>
+                    <p>ID Tarefa / linha: cada linha da planilha é uma sessão (data + início). Descrição da Tarefa = tarefa_do_dia. Status / Trabalho Feito = trabalho_feito. Início = inicio_sessão. Fim = fim_sessão. Horas = horas_trabalhadas. Valor CC = valor_sessão_cc. Acumulado = acumulado_cc.</p>
                 </section>
                 <section>
                     <h2>Quem atualiza</h2>
-                    <p><strong>Robô 01 (iniciar_trabalho):</strong> preenche data, tarefa_do_dia, horas_previstas, acumulado_cc (até a sessão anterior), inicio_sessao.</p>
-                    <p><strong>Robô 02 (validar_trabalho_executado):</strong> preenche trabalho_feito, horas_trabalhadas, valor_sessao_cc, acumulado_cc, fim_sessao.</p>
+                    <p><strong>Robô 01 (iniciar_trabalho):</strong> preenche data, tarefa_do_dia, horas_previstas, acumulado_cc (até a sessão anterior), inicio_sessão.</p>
+                    <p><strong>Robô 02 (validar_trabalho_executado):</strong> preenche trabalho_feito, horas_trabalhadas, valor_sessão_cc, acumulado_cc, fim_sessão.</p>
                     <p>Você não precisa editar a planilha à mão. Os robôs fazem isso de forma transparente.</p>
                 </section>
             </article>

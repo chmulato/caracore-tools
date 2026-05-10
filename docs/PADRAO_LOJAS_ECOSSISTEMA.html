@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Padrao de Lojas - Ecossistema Cara Core</title>
-  <meta name="description" content="Padrao tecnico oficial para lojas de releases do ecossistema Cara Core Informatica.">
+  <title>Padrão de Lojas - Ecossistema Cara Core</title>
+  <meta name="description" content="Padrão técnico oficial para lojas de releases do ecossistema Cara Core Informática.">
   <style>
     :root {
       --bg: #0d1117;
@@ -100,21 +100,21 @@
 <body>
   <main>
     <p class="topline">Cara Core Tools</p>
-    <h1>Padrao de Lojas do Ecossistema Cara Core Informatica</h1>
-    <p>Este documento define o padrao tecnico para todas as lojas publicadas via repositorios <code>*-releases</code>.</p>
+    <h1>Padrão de Lojas do Ecossistema Cara Core Informática</h1>
+    <p>Este documento define o padrão técnico para todas as lojas publicadas via repositórios <code>*-releases</code>.</p>
 
     <section class="card">
       <h2>1) Objetivos</h2>
       <ul>
-        <li>Garantir encoding consistente (UTF-8) em todas as paginas.</li>
+        <li>Garantir encoding consistente (UTF-8) em todas as páginas.</li>
         <li>Padronizar layout e componentes institucionais.</li>
-        <li>Manter identidade visual por produto sem perder consistencia de ecossistema.</li>
+        <li>Manter identidade visual por produto sem perder consistência de ecossistema.</li>
         <li>Facilitar manutencao e evolucao das lojas.</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2>2) Estrutura padrao</h2>
+      <h2>2) Estrutura padrão</h2>
       <pre>docs/
   assets/
     caracore-core-typography.css
@@ -143,8 +143,8 @@
       <h2>3) Regras de encoding</h2>
       <ul>
         <li>Todos os arquivos HTML, CSS, JS e MD devem estar em UTF-8.</li>
-        <li><code>&lt;meta charset="UTF-8"&gt;</code> deve existir em todas as paginas HTML.</li>
-        <li>Nao permitir texto corrompido (ex.: <code>Ã§</code>, <code>Ã£</code>, <code>â€”</code>, <code>â€“</code>, <code>â€</code>).</li>
+        <li><code>&lt;meta charset="UTF-8"&gt;</code> deve existir em todas as páginas HTML.</li>
+        <li>Não permitir texto corrompido (ex.: <code>Ã§</code>, <code>Ã£</code>, <code>â€”</code>, <code>â€“</code>, <code>â€</code>).</li>
       </ul>
     </section>
 
@@ -165,17 +165,17 @@
     </section>
 
     <section class="card">
-      <h2>5) Componentes obrigatorios por loja</h2>
+      <h2>5) Componentes obrigatórios por loja</h2>
       <ul>
         <li>Breadcrumb institucional.</li>
         <li>Canal de feedback.</li>
-        <li>Rodape com links para loja, repositorio e portfolio.</li>
-        <li>Bloco de apresentacao do produto com CTA claro (download, demonstracao ou compra).</li>
+        <li>Rodapé com links para loja, repositório e portfólio.</li>
+        <li>Bloco de apresentação do produto com CTA claro (download, demonstracao ou compra).</li>
       </ul>
     </section>
 
     <section class="card">
-      <h2>6) Checklist de revisao por loja</h2>
+      <h2>6) Checklist de revisão por loja</h2>
       <ul>
         <li><code>index.html</code> com <code>meta charset="UTF-8"</code>.</li>
         <li>Arquivos sem mojibake (<code>Ã</code>, <code>â€</code>, <code>�</code>).</li>
@@ -183,7 +183,7 @@
         <li>Breadcrumb presente e funcional.</li>
         <li>Canal de feedback funcional.</li>
         <li>CSS padronizado (<code>loja.css</code> + <code>&lt;produto&gt;.css</code>).</li>
-        <li>Dependencias externas de layout removidas ou justificadas.</li>
+        <li>Dependências externas de layout removidas ou justificadas.</li>
         <li>Links internos validados (sem 404).</li>
         <li><code>CNAME</code>, <code>.nojekyll</code> e <code>_config.yml</code> corretos.</li>
       </ul>
@@ -209,8 +209,8 @@
     <section class="card">
       <h2>8) Regra de commit</h2>
       <ul>
-        <li>Um commit por loja e por objetivo tecnico.</li>
-        <li>Mensagem padrao sugerida:</li>
+        <li>Um commit por loja e por objetivo técnico.</li>
+        <li>Mensagem padrão sugerida:</li>
       </ul>
       <ul>
         <li><code>fix(loja): normaliza encoding utf-8</code></li>
@@ -228,7 +228,7 @@
       <p>Atualização: 2026-04-05 · Auditoria: 11 repositórios <code>*-releases</code>.</p>
     </section>
 
-    <p class="subtle">Documento convertido para HTML padrao para publicacao no portal da Cara Core Tools.</p>
+    <p class="subtle">Documento convertido para HTML padrão para publicação no portal da Cara Core Tools.</p>
   </main>
 </body>
 </html>
