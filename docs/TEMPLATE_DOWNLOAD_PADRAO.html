@@ -23,17 +23,21 @@
     [ ] Get-FileHash (não certutil) para SHA-256
     [ ] Nenhum <style> inline no <head>
     [ ] CSS em assets/css/[produto].css ou laboratorio.css
+    [ ] Guia de instalação publicado em HTML
 -->
 <html lang="pt-BR">
 <head>
+    <!-- caracore-audit: template-placeholders -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="caracore-audit" content="template-placeholders skip-link-validation">
     <base href="https://[dominio]/">
     <title>Download — [NomeProduto] | Cara Core Informática</title>
     <meta name="description" content="Baixe o instalador Windows do [NomeProduto]. [desc_curta]. Checksums SHA-256 e MD5.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- TEMPLATE COM PLACEHOLDERS: ignorar em auditorias automáticas de navegação até publicação real. -->
     <!-- CSS do produto — NÃO usar <style> inline -->
     <link rel="stylesheet" href="assets/css/loja.css">
     <link rel="stylesheet" href="assets/evolution-status/evolution-status.css">
@@ -77,7 +81,7 @@
             </a>
             <a href="artifacts/checksum.sha256" class="btn-release btn-release-outline" target="_blank" rel="noopener">Checksum SHA-256</a>
             <a href="artifacts/checksum.md5" class="btn-release btn-release-outline" target="_blank" rel="noopener">Checksum MD5</a>
-            <a href="artifacts/INSTALACAO.md" class="btn-release btn-release-outline" target="_blank" rel="noopener">Guia de instalação</a>
+            <a href="artifacts/INSTALACAO.html" class="btn-release btn-release-outline" target="_blank" rel="noopener">Guia de instalação</a>
         </section>
 
         <section class="card">
