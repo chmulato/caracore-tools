@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Política de Publicação HTML-Only - Cara Core Tools</title>
-  <meta name="description" content="Política operacional para manter o docs do Cara Core Tools com artefatos publicados em HTML e visual harmônico dentro do site.">
+  <title>Regras de Publicação do Portal - Cara Core Tools</title>
+  <meta name="description" content="Regras simples para manter o portal Cara Core Tools claro, público e livre de material de trabalho interno.">
   <link rel="canonical" href="https://tools.caracore.com.br/politica_publicacao_html_only.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,15 +14,15 @@
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <div class="brand">Cara Core · Política HTML-Only</div>
-      <div class="meta">publicação harmonica no docs</div>
+      <div class="brand">Cara Core · Regras de Publicação</div>
+      <div class="meta">clareza na área pública</div>
     </div>
   </header>
 
   <div class="layout">
     <aside class="sidebar" aria-label="Navegacao da política">
       <h2 class="side-title">Atalhos</h2>
-      <p class="side-lead">Regra operacional para impedir artefatos crus no site publicado e preservar coesão visual entre portal e hubs.</p>
+      <p class="side-lead">Regras para manter o portal público claro, organizado e coerente.</p>
       <div class="sidebar-block">
         <ul class="quick-nav">
           <li><a href="index.html">Portal principal</a></li>
@@ -35,65 +35,63 @@
         </ul>
       </div>
       <div class="sidebar-block">
-        <p class="sidebar-label">Regra do espaco</p>
-        <p class="side-lead">No domínio publicado, documento visível deve ser HTML. Fonte crua, script operacional e rascunho ficam fora de docs.</p>
+        <p class="sidebar-label">Regra do portal</p>
+        <p class="side-lead">Na área pública entram apenas páginas prontas para leitura. Material de trabalho fica fora dela.</p>
       </div>
     </aside>
 
     <main class="main">
       <section class="hero anim-in">
-        <p class="eyebrow">Gate de publicação</p>
-        <h1>Política HTML-only para o docs</h1>
-        <p>O site publicado deve expor páginas HTML com navegação valida e estilo harmônico. Arquivos de apoio técnico podem existir como assets de renderizacao, mas documentos, notas operacionais e scripts não devem permanecer dentro de <code>docs/</code>.</p>
+        <p class="eyebrow">Publicação</p>
+        <h1>Regras da área pública do portal</h1>
+        <p>O portal deve mostrar apenas páginas prontas para leitura pública. Anotações internas, rascunhos e materiais de trabalho não devem aparecer na navegação pública.</p>
 
         <div class="badges">
-          <span class="badge">html-only</span>
-          <span class="badge">shell harmônico</span>
-          <span class="badge">sem artefato cru</span>
+          <span class="badge">clareza</span>
+          <span class="badge">coerência</span>
+          <span class="badge">leitura pública</span>
         </div>
       </section>
 
       <section class="section anim-in" id="regras">
-        <h2>Regras operacionais</h2>
+        <h2>Regras principais</h2>
         <ul>
-          <li>Documento publicado no portal: sempre <code>.html</code>.</li>
-          <li>Nomes de arquivos <code>.html</code> em caixa baixa (URLs estáveis em servidores case-sensitive e alinhamento com o catálogo).</li>
-          <li>Arquivos fonte como <code>.md</code>, <code>.txt</code>, <code>.py</code>, <code>.csv</code>, <code>.htm</code> e equivalentes não podem permanecer na arvore publicada.</li>
-          <li>Assets técnicos de renderizacao podem permanecer quando forem estritamente suporte de página: <code>.css</code>, <code>.js</code>, imagens e fontes.</li>
-          <li>Excecao operacional explicita: <code>feed.xml</code> e permitido somente para distribuicao de feed público (sindication).</li>
-          <li>Subportais com identidade própria continuam permitidos, desde que respeitem navegação, hierarquia e integracao com o shell do site.</li>
-          <li>Todo novo documento entra no portal com metadata básica, link institucional e visual coerente com a coleção onde vive.</li>
+          <li>Publicar apenas páginas finalizadas e pensadas para leitura aberta.</li>
+          <li>Evitar expor rascunhos, notas internas, comandos e material de bastidor.</li>
+          <li>Manter o texto simples, objetivo e coerente com a linguagem do portal.</li>
+          <li>Preservar a navegação e a identidade visual já adotadas pelo site.</li>
+          <li>Organizar cada novo conteúdo de forma que o leitor entenda rapidamente onde está e para onde pode seguir.</li>
         </ul>
       </section>
 
       <section class="section anim-in">
-        <h2>O que bloqueia publicação</h2>
+        <h2>O que não deve aparecer no portal</h2>
         <ul>
-          <li>README operacional, prompt, plano bruto ou nota de continuidade publicado diretamente dentro de <code>docs/</code>.</li>
-          <li>Script Python ou PowerShell acessivel pelo mesmo caminho da documentação web.</li>
-          <li>Indice usando extensão legada <code>.htm</code> em vez de <code>.html</code>.</li>
-          <li>Página nova sem shell harmônico ou sem links de retorno para o portal/hub.</li>
+          <li>Rascunhos, lembretes internos e material ainda em preparo.</li>
+          <li>Explicações técnicas que só fazem sentido para manutenção interna.</li>
+          <li>Páginas sem contexto, sem navegação de retorno ou sem conexão com o restante do portal.</li>
+          <li>Textos que exijam conhecimento de bastidor para serem entendidos.</li>
         </ul>
       </section>
 
       <section class="section anim-in" id="fluxo">
-        <h2>Fluxo recomendado para migrar material cru</h2>
+        <h2>Fluxo recomendado de publicação</h2>
         <ol>
-          <li>Escolher o material bruto fora de <code>docs/</code> como fonte de trabalho.</li>
-          <li>Produzir a versão publicada em HTML usando o shell do portal ou a identidade local autorizada.</li>
-          <li>Apontar navegação do hub para a página HTML final.</li>
-          <li>Executar a auditoria com <code>python scripts/check_docs_html_only.py --report-only</code>.</li>
-          <li>Se a auditoria retornar zero violacoes, liberar para deploy.</li>
+          <li>Preparar o conteúdo primeiro fora da área pública.</li>
+          <li>Transformar o material em uma página clara, direta e pronta para leitura.</li>
+          <li>Adicionar a navegação necessária para o leitor entrar e sair do tema sem se perder.</li>
+          <li>Revisar o texto e conferir se ele está alinhado com o restante do portal.</li>
+          <li>Publicar apenas quando a página estiver compreensível para quem não conhece o bastidor.</li>
         </ol>
       </section>
 
       <section class="section anim-in">
-        <h2>Validação automatica</h2>
-        <p class="section-intro">Script institucional: <code>scripts/check_docs_html_only.py</code>.</p>
+        <h2>Critério final de revisão</h2>
+        <p class="section-intro">Antes de publicar, confirme que a página está fácil de ler e que não expõe detalhes internos desnecessários.</p>
         <ul>
-          <li><strong>Modo de auditoria:</strong> <code>python scripts/check_docs_html_only.py --report-only</code></li>
-          <li><strong>Modo de gate:</strong> <code>python scripts/check_docs_html_only.py</code></li>
-          <li><strong>Saida esperada:</strong> total de violacoes, agrupamento por extensão e diretorios com maior passivo.</li>
+          <li>O leitor entende o assunto sem depender de contexto interno.</li>
+          <li>A navegação está clara do início ao fim.</li>
+          <li>O texto informa sem exagerar em jargão, configuração ou detalhe técnico.</li>
         </ul>
       </section>
 

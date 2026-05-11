@@ -3,18 +3,102 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sistema de Governança do Ecossistema Cara Core</title>
-  <link rel="stylesheet" href="assets/css/sala-doc.css">
+  <title>Como a Cara Core organiza o ecossistema</title>
+  <meta name="description" content="Explicação simples de como a Cara Core organiza planejamento, revisão e publicação dentro do ecossistema.">
+  <link rel="canonical" href="https://tools.caracore.com.br/sistema_governanca_ecossistema.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/portal-docs.css">
 </head>
 <body>
-  <header class="sala-header">Cara Core Informática · Sala de Operações · Tools</header>
-  <main class="container">
-    <div class="panel">
-      <div class="breadcrumb"><a href="index.html">Voltar para o portal</a></div>
-<h1>Sistema de Governança do Ecossistema Cara Core</h1> <p>Este documento define o <code>caracore-tools</code> como núcleo operacional de governança para:</p> <ul> <li>releases</li> <li>roadmap</li> <li>automação de delivery</li> <li>sincronização matriz/lojas por aplicação</li> </ul> <h2>Objetivo</h2> <p>Reduzir estresse operacional com um fluxo único, rastreável e reproduzível.</p> <h2>Componentes</h2> <ol> <li>Orquestração de delivery:</li> </ol> <ul> <li><code>scripts/ecosystem_delivery.py</code></li> <li><code>scripts/ecosystem-delivery-map.json</code></li> </ul> <ol> <li>Governança e gate:</li> </ol> <ul> <li><code>scripts/ecosystem_governance.py</code></li> <li><code>scripts/ecosystem-governance-catalog.json</code></li> </ul> <ol> <li>Governança de branches:</li> </ol> <ul> <li><code>scripts/ecosystem_branch_governance.py</code></li> <li>campos <code>sourceBranchTarget</code> e <code>releaseBranchTarget</code> no catálogo</li> </ul> <ol> <li>Wrappers por aplicação:</li> </ol> <ul> <li><code>scripts/run_delivery_ete.py</code></li> <li><code>scripts/run_delivery_circuito.py</code></li> <li><code>scripts/run_delivery_hub.py</code></li> <li><code>scripts/run_delivery_ink.py</code></li> <li><code>scripts/run_delivery_ru.py</code></li> <li><code>scripts/run_delivery_cso.py</code></li> <li>suporte comum: <code>scripts/sync_delivery_site_to_releases_docs.py</code></li> </ul> <h2>Fluxo recomendado por release</h2> <ol> <li>Dashboard de governança:</li> </ol> <pre><code> python scripts/ecosystem_governance.py dashboard </code></pre> <ol> <li>Janela de calendário (próximos marcos):</li> </ol> <pre><code> python scripts/ecosystem_governance.py roadmap --window-days 180 </code></pre> <p>2.5. Alinhamento de branch por app (fonte e releases):</p> <pre><code> python scripts/ecosystem_branch_governance.py status </code></pre> <pre><code> python scripts/ecosystem_branch_governance.py align --dry-run </code></pre> <ol> <li>Gate por aplicação (No-Go/Go):</li> </ol> <pre><code> python scripts/ecosystem_governance.py gate --app pdv --strict </code></pre> <ol> <li>Geração de evidência formal do gate:</li> </ol> <pre><code> python scripts/ecosystem_governance.py report --app pdv </code></pre> <ol> <li>Simulação de delivery:</li> </ol> <pre><code> python scripts/ecosystem_delivery.py run --app pdv --dry-run </code></pre> <ol> <li>Delivery efetivo:</li> </ol> <pre><code> python scripts/ecosystem_delivery.py run --app pdv </code></pre> <h2>Criticidade do gate</h2> <p>O gate avalia quatro eixos:</p> <ul> <li>Segurança (tokens/credenciais de publicação)</li> <li>Consistência Delivery-Matriz-Loja</li> <li>Automação (comando de release existente)</li> <li>Integridade Git (repos limpos)</li> </ul> <p>Regra:</p> <ul> <li>Falha crítica =&gt; <code>BLOQUEADO</code></li> <li>Sem falha crítica e com ressalvas =&gt; <code>APROVADO COM RESSALVAS</code></li> <li>Sem ressalvas =&gt; <code>APROVADO</code></li> </ul> <h2>Evidências</h2> <p>Relatórios Markdown do gate são gerados localmente em (não publicados no site):</p> <ul> <li><code>reports/governance/</code></li> </ul> <p>Padrão de arquivo:</p> <ul> <li><code>GATE_&lt;app&gt;_&lt;timestamp&gt;.md</code></li> </ul> <h2>Política operacional</h2> <ul> <li>Sempre executar <code>dashboard</code> e <code>gate</code> antes de publicar.</li> <li>Sempre executar <code>-DryRun</code> antes de delivery efetivo.</li> <li>Usar commits atômicos por app e por repositório.</li> <li>Publicar somente com trilha de evidência do gate.</li> </ul> <h2>Regra de artefatos binários por canal</h2> <p>Diretriz obrigatória para o PDV:</p> <ul> <li>O executável e checksums do PDV não devem ser publicados pela matriz (<code>caracore-site</code>).</li> <li>O delivery de binários do PDV deve ocorrer somente na loja oficial de releases:</li> </ul> <p>	<code>https://github.com/chmulato/caracore-pdv-releases</code>.</p> <ul> <li>A matriz deve publicar apenas conteúdo institucional, documentação e links para a loja.</li> </ul> <p>O gate de governança bloqueia publicação quando detectar alteração em artefatos proibidos na matriz do PDV.</p> <p>Regra geral do ecossistema:</p> <ul> <li>Cada aplicação com entrega de artefato deve publicar no seu repositório dedicado com sufixo <code>-releases</code>.</li> <li>O repositório de matriz (<code>caracore-site</code>) permanece como canal institucional de apresentação, documentação e direcionamento.</li> <li>O gate valida conformidade do canal oficial por app (checagem de padrão <code>*-releases</code>).</li> </ul>
-      <div class="footer">Documento publicado em formato HTML.</div>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">Cara Core · Organização do Ecossistema</div>
+      <div class="meta">tools.caracore.com.br</div>
     </div>
-  </main>
+  </header>
+
+  <div class="layout">
+    <aside class="sidebar" aria-label="Navegação">
+      <h2 class="side-title">Atalhos</h2>
+      <div class="sidebar-block">
+        <ul class="quick-nav">
+          <li><a href="index.html">Página inicial</a></li>
+          <li><a href="catalogo.html">Catálogo completo</a></li>
+          <li><a href="matriz_produto_status_expectativa_gate.html">Matriz pública</a></li>
+          <li><a href="linhas_mestras_cara_core.html">Linhas mestras</a></li>
+        </ul>
+      </div>
+      <div class="sidebar-block">
+        <p class="sidebar-label">Leitura</p>
+        <p class="side-lead">Esta página explica, de forma direta, como a Cara Core decide o que continua, o que publica e o que precisa ser revisto.</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="hero anim-in">
+        <p class="eyebrow">Visão geral</p>
+        <h1>Como a Cara Core organiza o ecossistema</h1>
+        <p class="hero-lead">O ecossistema é conduzido com uma rotina simples: planejar, revisar, confirmar coerência e só então publicar. O objetivo é reduzir ruído e manter cada frente alinhada com o negócio.</p>
+      </section>
+
+      <section class="section anim-in">
+        <h2>Objetivo</h2>
+        <p class="section-intro">A governança existe para dar clareza. Ela evita promessas fora de hora, ajuda a manter o foco e organiza a passagem entre trabalho interno e leitura pública.</p>
+        <ul class="link-list">
+          <li>Planejar o que realmente merece seguir adiante.</li>
+          <li>Revisar cada frente antes de torná-la pública.</li>
+          <li>Manter produto, comunicação e momento de publicação em sintonia.</li>
+          <li>Preservar a confiança do público com informações coerentes.</li>
+        </ul>
+      </section>
+
+      <section class="section anim-in section-muted">
+        <h2>Como funciona na prática</h2>
+        <div class="cards cards-compact">
+          <article class="card">
+            <h3>1. Planejamento</h3>
+            <p>Cada frente começa com uma pergunta simples: isso resolve um problema real e reforça a direção da Cara Core?</p>
+          </article>
+          <article class="card">
+            <h3>2. Revisão</h3>
+            <p>Antes de avançar, a equipe confere se o conteúdo está claro, se a entrega faz sentido e se o momento é adequado.</p>
+          </article>
+          <article class="card">
+            <h3>3. Confirmação</h3>
+            <p>O material só segue quando a comunicação, a proposta e a expectativa pública estão coerentes entre si.</p>
+          </article>
+          <article class="card">
+            <h3>4. Publicação</h3>
+            <p>O que entra no portal deve estar pronto para leitura pública, com contexto suficiente e sem depender de bastidor técnico.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section anim-in">
+        <h2>O que sempre é observado</h2>
+        <ul class="link-list">
+          <li>Se a frente está alinhada com a direção do ecossistema.</li>
+          <li>Se o texto público corresponde ao estágio real do produto ou do tema.</li>
+          <li>Se a informação publicada está clara para quem lê de fora.</li>
+          <li>Se a publicação ajuda a organização do portfólio, e não o contrário.</li>
+        </ul>
+      </section>
+
+      <section class="section anim-in section-muted">
+        <h2>Regra de publicação</h2>
+        <p class="section-intro">Nem todo material interno deve virar página pública. O portal deve mostrar apenas o que já está pronto para informar com clareza.</p>
+        <ul class="link-list">
+          <li>Informação pública precisa ser objetiva e compreensível.</li>
+          <li>Detalhes de bastidor ficam fora da navegação principal.</li>
+          <li>Quando houver dúvida entre avançar ou esperar, a coerência vale mais do que a pressa.</li>
+        </ul>
+      </section>
+
+      <footer class="footer">tools.caracore.com.br · organização pública e consultiva do ecossistema Cara Core</footer>
+    </main>
+  </div>
 </body>
 </html>
 

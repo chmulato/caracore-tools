@@ -3,184 +3,85 @@
 
   var docs = [
     {
-      title: 'Linhas mestras da Cara Core Informatica',
+      title: 'Linhas mestras da Cara Core Informática',
       href: 'linhas_mestras_cara_core.html',
-      description: 'Base pública e consultiva da tese, dos eixos de decisão e da fidelidade ao negócio da Cara Core.',
+      description: 'Explica a direção da Cara Core e os princípios que orientam o ecossistema.',
       category: 'governanca',
       tag: 'linhas-mestras',
       audience: 'estrategia',
-      updatedAt: '2026-05-10'
+      updatedAt: '2026-05-11'
     },
     {
       title: 'Matriz pública do portfólio Cara Core',
       href: 'matriz_produto_status_expectativa_gate.html',
-      description: 'Quadro consultivo de produto, status interno, expectativa pública e gate exigido.',
+      description: 'Apresenta cada frente do portfólio com estágio atual e expectativa pública.',
       category: 'governanca',
       tag: 'matriz',
       audience: 'estrategia',
       updatedAt: '2026-05-10'
     },
     {
-      title: 'Sistema de governança do ecossistema',
+      title: 'Como a Cara Core organiza o ecossistema',
       href: 'sistema_governanca_ecossistema.html',
-      description: 'Papéis, regras e fluxo operacional do ecossistema Cara Core.',
+      description: 'Mostra como a Cara Core organiza revisão, coerência e publicação no ecossistema.',
       category: 'governanca',
       tag: 'governanca',
       audience: 'operacao',
       updatedAt: '2026-03-12'
     },
     {
-      title: 'Mapeamento do ecossistema',
+      title: 'Visão geral do ecossistema Cara Core',
       href: 'mapeamento_ecossistema_productos.html',
-      description: 'Produtos, dependências e relação entre frentes.',
+      description: 'Resume os principais produtos, áreas de atuação e papéis do ecossistema.',
       category: 'governanca',
       tag: 'mapa',
       audience: 'estrategia',
       updatedAt: '2026-03-14'
     },
     {
-      title: 'Padrão de lojas do ecossistema',
-      href: 'padrao_lojas_ecossistema.html',
-      description: 'Estrutura e experiência das lojas e repositórios de releases.',
-      category: 'governanca',
-      tag: 'padrao',
-      audience: 'publicacao',
-      updatedAt: '2026-03-20'
-    },
-    {
-      title: 'Plano de vitrine padrão 2026',
-      href: 'plano_vitrine_padrao_2026.html',
-      description: 'Apresentação online de produtos com foco comercial.',
-      category: 'campanha',
-      tag: 'vitrine',
-      audience: 'marketing',
-      updatedAt: '2026-03-22'
-    },
-    {
-      title: 'Template de vitrine padrão',
-      href: 'template_vitrine_padrao.html',
-      description: 'Modelo base de página de vitrine de produto.',
-      category: 'campanha',
-      tag: 'template',
-      audience: 'marketing',
-      updatedAt: '2026-03-22'
-    },
-    {
-      title: 'Template de download padrão',
-      href: 'template_download_padrao.html',
-      description: 'Modelo de página de download e distribuição de artefatos.',
-      category: 'campanha',
-      tag: 'template',
-      audience: 'publicacao',
-      updatedAt: '2026-03-22'
-    },
-    {
-      title: 'Template de instalação (HTML)',
-      href: 'template_instalacao.html',
-      description: 'Instalação no Windows e validação de checksum.',
-      category: 'campanha',
-      tag: 'instalacao',
-      audience: 'suporte',
-      updatedAt: '2026-04-09'
-    },
-    {
-      title: 'Relatório de segurança do ecossistema',
-      href: 'relatorio_seguranca_ecossistema.html',
-      description: 'Controles, riscos e recomendações técnicas.',
-      category: 'seguranca',
-      tag: 'seguranca',
-      audience: 'governanca',
-      updatedAt: '2026-03-15'
-    },
-    {
-      title: 'Auditoria de segurança das lojas de releases',
-      href: 'auditoria_seguranca_lojas_releases.html',
-      description: 'Postura de segurança nas lojas de release.',
-      category: 'auditoria',
-      tag: 'seguranca',
-      audience: 'compliance',
-      updatedAt: '2026-03-14'
-    },
-    {
-      title: 'Auditoria de licenças dos repositórios',
-      href: 'auditoria_licencas_repositorios_2026_03_14.html',
-      description: 'Conformidade e rastreabilidade de licenças.',
-      category: 'auditoria',
-      tag: 'compliance',
-      audience: 'juridico',
-      updatedAt: '2026-03-14'
-    },
-    {
-      title: 'Relatório final de saúde do código',
-      href: 'code_health_report_final.html',
-      description: 'Consolidado do estado técnico do código.',
-      category: 'auditoria',
-      tag: 'code-health',
-      audience: 'engenharia',
-      updatedAt: '2026-03-19'
-    },
-    {
-      title: 'Gate de publicação antiabuso',
-      href: 'gate_publicacao_antiabutre_ecossistema.html',
-      description: 'Gate de publicação e controles operacionais.',
-      category: 'seguranca',
-      tag: 'gate',
-      audience: 'publicacao',
-      updatedAt: '2026-03-16'
-    },
-    {
-      title: 'Análise de honestidade cronológica',
-      href: 'analise_honestidade_cronologica_produtos.html',
-      description: 'Coerência temporal nas entregas e trilha de evidências.',
-      category: 'auditoria',
-      tag: 'analise',
-      audience: 'governanca',
-      updatedAt: '2026-03-17'
-    },
-    {
       title: 'Campanha B2B',
       href: 'b2b/index.html',
-      description: 'Doze artigos em inglês, com filtros por assunto.',
+      description: 'Reúne textos em inglês voltados à apresentação institucional e ao mercado.',
       category: 'campanha',
       tag: 'b2b',
       audience: 'marketing',
       updatedAt: '2026-04-01'
     },
     {
-      title: 'Checklist de publicação web',
+      title: 'Checklist de publicação',
       href: 'publicacao_checklist.html',
-      description: 'Validar navegação, links e consistência antes de publicar.',
+      description: 'Traz uma revisão curta para confirmar clareza, links e leitura antes da publicação.',
       category: 'governanca',
       tag: 'checklist',
       audience: 'operacao',
       updatedAt: '2026-04-09'
     },
     {
-      title: 'Política de publicação só em HTML',
+      title: 'Regras de publicação do portal',
       href: 'politica_publicacao_html_only.html',
-      description: 'Manter o site só com HTML publicável, sem artefatos crus.',
+      description: 'Resume o que pode entrar na área pública e o que deve ficar fora dela.',
       category: 'governanca',
       tag: 'html-only',
       audience: 'publicacao',
       updatedAt: '2026-04-10'
     },
     {
-      title: 'Guia: shell do portal e identidade da loja',
+      title: 'Guia de linguagem e identidade das páginas',
       href: 'guia_publicacao_shell_identidade.html',
-      description: 'O que é compartilhado no portal e o que é identidade por produto.',
+      description: 'Mostra o que deve permanecer igual no portal e o que cada página pode adaptar ao seu assunto.',
       category: 'governanca',
       tag: 'publicacao',
       audience: 'publicacao',
-      updatedAt: '2026-04-10'
+      updatedAt: '2026-05-11'
     },
     {
-      title: 'Checklist de QA visual do portal',
+      title: 'Checklist visual do portal',
       href: 'checklist_qa_visual_portal.html',
-      description: 'Contraste, hierarquia e leitura em desktop e celular.',
+      description: 'Ajuda a revisar leitura, contraste, hierarquia e conforto de navegação das páginas.',
       category: 'governanca',
       tag: 'qa-visual',
       audience: 'publicacao',
-      updatedAt: '2026-04-10'
+      updatedAt: '2026-05-11'
     }
   ];
 

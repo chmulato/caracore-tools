@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Prioridade da documentação — Cara Core</title>
-  <meta name="description" content="Painel para ordenar a documentação do portal por impacto, categoria e tempo desde a última atualização.">
+  <title>Ordem de Leitura — Cara Core</title>
+  <meta name="description" content="Painel simples para orientar a ordem de leitura e revisão dos documentos do portal.">
   <link rel="canonical" href="https://tools.caracore.com.br/negocios.html">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,7 +14,7 @@
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <div class="brand">Cara Core · Prioridades</div>
+      <div class="brand">Cara Core · Ordem de Leitura</div>
       <div class="meta">tools.caracore.com.br</div>
     </div>
   </header>
@@ -31,55 +31,55 @@
       </div>
       <div class="sidebar-block">
         <p class="sidebar-label">Objetivo</p>
-        <p class="side-lead">Apoia a manutenção: o que revisar primeiro, com base em criticidade, público e data.</p>
+        <p class="side-lead">Indica uma ordem sugerida para leitura e revisão, sem substituir avaliação humana.</p>
       </div>
     </aside>
 
     <main class="main">
       <section class="hero anim-in">
         <p class="eyebrow">Painel</p>
-        <h1>Prioridade da documentação</h1>
-        <p class="hero-lead">Pontuação simples a partir da categoria, do público-alvo e dos dias desde a última alteração. Não substitui julgamento humano.</p>
+        <h1>Ordem sugerida de leitura</h1>
+        <p class="hero-lead">Este painel ajuda a enxergar o que merece atenção primeiro. Ele organiza os documentos por tema, atualização e relevância geral.</p>
 
         <div class="business-kpis" id="bizKpis"></div>
 
         <div class="catalog-toolbar toolbar-spaced">
-          <input id="bizSearch" type="search" placeholder="Buscar na tabela" autocomplete="off">
-          <select id="bizStreamFilter" aria-label="Filtrar por grupo de trabalho">
-            <option value="all">Todos os grupos</option>
-            <option value="governanceOps">Operação e governança</option>
+          <input id="bizSearch" type="search" placeholder="Buscar por documento ou assunto" autocomplete="off">
+          <select id="bizStreamFilter" aria-label="Filtrar por assunto">
+            <option value="all">Todos os assuntos</option>
+            <option value="governanceOps">Direção e organização</option>
             <option value="publicationPipeline">Publicação e modelos</option>
-            <option value="riskAndSecurity">Risco e segurança</option>
+            <option value="riskAndSecurity">Cuidados e revisão</option>
             <option value="marketEnablement">Campanha e mercado</option>
           </select>
         </div>
 
         <div class="catalog-toolbar">
-          <select id="bizStatusFilter" aria-label="Filtrar por estado de recência">
-            <option value="all">Todos os estados</option>
-            <option value="quente">Quente</option>
-            <option value="morno">Morno</option>
-            <option value="saudavel">Saudável</option>
+          <select id="bizStatusFilter" aria-label="Filtrar por atualização">
+            <option value="all">Todas as atualizações</option>
+            <option value="quente">Precisa de atenção</option>
+            <option value="morno">Pode ser revisado em breve</option>
+            <option value="saudavel">Segue estável</option>
           </select>
           <p class="result-line" id="bizCount">A carregar…</p>
         </div>
       </section>
 
       <section class="section anim-in">
-        <h2>Tabela</h2>
-        <p class="section-intro">Colunas: documento, grupo, categoria, público, estado, idade em dias e pontuação.</p>
+        <h2>Painel de leitura</h2>
+        <p class="section-intro">A tabela reúne documento, assunto, finalidade, atualização e uma ordem sugerida de atenção.</p>
 
         <div class="biz-table-wrap">
           <table class="biz-table" aria-label="Prioridade da documentação">
             <thead>
               <tr>
                 <th>Documento</th>
-                <th>Grupo</th>
-                <th>Categoria</th>
-                <th>Público</th>
-                <th>Estado</th>
-                <th>Idade</th>
-                <th>Pontos</th>
+                <th>Assunto</th>
+                <th>Tipo</th>
+                <th>Leitura indicada</th>
+                <th>Atualização</th>
+                <th>Dias</th>
+                <th>Ordem</th>
               </tr>
             </thead>
             <tbody id="businessTableBody"></tbody>
@@ -87,7 +87,7 @@
         </div>
       </section>
 
-      <footer class="footer">tools.caracore.com.br</footer>
+      <footer class="footer">tools.caracore.com.br · ordem sugerida de leitura do portal</footer>
     </main>
   </div>
 
