@@ -107,7 +107,7 @@ Formato: NUMERO | DATA | ARQUIVO | TITULO
   84 | 2026-05-09 | 2026_05_09_article_84.html | Como Construir Software Tecnico em Escala com Equipes Enxutas
   85 | 2026-05-16 | 2026_05_16_article_85.html | O Brasil Emergente e a Oportunidade de Inovar Onde Ninguem Esta Olhando
   86 | 2026-05-23 | 2026_05_23_article_86.html | O Futuro da Cara Core: Para Onde Estamos Indo
-  87 | 2026-05-30 | 2026_05_30_article_87.html | A Rota da Serenidade: Da Descoberta a Soberania Tecnica em Java 21
+  87 | 2026-05-30 | 2026_05_30_article_87.html | A Rota da Serenidade: Da Descoberta a Soberania Tecnica em Java 25
 
 Total de artigos registrados: 87 (ate 30/05/2026).
 
