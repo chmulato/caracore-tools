@@ -13,3 +13,6 @@ tokens.txt
 
 # Saida local do gate (nao versionar)
 reports/
+
+# Material de bastidor (repositorio publico): manter so local
+interno/
