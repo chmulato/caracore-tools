@@ -843,7 +843,6 @@ def render_html(num: int, date_iso: str, title: str, img_prefix: str) -> str:
             <article class="panel">
               <h1>{title}</h1>
               <p><strong>Publish date:</strong> {date_iso}</p>
-              <p><strong>Status:</strong> Scheduled — June 2027 onward editorial window</p>
               <p><strong>Estimated reading time:</strong> about 5 minutes</p>
 
               <figure class="article-hero-image">
