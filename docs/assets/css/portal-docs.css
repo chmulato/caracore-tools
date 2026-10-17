@@ -703,6 +703,27 @@ h1 {
   font-weight: 600;
 }
 
+@media (max-width: 720px) {
+  .biz-table { min-width: 0; }
+  .biz-table thead { display: none; }
+  .biz-table,
+  .biz-table tbody,
+  .biz-table tr,
+  .biz-table td { display: block; width: 100%; }
+  .biz-table tr {
+    padding: 0.6rem 0.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .biz-table td { border: 0; padding: 0.15rem 0.7rem; }
+  .biz-table td.prod-name { color: var(--accent); font-weight: 700; font-size: 1rem; }
+  .biz-table td[data-label]::before {
+    content: attr(data-label) ": ";
+    color: var(--accent-2);
+    font-size: 0.75rem;
+  }
+  .biz-table td a { display: inline-block; padding: 0.6rem 0; }
+}
+
 .hidden,
 .is-hidden {
   display: none !important;

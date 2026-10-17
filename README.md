@@ -1,4 +1,4 @@
-# Cara Core Informatica Tools
+﻿# Cara Core Informatica Tools
 
 Manual tecnico e operacional das ferramentas de apoio ao ecossistema Cara Core Informatica.
 
@@ -12,7 +12,7 @@ Tambem hospeda a base publica e consultiva das linhas mestras da Cara Core Infor
 
 1. Validacao automatica de encoding em README (CI e script local).
 2. Registro documental de governanca tecnica e conformidade do ecossistema.
-3. Publicacao canonica da Sala de Operacoes em `docs/sala/`, consumida pelo dominio `tools.caracore.com.br`.
+3. Sala de Operacoes mantida em `interno/sala/`, fora do site publico (`docs/` so publica index, produtos, como-publicamos e b2b; as URLs antigas redirecionam). Documentos antigos ficam em `interno/docs-antigos/`.
 
 ## Estrutura do repositorio
 
@@ -45,9 +45,9 @@ caracore-tools/
 | scripts | subdomain_smoke_check.py | Verificacoes HTTP em subdominios publicos |
 | scripts | sync_delivery_site_to_releases_docs.py | Copia `delivery/<app>` para `*-releases/docs` com git |
 | scripts | run_delivery_ink.py | Wrapper: sync Ink matriz -> caracore-ink-releases |
-| docs/sala | Sala de Operacoes | Hub canonico de documentacao operacional, campanhas e registos da sala |
-| docs/linhas_mestras_cara_core.html | Linhas mestras | Referencia publica consultiva da tese, do portfolio e dos gates de decisao da Cara Core |
-| docs/matriz_produto_status_expectativa_gate.html | Matriz publica | Quadro consultivo do portfolio por produto, status, expectativa publica e gate exigido |
+| interno/sala | Sala de Operacoes | Documentacao operacional, campanhas e registos da sala (nao publicada) |
+| docs/como-publicamos.html | Como publicamos | Principios e regras de publicacao do portal |
+| docs/produtos.html | Produtos | Situacao publica de cada produto, com link para a loja oficial |
 
 ## Procedimentos operacionais
 

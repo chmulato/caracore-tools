@@ -1,6 +1,6 @@
-#!/usr/bin/env python3
+﻿#!/usr/bin/env python3
 """
-Rebuilds B2B campaign articles: ~5 min read each, filenames from June 2026 onward.
+Rebuilds B2B campaign articles: ~5 min read each, filenames from June 2027 onward.
 Copies hero PNGs to new dated names, removes legacy article HTML + old PNGs.
 """
 from __future__ import annotations
@@ -15,29 +15,29 @@ IMG_DIR = ART_DIR / "assets" / "img"
 
 # (article_num, new_date, old_img_date_prefix, title, search_keywords, data_subject)
 SPECS: list[tuple[int, str, str, str, str, str]] = [
-    (1, "2026_06_02", "2026_04_13", "The hidden risk of cloud-only systems",
+    (1, "2027_06_02", "2026_04_13", "The hidden risk of cloud-only systems",
      "cloud dependency continuity retail", "continuity architecture"),
-    (2, "2026_06_09", "2026_04_20", "What really happens when the internet goes down in a business",
+    (2, "2027_06_09", "2026_04_20", "What really happens when the internet goes down in a business",
      "outage isp branch operations", "continuity"),
-    (3, "2026_06_16", "2026_04_27", "Why most POS and ERP systems are not built for failure",
+    (3, "2027_06_16", "2026_04_27", "Why most POS and ERP systems are not built for failure",
      "pos erp failure design retail", "architecture continuity"),
-    (4, "2026_06_23", "2026_05_04", "Downtime is not a bug — it is a design decision",
+    (4, "2027_06_23", "2026_05_04", "Downtime is not a bug — it is a design decision",
      "downtime sla architecture strategy", "architecture strategy"),
-    (5, "2026_06_30", "2026_05_11", "What is offline-first architecture and why it matters",
+    (5, "2027_06_30", "2026_05_11", "What is offline-first architecture and why it matters",
      "offline first sync queue", "offline-first architecture"),
-    (6, "2026_07_07", "2026_05_18", "Local-first vs cloud-first: a practical comparison",
+    (6, "2027_07_07", "2026_05_18", "Local-first vs cloud-first: a practical comparison",
      "local first cloud comparison", "offline-first architecture"),
-    (7, "2026_07_14", "2026_05_25", "Designing systems that survive disconnection",
+    (7, "2027_07_14", "2026_05_25", "Designing systems that survive disconnection",
      "disconnection sync conflict retail", "continuity architecture"),
-    (8, "2026_07_21", "2026_06_01", "Edge computing for real businesses",
+    (8, "2027_07_21", "2026_06_01", "Edge computing for real businesses",
      "edge latency branch iot", "edge architecture"),
-    (9, "2026_07_28", "2026_06_08", "How we build systems that never stop",
+    (9, "2027_07_28", "2026_06_08", "How we build systems that never stop",
      "always on continuity pdv hub", "continuity architecture"),
-    (10, "2026_08_04", "2026_06_15", "Where offline-first systems make the biggest impact",
+    (10, "2027_08_04", "2026_06_15", "Where offline-first systems make the biggest impact",
      "impact inventory field service", "offline-first strategy"),
-    (11, "2026_08_11", "2026_06_22", "Partnering with IT firms: how we work together",
+    (11, "2027_08_11", "2026_06_22", "Partnering with IT firms: how we work together",
      "partner integrator delivery model", "partnership strategy"),
-    (12, "2026_08_18", "2026_06_29", "Why resilience is becoming a competitive advantage",
+    (12, "2027_08_18", "2026_06_29", "Why resilience is becoming a competitive advantage",
      "competitive advantage trust b2b", "strategy continuity"),
 ]
 
@@ -833,7 +833,7 @@ def render_html(num: int, date_iso: str, title: str, img_prefix: str) -> str:
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1">
           <title>Article {num:02d} — {title}</title>
-          <meta name="description" content="B2B export campaign article (~5 min read). Editorial schedule from June 2026.">
+          <meta name="description" content="B2B export campaign article (~5 min read). Editorial schedule from June 2027.">
           <link rel="stylesheet" href="assets/css/sala-doc.css">
         </head>
         <body>
@@ -843,11 +843,14 @@ def render_html(num: int, date_iso: str, title: str, img_prefix: str) -> str:
             <article class="panel">
               <h1>{title}</h1>
               <p><strong>Publish date:</strong> {date_iso}</p>
-              <p><strong>Status:</strong> Scheduled — June 2026 onward editorial window</p>
+              <p><strong>Status:</strong> Scheduled — June 2027 onward editorial window</p>
               <p><strong>Estimated reading time:</strong> about 5 minutes</p>
 
               <figure class="article-hero-image">
-                <img src="assets/img/{img_prefix}_IMAGE_01.png" alt="Editorial image for {fn}" loading="lazy" decoding="async">
+                <picture>
+                  <source media="(max-width: 600px)" srcset="assets/img/{img_prefix}_mobile.webp" width="800" height="1000">
+                  <img src="assets/img/{img_prefix}_desktop.webp" alt="{title}" width="1200" height="630" loading="lazy" decoding="async">
+                </picture>
               </figure>
               <p class="image-note"><strong>About this image:</strong> Campaign visual carried forward for this article slot; update asset if you refresh the creative.</p>
 
@@ -868,12 +871,9 @@ def main() -> None:
     # Write new HTML + copy images
     for num, new_date, old_prefix, title, _kw, _subj in SPECS:
         img_prefix = new_date.replace("-", "_")
-        dst_img = IMG_DIR / f"{img_prefix}_IMAGE_01.png"
-        src_img = IMG_DIR / f"{old_prefix}_IMAGE_01.png"
-        if src_img.is_file():
-            shutil.copy2(src_img, dst_img)
-        elif not dst_img.is_file():
-            raise SystemExit(f"Missing hero image (expected {src_img} or existing {dst_img})")
+        for kind in ("desktop", "mobile"):
+            if not (IMG_DIR / f"{img_prefix}_{kind}.webp").is_file():
+                raise SystemExit(f"Missing hero image {img_prefix}_{kind}.webp in {IMG_DIR}")
         html_name = f"{img_prefix}_article_{num:02d}_.html"
         html_path = ART_DIR / html_name
         y, m, d = new_date.split("_", 2)

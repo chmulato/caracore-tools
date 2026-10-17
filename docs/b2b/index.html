@@ -1,246 +1,118 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>B2B Campaign Hub - Cara Core Tools</title>
-  <meta name="description" content="B2B export campaign hub: twelve articles (~5 min read each), scheduled from June 2026, with subject filters and search.">
-  <link rel="canonical" href="https://tools.caracore.com.br/b2b/">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>B2B articles — Cara Core</title>
+  <meta name="description" content="Índice dos 12 artigos B2B em inglês da Cara Core, com imagem de destaque.">
+  <link rel="canonical" href="https://tools.caracore.com.br/b2b/index.html">
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/portal-docs.css">
   <style>
-    .quick-subjects {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.42rem;
-      margin: 0 0 0.7rem;
-    }
-    .chip-btn {
-      border: 1px solid var(--border);
-      background: rgba(255, 255, 255, 0.03);
-      color: var(--muted);
-      border-radius: 999px;
-      padding: 0.2rem 0.58rem;
-      font-size: 0.78rem;
-      cursor: pointer;
-    }
-    .chip-btn:hover {
-      color: var(--text);
-    }
-    .chip-btn.is-active {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #1f1602;
-      font-weight: 700;
-    }
-    .subportal-item h3 {
-      margin: 0;
-      font-size: 0.96rem;
-      color: var(--accent);
-    }
-    .subportal-item h3 a {
-      text-decoration: none;
-    }
+    .thumb-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:18px}
+    .thumb-card{display:block;border:1px solid rgba(255,255,255,.12);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;background:rgba(255,255,255,.03)}
+    .thumb-card:hover,.thumb-card:focus-visible{border-color:#f2c14e}
+    .thumb-card img{display:block;width:100%;height:auto;aspect-ratio:40/21;object-fit:cover}
+    .thumb-date{display:block;padding:10px 14px 0;font-size:.8rem;opacity:.75}
+    .thumb-card h3{margin:0;padding:4px 14px 16px;font-size:1rem;line-height:1.35}
+    @media (max-width:600px){.thumb-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <div class="brand">Cara Core · B2B Export</div>
-      <div class="meta">campaign article hub</div>
+      <div class="brand">Cara Core · B2B (English)</div>
+      <div class="meta">tools.caracore.com.br</div>
     </div>
   </header>
 
   <div class="layout">
-    <aside class="sidebar" aria-label="B2B navigation">
-      <h2 class="side-title">Quick access</h2>
-      <p class="side-lead">Navigate campaign content and return to the main docs portal.</p>
+    <aside class="sidebar" aria-label="Navegação">
+      <h2 class="side-title">Navegação</h2>
       <div class="sidebar-block">
         <ul class="quick-nav">
-          <li><a href="../index.html">Back to Docs Portal</a></li>
-          <li><a href="../catalogo.html">Open Full Catalog</a></li>
-          <li><a href="../negocios.html">Business Logic Panel</a></li>
-          <li><a href="#articles">Article Index</a></li>
-          <li><a href="../guia_publicacao_shell_identidade.html">Shell x Identity Guide</a></li>
-          <li><a href="../checklist_qa_visual_portal.html">Visual QA Checklist</a></li>
+          <li><a href="../index.html">Início</a></li>
+          <li><a href="../produtos.html">Produtos</a></li>
+          <li><a href="../como-publicamos.html">Como publicamos</a></li>
+          <li><a href="../b2b/index.html" aria-current="page">B2B (English)</a></li>
         </ul>
-      </div>
-      <div class="sidebar-block">
-        <p class="sidebar-label">Subject logic</p>
-        <p class="side-lead">This hub stays in English because the audience is export-facing. The visual shell follows the portal, but the editorial voice remains campaign-specific.</p>
-        <p class="side-lead">Shared shell: navigation, spacing rhythm and responsive behavior. Local identity: campaign narrative, language, and article taxonomy.</p>
       </div>
     </aside>
 
     <main class="main">
       <section class="hero anim-in">
-        <p class="eyebrow">Campaign Content Studio</p>
-        <h1>B2B Campaign Hub</h1>
-        <p>Twelve export-facing articles in plain English. Each piece is edited for <strong>about five minutes of reading</strong> and scheduled from <strong>June 2026 onward</strong> (weekly slots through mid-August). Use filters and search to navigate by subject.</p>
+        <p class="eyebrow">English · B2B</p>
+        <h1>B2B articles</h1>
+        <p class="hero-lead">Twelve five-minute articles on offline-first systems and business continuity, published weekly from June 2027.</p>
+      </section>
 
-        <div class="badges">
-          <span class="badge">~5 min read</span>
-          <span class="badge">from June 2026</span>
-          <span class="badge">subject + search</span>
+      <section class="section anim-in" lang="en">
+        <div class="thumb-grid">
+          <a class="thumb-card" href="article/2027_06_02_article_01.html">
+            <img src="thumbs/2027_06_02.webp" alt="" width="640" height="336" loading="lazy" decoding="async">
+            <span class="thumb-date">2 June 2027</span>
+            <h3>The hidden risk of cloud-only systems</h3>
+          </a>
+          <a class="thumb-card" href="article/2027_06_09_article_02.html">
+            <img src="thumbs/2027_06_09.webp" alt="" width="640" height="336" loading="lazy" decoding="async">
+            <span class="thumb-date">9 June 2027</span>
+            <h3>What really happens when the internet goes down in a business</h3>
+          </a>
+          <a class="thumb-card" href="article/2027_06_16_article_03.html">
+            <img src="thumbs/2027_06_16.webp" alt="" width="640" height="336" loading="lazy" decoding="async">
+            <span class="thumb-date">16 June 2027</span>
+            <h3>Why most POS and ERP systems are not built for failure</h3>
+          </a>
+          <a class="thumb-card" href="article/2027_06_23_article_04.html">
+            <img src="thumbs/2027_06_23.webp" alt="" width="640" height="336" loading="lazy" decoding="async">
+            <span class="thumb-date">23 June 2027</span>
+            <h3>Downtime is not a bug — it is a design decision</h3>
+          </a>
+          <a class="thumb-card" href="article/2027_06_30_article_05.html">
+            <img src="thumbs/2027_06_30.webp" alt="" width="640" height="336" loading="lazy" decoding="async">
+            <span class="thumb-date">30 June 2027</span>
+            <h3>What is offline-first architecture and why it matters</h3>
+          </a>
+          <a class="thumb-card" href="article/2027_07_07_article_06.html">
+            <img src="thumbs/2027_07_07.webp" alt="" width="640" height="336" loading="lazy" decoding="async">
+            <span class="thumb-date">7 July 2027</span>
+            <h3>Local-first vs cloud-first: a practical comparison</h3>
+          </a>
+          <a class="thumb-card" href="article/2027_07_14_article_07.html">
+            <img src="thumbs/2027_07_14.webp" alt="" width="640" height="336" loading="lazy" decoding="async">
+            <span class="thumb-date">14 July 2027</span>
+            <h3>Designing systems that survive disconnection</h3>
+          </a>
+          <a class="thumb-card" href="article/2027_07_21_article_08.html">
+            <img src="thumbs/2027_07_21.webp" alt="" width="640" height="336" loading="lazy" decoding="async">
+            <span class="thumb-date">21 July 2027</span>
+            <h3>Edge computing for real businesses</h3>
+          </a>
+          <a class="thumb-card" href="article/2027_07_28_article_09.html">
+            <img src="thumbs/2027_07_28.webp" alt="" width="640" height="336" loading="lazy" decoding="async">
+            <span class="thumb-date">28 July 2027</span>
+            <h3>How we build systems that never stop</h3>
+          </a>
+          <a class="thumb-card" href="article/2027_08_04_article_10.html">
+            <img src="thumbs/2027_08_04.webp" alt="" width="640" height="336" loading="lazy" decoding="async">
+            <span class="thumb-date">4 August 2027</span>
+            <h3>Where offline-first systems make the biggest impact</h3>
+          </a>
+          <a class="thumb-card" href="article/2027_08_11_article_11.html">
+            <img src="thumbs/2027_08_11.webp" alt="" width="640" height="336" loading="lazy" decoding="async">
+            <span class="thumb-date">11 August 2027</span>
+            <h3>Partnering with IT firms: how we work together</h3>
+          </a>
+          <a class="thumb-card" href="article/2027_08_18_article_12.html">
+            <img src="thumbs/2027_08_18.webp" alt="" width="640" height="336" loading="lazy" decoding="async">
+            <span class="thumb-date">18 August 2027</span>
+            <h3>Why resilience is becoming a competitive advantage</h3>
+          </a>
         </div>
       </section>
 
-      <section class="section anim-in" id="articles">
-        <h2>Article Index</h2>
-        <p class="section-intro">The campaign keeps a single visual shell. Articles are shorter for busy readers; dates in filenames follow the postponed editorial window (June–August 2026).</p>
-        <div class="subportal-toolbar subportal-toolbar--wide">
-          <div>
-            <label for="subjectFilter">Filter by subject</label>
-            <select id="subjectFilter">
-              <option value="all">All subjects</option>
-              <option value="continuity">Business continuity</option>
-              <option value="architecture">Resilient architecture</option>
-              <option value="offline-first">Offline-first and local-first</option>
-              <option value="edge">Edge operations</option>
-              <option value="partnership">B2B partnership model</option>
-              <option value="strategy">Resilience as strategy</option>
-            </select>
-          </div>
-          <div>
-            <label for="searchFilter">Search by title or filename</label>
-            <input id="searchFilter" type="search" placeholder="Type cloud, ERP, edge, partner...">
-          </div>
-        </div>
-        <p class="subportal-count" id="resultCount">Showing 12 of 12 articles.</p>
-        <div class="quick-subjects" id="quickSubjects">
-          <button type="button" class="chip-btn is-active" data-subject="all">All</button>
-          <button type="button" class="chip-btn" data-subject="continuity">Business continuity</button>
-          <button type="button" class="chip-btn" data-subject="architecture">Resilient architecture</button>
-          <button type="button" class="chip-btn" data-subject="offline-first">Offline-first/local-first</button>
-          <button type="button" class="chip-btn" data-subject="edge">Edge operations</button>
-          <button type="button" class="chip-btn" data-subject="partnership">B2B partnership</button>
-          <button type="button" class="chip-btn" data-subject="strategy">Resilience strategy</button>
-        </div>
-
-        <ul class="subportal-list" id="articleList">
-        <li class="subportal-item" data-subject="continuity architecture" data-search="2026_06_02_article_01.html the hidden risk of cloud-only systems">
-          <h3><a href="article/2026_06_02_article_01.html">The hidden risk of cloud-only systems</a></h3>
-          <p>File: 2026_06_02_article_01.html · ~5 min read · publish 2026-06-02</p>
-          <span class="subportal-tag">Business continuity</span>
-        </li>
-        <li class="subportal-item" data-subject="continuity" data-search="2026_06_09_article_02.html what really happens when the internet goes down in a business">
-          <h3><a href="article/2026_06_09_article_02.html">What really happens when the internet goes down in a business</a></h3>
-          <p>File: 2026_06_09_article_02.html · ~5 min read · publish 2026-06-09</p>
-          <span class="subportal-tag">Business continuity</span>
-        </li>
-        <li class="subportal-item" data-subject="architecture continuity" data-search="2026_06_16_article_03.html why most pos and erp systems are not built for failure">
-          <h3><a href="article/2026_06_16_article_03.html">Why most POS and ERP systems are not built for failure</a></h3>
-          <p>File: 2026_06_16_article_03.html · ~5 min read · publish 2026-06-16</p>
-          <span class="subportal-tag">Resilient architecture</span>
-        </li>
-        <li class="subportal-item" data-subject="architecture strategy" data-search="2026_06_23_article_04.html downtime is not a bug it is a design decision">
-          <h3><a href="article/2026_06_23_article_04.html">Downtime is not a bug — it is a design decision</a></h3>
-          <p>File: 2026_06_23_article_04.html · ~5 min read · publish 2026-06-23</p>
-          <span class="subportal-tag">Resilient architecture</span>
-        </li>
-        <li class="subportal-item" data-subject="offline-first architecture" data-search="2026_06_30_article_05.html what is offline-first architecture and why it matters">
-          <h3><a href="article/2026_06_30_article_05.html">What is offline-first architecture and why it matters</a></h3>
-          <p>File: 2026_06_30_article_05.html · ~5 min read · publish 2026-06-30</p>
-          <span class="subportal-tag">Offline-first and local-first</span>
-        </li>
-        <li class="subportal-item" data-subject="offline-first architecture" data-search="2026_07_07_article_06.html local-first vs cloud-first a practical comparison">
-          <h3><a href="article/2026_07_07_article_06.html">Local-first vs cloud-first: a practical comparison</a></h3>
-          <p>File: 2026_07_07_article_06.html · ~5 min read · publish 2026-07-07</p>
-          <span class="subportal-tag">Offline-first and local-first</span>
-        </li>
-        <li class="subportal-item" data-subject="continuity architecture" data-search="2026_07_14_article_07.html designing systems that survive disconnection">
-          <h3><a href="article/2026_07_14_article_07.html">Designing systems that survive disconnection</a></h3>
-          <p>File: 2026_07_14_article_07.html · ~5 min read · publish 2026-07-14</p>
-          <span class="subportal-tag">Business continuity</span>
-        </li>
-        <li class="subportal-item" data-subject="edge architecture" data-search="2026_07_21_article_08.html edge computing for real businesses">
-          <h3><a href="article/2026_07_21_article_08.html">Edge computing for real businesses</a></h3>
-          <p>File: 2026_07_21_article_08.html · ~5 min read · publish 2026-07-21</p>
-          <span class="subportal-tag">Edge operations</span>
-        </li>
-        <li class="subportal-item" data-subject="continuity architecture" data-search="2026_07_28_article_09.html how we build systems that never stop">
-          <h3><a href="article/2026_07_28_article_09.html">How we build systems that never stop</a></h3>
-          <p>File: 2026_07_28_article_09.html · ~5 min read · publish 2026-07-28</p>
-          <span class="subportal-tag">Business continuity</span>
-        </li>
-        <li class="subportal-item" data-subject="offline-first strategy" data-search="2026_08_04_article_10.html where offline-first systems make the biggest impact">
-          <h3><a href="article/2026_08_04_article_10.html">Where offline-first systems make the biggest impact</a></h3>
-          <p>File: 2026_08_04_article_10.html · ~5 min read · publish 2026-08-04</p>
-          <span class="subportal-tag">Offline-first and local-first</span>
-        </li>
-        <li class="subportal-item" data-subject="partnership strategy" data-search="2026_08_11_article_11.html partnering with it firms how we work together">
-          <h3><a href="article/2026_08_11_article_11.html">Partnering with IT firms: how we work together</a></h3>
-          <p>File: 2026_08_11_article_11.html · ~5 min read · publish 2026-08-11</p>
-          <span class="subportal-tag">B2B partnership model</span>
-        </li>
-        <li class="subportal-item" data-subject="strategy continuity" data-search="2026_08_18_article_12.html why resilience is becoming a competitive advantage">
-          <h3><a href="article/2026_08_18_article_12.html">Why resilience is becoming a competitive advantage</a></h3>
-          <p>File: 2026_08_18_article_12.html · ~5 min read · publish 2026-08-18</p>
-          <span class="subportal-tag">Resilience as strategy</span>
-        </li>
-      </ul>
-
-        <div class="subportal-note">
-          Template structure: Hook, Real Problem, Explanation, Solution, Application and Closing — each article targets <strong>about five minutes</strong> of reading.<br>
-          Naming pattern (lowercase): <code>yyyy_mm_dd_article_xx.html</code> · editorial window postponed to <strong>June–August 2026</strong>.
-        </div>
-      </section>
-
-      <footer class="footer">Cara Core Tools · B2B export editorial hub.</footer>
+      <footer class="footer">tools.caracore.com.br · consulta pública da Cara Core</footer>
     </main>
   </div>
-  <script>
-    (function () {
-      var subjectFilter = document.getElementById('subjectFilter');
-      var searchFilter = document.getElementById('searchFilter');
-      var articleList = document.getElementById('articleList');
-      var resultCount = document.getElementById('resultCount');
-      var quickSubjects = document.getElementById('quickSubjects');
-      var chips = Array.prototype.slice.call(quickSubjects.querySelectorAll('.chip-btn'));
-      var items = Array.prototype.slice.call(articleList.querySelectorAll('.subportal-item'));
-
-      function syncChips(subject) {
-        chips.forEach(function (chip) {
-          var active = chip.getAttribute('data-subject') === subject;
-          chip.classList.toggle('is-active', active);
-        });
-      }
-
-      function applyFilters() {
-        var subject = subjectFilter.value;
-        var query = searchFilter.value.trim().toLowerCase();
-        var visible = 0;
-
-        items.forEach(function (item) {
-          var subjects = item.getAttribute('data-subject') || '';
-          var searchable = item.getAttribute('data-search') || '';
-          var matchesSubject = subject === 'all' || subjects.indexOf(subject) !== -1;
-          var matchesQuery = !query || searchable.indexOf(query) !== -1;
-          var isVisible = matchesSubject && matchesQuery;
-
-          item.classList.toggle('is-hidden', !isVisible);
-          if (isVisible) {
-            visible += 1;
-          }
-        });
-
-        resultCount.textContent = 'Showing ' + visible + ' of ' + items.length + ' articles.';
-        syncChips(subject);
-      }
-
-      subjectFilter.addEventListener('change', applyFilters);
-      searchFilter.addEventListener('input', applyFilters);
-      chips.forEach(function (chip) {
-        chip.addEventListener('click', function () {
-          subjectFilter.value = chip.getAttribute('data-subject');
-          applyFilters();
-        });
-      });
-      applyFilters();
-    })();
-  </script>
-  <script src="article/assets/js/article.js" defer></script>
 </body>
 </html>

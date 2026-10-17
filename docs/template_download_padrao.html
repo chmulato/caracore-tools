@@ -1,119 +1,14 @@
-<!DOCTYPE html>
-<!--
-  template_download_padrao.html
-  Template canônico para pages de download das lojas *-releases.
-  Substitua todas as ocorrências de:
-    [SLUG]          → identificador curto do produto, ex: pdv, ete, oidc
-    [NomeProduto]   → nome completo do produto, ex: CaraCore PDV
-    [Executavel]    → nome do arquivo EXE sem extensão, ex: CaraCorePDV
-    [versão]        → versão atual, ex: v1.0.16-rc2
-    [data_release]  → data de publicação, ex: 04/04/2026
-    [dominio]       → domínio do produto, ex: pdv.caracore.com.br
-    [repo_github]   → URL completa do repo de releases no GitHub
-    [desc_curta]    → 1 frase descrevendo o produto
-
-  Para produtos com lançamento FUTURO (bouton desabilitado):
-    Substitua a seção <section class="download-hero"> pelo bloco
-    marcado como "<!-- VARIANTE: lançamento futuro -->" abaixo.
-
-  Checklist de conformidade antes de publicar:
-    [ ] <base href> aponta para o domínio correto
-    [ ] <a> (não <span>) nos botões de ação
-    [ ] href="artifacts/[Executavel].exe" (arquivo real ou GitHub Releases)
-    [ ] Get-FileHash (não certutil) para SHA-256
-    [ ] Nenhum <style> inline no <head>
-    [ ] CSS em assets/css/[produto].css ou laboratorio.css
-    [ ] Guia de instalação publicado em HTML
--->
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <!-- caracore-audit: template-placeholders -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="caracore-audit" content="template-placeholders skip-link-validation">
-    <base href="https://[dominio]/">
-    <title>Download — [NomeProduto] | Cara Core Informática</title>
-    <meta name="description" content="Baixe o instalador Windows do [NomeProduto]. [desc_curta]. Checksums SHA-256 e MD5.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- TEMPLATE COM PLACEHOLDERS: ignorar em auditorias automáticas de navegação até publicação real. -->
-    <!-- CSS do produto — NÃO usar <style> inline -->
-    <link rel="stylesheet" href="assets/css/loja.css">
-    <link rel="stylesheet" href="assets/evolution-status/evolution-status.css">
-    <link rel="stylesheet" href="/assets/caracore-core-typography.css">
-    <link rel="stylesheet" href="/assets/caracore-institutional-components.css">
+  <meta charset="utf-8">
+  <title>Página movida</title>
+  <meta name="robots" content="noindex">
+  <meta http-equiv="refresh" content="0; url=index.html">
+  <link rel="canonical" href="https://tools.caracore.com.br/index.html">
+  <script>location.replace("index.html");</script>
 </head>
-<body class="page-download">
-    <div class="wrapper">
-
-        <!-- Breadcrumb -->
-        <nav class="breadcrumb" aria-label="Navegação">
-            <a href="index.html">[NomeProduto] — Loja</a>
-            <span> · </span>
-            <span>Download</span>
-        </nav>
-
-        <!-- Cabeçalho -->
-        <header>
-            <h1>Download — [NomeProduto]</h1>
-            <p>[desc_curta] • Windows 10/11</p>
-        </header>
-
-        <!-- Nota de versão -->
-        <p class="download-notice"><strong>Versão [versão] disponível.</strong> Publicada em [data_release].</p>
-
-        <!-- Seção principal de download — VARIANTE PADRÃO (artefato disponível) -->
-        <section class="card">
-            <p>O <strong>[NomeProduto]</strong> é distribuído como instalador <strong>Windows (EXE)</strong> autocontido — nenhuma dependência adicional é necessária.</p>
-
-            <!-- Descreva brevemente o que o produto faz após executar o EXE -->
-            <p><strong>Após a instalação:</strong></p>
-            <ul>
-                <li>[Passo 1, ex: clique no atalho criado no Desktop]</li>
-                <li>[Passo 2, ex: o servidor sobe em localhost:8080]</li>
-                <li>[Passo 3, ex: acesse via navegador]</li>
-            </ul>
-
-            <!-- Botão principal de download — DEVE ser <a>, não <span> -->
-            <a href="artifacts/[Executavel].exe" class="btn-release" target="_blank" rel="noopener">
-                Baixar [Executavel].exe ([versão], Windows)
-            </a>
-            <a href="artifacts/checksum.sha256" class="btn-release btn-release-outline" target="_blank" rel="noopener">Checksum SHA-256</a>
-            <a href="artifacts/checksum.md5" class="btn-release btn-release-outline" target="_blank" rel="noopener">Checksum MD5</a>
-            <a href="artifacts/INSTALACAO.html" class="btn-release btn-release-outline" target="_blank" rel="noopener">Guia de instalação</a>
-        </section>
-
-        <section class="card">
-            <h3>Shell compartilhado x identidade do produto</h3>
-            <p>Este template preserva o shell institucional (breadcrumb, estrutura, CTA de download e bloco de validacao). A identidade propria fica no texto do produto, requisitos e orientacoes de uso.</p>
-            <p>Referencia de governanca editorial: <a href="https://tools.caracore.com.br/guia_publicacao_shell_identidade.html" target="_blank" rel="noopener">Guia de publicacao Shell x Identidade</a>.</p>
-            <p>Validacao visual dirigida: <a href="https://tools.caracore.com.br/checklist_qa_visual_portal.html" target="_blank" rel="noopener">Checklist QA visual do portal</a>.</p>
-        </section>
-
-        <!--
-        VARIANTE: lançamento futuro — substituir a seção card acima por:
-        <section class="card">
-            <p>O <strong>[NomeProduto]</strong> ainda não está disponível para download.</p>
-            <p><strong>Lançamento previsto:</strong> [data_lancamento].</p>
-            <p>Acompanhe as atualizações na <a href="index.html">página da loja</a>.</p>
-        </section>
-        -->
-
-        <!-- Verificação de integridade -->
-        <section class="card card-highlight">
-            <h3>Verificação de Integridade</h3>
-            <p>Após o download, verifique a integridade no <strong>PowerShell</strong>:</p>
-            <code class="hash-command">Get-FileHash -Path .\[Executavel].exe -Algorithm SHA256</code>
-            <p>Compare o resultado com o hash publicado em <code>checksum.sha256</code>.</p>
-        </section>
-
-        <!-- Navegação de volta -->
-        <nav class="back">
-            <a href="index.html">← Voltar ao portal</a> · <a href="wiki.html">Wiki da loja</a> · Portal de ferramentas: <a href="https://tools.caracore.com.br" target="_blank" rel="noopener">tools.caracore.com.br</a>
-        </nav>
-
-    </div>
-    <script src="assets/js/loja.js"></script>
+<body>
+  <p>Página movida. <a href="index.html">Continuar</a></p>
 </body>
 </html>

@@ -94,7 +94,7 @@ def check_retro() -> None:
         if m:
             num = int(m.group(1))
             # article 11–86 e 87+ são válidos; 87+ é continuidade LinkedIn
-        # Nomes tipo 2026_02_12_article_72.html são válidos
+        # Nomes tipo 2027_02_12_article_72.html são válidos
     listagem = RETRO_DIR / "articles.html"
     if not listagem.is_file():
         log_warn(f"Retro: listagem não encontrada: {listagem}")

@@ -15,7 +15,7 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT = SCRIPT_DIR.parent.parent
 WORKSPACE_ROOT = REPO_ROOT.parent
-SALA_DIR = REPO_ROOT / "docs" / "sala"
+SALA_DIR = REPO_ROOT / "interno" / "sala"
 REDES_DIR = SALA_DIR / "redes"
 
 FACE_DIR = REDES_DIR / "face"
